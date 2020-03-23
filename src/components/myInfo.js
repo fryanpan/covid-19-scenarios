@@ -1,7 +1,5 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { StaticQuery, graphql} from "gatsby"
 import React from "react"
-import model from "../utils/model";
 
 class MyInfo extends React.Component {
     /**
@@ -11,34 +9,79 @@ class MyInfo extends React.Component {
      */
     constructor(props) {
         super(props);
+
         this.handleChange = this.handleChange.bind(this);
+        this.distinctCountries = props.distinctCountries;
+        this.locations = props.locations;
+
+        this.state = {
+            availableLocations: this.getAvailableLocations()
+        };
+    }
+
+    lookupStates(country) {
+        return this.locations.filter(x => x.country === country);
+    }
+
+    getAvailableLocations() {
+        const modelInputs = this.props.modelInputs;
+        console.log("UPdating available locations", modelInputs);
+        // update states value
+        const availableLocations = this.lookupStates(modelInputs.country);
+        
+        // clamp to one if there's only one
+        if(availableLocations.length === 1) {
+            modelInputs.state = availableLocations[0].state;
+        } else {
+            if(availableLocations.find(x => x.state === modelInputs.state) === undefined) {
+                modelInputs.state = "All";
+            }
+        }
+        console.log("Choosing state", modelInputs.state);
+        return availableLocations;
     }
 
     handleChange(e) {
         const handleModelInputChange = this.props.onModelInputChange;
-        // construct data to change
 
+        // construct data to change
+        console.log(`Changing ${e.target.name} to ${e.target.value}`);
 
         var modelInputs = this.props.modelInputs;
         const name = e.target.name;
         const value = e.target.value;
-        if(name == "isSocialDistancing") {
-            modelInputs[name] = value == "true";
+        const changedLocation = e.target.name === "country" || e.target.name === "state";
+
+        if(name === "isSocialDistancing") {
+            modelInputs[name] = value === "true";
         } else {
             modelInputs[name] = value;
         }
-        console.log(modelInputs);
+
+        const newLocations = this.getAvailableLocations();
+        this.setState({
+            availableLocations: newLocations
+        });
+        
+        const currentLocation = newLocations.find(x => x.country === modelInputs.country && x.state === modelInputs.state);
+
+        // update social distancing information, if location changed
+        if(changedLocation) {
+            modelInputs.hammerDate = currentLocation.hammerDate || modelInputs.hammerDate;
+        }
+
+        console.log("New modelInputs", modelInputs);
 
         handleModelInputChange(modelInputs);
     }
 
     render() {
         const modelInputs = this.props.modelInputs;
-        const country = modelInputs.country;;
+        const country = modelInputs.country;
         const state = modelInputs.state;
         const age = modelInputs.age;
         const isSocialDistancing = modelInputs.isSocialDistancing;
-        const socialDistancingStartDate = modelInputs.socialDistancingStartDate;
+        const hammerDate = modelInputs.hammerDate;
         const handleChange = this.handleChange.bind(this);
         
         return <div>
@@ -47,44 +90,81 @@ class MyInfo extends React.Component {
             </h1>
             <form>
                 <p>
-                I live in <input name="country"
-                                 value={country}
-                                 onChange={handleChange}></input><br/>
-
-                I am <input type="text" 
-                        name="age"
-                        value={age} 
-                        onChange={handleChange}></input> years old<br/>
-
-                My city is <select name="isSocialDistancing"
-                            value={isSocialDistancing ? "true" : "false"}
-                            onChange={handleChange}>
-                                <option value="true">social distancing</option>
-                                <option value="false">not social distancing</option>
-                        </select>&nbsp;
-            </p>
-                {isSocialDistancing &&
-                    <span> 
-                        and this started on <input type="date" name="socialDistancingStartDate"
-                                                value={socialDistancingStartDate}
-                                                onChange={handleChange}></input>.  
+                I live in <select name="country" value={country} onChange={handleChange}>
+                        <option value="" key="__blank"></option>
+                        {
+                            this.distinctCountries.map(x => 
+                                <option value={x} key={x}>{x}</option>
+                            )
+                        }
+                    </select> 
+                { this.state.availableLocations.length > 1 && 
+                    <span>
+                        (state or province 
+                            <select name="state" value={state} onChange={handleChange}>
+                                {
+                                    this.state.availableLocations.map(x => 
+                                        <option value={x.state} key={x.state}>{x.state}</option>
+                                    )
+                                }
+                            </select>
+                        )
                     </span>
                 }
-                {isSocialDistancing &&
-                    <p>
-                        This means that most of us are staying at home, except for essential trips.
-                    </p>  
-                }
-                {!isSocialDistancing &&
-                    <p>
-                        This means that we are not staying at home.  We are meeting other people every day that we don't live with.
-                    </p>
-                }
+
+                and I am <input type="text"
+                        style={{width: "1.5rem"}} 
+                        name="age"
+                        value={age} 
+                        onChange={handleChange}></input> years old
+                </p>
+
+                <p>
+                    My city is <select name="isSocialDistancing"
+                                value={isSocialDistancing ? "true" : "false"}
+                                onChange={handleChange}>
+                                    <option value="true">social distancing</option>
+                                    <option value="false">not social distancing</option>
+                            </select>&nbsp;
+                    {isSocialDistancing &&
+                        <span> 
+                            and this started on <input style={{width: "7rem"}} type="date" name="hammerDate"
+                                                    value={hammerDate.toISOString().split('T')[0]}
+                                                    onChange={handleChange}></input>
+                        </span>
+                    }<br/>
+                    {isSocialDistancing &&
+                        <span>
+                            This means that most of us are trying to minimize contact with other people (for example by staying home except for essential trips).
+                        </span>
+                    }          
+                    {!isSocialDistancing && 
+                        <span>
+                            This means that most of us are not trying to minimize contact. 
+                        </span>
+                    }
+                </p>
             </form>
         </div>
     }
 
 }
 
+/** Using a static query with a class-based component.  Snippet adapted from here:
+ * https://spectrum.chat/gatsby-js/general/is-this-a-good-way-of-using-gatsby-v2s-staticquery-with-react-component-class~d9db7af2-f594-4199-9640-8756f39876d5
+ */
+export default props => (
+    <StaticQuery
+      query={ graphql`query {
+            allLocationsCsv {
+                distinct(field: country)
+                nodes {
+                    country
+                    state
+                }
+            }
+        }`}
+      render={({ allLocationsCsv }) => <MyInfo distinctCountries={allLocationsCsv.distinct} locations={allLocationsCsv.nodes} {...props} />}
+    />
+  )
 
-export default MyInfo

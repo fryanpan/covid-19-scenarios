@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Bryan Chan <fryanpan@gmail.com>",
   "dependencies": {
+    "gamma-distribution": "^1.0.4",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
@@ -21,6 +22,7 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
+    "typography-theme-twin-peaks": "^0.16.19",
     "typography-theme-wikipedia": "^0.16.19"
   },
   "devDependencies": {

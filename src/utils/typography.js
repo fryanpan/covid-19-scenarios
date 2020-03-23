@@ -1,6 +1,6 @@
 import Typography from "typography"
-import wikipediaTheme from 'typography-theme-wikipedia'
+import theme from 'typography-theme-twin-peaks'
 
-const typography = new Typography(wikipediaTheme);
+const typography = new Typography(theme);
 
 export default typography

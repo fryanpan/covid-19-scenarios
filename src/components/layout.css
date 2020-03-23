@@ -1,0 +1,24 @@
+input, select {
+    border-style: none;
+    border-width: 0;
+    border-bottom-style: inset;
+    border-bottom-width: 1px;
+    border-bottom-color: darkslategrey;
+    background-color: transparent;
+}
+
+input:focus, select:focus {
+    outline-style: none;
+    border-bottom-color: CornflowerBlue;
+    box-shadow: 0 3px 2px -2px cornflowerblue;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button, 
+input[type="date"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+input[type="date"]::-ms-clear {
+    display: none;
+}

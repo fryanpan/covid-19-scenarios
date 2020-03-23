@@ -1,0 +1,14 @@
+td, th {
+    padding: 0rem 1rem;
+}
+
+td {
+    text-align: right;
+}
+
+table { 
+    font-size: 0.6rem;
+    table-layout: fixed;
+    width: 1000px;
+    line-height: 1rem;
+}

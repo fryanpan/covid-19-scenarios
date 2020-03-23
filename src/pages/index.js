@@ -1,10 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import MyInfo from "../components/myInfo"
 import MyFuture from "../components/myFuture"
-import Image from "../components/image"
+import SimulationDataTable from "../components/simDataTable"
 import Model from "../utils/model"
 
 class IndexPage extends React.Component {
@@ -12,37 +10,69 @@ class IndexPage extends React.Component {
     super(props);
 
     this.state = {
-      modelInputs: new Model.ModelInputs()
+      modelInputs: new Model.ModelInputs(),
+      modelData: []
     }
 
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
 
     this.historicalData = this.props.data;
-    this.distinctCountries = this.historicalData.allLocationsCsv.distinct;
   }
 
   handleModelInputChange(newModelInputs) {
+    const lookupCountry = newModelInputs.country;
+    const lookupState = newModelInputs.state;
+    const locationData = this.historicalData.allLocationsCsv.nodes.find(x => {
+      return x.country === lookupCountry && x.state === 'All';
+    })    
+    locationData.population = parseFloat(locationData.population);
+
+    console.log("Location data", locationData);
+    const rBefore = parseFloat(locationData.rInitial || 2);
+    const cfrBefore = parseFloat(locationData.cfrInitial || 0.0014);
+    const rAfter = 0.4;
+    const cfrAfter = 0.0014;
+    const thresholdDate = newModelInputs.hammerDate;
+
+    const dailyData = this.historicalData.allDailyDataCsv.nodes.filter(x => {
+      return x.country === lookupCountry && x.state === lookupState;
+    }).map(x => {
+      return {
+        date: new Date(x.date),
+        confirmedCases: parseFloat(x.confirmedCases),
+        confirmedDeaths: parseFloat(x.confirmedDeaths)
+      }
+    });
+
+    const diseaseModelData = new Model.BasicDiseaseModel(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
+
     this.setState(prevState => {
-      return Object.assign(prevState, newModelInputs);
+      const newState = Object.assign(prevState, {
+        modelInputs: newModelInputs,
+        modelData: diseaseModelData
+      });
+      return newState;
     });
   }
 
   render() {
     return <Layout>
-      <p>
+      {/* <p>
       Hope you are staying safe.  You've likely already seen many news reports and charts about the 
       <a href="https://www.covidly.com"> pandemic spreading around the world, </a> 
       and tried out carefully designed tools to understand 
       <a href="http://gabgoh.github.io/COVID"> disease propagation scenarios. </a>
       </p>
+
       <p>
-        This site aims to answer different questions. It is first and foremost about you, your friends and family, and your home.
-      </p>
+        This site It is first and foremost about you, your friends and family, and where you live.
+      </p> */}
 
       <MyInfo modelInputs={this.state.modelInputs} countries={this.distinctCountries} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
-      <MyFuture models={this.state.models}></MyFuture>
+      <MyFuture models={this.state.modelData}></MyFuture>
       
+      <SimulationDataTable modelData={this.state.modelData}></SimulationDataTable>
 
     </Layout>
   }
@@ -52,23 +82,26 @@ export const query = graphql`
   query {
     allLocationsCsv {
       nodes {
-        Country
-        IsSocialDistancing
-        PastR0
-        PastCFR
-        Population
-        State
-        SocialDistancingStartDate
+        country
+        state
+        population
+        rInitial
+        cfrInitial
+        hammerDate
+        rHammer
+        cfrHammer
+        danceDate
+        rDance
+        cfrDance        
       }
-      distinct(field: Country)
     }
     allDailyDataCsv {
       nodes {
-        ConfirmedCases
-        ConfirmedDeaths
-        Country
-        Date
-        State
+        country
+        state
+        date
+        confirmedCases
+        confirmedDeaths
       }
     }
   }

@@ -1,4 +1,4 @@
-﻿Country,State,Date,ConfirmedCases,ConfirmedDeaths,
+﻿country,state,date,confirmedCases,confirmedDeaths,
 Afghanistan,All,12/31/19,0,0,
 Afghanistan,All,1/1/20,0,0,
 Afghanistan,All,1/2/20,0,0,
@@ -5528,52 +5528,52 @@ Vietnam,All,3/15/20,53,0,
 Vietnam,All,3/16/20,57,0,
 Vietnam,All,3/17/20,61,0,
 Vietnam,All,3/18/20,61,0,
-United states,"King County, Washington",3/1/20,14,6,https://www.kingcounty.gov/
-United states,"King County, Washington",3/2/20,21,8,https://www.kingcounty.gov/
-United states,"King County, Washington",3/3/20,31,9,https://www.kingcounty.gov/
-United states,"King County, Washington",3/4/20,51,10,https://www.kingcounty.gov/
-United states,"King County, Washington",3/5/20,58,11,https://www.kingcounty.gov/
-United states,"King County, Washington",3/6/20,71,15,https://www.kingcounty.gov/
-United states,"King County, Washington",3/7/20,83,17,https://www.kingcounty.gov/
-United states,"King County, Washington",3/8/20,116,20,https://www.kingcounty.gov/
-United states,"King County, Washington",3/9/20,190,22,https://www.kingcounty.gov/
-United states,"King County, Washington",3/10/20,234,26,https://www.kingcounty.gov/
-United states,"King County, Washington",3/11/20,270,27,https://www.kingcounty.gov/
-United states,"King County, Washington",3/12/20,328,32,https://www.kingcounty.gov/
-United states,"King County, Washington",3/13/20,388,35,https://www.kingcounty.gov/
-United states,"King County, Washington",3/14/20,420,37,https://www.kingcounty.gov/
-United states,"King County, Washington",3/15/20,488,43,https://www.kingcounty.gov/
-United states,"King County, Washington",3/16/20,518,46,https://www.kingcounty.gov/
-United states,"King County, Washington",3/17/20,562,56,https://www.kingcounty.gov/
-United states,California,3/4/20,43,0,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/5/20,53,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/6/20,69,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/7/20,88,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/8/20,114,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/9/20,133,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/10/20,157,2,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/11/20,177,3,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/12/20,198,4,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/13/20,247,5,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/14/20,335,6,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/15/20,392,6,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/16/20,472,11,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,California,3/17/20,598,13,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
-United states,New York State,3/1/20,1,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/2/20,1,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/3/20,2,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/4/20,11,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/5/20,22,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/6/20,44,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/7/20,89,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/8/20,105,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/9/20,142,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/10/20,173,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/11/20,216,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/12/20,325,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/13/20,421,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/14/20,613,2,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/15/20,729,3,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/16/20,950,7,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/17/20,1374,12,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
-United states,New York State,3/18/20,2480,22,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,"King County, Washington",3/1/20,14,6,https://www.kingcounty.gov/
+United States,"King County, Washington",3/2/20,21,8,https://www.kingcounty.gov/
+United States,"King County, Washington",3/3/20,31,9,https://www.kingcounty.gov/
+United States,"King County, Washington",3/4/20,51,10,https://www.kingcounty.gov/
+United States,"King County, Washington",3/5/20,58,11,https://www.kingcounty.gov/
+United States,"King County, Washington",3/6/20,71,15,https://www.kingcounty.gov/
+United States,"King County, Washington",3/7/20,83,17,https://www.kingcounty.gov/
+United States,"King County, Washington",3/8/20,116,20,https://www.kingcounty.gov/
+United States,"King County, Washington",3/9/20,190,22,https://www.kingcounty.gov/
+United States,"King County, Washington",3/10/20,234,26,https://www.kingcounty.gov/
+United States,"King County, Washington",3/11/20,270,27,https://www.kingcounty.gov/
+United States,"King County, Washington",3/12/20,328,32,https://www.kingcounty.gov/
+United States,"King County, Washington",3/13/20,388,35,https://www.kingcounty.gov/
+United States,"King County, Washington",3/14/20,420,37,https://www.kingcounty.gov/
+United States,"King County, Washington",3/15/20,488,43,https://www.kingcounty.gov/
+United States,"King County, Washington",3/16/20,518,46,https://www.kingcounty.gov/
+United States,"King County, Washington",3/17/20,562,56,https://www.kingcounty.gov/
+United States,California,3/4/20,43,0,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/5/20,53,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/6/20,69,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/7/20,88,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/8/20,114,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/9/20,133,1,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/10/20,157,2,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/11/20,177,3,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/12/20,198,4,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/13/20,247,5,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/14/20,335,6,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/15/20,392,6,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/16/20,472,11,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,California,3/17/20,598,13,https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Immunization/ncov2019.aspx
+United States,New York State,3/1/20,1,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/2/20,1,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/3/20,2,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/4/20,11,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/5/20,22,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/6/20,44,0,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/7/20,89,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/8/20,105,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/9/20,142,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/10/20,173,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/11/20,216,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/12/20,325,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/13/20,421,1,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/14/20,613,2,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/15/20,729,3,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/16/20,950,7,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/17/20,1374,12,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)
+United States,New York State,3/18/20,2480,22,https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_New_York_(state)

@@ -15,24 +15,30 @@ class SimulationDataTable extends React.Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Index</th>
-                            <th>Date</th>
-                            <td>New Confirmed Cases</td>
-                            <td>New Confirmed Deaths</td>
+                            <th rowSpan="2">Index</th>
+                            <th rowSpan="2">Date</th>
+                            <th colSpan="2" style={{backgroundColor: "lightGrey", textAlign: "center"}}>Confirmed</th>
+                            <th colSpan="7" style={{backgroundColor: "darkGrey", textAlign: "center"}}>Simulated</th>
+                            
+                        </tr>    
+                        <tr>
+                            <th>Cases</th>
+                            <th>Deaths</th>
                             <th>Susceptible</th>
                             <th>Exposed</th>
                             <th>Infected</th>
                             <th>Infectious</th>
                             <th>Recovered</th>
                             <th>Dead</th>
-                        </tr>    
+                            <th>Total Infected</th>
+                        </tr>
                         </thead>
                         <tbody>
                             { modelData.map(row => <tr key={row.index}>
                                             <td>{row.index}</td>
                                             <td width="100px">{row.date.toISOString().split('T')[0]}</td>
-                                            <td>{row.confirmedCasesInc}</td>
-                                            <td>{row.confirmedDeathsInc}</td>
+                                            <td>{row.confirmedCases}</td>
+                                            <td>{row.confirmedDeaths}</td>
 
                                             <td>{Math.round(row.susceptible)}</td>
 
@@ -45,6 +51,8 @@ class SimulationDataTable extends React.Component {
                                             <td>{Math.round(row.recovered)}</td>
 
                                             <td>{Math.round(row.dead)}</td>
+                                            <td>{Math.round(row.totalInfected)}</td>
+                                            <td></td>
                                         </tr>)
                             }    
                         </tbody>

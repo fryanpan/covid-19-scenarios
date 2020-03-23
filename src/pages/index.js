@@ -4,26 +4,22 @@ import MyInfo from "../components/myInfo"
 import MyFuture from "../components/myFuture"
 import SimulationDataTable from "../components/simDataTable"
 import Model from "../utils/model"
+import MyCommunity from "../components/myCommunity"
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      modelInputs: new Model.ModelInputs(),
-      modelData: []
-    }
-
-    this.handleModelInputChange = this.handleModelInputChange.bind(this);
-
     this.historicalData = this.props.data;
+    this.state = this.getNewModelState(new Model.ModelInputs());
+    this.handleModelInputChange = this.handleModelInputChange.bind(this);
   }
 
-  handleModelInputChange(newModelInputs) {
+  getNewModelState(newModelInputs) {
     const lookupCountry = newModelInputs.country;
     const lookupState = newModelInputs.state;
     const locationData = this.historicalData.allLocationsCsv.nodes.find(x => {
-      return x.country === lookupCountry && x.state === 'All';
+      return x.country === lookupCountry && x.state === lookupState;
     })    
     locationData.population = parseFloat(locationData.population);
 
@@ -46,12 +42,17 @@ class IndexPage extends React.Component {
 
     const diseaseModelData = new Model.BasicDiseaseModel(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
 
+    console.log("Setting disease model data", diseaseModelData);
+    return {
+      modelInputs: newModelInputs,
+      modelData: diseaseModelData
+    }
+  }
+
+  handleModelInputChange(newModelInputs) {
+    const newState = this.getNewModelState(newModelInputs);
     this.setState(prevState => {
-      const newState = Object.assign(prevState, {
-        modelInputs: newModelInputs,
-        modelData: diseaseModelData
-      });
-      return newState;
+      return newState
     });
   }
 
@@ -70,7 +71,8 @@ class IndexPage extends React.Component {
 
       <MyInfo modelInputs={this.state.modelInputs} countries={this.distinctCountries} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
-      <MyFuture models={this.state.modelData}></MyFuture>
+      <MyFuture modelData={this.state.modelData}></MyFuture>
+      <MyCommunity modelData={this.state.modelData}></MyCommunity>
       
       <SimulationDataTable modelData={this.state.modelData}></SimulationDataTable>
 

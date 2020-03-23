@@ -102,12 +102,10 @@ const ASSUMPTIONS = {
     var curDate = incDate(sourceData[0].date, -rowsBefore);
     var simIndex = 0;
 
-    console.log("setupData");
     for(let i = 0; i < rowsBefore; ++i) {
       result.push(createEntry(simIndex++, curDate, 0, 0, susceptible));
       curDate = incDate(curDate, 1);
     }
-    console.log(result.length);
 
     for(let j = 0; j < sourceData.length; ++j) {
       // Convert cumulative confirmed cases and death counts to deltas
@@ -117,14 +115,11 @@ const ASSUMPTIONS = {
       result.push(createEntry(simIndex++, curDate, confirmedCasesAdded, confirmedDeathsAdded, susceptible));
       curDate = incDate(curDate, 1);
     }
-    console.log(result.length, rowsAfter);
-    
 
     for(let k = 0; k < rowsAfter; ++k) {
       result.push(createEntry(simIndex++, curDate, 0, 0, susceptible));
       curDate = incDate(curDate, 1);
     }
-    console.log(result.length);
     
     return result;
   }
@@ -148,7 +143,6 @@ const ASSUMPTIONS = {
       })
     }
     if(end == undefined) end = data.length - 1;
-    console.log(data.length, start, end);
     return data.slice(start, end + 1);
   }
 
@@ -165,6 +159,9 @@ const ASSUMPTIONS = {
       date: date,
       confirmedCasesInc: confirmedCasesAdded || 0,
       confirmedDeathsInc: confirmedDeathsAdded || 0,
+      confirmedCases: 0,
+      confirmedDeaths: 0,
+      totalInfected: 0, // everyone who's been exposed
       population: susceptible
     };
 
@@ -225,9 +222,6 @@ const ASSUMPTIONS = {
         }
       }
 
-      console.log("After generating deaths");
-      console.log(data);
-
       // Now run the simulation.  At time step i, we've propagated the effects of all transitions from time steps 0 to i-1
       // Now generate any new transitions and propagate transitions at time i to future times
       for(let j = 0; j < data.length - BUFFER_LENGTH; ++j) {
@@ -257,6 +251,16 @@ const ASSUMPTIONS = {
           }
         });
 
+        // update running confirmedDeaths and confirmedCases cumulative counts
+        if(j > 0) {
+          if(j < bufferedDataLength) {
+            data[j].confirmedDeaths = data[j-1].confirmedDeaths + data[j].confirmedDeathsInc;
+            data[j].confirmedCases = data[j-1].confirmedCases + data[j].confirmedCasesInc;
+          }
+          data[j].totalInfected = data[j-1].totalInfected + data[j-1].infectedInc;
+
+        }
+
         // Handle propagation from all currently infectious folks 
         if(j >= startSimulatingExposureIndex) {
           const reproductionRate = beforeThreshold ? rBefore : rAfter;
@@ -269,12 +273,7 @@ const ASSUMPTIONS = {
           }
         }
         
-      }
-      
-      //   data[i].totalUninfected = population - data[i].totalCases;
-      //   data[i].testDetectionRate = data[i].confirmedCases / data[i].totalCases;
-      //   data[i].activeRatio = data[i].activeCases / population * 1000000;
-      // }
+      }      
       return trimData(data, BUFFER_LENGTH);
   }
     

@@ -54,6 +54,8 @@ class MyInfo extends React.Component {
 
         if(name === "isSocialDistancing") {
             modelInputs[name] = value === "true";
+        } else if (name === "hammerDate") {
+            modelInputs[name] = new Date(value);
         } else {
             modelInputs[name] = value;
         }

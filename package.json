@@ -21,6 +21,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "recharts": "^1.8.5",
     "typography": "^0.16.19",
     "typography-theme-twin-peaks": "^0.16.19",
     "typography-theme-wikipedia": "^0.16.19"

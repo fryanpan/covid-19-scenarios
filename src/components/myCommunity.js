@@ -8,13 +8,7 @@ import moment from 'moment';
   
 
 class MyCommunity extends React.Component {    
-    formatDateAxis(tickItem) {
-        console.log(tickItem);
-        return moment(tickItem).toString("YYYY-MM-DD");
-    }
-
     render() {        
-        console.log("Rendering charts", this.props.modelData);
         return <div>
             <h1>
                 How might COVID-19 spread in my community?
@@ -29,8 +23,8 @@ class MyCommunity extends React.Component {
                     top: 10, right: 30, left: 0, bottom: 0,
                 }}
             >
-                <XAxis dataKey="date" tickFormatter={this.formatDateAxis}/>
-                <YAxis />
+                <XAxis dataKey="date"/>
+                <YAxis width={100}/>
                 <Tooltip />
                 <Legend />
                 <Area type="monotone" dataKey="recovered"  fill="#8884d8" />
@@ -50,8 +44,8 @@ class MyCommunity extends React.Component {
                 barCategoryGap={1}
                 barGap={0}
             >
-                <XAxis dataKey="date" tickFormatter={this.formatDateAxis}/>
-                <YAxis />
+                <XAxis dataKey="date"/>
+                <YAxis width={100} />
                 <Tooltip />
                 <Legend />
                 <Bar type="monotone" dataKey="confirmedDeaths" stackId="a" fill="#82ca9d" />

@@ -23,8 +23,7 @@ class IndexPage extends React.Component {
     })    
     locationData.population = parseFloat(locationData.population);
 
-    console.log("Location data", locationData);
-    const rBefore = parseFloat(locationData.rInitial || 2);
+    const rBefore = parseFloat(locationData.rInitial || 2.5);
     const cfrBefore = parseFloat(locationData.cfrInitial || 0.0014);
     const rAfter = 0.4;
     const cfrAfter = 0.0014;
@@ -42,7 +41,6 @@ class IndexPage extends React.Component {
 
     const diseaseModelData = new Model.BasicDiseaseModel(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
 
-    console.log("Setting disease model data", diseaseModelData);
     return {
       modelInputs: newModelInputs,
       modelData: diseaseModelData
@@ -69,7 +67,7 @@ class IndexPage extends React.Component {
         This site It is first and foremost about you, your friends and family, and where you live.
       </p> */}
 
-      <MyInfo modelInputs={this.state.modelInputs} countries={this.distinctCountries} onModelInputChange={this.handleModelInputChange}>
+      <MyInfo modelInputs={this.state.modelInputs} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
       <MyFuture modelData={this.state.modelData}></MyFuture>
       <MyCommunity modelData={this.state.modelData}></MyCommunity>

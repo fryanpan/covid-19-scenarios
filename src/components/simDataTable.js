@@ -36,7 +36,7 @@ class SimulationDataTable extends React.Component {
                         <tbody>
                             { modelData.map(row => <tr key={row.index}>
                                             <td>{row.index}</td>
-                                            <td width="100px">{row.date.toISOString().split('T')[0]}</td>
+                                            <td width="100px">{row.date}</td>
                                             <td>{row.confirmedCases}</td>
                                             <td>{row.confirmedDeaths}</td>
 

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 class ModelInputs {
     constructor() {
         this.age = 45;
@@ -146,6 +148,24 @@ const ASSUMPTIONS = {
     return data.slice(start, end + 1);
   }
 
+  /**
+   * Round all total values for each simulation state.
+   * This ideally should be done only for display purposes, but for now, it's more convenient to do it here. 
+   * 
+   * @param {Object[]} data Data array to round 
+   */
+  function formatForDisplay(data) {
+    SIMULATION_STATES.forEach(state => {
+      for(let i = 0; i < data.length; ++i) {
+        data[i][state] = Math.round(data[i][state]);
+      }
+    });
+
+    for(let i = 0; i < data.length; ++i) {
+      data[i].date = moment(data[i].date).format("YYYY-MM-DD");
+    }
+  }
+
   
   function incDate(date, incDays) {
     var result = new Date(date);
@@ -201,6 +221,7 @@ const ASSUMPTIONS = {
    *
    */
   function BasicDiseaseModel(inputData, population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate) {   
+      const startTime = +new Date();
       // Setup simulation data
 
       const originalDataLength = inputData.length;
@@ -208,7 +229,7 @@ const ASSUMPTIONS = {
       const startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
 
       var data = setupData(inputData, BUFFER_LENGTH, ASSUMPTIONS.maxDaysToSimulate + BUFFER_LENGTH, population);
-      console.log("Initial data", data, " with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
+      console.log("Basic Disease Model with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
 
       // Calculate new exposures based on deaths
       for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
@@ -274,7 +295,12 @@ const ASSUMPTIONS = {
         }
         
       }      
-      return trimData(data, BUFFER_LENGTH);
+
+      formatForDisplay(data);
+      const result = trimData(data, BUFFER_LENGTH);
+      const elapsed = +new Date() - startTime;
+      console.log("Ran model in ", elapsed, "ms");
+      return result;
   }
     
 

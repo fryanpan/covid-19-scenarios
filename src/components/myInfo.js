@@ -1,5 +1,6 @@
 import { StaticQuery, graphql} from "gatsby"
 import React from "react"
+import moment from "moment"
 
 class MyInfo extends React.Component {
     /**
@@ -14,16 +15,18 @@ class MyInfo extends React.Component {
         this.distinctCountries = props.distinctCountries;
         this.locations = props.locations;
 
-        this.state = {
-            availableLocations: this.getAvailableLocations()
-        };
+        this.state = this.getUpdatedState(true);
     }
 
     lookupStates(country) {
         return this.locations.filter(x => x.country === country);
     }
 
-    getAvailableLocations() {
+    /**
+     * 
+     * @param {Boolean} changedLocation Whether the location changed 
+     */
+    getUpdatedState(changedLocation) {
         const modelInputs = this.props.modelInputs;
         console.log("UPdating available locations", modelInputs);
         // update states value
@@ -37,8 +40,20 @@ class MyInfo extends React.Component {
                 modelInputs.state = "All";
             }
         }
-        console.log("Choosing state", modelInputs.state);
-        return availableLocations;
+
+        // update social distancing information, if location changed
+        if(changedLocation) {
+            const chosenLocation = availableLocations.find(x => x.country === modelInputs.country && x.state === modelInputs.state);
+            console.log("Changing to hammer date for location", chosenLocation.country, chosenLocation.state, chosenLocation.hammerDate);
+            if(chosenLocation.hammerDate) {
+                modelInputs.hammerDate = moment(chosenLocation.hammerDate).toDate();
+            }
+        }
+
+        return {
+            availableLocations: availableLocations,
+            modelInputs: modelInputs
+        }
     }
 
     handleChange(e) {
@@ -60,37 +75,36 @@ class MyInfo extends React.Component {
             modelInputs[name] = value;
         }
 
-        const newLocations = this.getAvailableLocations();
-        this.setState({
-            availableLocations: newLocations
+        const newState = this.getUpdatedState(changedLocation);
+        this.setState(prevState => {
+            return newState;
         });
-        
-        const currentLocation = newLocations.find(x => x.country === modelInputs.country && x.state === modelInputs.state);
 
-        // update social distancing information, if location changed
-        if(changedLocation) {
-            modelInputs.hammerDate = currentLocation.hammerDate || modelInputs.hammerDate;
-        }
-
-        console.log("New modelInputs", modelInputs);
-
-        handleModelInputChange(modelInputs);
+        handleModelInputChange(newState.modelInputs);
     }
 
     render() {
-        const modelInputs = this.props.modelInputs;
+        const modelInputs = this.state.modelInputs;
         const country = modelInputs.country;
         const state = modelInputs.state;
         const age = modelInputs.age;
         const isSocialDistancing = modelInputs.isSocialDistancing;
         const hammerDate = modelInputs.hammerDate;
         const handleChange = this.handleChange.bind(this);
+        console.log(hammerDate);
         
         return <div>
             <h1>
                 About me 
             </h1>
             <form>
+                <p>
+                I am <input type="text"
+                        style={{width: "1.5rem"}} 
+                        name="age"
+                        value={age} 
+                        onChange={handleChange}></input> years old
+                </p>
                 <p>
                 I live in <select name="country" value={country} onChange={handleChange}>
                         <option value="" key="__blank"></option>
@@ -99,10 +113,12 @@ class MyInfo extends React.Component {
                                 <option value={x} key={x}>{x}</option>
                             )
                         }
-                    </select> 
+                    </select>
+                </p>
                 { this.state.availableLocations.length > 1 && 
-                    <span>
-                        (state or province 
+                    <p>
+                    I want to see information about this state or province: 
+
                             <select name="state" value={state} onChange={handleChange}>
                                 {
                                     this.state.availableLocations.map(x => 
@@ -110,39 +126,31 @@ class MyInfo extends React.Component {
                                     )
                                 }
                             </select>
-                        )
-                    </span>
-                }
-
-                and I am <input type="text"
-                        style={{width: "1.5rem"}} 
-                        name="age"
-                        value={age} 
-                        onChange={handleChange}></input> years old
-                </p>
+                    </p>
+                }                
 
                 <p>
-                    My city is <select name="isSocialDistancing"
+                    We have <select name="isSocialDistancing"
                                 value={isSocialDistancing ? "true" : "false"}
                                 onChange={handleChange}>
-                                    <option value="true">social distancing</option>
-                                    <option value="false">not social distancing</option>
-                            </select>&nbsp;
+                                    <option value="true">started</option>
+                                    <option value="false">not started</option>
+                            </select> social distancing&nbsp;
                     {isSocialDistancing &&
                         <span> 
-                            and this started on <input style={{width: "7rem"}} type="date" name="hammerDate"
+                            since <input style={{width: "7rem"}} type="date" name="hammerDate"
                                                     value={hammerDate.toISOString().split('T')[0]}
                                                     onChange={handleChange}></input>
                         </span>
-                    }<br/>
+                    }&nbsp;&nbsp;
                     {isSocialDistancing &&
                         <span>
-                            This means that most of us are trying to minimize contact with other people (for example by staying home except for essential trips).
+                            This means that most of us are trying to minimize contact with people we do not live with.
                         </span>
                     }          
                     {!isSocialDistancing && 
                         <span>
-                            This means that most of us are not trying to minimize contact. 
+                            This means that most of us are regularly around people we do not live with.
                         </span>
                     }
                 </p>
@@ -163,6 +171,7 @@ export default props => (
                 nodes {
                     country
                     state
+                    hammerDate
                 }
             }
         }`}

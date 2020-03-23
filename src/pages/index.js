@@ -9,52 +9,24 @@ import MyCommunity from "../components/myCommunity"
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-
-    this.historicalData = this.props.data;
-    this.state = this.getNewModelState(new Model.ModelInputs());
+    this.state = {
+      modelManager: new Model.ModelManager(this.props.data)
+    }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
   }
 
-  getNewModelState(newModelInputs) {
-    const lookupCountry = newModelInputs.country;
-    const lookupState = newModelInputs.state;
-    const locationData = this.historicalData.allLocationsCsv.nodes.find(x => {
-      return x.country === lookupCountry && x.state === lookupState;
-    })    
-    locationData.population = parseFloat(locationData.population);
-
-    const rBefore = parseFloat(locationData.rInitial || 2.5);
-    const cfrBefore = parseFloat(locationData.cfrInitial || 0.0014);
-    const rAfter = 0.4;
-    const cfrAfter = 0.0014;
-    const thresholdDate = newModelInputs.hammerDate;
-
-    const dailyData = this.historicalData.allDailyDataCsv.nodes.filter(x => {
-      return x.country === lookupCountry && x.state === lookupState;
-    }).map(x => {
-      return {
-        date: new Date(x.date),
-        confirmedCases: parseFloat(x.confirmedCases),
-        confirmedDeaths: parseFloat(x.confirmedDeaths)
-      }
-    });
-
-    const diseaseModelData = new Model.BasicDiseaseModel(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
-
-    return {
-      modelInputs: newModelInputs,
-      modelData: diseaseModelData
-    }
-  }
-
   handleModelInputChange(newModelInputs) {
-    const newState = this.getNewModelState(newModelInputs);
+    this.state.modelManager.updateModelInputs(newModelInputs);
+
     this.setState(prevState => {
-      return newState
+      return {
+        modelManager: this.state.modelManager
+      }
     });
   }
 
   render() {
+    const modelData = this.state.modelManager.diseaseModel.getDisplayData();
     return <Layout>
       {/* <p>
       Hope you are staying safe.  You've likely already seen many news reports and charts about the 
@@ -67,44 +39,45 @@ class IndexPage extends React.Component {
         This site It is first and foremost about you, your friends and family, and where you live.
       </p> */}
 
-      <MyInfo modelInputs={this.state.modelInputs} onModelInputChange={this.handleModelInputChange}>
+      <MyInfo modelInputs={this.state.modelManager.modelInputs} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
-      <MyFuture modelData={this.state.modelData}></MyFuture>
-      <MyCommunity modelData={this.state.modelData}></MyCommunity>
+      <MyFuture modelData={modelData}></MyFuture>
+      <MyCommunity modelData={modelData}></MyCommunity>
       
-      <SimulationDataTable modelData={this.state.modelData}></SimulationDataTable>
+      <SimulationDataTable modelData={modelData}></SimulationDataTable>
 
     </Layout>
   }
 }
 
+/** Data used by the model manager @see model.js for ModelManager class */
 export const query = graphql`
-  query {
-    allLocationsCsv {
-      nodes {
-        country
-        state
-        population
-        rInitial
-        cfrInitial
-        hammerDate
-        rHammer
-        cfrHammer
-        danceDate
-        rDance
-        cfrDance        
-      }
-    }
-    allDailyDataCsv {
-      nodes {
-        country
-        state
-        date
-        confirmedCases
-        confirmedDeaths
-      }
-    }
-  }
+ query {
+   allLocationsCsv {
+     nodes {
+       country
+       state
+       population
+       rInitial
+       cfrInitial
+       hammerDate
+       rHammer
+       cfrHammer
+       danceDate
+       rDance
+       cfrDance        
+     }
+   }
+   allDailyDataCsv {
+     nodes {
+       country
+       state
+       date
+       confirmedCases
+       confirmedDeaths
+     }
+   }
+ }
 `
 
 export default IndexPage

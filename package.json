@@ -27,7 +27,8 @@
     "typography": "^0.16.19",
     "typography-theme-bootstrap": "^0.16.19",
     "typography-theme-twin-peaks": "^0.16.19",
-    "typography-theme-wikipedia": "^0.16.19"
+    "typography-theme-wikipedia": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

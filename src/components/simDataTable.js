@@ -51,7 +51,7 @@ class SimulationDataTable extends React.Component {
                             <th rowSpan="2">Index</th>
                             <th rowSpan="2">Date</th>
                             <th colSpan="2" style={{backgroundColor: "lightGrey", textAlign: "center"}}>Confirmed</th>
-                            <th colSpan="8" style={{backgroundColor: "darkGrey", textAlign: "center"}}>Simulated</th>
+                            <th colSpan="9" style={{backgroundColor: "darkGrey", textAlign: "center"}}>Simulated</th>
                             
                         </tr>    
                         <tr>
@@ -65,6 +65,7 @@ class SimulationDataTable extends React.Component {
                             <th>Dead</th>
                             <th>Total Exposed</th>
                             <th>Total Infected</th>
+                            <th>Testing %</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -87,6 +88,7 @@ class SimulationDataTable extends React.Component {
                                             <td>{Math.round(row.dead)}</td>
                                             <td>{Math.round(row.totalExposed)}</td>
                                             <td>{Math.round(row.totalInfected)}</td>
+                                            <td>{Math.round(row.testingRatio)}</td>
                                             <td></td>
                                         </tr>)
                             }    

@@ -127,12 +127,12 @@ const ASSUMPTIONS = {
         start = i;
       }
 
-    //   // find the last row with a change > 1
-    //   SIMULATION_STATES.forEach(state => {
-    //     if(row[state + "Inc"] > 1 || row[state + "Dec"] > 1) {
-    //       end = i;
-    //     }
-    //   })
+      // find the last row with a change > 1
+      SIMULATION_STATES.forEach(state => {
+        if(row[state + "Inc"] > 1 || row[state + "Dec"] > 1) {
+          end = i;
+        }
+      })
     }
     if(end == undefined) end = data.length - bufferAfter - 1;
     return data.slice(start, end + 1);
@@ -340,7 +340,7 @@ const ASSUMPTIONS = {
         for(let i = 0; i < data.length; ++i) {
             var newRow = {...data[i]};
             newRow.date = moment(data[i].date).format("YYYY-MM-DD");
-            newRow.testingRatio = data[i].totalInfected / data[i].confirmedCases;
+            newRow.testingRatio = data[i].totalInfected > 0 ? data[i].confirmedCases / data[i].totalInfected : 0;
             result.push(newRow);
         }
 

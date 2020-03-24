@@ -59,6 +59,22 @@ class MyCommunity extends React.Component {
             <h2>When might social distancing end?</h2>
 
             <h2>How well are we testing?</h2>
+            <AreaChart
+                width={960}
+                height={300}
+                data={scenarios.current.dailyData.slice(0, scenarios.current.summary.currentDayIndex)}
+                margin={{
+                    top: 10, right: 30, left: 0, bottom: 0,
+                }}
+                // barCategoryGap={1}
+                // barGap={0}
+            >
+                <XAxis dataKey="date"/>
+                <YAxis width={100} />
+                <Tooltip />
+                <Legend />
+                <Area type="monotone" dataKey="testingRatio" fill="#8884d8" />
+            </AreaChart>
             <h3>Comparison with other countries</h3>
         </div>
     }

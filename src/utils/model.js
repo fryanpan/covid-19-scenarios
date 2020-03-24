@@ -62,6 +62,11 @@ class ModelManager {
       }
     });
 
+    if(dailyData.length == 0) {
+      alert("Unable to find data for country ", lookupCountry, " and state/province ", lookupState);
+      return [];
+    }
+
     this.scenarios.current = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
 
     this.scenarios.strongDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, thresholdDate);

@@ -63,9 +63,66 @@ const STATE_FIX_MAP = {
     }
 }
 
+function groupRowsByCountryAndState(rows) {
+    return lodash(rows).groupBy(x => {
+        return x.country + '::' + x.state + '::' + x.date;
+    })
+    .map(entries => {
+        var initial = {
+            date: entries[0].date,
+            country: entries[0].country,
+            state: entries[0].state,
+            confirmedCases: 0,
+            confirmedDeaths: 0,
+            confirmedRecoveries: 0
+        }
+
+        var result = entries.reduce((prev, cur) => {
+            prev.confirmedCases += parseInt(cur.confirmedCases);
+            prev.confirmedDeaths += parseInt(cur.confirmedDeaths);
+            prev.confirmedRecoveries += parseInt(cur.confirmedRecoveries);
+            return prev;
+        }, initial)
+        return result;
+    }).value();
+}
+
+function addCountrySums(rows) {
+    process.stderr.write("addCountrySums\n");
+    // Identify countries that are missing totals on particular days
+    var hasTotal = {};
+    var addedTotal = {};
+    rows.forEach(row => {
+        if(row.state == 'All') {
+            const key = row.country + "::" + row.date;
+            hasTotal[key] = true;
+        }
+    });
+
+    // Add to total for any days that are missing
+    var extraRows = [];
+    rows.forEach(row => {
+        const key = row.country + "::" + row.date;
+
+        if(!hasTotal[key]) {
+            var newRow = lodash.clone(row);
+            newRow.state = 'All';
+            extraRows.push(newRow)
+
+            if(!addedTotal[key]) {
+                process.stderr.write("Adding total for country " + newRow.country + '\n');
+                addedTotal[key] = true;
+            }
+        }
+    });
+    rows = rows.concat(extraRows);
+    return groupRowsByCountryAndState(rows);
+}
+
 async function downloadFiles() {
     var now = new Date();
     var rows = [];
+    var i = 0; 
 
     for(let curDate = moment(START_DATE); curDate.isSameOrBefore(now); curDate = curDate.add(1, 'day')) {
         const fileName =  curDate.format("MM-DD-YYYY") + ".csv";
@@ -120,31 +177,12 @@ async function downloadFiles() {
                 }
             });
         } catch (e) {
-            process.stderr.write("On date", curDate, " error", e.message + '\n');
+            process.stderr.write("On date" + dateString + e);
         }
     }
     // Group together fixed rows
-    rows = lodash(rows).groupBy(x => {
-            return x.country + '::' + x.state + '::' + x.date;
-        })
-        .map(entries => {
-            var initial = {
-                date: entries[0].date,
-                country: entries[0].country,
-                state: entries[0].state,
-                confirmedCases: 0,
-                confirmedDeaths: 0,
-                confirmedRecoveries: 0
-            }
-
-            var result = entries.reduce((prev, cur) => {
-                prev.confirmedCases += parseInt(cur.confirmedCases);
-                prev.confirmedDeaths += parseInt(cur.confirmedDeaths);
-                prev.confirmedRecoveries += parseInt(cur.confirmedRecoveries);
-                return prev;
-            }, initial)
-            return result;
-        }).value();
+    rows = groupRowsByCountryAndState(rows)
+    rows = addCountrySums(rows)
 
     return rows.sort((x, y) => {
         const countryCmp = x.country.localeCompare(y.country);

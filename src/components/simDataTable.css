@@ -1,11 +1,25 @@
+
+table {
+    line-height: 1rem;
+}
+
 td, th {
     padding: 0rem 1rem;
+}
+
+table.simdata { 
+    font-size: 0.6rem;
+    table-layout: fixed;
+    width: 1300px;
+}
+
+table.inputdata {
+    font-size: 0.8rem;
+    width: 400px;
+}
+
+table.simdata td, 
+table.simdata th {
     text-align: right;
 }
 
-table { 
-    font-size: 0.6rem;
-    table-layout: fixed;
-    width: 1200px;
-    line-height: 1rem;
-}

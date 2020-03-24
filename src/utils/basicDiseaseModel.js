@@ -127,14 +127,14 @@ const ASSUMPTIONS = {
         start = i;
       }
 
-      // find the last row with a change > 1
-      SIMULATION_STATES.forEach(state => {
-        if(row[state + "Inc"] > 1 || row[state + "Dec"] > 1) {
-          end = i;
-        }
-      })
+    //   // find the last row with a change > 1
+    //   SIMULATION_STATES.forEach(state => {
+    //     if(row[state + "Inc"] > 1 || row[state + "Dec"] > 1) {
+    //       end = i;
+    //     }
+    //   })
     }
-    if(end == undefined) end = data.length - 1;
+    if(end == undefined) end = data.length - bufferAfter - 1;
     return data.slice(start, end + 1);
   }
 
@@ -150,11 +150,16 @@ const ASSUMPTIONS = {
     constructor(index, date, confirmedCasesAdded, confirmedDeathsAdded, initialSusceptible) {
         this.index = index;
         this.date = date;
+
         this.confirmedCasesInc = confirmedCasesAdded || 0;
-        this. confirmedDeathsInc = confirmedDeathsAdded || 0;
-        this. confirmedCases = 0;
+        this.confirmedDeathsInc = confirmedDeathsAdded || 0;
+
+        this.confirmedCases = 0;
         this.confirmedDeaths = 0;
-        this. totalInfected = 0; // everyone who's been exposed
+
+        this.totalInfected = 0; // everyone who's been exposed
+        this.totalExposed = 0;
+
         this.population = initialSusceptible; 
     
         SIMULATION_STATES.forEach(state => {
@@ -268,22 +273,25 @@ const ASSUMPTIONS = {
         // update running confirmedDeaths and confirmedCases cumulative counts
         if(j > 0) {
             if(j < bufferedDataLength) {
-            data[j].confirmedDeaths = data[j-1].confirmedDeaths + data[j].confirmedDeathsInc;
-            data[j].confirmedCases = data[j-1].confirmedCases + data[j].confirmedCasesInc;
+                data[j].confirmedDeaths = data[j-1].confirmedDeaths + data[j].confirmedDeathsInc;
+                data[j].confirmedCases = data[j-1].confirmedCases + data[j].confirmedCasesInc;
             }
-            data[j].totalInfected = data[j-1].totalInfected + data[j-1].infectedInc;
 
+            data[j].totalInfected = data[j-1].totalInfected + data[j-1].infectedInc;
+            data[j].totalExposed = data[j-1].totalExposed + data[j-1].exposedInc;
         }
 
         // Handle propagation from all currently infectious folks 
         if(j >= startSimulatingExposureIndex) {
             const reproductionRate = beforeThreshold ? rBefore : rAfter;
-            const scaledReproductionRate = reproductionRate / ASSUMPTIONS.meanInfectiousPeriod
+            const effectiveReproductionRate = reproductionRate * data[j].susceptible / population;
+            const scaledReproductionRate = effectiveReproductionRate / ASSUMPTIONS.meanInfectiousPeriod;
+
             const exposed = data[j].infectious * scaledReproductionRate;
 
             if(data[j+1].exposedInc < exposed) {
-            data[j+1].exposedInc = exposed;
-            data[j+1].susceptibleDec = exposed;
+                data[j+1].exposedInc = exposed;
+                data[j+1].susceptibleDec = exposed;
             }
         }
       }
@@ -294,18 +302,46 @@ const ASSUMPTIONS = {
       return this.resultData;
     }
 
+    getSummaryStats() {
+        const thresholdDate = this.thresholdDate
+        const currentDayIndex = this.resultData.findIndex(x => {
+            return moment(x.date).isSame(thresholdDate, 'day');
+        })
+
+        const lastData = this.resultData[this.resultData.length - 1];
+        const currentDayData = this.resultData[currentDayIndex];
+
+        return {
+            currentDayIndex: currentDayIndex,
+
+            currentTotalInfected: currentDayData.totalInfected,
+            currentTotalExposed: currentDayData.totalExposed,
+            currentTotalRecovered: currentDayData.recovered,
+            currentTotalDead: currentDayData.dead,
+
+            totalInfected: lastData.totalInfected,
+            totalExposed: lastData.totalExposed,
+            totalRecovered: lastData.totalRecovered,
+            totalDead: lastData.totalDead,
+        }
+    }
+
     /**
+     * Prepare data and summaries for display
+     * @TODO move this somewhere else where it belongs more
+     * 
      * Round all total values for each simulation state.
      * This ideally should be done only for display purposes, but for now, it's more convenient to do it here. 
      */      
     getDisplayData() {
-        var result = [];
         const data = this.resultData;
+        var result = [];
 
         for(let i = 0; i < data.length; ++i) {
-            result.push({
-                date: moment(data[i].date).format("YYYY-MM-DD")
-            });
+            var newRow = {...data[i]};
+            newRow.date = moment(data[i].date).format("YYYY-MM-DD");
+            newRow.testingRatio = data[i].totalInfected / data[i].confirmedCases;
+            result.push(newRow);
         }
 
         SIMULATION_STATES.forEach(state => {
@@ -314,6 +350,17 @@ const ASSUMPTIONS = {
             }
         });
 
-        return result;
+        return {
+            scenario: {
+                population: this.population,
+                rBefore: this.rBefore,
+                cfrBefore: this.cfrBefore,
+                rAfter: this.rAfter,
+                cfrAfter: this.cfrAfter,
+                thresholdDate: moment(this.thresholdDate).format("YYYY-MM-DD")
+            },
+            summary: this.getSummaryStats(),
+            dailyData: result
+        }
     }
   }    

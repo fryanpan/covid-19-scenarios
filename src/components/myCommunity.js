@@ -2,13 +2,15 @@ import React from "react"
 
 import {
     AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  } from 'recharts';
+} from 'recharts';
 
 import moment from 'moment';
   
 
 class MyCommunity extends React.Component {    
     render() {        
+        const scenarios = this.props.modelData;
+
         return <div>
             <h1>
                 How might COVID-19 spread in my community?
@@ -18,7 +20,7 @@ class MyCommunity extends React.Component {
             <AreaChart
                 width={960}
                 height={300}
-                data={this.props.modelData}
+                data={scenarios.current.dailyData}
                 margin={{
                     top: 10, right: 30, left: 0, bottom: 0,
                 }}
@@ -34,23 +36,30 @@ class MyCommunity extends React.Component {
             </AreaChart>
 
             <h2>How many people might die?</h2>
-            <BarChart
+            <AreaChart
                 width={960}
                 height={300}
-                data={this.props.modelData}
+                data={scenarios.current.dailyData}
                 margin={{
                     top: 10, right: 30, left: 0, bottom: 0,
                 }}
-                barCategoryGap={1}
-                barGap={0}
+                // barCategoryGap={1}
+                // barGap={0}
             >
                 <XAxis dataKey="date"/>
                 <YAxis width={100} />
                 <Tooltip />
                 <Legend />
-                <Bar type="monotone" dataKey="confirmedDeaths" stackId="a" fill="#82ca9d" />
-                <Bar type="monotone" dataKey="dead" stackId="b" fill="#8884d8" />
-            </BarChart>
+                <Area type="monotone" dataKey="dead" fill="#8884d8" />
+                <Area type="monotone" dataKey="confirmedDeaths" fill="#82ca9d" />
+            </AreaChart>
+
+            <h2>How can I tell if social distancing is working?</h2>
+
+            <h2>When might social distancing end?</h2>
+
+            <h2>How well are we testing?</h2>
+            <h3>Comparison with other countries</h3>
         </div>
     }
 

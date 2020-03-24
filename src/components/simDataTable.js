@@ -8,17 +8,50 @@ import "./simDataTable.css"
 
 class SimulationDataTable extends React.Component {
     render() {
-        const modelData = this.props.modelData;
+        const modelData = this.props.modelData.current;
+        const dailyData = modelData.dailyData;
+        const scenario = modelData.scenario;
 
         return <>
                 <h1> Simulation Data </h1>
-                <table>
+                <h2> Simulation Inputs </h2>
+                <table className="inputdata">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Population</td><td>{scenario.population}</td>
+                        </tr>
+                        <tr>
+                            <td>Basic reproduction number, before (R0)</td><td>{scenario.rBefore}</td>
+                        </tr>
+                        <tr>
+                            <td>Case fatality rate, before (R0)</td><td>{scenario.cfrBefore}</td>
+                        </tr>
+                        <tr>
+                            <td>Threshold date</td><td>{scenario.thresholdDate}</td>
+                        </tr>
+                        <tr>
+                            <td>Basic reproduction number, after (R0)</td><td>{scenario.rAfter}</td>
+                        </tr>
+                        <tr>
+                            <td>Case fatality rate, after (R0)</td><td>{scenario.cfrAfter}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2> Daily Prediction </h2>
+                <table className="simdata">
                     <thead>
                         <tr>
                             <th rowSpan="2">Index</th>
                             <th rowSpan="2">Date</th>
                             <th colSpan="2" style={{backgroundColor: "lightGrey", textAlign: "center"}}>Confirmed</th>
-                            <th colSpan="7" style={{backgroundColor: "darkGrey", textAlign: "center"}}>Simulated</th>
+                            <th colSpan="8" style={{backgroundColor: "darkGrey", textAlign: "center"}}>Simulated</th>
                             
                         </tr>    
                         <tr>
@@ -30,11 +63,12 @@ class SimulationDataTable extends React.Component {
                             <th>Infectious</th>
                             <th>Recovered</th>
                             <th>Dead</th>
+                            <th>Total Exposed</th>
                             <th>Total Infected</th>
                         </tr>
                         </thead>
                         <tbody>
-                            { modelData.map(row => <tr key={row.index}>
+                            { dailyData.map(row => <tr key={row.index}>
                                             <td>{row.index}</td>
                                             <td width="100px">{row.date}</td>
                                             <td>{row.confirmedCases}</td>
@@ -51,6 +85,7 @@ class SimulationDataTable extends React.Component {
                                             <td>{Math.round(row.recovered)}</td>
 
                                             <td>{Math.round(row.dead)}</td>
+                                            <td>{Math.round(row.totalExposed)}</td>
                                             <td>{Math.round(row.totalInfected)}</td>
                                             <td></td>
                                         </tr>)

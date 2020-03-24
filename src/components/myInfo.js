@@ -71,6 +71,8 @@ class MyInfo extends React.Component {
             modelInputs[name] = value === "true";
         } else if (name === "hammerDate") {
             modelInputs[name] = new Date(value);
+        } else if (name === "age") {
+            modelInputs.age = value === "" ? "" : parseInt(value);
         } else {
             modelInputs[name] = value;
         }

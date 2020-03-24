@@ -26,7 +26,9 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    const modelData = this.state.modelManager.diseaseModel.getDisplayData();
+    const modelData = this.state.modelManager.getDisplayData();
+    const modelInputs = this.state.modelManager.modelInputs;
+
     return <Layout>
       {/* <p>
       Hope you are staying safe.  You've likely already seen many news reports and charts about the 
@@ -39,9 +41,9 @@ class IndexPage extends React.Component {
         This site It is first and foremost about you, your friends and family, and where you live.
       </p> */}
 
-      <MyInfo modelInputs={this.state.modelManager.modelInputs} onModelInputChange={this.handleModelInputChange}>
+      <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
-      <MyFuture modelData={modelData}></MyFuture>
+      <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
       <MyCommunity modelData={modelData}></MyCommunity>
       
       <SimulationDataTable modelData={modelData}></SimulationDataTable>

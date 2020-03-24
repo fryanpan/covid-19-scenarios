@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
 
     return <Layout>
       <p>
-      Hope you are staying safe.  You've likely already seen many news reports and charts about the 
+      Hope you are staying safe.  We've all  likely already seen many news reports and charts about the 
       <a href="https://www.covidly.com"> pandemic spreading around the world, </a> 
       and tried out carefully designed tools to understand 
       <a href="http://gabgoh.github.io/COVID"> disease propagation scenarios. </a>

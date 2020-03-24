@@ -1,4 +1,5 @@
 import React from "react"
+import * as d3Format from "d3-format"
 
 import {
     AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -10,6 +11,7 @@ import moment from 'moment';
 class MyCommunity extends React.Component {    
     render() {        
         const scenarios = this.props.modelData;
+        const percentFormatter = d3Format.format(",.0%");
 
         return <div>
             <h1>
@@ -29,10 +31,10 @@ class MyCommunity extends React.Component {
                 <YAxis width={100}/>
                 <Tooltip />
                 <Legend />
-                <Area type="monotone" dataKey="recovered"  fill="#8884d8" />
-                <Area type="monotone" dataKey="infected"  fill="#82ca9d" />
-                <Area type="monotone" dataKey="exposed" fill="#8884d8" />
-                <Area type="monotone" dataKey="dead" fill="#8884d8" />
+                <Area type="linear" dataKey="recovered"  fill="#8884d8" />
+                <Area type="linear" dataKey="infected"  fill="#82ca9d" />
+                <Area type="linear" dataKey="exposed" fill="#8884d8" />
+                <Area type="linear" dataKey="dead" fill="#8884d8" />
             </AreaChart>
 
             <h2>How many people might die?</h2>
@@ -50,8 +52,8 @@ class MyCommunity extends React.Component {
                 <YAxis width={100} />
                 <Tooltip />
                 <Legend />
-                <Area type="monotone" dataKey="dead" fill="#8884d8" />
-                <Area type="monotone" dataKey="confirmedDeaths" fill="#82ca9d" />
+                <Area type="step" dataKey="dead" fill="#8884d8" />
+                <Area type="step" dataKey="confirmedDeaths" fill="#82ca9d" />
             </AreaChart>
 
             <h2>How can I tell if social distancing is working?</h2>
@@ -59,7 +61,7 @@ class MyCommunity extends React.Component {
             <h2>When might social distancing end?</h2>
 
             <h2>How well are we testing?</h2>
-            <AreaChart
+            <BarChart
                 width={960}
                 height={300}
                 data={scenarios.current.dailyData.slice(0, scenarios.current.summary.currentDayIndex)}
@@ -70,11 +72,11 @@ class MyCommunity extends React.Component {
                 // barGap={0}
             >
                 <XAxis dataKey="date"/>
-                <YAxis width={100} />
-                <Tooltip />
+                <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
+                <Tooltip formatter={percentFormatter}/>
                 <Legend />
-                <Area type="monotone" dataKey="testingRatio" fill="#8884d8" />
-            </AreaChart>
+                <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
+            </BarChart>
             <h3>Comparison with other countries</h3>
         </div>
     }

@@ -10,7 +10,7 @@ td, th {
 table.simdata { 
     font-size: 0.6rem;
     table-layout: fixed;
-    width: 1400px;
+    width: 960px;
 }
 
 table.inputdata {

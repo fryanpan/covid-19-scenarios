@@ -41,13 +41,14 @@ class ModelManager {
     const R_STRONG = 0.4;
     const R_MODERATE = 0.7;
     const R_SINGAPORE = 1.2;
+    const R_MINIMAL_DISTANCING = 1.8;
     const R_NO_DISTANCING = 2.2;
 
-    const rBefore = parseFloat(locationData.rInitial || R_NO_DISTANCING);
-    const cfrBefore = parseFloat(locationData.cfrInitial || 0.0014);
+    const rBefore = parseFloat(locationData.rInitial || R_MINIMAL_DISTANCING);
+    const cfrBefore = parseFloat(locationData.cfrInitial || 0.014);
    
-    const rAfter = isSocialDistancing ? R_STRONG : R_NO_DISTANCING;
-    const cfrAfter = 0.0014;
+    const rAfter = isSocialDistancing ? R_STRONG : R_MINIMAL_DISTANCING;
+    const cfrAfter = 0.014;
 
     const thresholdDate = newModelInputs.hammerDate;
 
@@ -68,8 +69,8 @@ class ModelManager {
     // this.scenarios.singapore = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_SINGAPORE, cfrAfter, thresholdDate);
     this.scenarios.noDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rBefore, cfrBefore, thresholdDate);
     this.scenarios.twoWeekEarlierDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(-2, 'week').toDate());
-    this.scenarios.twoWeekLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, moment(thresholdDate).add(2, 'week').toDate());
-    this.scenarios.monthLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, moment(thresholdDate).add(1, 'month').toDate());
+    this.scenarios.twoWeekLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(2, 'week').toDate());
+    this.scenarios.monthLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(1, 'month').toDate());
 
     return this.scenarios;
   }

@@ -147,7 +147,7 @@ class MyInfo extends React.Component {
                     }&nbsp;&nbsp;
                     {isSocialDistancing &&
                         <span>
-                            This means that most of us are trying to minimize contact with people we do not live with.
+                            <br/>This means that most of us are trying to minimize contact with people we do not live with.
                         </span>
                     }          
                     {!isSocialDistancing && 

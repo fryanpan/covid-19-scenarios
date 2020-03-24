@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
     const modelInputs = this.state.modelManager.modelInputs;
 
     return <Layout>
-      {/* <p>
+      <p>
       Hope you are staying safe.  You've likely already seen many news reports and charts about the 
       <a href="https://www.covidly.com"> pandemic spreading around the world, </a> 
       and tried out carefully designed tools to understand 
@@ -38,8 +38,8 @@ class IndexPage extends React.Component {
       </p>
 
       <p>
-        This site It is first and foremost about you, your friends and family, and where you live.
-      </p> */}
+        This site hopes to answer some questions about you and your community.
+      </p>
 
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>

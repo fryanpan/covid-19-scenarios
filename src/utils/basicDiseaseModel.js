@@ -303,9 +303,9 @@ const ASSUMPTIONS = {
     }
 
     getSummaryStats() {
-        const thresholdDate = this.thresholdDate
+        const today = new Date();
         const currentDayIndex = this.resultData.findIndex(x => {
-            return moment(x.date).isSame(thresholdDate, 'day');
+            return moment(x.date).isSame(today, 'day');
         })
 
         const lastData = this.resultData[this.resultData.length - 1];

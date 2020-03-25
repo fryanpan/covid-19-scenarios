@@ -192,6 +192,12 @@ const ASSUMPTIONS = {
    */
   export class BasicDiseaseModelScenario {
       /**
+        * @TODO Rethink how to pass in parameters to a model. This is getting hairy and mixing concerns
+        * between what's relevant to the model and what's relevant outside.
+        *  
+        * @param category {String} Category 
+        * @param name {String} Name of the scenario
+        * 
         * @param data {Object[]} Array of historical data to use
         * @param population {Number} Population
         * 
@@ -203,7 +209,9 @@ const ASSUMPTIONS = {
         * 
         * @param thresholdDate {Date} Date to switch between past and future
        */
-      constructor(inputData, population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate) {
+      constructor(category, name, inputData, population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate) {
+          this.category = category;
+          this.name = name;
           this.inputData = inputData;
           this.population = population;
           this.rBefore = rBefore;
@@ -364,6 +372,8 @@ const ASSUMPTIONS = {
 
         return {
             scenario: {
+                category: this.category,
+                name: this.name,
                 population: this.population,
                 rBefore: this.rBefore,
                 cfrBefore: this.cfrBefore,

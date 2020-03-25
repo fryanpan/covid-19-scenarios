@@ -4,14 +4,14 @@ import AboutModel from "../components/aboutModel"
 import MyInfo from "../components/myInfo"
 import MyFuture from "../components/myFuture"
 import SimulationDataTable from "../components/simDataTable"
-import Model from "../utils/model"
+import { ModelManager } from "../utils/model"
 import MyCommunity from "../components/myCommunity"
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modelManager: new Model.ModelManager(this.props.data)
+      modelManager: new ModelManager(this.props.data)
     }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
   }
@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
       <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
       <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
       <AboutModel modelData={modelData}></AboutModel>
-      <SimulationDataTable modelData={modelData}></SimulationDataTable>
+      <SimulationDataTable modelData={modelData[modelInputs.scenario]}></SimulationDataTable>
 
     </Layout>
   }
@@ -78,12 +78,7 @@ export const query = graphql`
        population
        rInitial
        cfrInitial
-       hammerDate
-       rHammer
-       cfrHammer
-       danceDate
-       rDance
-       cfrDance        
+       hammerDate    
      }
    }
    allDailyDataCsv {

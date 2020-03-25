@@ -1,21 +1,77 @@
 import moment from 'moment';
 import { BasicDiseaseModelScenario } from './basicDiseaseModel';
 
+/** Scenarios list that we're running */
+const BASE_SCENARIO = {
+  rBefore: 2.2,
+  cfrBefore: 0.014,
+  rAfter: 2.2,
+  cfrAfter: 0.014,
+  thresholdDate: new Date()
+}
+
+export const PresetCategories  = {
+  BASIC: "basic",
+  HAMMER_TIMING: "hammerTiming"
+}
+
+/** Scenario data can be either an Object that overrides BASE_SCENARIO, or a function that modifies it */
+export const PresetScenarios = new Map([
+  ["strongDistancing",  {
+    category: PresetCategories.BASIC, 
+    name: "Strong Hammer",
+    rAfter: 0.4
+  }],
+
+  ["moderateDistancing", {
+    category: PresetCategories.BASIC,
+    name: "Moderate Hammer",
+    rAfter: 0.8
+  }],
+
+  ["moderateFlattening", {
+    category: PresetCategories.BASIC,
+    name: "Moderate Flatten",
+    rAfter: 1.5
+  }],
+
+  ["uncontrolled", {
+    category: PresetCategories.BASIC,
+    name: "No Controls",
+    rAfter: 2.2
+  }],
+
+  createHammerTimingScenario("hammerTwoWeeksEarlier", -2, 'week'),
+  createHammerTimingScenario("hammer", 0, 'day'),
+  createHammerTimingScenario("hammerTwoWeeksLater", 2, 'week'),
+  createHammerTimingScenario("hammerOneMonthLater", 1, 'month')
+]);
+
+function createHammerTimingScenario(key, numPeriods, periodType) {
+  return [key, x => {
+    const hammerDate = moment(x.thresholdDate).add(numPeriods, periodType);
+    x.name = "Start on " + hammerDate.format("YYYY-MM-DD");
+    x.rAfter = 0.4;
+    x.category = PresetCategories.HAMMER_TIMING;
+    x.thresholdDate = hammerDate.toDate();
+  }]
+}
+
 /** Represents a set of model inputs to run */
-class ModelInputs {
+export class ModelInputs {
     constructor() {
         this.age = 45;
         this.country = "United States";
         this.state = "California";
-        this.isSocialDistancing = true;
-        this.hammerDate = "2020-03-17";
+        this.hammerDate = moment("2020-03-17").toDate();
+        this.scenario = "strongDistancing";
     }
 }
 
 /**
  * Manages the models needed based on the model inputs provided by the user
  */
-class ModelManager {
+export class ModelManager {
   /**
    * @todo the query runs right now in index.js, which is inconvenient.  figure out a better way
    * 
@@ -30,28 +86,17 @@ class ModelManager {
   }
 
   updateModelInputs(newModelInputs) {
+    console.log("model.updateModelInputs", newModelInputs);
+
     const lookupCountry = newModelInputs.country;
     const lookupState = newModelInputs.state;
-    const isSocialDistancing = newModelInputs.isSocialDistancing;
+
     const locationData = this.historicalData.allLocationsCsv.nodes.find(x => {
       return x.country === lookupCountry && x.state === lookupState;
     })    
     locationData.population = parseFloat(locationData.population);
 
-    const R_STRONG = 0.4;
-    const R_MODERATE = 0.7;
-    const R_EARLY_SOUTH_KOREA = 1.5;
-    const R_MINIMAL_DISTANCING = 1.8;
-    const R_NO_DISTANCING = 2.2;
-
-    const rBefore = parseFloat(locationData.rInitial || R_MINIMAL_DISTANCING);
-    const cfrBefore = parseFloat(locationData.cfrInitial || 0.014);
-   
-    const rAfter = isSocialDistancing ? R_STRONG : R_MINIMAL_DISTANCING;
-    const cfrAfter = 0.014;
-
-    const thresholdDate = isSocialDistancing ? newModelInputs.hammerDate : new Date();
-
+    // Load daily data
     const dailyData = this.historicalData.allDailyDataCsv.nodes.filter(x => {
       return x.country === lookupCountry && x.state === lookupState;
     }).map(x => {
@@ -66,17 +111,42 @@ class ModelManager {
       alert("Unable to find data for country ", lookupCountry, " and state/province ", lookupState);
       return [];
     }
+    
+    // Create and run the preset scenarios
 
-    this.scenarios.current = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
+    // Base scenario.  Construct additional scenarios from this
+    const locationBaseScenario = Object.assign({
+      rBefore: parseFloat(locationData.rInitial),
+      cfrBefore: parseFloat(locationData.cfrBefore),
+      thresholdDate: newModelInputs.hammerDate
+    }, BASE_SCENARIO);
 
-    this.scenarios.strongDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, thresholdDate);
-    this.scenarios.moderateDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_MODERATE, cfrAfter, thresholdDate);
-    this.scenarios.noDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_NO_DISTANCING, cfrAfter, thresholdDate);
+    this.scenarios = {};
 
-    this.scenarios.twoWeekEarlierDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(-2, 'week').toDate());
-    this.scenarios.twoWeekLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(2, 'week').toDate());
-    this.scenarios.monthLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(1, 'month').toDate());
+    for(let [key, scenarioData] of PresetScenarios.entries()) {
+      const scenarioClone = {...locationBaseScenario};
 
+      // Make modifications
+      if(scenarioData instanceof Function) {
+        scenarioData(scenarioClone);
+      } else {
+        Object.assign(scenarioClone, scenarioData);
+      }
+
+      // Run the scenario
+      console.log("Running scenario ", JSON.stringify(scenarioClone));
+      this.scenarios[key] = new BasicDiseaseModelScenario(
+        scenarioClone.category,
+        scenarioClone.name,
+        dailyData,
+        locationData.population,
+        scenarioClone.rBefore,
+        scenarioClone.cfrBefore,
+        scenarioClone.rAfter,
+        scenarioClone.cfrAfter,
+        scenarioClone.thresholdDate
+      );
+    }
     return this.scenarios;
   }
 
@@ -90,7 +160,3 @@ class ModelManager {
   }
 }
 
-export default {
-    ModelInputs: ModelInputs,
-    ModelManager: ModelManager
-}

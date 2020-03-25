@@ -9,7 +9,7 @@ import "./simDataTable.css"
 
 class SimulationDataTable extends React.Component {
     render() {
-        const modelData = this.props.modelData.current;
+        const modelData = this.props.modelData;
         const dailyData = modelData.dailyData;
         const scenario = modelData.scenario;
 

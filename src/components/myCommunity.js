@@ -83,12 +83,13 @@ class MyCommunity extends React.Component {
         const modelInputs = this.props.modelInputs;
         const scenarios = this.props.modelData;
         const historicalData = this.props.historicalData;
+        const currentScenario = scenarios[modelInputs.scenario];
 
         const percentFormatter = d3Format.format(",.0%");
 
         /** Keep only days with testing ratios */
-        const firstTestIndex = scenarios.current.dailyData.findIndex(x => x.testingRatio > 0);
-        const testData = scenarios.current.dailyData.slice(firstTestIndex, scenarios.current.summary.currentDayIndex)
+        const firstTestIndex = currentScenario.dailyData.findIndex(x => x.testingRatio > 0);
+        const testData = currentScenario.dailyData.slice(firstTestIndex, currentScenario.summary.currentDayIndex)
 
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
@@ -155,7 +156,7 @@ class MyCommunity extends React.Component {
                 <AreaChart
                     width={960}
                     height={300}
-                    data={scenarios.current.dailyData}
+                    data={currentScenario.dailyData}
                     margin={{
                         top: 10, right: 30, left: 0, bottom: 0,
                     }}
@@ -180,7 +181,7 @@ class MyCommunity extends React.Component {
                 <AreaChart
                     width={960}
                     height={300}
-                    data={scenarios.current.dailyData}
+                    data={currentScenario.dailyData}
                     margin={{
                         top: 10, right: 30, left: 0, bottom: 0,
                     }}

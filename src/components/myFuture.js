@@ -195,8 +195,7 @@ class MyFuture extends React.Component {
             <h3>Does it matter when social distancing starts?</h3>
             <p>
                 If you are in an area where the virus is spreading rapidly and testing is incomplete, then yes it does matter!
-                This chart shows the chances you will catch COVID-19 if social distancing starts on different dates.  
-                It assumes strong social distancing (similar to Wuhan).  Waiting just two weeks can make a big difference.
+                This chart shows the chance that you will catch COVID-19 with social distancing starting on different dates.  
             </p> 
             <BarChart
                 layout="vertical"

@@ -110,7 +110,47 @@ class MyCommunity extends React.Component {
                 How might COVID-19 spread in my community?
             </h1>
 
-            <h2>How many people might be exposed?</h2>
+            <h2>When might social distancing end?</h2>
+            @TODO: Insert a chart here by active cases per million people 
+
+
+            @TODO Consider changing the graphs below to show chances that someone you know will be infected or die
+
+            <h2>Are things getting better?</h2>
+
+            <h3>How do current deaths compare to past deaths?</h3>
+            <p>
+            This chart calculates the number of deaths over the past week and how it compares to the week before that.
+
+            </p>
+            <p>
+                The lockdown in Hubei started on January 24, which would have immediately reduced transmission.
+                However, most deaths happen 3 or more weeks after contracting the virus, so the effects of the lockdown
+                only start appearing around February 19.  Eventually, deaths in each week are only 50% of the week before.
+            </p>
+            <LineChart
+                width={960}
+                height={600}
+                data={deathRatios}
+                margin={{
+                    top: 10, right: 30, left: 0, bottom: 0,
+                }}
+            >
+                <XAxis dataKey="date"/>
+                <YAxis width={100} tickFormatter={percentFormatter} />
+                <Tooltip formatter={percentFormatter}/>
+                <Legend />
+
+                <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
+                <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
+                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
+            </LineChart>
+            <p>
+                If your local authorities have made a major change, like more social distancing or extensive testing, 
+                look for changes in the death ratio about 3 weeks later.
+            </p>
+
+            <h2>How many people might be infected over time?</h2>
             <AreaChart
                 width={960}
                 height={300}
@@ -148,13 +188,13 @@ class MyCommunity extends React.Component {
                 <YAxis width={100} />
                 <Tooltip />
                 <Legend />
-                <Area type="step" dataKey="dead" fill="#e78ac3" />
-                <Area type="step" dataKey="confirmedDeaths" fill="#a6d854" />
+                <Area type="step" dataKey="dead" strokeWidth={0}
+                    name = "Deaths (from simulation)" fill="#e78ac3" />
+                <Area type="step" dataKey="confirmedDeaths" strokeWidth={0} 
+                    name = "Confirmed Deaths" fill="#a6d854" />
             </AreaChart>
 
             <h2>How well are we testing?</h2>
-
-
             <BarChart
                 width={960}
                 height={300}
@@ -172,48 +212,10 @@ class MyCommunity extends React.Component {
                 <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
             </BarChart>
 
-            <h2>How can I tell if we might be getting to the dance?</h2>
-
-            As 
 
 
-            <h3>How do current deaths compare to past deaths?</h3>
-            <p>
-            This chart calculates the number of deaths over the past week and how it compares to the week before that.
-
-            </p>
-            <p>
-                The lockdown in Hubei started on January 24, which would have immediately reduced transmission.
-                However, most deaths happen 3 or more weeks after contracting the virus, so the effects of the lockdown
-                only start appearing around February 19.  Eventually, deaths in each week are only 50% of the week before.
-            </p>
-            <LineChart
-                width={960}
-                height={600}
-                data={deathRatios}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}
-            >
-                <XAxis dataKey="date"/>
-                <YAxis width={100} tickFormatter={percentFormatter} />
-                <Tooltip formatter={percentFormatter}/>
-                <Legend />
-
-                <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
-                <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
-                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
-            </LineChart>
-            <p>
-                If your local authorities have made a major change, like more social distancing or extensive testing, 
-                look for changes in the death ratio about 3 weeks later.
-            </p>
 
 
-            <h2>When might social distancing end?</h2>
-
-
-            <h3>Comparison with other countries</h3>
         </div>
     }
 

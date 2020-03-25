@@ -40,7 +40,7 @@ class ModelManager {
 
     const R_STRONG = 0.4;
     const R_MODERATE = 0.7;
-    const R_SINGAPORE = 1.2;
+    const R_EARLY_SOUTH_KOREA = 1.5;
     const R_MINIMAL_DISTANCING = 1.8;
     const R_NO_DISTANCING = 2.2;
 
@@ -50,13 +50,13 @@ class ModelManager {
     const rAfter = isSocialDistancing ? R_STRONG : R_MINIMAL_DISTANCING;
     const cfrAfter = 0.014;
 
-    const thresholdDate = newModelInputs.hammerDate;
+    const thresholdDate = isSocialDistancing ? newModelInputs.hammerDate : new Date();
 
     const dailyData = this.historicalData.allDailyDataCsv.nodes.filter(x => {
       return x.country === lookupCountry && x.state === lookupState;
     }).map(x => {
       return {
-        date: new Date(x.date),
+        date: x.date,
         confirmedCases: parseFloat(x.confirmedCases),
         confirmedDeaths: parseFloat(x.confirmedDeaths)
       }
@@ -70,9 +70,9 @@ class ModelManager {
     this.scenarios.current = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rAfter, cfrAfter, thresholdDate);
 
     this.scenarios.strongDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, thresholdDate);
-    // this.scenarios.moderateDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_MODERATE, cfrAfter, thresholdDate);
-    // this.scenarios.singapore = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_SINGAPORE, cfrAfter, thresholdDate);
-    this.scenarios.noDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, rBefore, cfrBefore, thresholdDate);
+    this.scenarios.moderateDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_MODERATE, cfrAfter, thresholdDate);
+    this.scenarios.noDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_NO_DISTANCING, cfrAfter, thresholdDate);
+
     this.scenarios.twoWeekEarlierDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(-2, 'week').toDate());
     this.scenarios.twoWeekLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(2, 'week').toDate());
     this.scenarios.monthLaterDistancing = new BasicDiseaseModelScenario(dailyData, locationData.population, rBefore, cfrBefore, R_STRONG, cfrAfter, moment(thresholdDate).add(1, 'month').toDate());

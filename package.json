@@ -6,6 +6,7 @@
   "author": "Bryan Chan <fryanpan@gmail.com>",
   "dependencies": {
     "d3-format": "^1.4.3",
+    "d3-scale": "^3.2.1",
     "gamma-distribution": "^1.0.4",
     "gatsby": "^2.20.2",
     "gatsby-image": "^2.3.0",

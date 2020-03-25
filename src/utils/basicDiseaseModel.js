@@ -24,6 +24,7 @@ const ASSUMPTIONS = {
     meanTimeToDeath: 15,
     sdTimeToDeath: 2,
     
+    minDaysToSimulate: 90,
     maxDaysToSimulate: 365
   }
 
@@ -117,7 +118,7 @@ const ASSUMPTIONS = {
   }
 
   /** Trims data from the results array */
-  function trimData(data, bufferAfter) {
+  function trimData(data, bufferAfter, minRows) {
     var start, end;
     for(let i = 0; i < data.length - bufferAfter; ++i) {
       const row = data[i];
@@ -134,16 +135,20 @@ const ASSUMPTIONS = {
         }
       })
     }
-    if(end == undefined) end = data.length - bufferAfter - 1;
+    if(end == undefined) {
+      end = data.length - bufferAfter - 1;
+    }
+
+    if(end < start + minRows) {
+      end = start + minRows - 1;
+    }
     return data.slice(start, end + 1);
   }
 
 
   
   function incDate(date, incDays) {
-    var result = new Date(date);
-    result.setDate(result.getDate() + incDays);
-    return result;
+    return moment(date).add(incDays, 'day').toDate();
   }
 
   class DailyData {
@@ -225,6 +230,7 @@ const ASSUMPTIONS = {
         const originalDataLength = inputData.length;
         const bufferedDataLength = originalDataLength + BUFFER_LENGTH;
         const startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
+        const minOutputLength  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate;
 
         var data = setupData(inputData, BUFFER_LENGTH, ASSUMPTIONS.maxDaysToSimulate + BUFFER_LENGTH, population);
         console.log("Basic Disease Model with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
@@ -296,7 +302,7 @@ const ASSUMPTIONS = {
         }
       }
 
-      this.resultData = trimData(data, BUFFER_LENGTH);
+      this.resultData = trimData(data, BUFFER_LENGTH, minOutputLength);
       const elapsed = +new Date() - startTime;
       console.log("Ran model in ", elapsed, "ms");
       return this.resultData;
@@ -340,7 +346,13 @@ const ASSUMPTIONS = {
         for(let i = 0; i < data.length; ++i) {
             var newRow = {...data[i]};
             newRow.date = moment(data[i].date).format("YYYY-MM-DD");
-            newRow.testingRatio = data[i].totalInfected > 0 ? data[i].confirmedCases / data[i].totalInfected : 0;
+            
+            if(data[i].totalInfected > 100) {
+              const testingRatio = Math.min(1, data[i].totalInfected > 0 ? data[i].confirmedCases / data[i].totalInfected : 0);
+              newRow.testingRatio = testingRatio;
+            } else {
+              newRow.testingRatio = 0;
+            }
             result.push(newRow);
         }
 

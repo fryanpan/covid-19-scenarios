@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import AboutModel from "../components/aboutModel"
 import MyInfo from "../components/myInfo"
 import MyFuture from "../components/myFuture"
 import SimulationDataTable from "../components/simDataTable"
@@ -28,24 +29,39 @@ class IndexPage extends React.Component {
   render() {
     const modelData = this.state.modelManager.getDisplayData();
     const modelInputs = this.state.modelManager.modelInputs;
+    const queryData = this.props.data;
 
     return <Layout>
       <p>
-      Hope you are staying safe.  We've all  likely already seen many news reports and charts about the 
-      <a href="https://www.covidly.com"> pandemic spreading around the world, </a> 
-      and tried out carefully designed tools to understand 
-      <a href="http://gabgoh.github.io/COVID"> disease propagation scenarios. </a>
+        Hope you are staying safe.  We are all a part of a pandemic spreading around the world.
+        There are so many&nbsp;
+        <a href="https://www.covidly.com">charts</a>,&nbsp;  
+        <a href="http://gabgoh.github.io/COVID"> disease modeling tools</a>,&nbsp;
+        <a href="https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus">
+          research papers</a>, and news articles.
+
+      </p>
+      <p>
+        This page hopes to do something different.  It focuses on answering questions that
+        are relevant to you and your community. Even though the future is uncertain, it is possible to 
+        &nbsp;<a href="https://hbr.org/1997/11/strategy-under-uncertainty">
+          guess at plausible scenarios
+        </a>.
       </p>
 
       <p>
-        This site hopes to answer some questions about you and your community.
+        Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
+        "all models are wrong, but some are useful"</a>.  Rely on your local authorities
+        for the most accurate and up-to-date information.  Hopefully though, this site may answer
+        some questions that your local authorities are not willing to answer yet,
+        becuase there is too much uncertainty.
       </p>
 
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}>
       </MyInfo>
       <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
-      <MyCommunity modelData={modelData}></MyCommunity>
-      
+      <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
+      <AboutModel modelData={modelData}></AboutModel>
       <SimulationDataTable modelData={modelData}></SimulationDataTable>
 
     </Layout>

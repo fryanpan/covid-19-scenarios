@@ -87,6 +87,16 @@ function groupRowsByCountryAndState(rows) {
     }).value();
 }
 
+/** On March 23, JHU added city-level data in the US and changed schema */
+function extractCountry(row) {
+    return row['Country/Region'] || row['Country_Region'];
+}
+
+function extractState(row) {
+    return row['Province/State'] || row['Province_State'];
+}
+
+
 function addCountrySums(rows) {
     process.stderr.write("addCountrySums\n");
     // Identify countries that are missing totals on particular days
@@ -136,13 +146,18 @@ async function downloadFiles() {
             const fileData = await neatCsv(rawData.toString().trim());
 
             fileData.forEach(x => {
-                var country = x['Country/Region'];
-                var state = x["Province/State"] || 'All';
+                var country = extractCountry(x);
+                var state = extractState(x) || 'All';
 
                 // Special case for HK -- data starts to categorize HK as part of China starting on 3/11
                 if(country == "Hong Kong" || country == "Hong Kong SAR") {
                     country = "China",
                     state = "Hong Kong"
+                }
+
+                // Special case for US - bad data on a few days
+                if(dateString >= "2020-03-18" && dateString <= "2020-03-22" && country == "US" && state == "US") {
+                    return; // skip these rows
                 }
 
                 if(country == state) {
@@ -172,7 +187,8 @@ async function downloadFiles() {
                         state: state.trim(),
                         confirmedCases: x['Confirmed'] || 0,
                         confirmedDeaths: x['Deaths'] || 0,
-                        confirmedRecoveries: x['Recovered'] || 0
+                        confirmedRecoveries: x['Recovered'] || 0,
+                        confirmedActive: x['Active'] || 0
                     });
                 }
             });

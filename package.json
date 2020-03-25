@@ -46,6 +46,7 @@
   "scripts": {
     "refresh_data": "node src/data_download/download_data.js > src/data/daily_data.csv",
     "build": "gatsby build",
+    "deploy": "gatsby build && surge public covid-what-if.surge.sh",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

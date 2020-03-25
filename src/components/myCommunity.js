@@ -27,8 +27,10 @@ function computeRollingRatio(data, key, window, outputKey) {
     for(let i = window * 2 + 1; i < data.length; ++i) {
         const sumNow = data[i][key] - data[i - window][key];
         const sumPast = data[i - window][key] - data[i - window * 2][key];
+
         const date = data[i].date;
         const value = sumPast !== 0 ? sumNow / sumPast : undefined;
+
         if(value && value > 0) {
             var entry = { date: date };
             entry[outputKey] = value;
@@ -94,18 +96,14 @@ class MyCommunity extends React.Component {
         const confirmedCasesRatios =
             mergeRollingRatios([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedCases', WINDOW, 'South Korea'),
                 rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)')
             ]);
 
         const deathRatios =
             mergeRollingRatios([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedDeaths', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedDeaths', WINDOW, 'South Korea'),
                 rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'China (Hubei)')
             ]);
-
-        console.log(confirmedCasesRatios, deathRatios);
 
         return <div>
             <h1>
@@ -125,10 +123,14 @@ class MyCommunity extends React.Component {
                 <YAxis width={100}/>
                 <Tooltip />
                 <Legend />
-                <Area type="linear" dataKey="recovered"  fill="#8884d8" />
-                <Area type="linear" dataKey="infected"  fill="#82ca9d" />
-                <Area type="linear" dataKey="exposed" fill="#8884d8" />
-                <Area type="linear" dataKey="dead" fill="#8884d8" />
+                <Area type="linear" dataKey="recovered" strokeWidth={0}
+                    name="Recovered" fill="#66c2a5" />
+                <Area type="linear" dataKey="infected" strokeWidth={0}
+                    stackId="a"  name = "Infected (has symptoms)" fill="#fc8d62" />
+                <Area type="linear" dataKey="exposed" strokeWidth={0}
+                    stackId="a" name = "Infected (no symptoms)" fill="#8da0cb" />
+                <Area type="linear" dataKey="dead" strokeWidth={0}
+                    name = "Dead" fill="#e78ac3" />
             </AreaChart>
 
             <h2>How many people might die?</h2>
@@ -146,8 +148,8 @@ class MyCommunity extends React.Component {
                 <YAxis width={100} />
                 <Tooltip />
                 <Legend />
-                <Area type="step" dataKey="dead" fill="#8884d8" />
-                <Area type="step" dataKey="confirmedDeaths" fill="#82ca9d" />
+                <Area type="step" dataKey="dead" fill="#e78ac3" />
+                <Area type="step" dataKey="confirmedDeaths" fill="#a6d854" />
             </AreaChart>
 
             <h2>How well are we testing?</h2>
@@ -170,14 +172,20 @@ class MyCommunity extends React.Component {
                 <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
             </BarChart>
 
-            <h2>How can I tell if social distancing is working?</h2>
+            <h2>How can I tell if we might be getting to the dance?</h2>
 
-            If social distancing is working, then 
+            As 
+
 
             <h3>How do current deaths compare to past deaths?</h3>
             <p>
-            This chart calculates the number of deaths in the three days before each date 
-            and then calculates the ratio with the three days before that. 
+            This chart calculates the number of deaths over the past week and how it compares to the week before that.
+
+            </p>
+            <p>
+                The lockdown in Hubei started on January 24, which would have immediately reduced transmission.
+                However, most deaths happen 3 or more weeks after contracting the virus, so the effects of the lockdown
+                only start appearing around February 19.  Eventually, deaths in each week are only 50% of the week before.
             </p>
             <LineChart
                 width={960}
@@ -188,39 +196,19 @@ class MyCommunity extends React.Component {
                 }}
             >
                 <XAxis dataKey="date"/>
-                <YAxis />
-                <Tooltip />
+                <YAxis width={100} tickFormatter={percentFormatter} />
+                <Tooltip formatter={percentFormatter}/>
                 <Legend />
 
-                <ReferenceLine y={1} label="R = 1" strokeDasharray="3 3" />
-                <Line type="linear" dataKey={currentScenarioName} stroke="#66c2a5" strokeWidth={2} dot={false}/>
-                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={2} dot={false}/>
-                <Line type="linear" dataKey="South Korea" stroke="#8da0cb" strokeWidth={2} dot={false}/>
+                <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
+                <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
+                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
             </LineChart>
-
-            <h3>How do current case counts compare to past counts?</h3>
             <p>
-            This chart calculates the number of deaths in the three days before each date 
-            and then calculates the ratio with the three days before that. 
+                If your local authorities have made a major change, like more social distancing or extensive testing, 
+                look for changes in the death ratio about 3 weeks later.
             </p>
-            <LineChart
-                width={960}
-                height={600}
-                data={confirmedCasesRatios}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}>
-                <XAxis dataKey="date"/>
-                <YAxis type="number" domain={[0, 5]}/>
-                <Tooltip />
-                <Legend />
 
-                <ReferenceLine y={1} label="R = 1" strokeDasharray="3 3" />
-
-                <Line type="linear" dataKey={currentScenarioName} stroke="#66c2a5" strokeWidth={2} dot={false}/>
-                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62" strokeWidth={2}  dot={false}/>
-                <Line type="linear" dataKey="South Korea" stroke="#8da0cb" strokeWidth={2} dot={false}/>
-            </LineChart>
 
             <h2>When might social distancing end?</h2>
 

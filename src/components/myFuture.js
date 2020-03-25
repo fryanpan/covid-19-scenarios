@@ -166,6 +166,32 @@ class MyFuture extends React.Component {
                 </Bar>
             </BarChart>
 
+            TODO: Bring in comparison data from this table and plot samples above.
+            <code>
+                micromorts	activity
+                0.1	    Fly 100 miles
+                0.43	Drive 100 miles by car
+                0.45	Snowboard for a day
+                0.71	Ski for a day
+                2	    Bungee jump once
+                5	    Go on one scuba dive
+                5.6	    Being a 45-year-old for a day (US, female)
+                7	    Run a marathon
+                8	    One skydive
+                12	    Going for a swim (drowning risk)
+                16	    Ride 100 miles on a motorbike
+                19	    Being a 60-year-old for a day (US, Female)
+                69	    Being a 75-year-old for a day (US, Female)
+                120	    Give birth via natural birth
+                170	    Give birth via C-section
+                430	    One basejump
+                430	    Being born (on the first day)
+                826	    Being a 100-year-old for a day (US, Female)
+                2840	Attempt to climb the Matterhorn
+                37932	Hike down from Everest summit
+                100000	Go on a space shuttle flight
+           </code>
+
             <h2>
                 How much difference { isSocialDistancing ? "will" : "would" } social distancing make?
             </h2>
@@ -214,8 +240,6 @@ class MyFuture extends React.Component {
                     <LabelList dataKey="probability" position="right" formatter={readableNumber}/>
                 </Bar>
             </BarChart>
-
-
         </div>
     }
 

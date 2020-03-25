@@ -15,7 +15,7 @@ class SimulationDataTable extends React.Component {
 
         return <>
                 <h1> Simulation Data </h1>
-                <h2> Simulation Inputs </h2>
+                <h2> Inputs </h2>
                 <table className="inputdata">
                     <thead>
                         <tr>
@@ -45,7 +45,7 @@ class SimulationDataTable extends React.Component {
                     </tbody>
                 </table>
 
-                <h2> Daily Prediction </h2>
+                <h2> Output </h2>
                 <table className="simdata">
                     <thead>
                         <tr>

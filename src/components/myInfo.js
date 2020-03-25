@@ -99,7 +99,7 @@ class MyInfo extends React.Component {
             <h1>
                 About me 
             </h1>
-            <form>
+            <form onSubmit={handleChange}>
                 <p>
                 I am <input type="text"
                         style={{width: "1.5rem"}} 

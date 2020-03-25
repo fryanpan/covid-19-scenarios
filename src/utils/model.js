@@ -8,7 +8,7 @@ class ModelInputs {
         this.country = "United States";
         this.state = "California";
         this.isSocialDistancing = true;
-        this.hammerDate = new Date();
+        this.hammerDate = "2020-03-17";
     }
 }
 

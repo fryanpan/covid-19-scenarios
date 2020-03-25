@@ -3,7 +3,7 @@ import * as d3Format from "d3-format"
 
 import {
     AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-    LineChart, Line, ReferenceLine
+    LineChart, Line, ReferenceLine, ResponsiveContainer
 } from 'recharts';
 
 import moment from 'moment';
@@ -128,89 +128,95 @@ class MyCommunity extends React.Component {
                 However, most deaths happen 3 or more weeks after contracting the virus, so the effects of the lockdown
                 only start appearing around February 19.  Eventually, deaths in each week are only 50% of the week before.
             </p>
-            <LineChart
-                width={960}
-                height={600}
-                data={deathRatios}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}
-            >
-                <XAxis dataKey="date"/>
-                <YAxis width={100} tickFormatter={percentFormatter} />
-                <Tooltip formatter={percentFormatter}/>
-                <Legend />
+            <ResponsiveContainer width={960} height={600}>
+                <LineChart
+                    data={deathRatios}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} tickFormatter={percentFormatter} />
+                    <Tooltip formatter={percentFormatter}/>
+                    <Legend />
 
-                <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
-                <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
-                <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
-            </LineChart>
+                    <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
+                </LineChart>
+            </ResponsiveContainer>
             <p>
                 If your local authorities have made a major change, like more social distancing or extensive testing, 
                 look for changes in the death ratio about 3 weeks later.
             </p>
 
             <h2>How many people might be infected over time?</h2>
-            <AreaChart
-                width={960}
-                height={300}
-                data={scenarios.current.dailyData}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}
-            >
-                <XAxis dataKey="date"/>
-                <YAxis width={100}/>
-                <Tooltip />
-                <Legend />
-                <Area type="linear" dataKey="recovered" strokeWidth={0}
-                    name="Recovered" fill="#66c2a5" />
-                <Area type="linear" dataKey="infected" strokeWidth={0}
-                    stackId="a"  name = "Infected (has symptoms)" fill="#fc8d62" />
-                <Area type="linear" dataKey="exposed" strokeWidth={0}
-                    stackId="a" name = "Infected (no symptoms)" fill="#8da0cb" />
-                <Area type="linear" dataKey="dead" strokeWidth={0}
-                    name = "Dead" fill="#e78ac3" />
-            </AreaChart>
+            <ResponsiveContainer width={960} height={300}>
+                <AreaChart
+                    width={960}
+                    height={300}
+                    data={scenarios.current.dailyData}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100}/>
+                    <Tooltip />
+                    <Legend />
+                    <Area type="linear" dataKey="recovered" strokeWidth={0}
+                        name="Recovered" fill="#66c2a5" />
+                    <Area type="linear" dataKey="infected" strokeWidth={0}
+                        stackId="a"  name = "Infected (has symptoms)" fill="#fc8d62" />
+                    <Area type="linear" dataKey="exposed" strokeWidth={0}
+                        stackId="a" name = "Infected (no symptoms)" fill="#8da0cb" />
+                    <Area type="linear" dataKey="dead" strokeWidth={0}
+                        name = "Dead" fill="#e78ac3" />
+                </AreaChart>
+            </ResponsiveContainer>
 
             <h2>How many people might die?</h2>
-            <AreaChart
-                width={960}
-                height={300}
-                data={scenarios.current.dailyData}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}
-                // barCategoryGap={1}
-                // barGap={0}
-            >
-                <XAxis dataKey="date"/>
-                <YAxis width={100} />
-                <Tooltip />
-                <Legend />
-                <Area type="step" dataKey="dead" strokeWidth={0}
-                    name = "Deaths (from simulation)" fill="#e78ac3" />
-                <Area type="step" dataKey="confirmedDeaths" strokeWidth={0} 
-                    name = "Confirmed Deaths" fill="#a6d854" />
-            </AreaChart>
+            <ResponsiveContainer width={960} height={300}>
+                <AreaChart
+                    width={960}
+                    height={300}
+                    data={scenarios.current.dailyData}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                    // barCategoryGap={1}
+                    // barGap={0}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} />
+                    <Tooltip />
+                    <Legend />
+                    <Area type="step" dataKey="dead" strokeWidth={0}
+                        name = "Deaths (from simulation)" fill="#e78ac3" />
+                    <Area type="step" dataKey="confirmedDeaths" strokeWidth={0} 
+                        name = "Confirmed Deaths" fill="#a6d854" />
+                </AreaChart>
+            </ResponsiveContainer>
 
             <h2>How well are we testing?</h2>
-            <BarChart
-                width={960}
-                height={300}
-                data={testData}
-                margin={{
-                    top: 10, right: 30, left: 0, bottom: 0,
-                }}
-                // barCategoryGap={1}
-                // barGap={0}
-            >
-                <XAxis dataKey="date"/>
-                <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
-                <Tooltip formatter={percentFormatter}/>
-                <Legend />
-                <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
-            </BarChart>
+            <ResponsiveContainer width={960} height={300}>
+                <BarChart
+                    width={960}
+                    height={300}
+                    data={testData}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                    // barCategoryGap={1}
+                    // barGap={0}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
+                    <Tooltip formatter={percentFormatter}/>
+                    <Legend />
+                    <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
+                </BarChart>
+            </ResponsiveContainer>
 
 
 

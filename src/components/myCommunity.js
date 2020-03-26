@@ -3,6 +3,7 @@ import * as d3Format from "d3-format"
 
 import {
     AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    ComposedChart,
     LineChart, Line, ReferenceLine, ResponsiveContainer
 } from 'recharts';
 
@@ -82,10 +83,12 @@ class MyCommunity extends React.Component {
             </h1>
 
             <h2>When might social distancing end?</h2>
-            @TODO: Insert a chart here by active cases per million people 
+            @TODO: Insert a chart here by active cases per million people
 
+            China started reducing restrictions once they were below 10 per million.
+            Taiwan never went above this level.
 
-            @TODO Consider changing the graphs below to show chances that someone you know will be infected or die
+            Link to Bill Gates' estimate of 6-10 weeks for developed nations (I assume his team is doing some exceptional modeling)
 
             <h2>Are things getting better?</h2>
             <p>
@@ -127,6 +130,38 @@ class MyCommunity extends React.Component {
             </p>
 
             <h2>How well are we testing?</h2>
+
+            By assuming that the death counts are somewhat accurate, the model can take a guess 
+            at how many actual cases there were in the past.  This chart shows the new cases
+            daily from the model (when people first show symptoms) vs. the increase in confirmed
+            case counts each day from performing tests:
+
+            <ResponsiveContainer width={960} height={300}>
+                <ComposedChart
+                    width={960}
+                    height={300}
+                    data={testData}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                    // barCategoryGap={1}
+                    // barGap={0}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
+                    <Tooltip formatter={percentFormatter}/>
+                    <Legend />
+                    <Bar dataKey="confirmedCasesInc" fill="#8884d8" />
+                    <Line type="linear" dataKey="infectedInc"
+                        strokeWidth={2} name="Simulated New Cases"
+                        />
+                </ComposedChart>
+            </ResponsiveContainer>
+
+            And as promised, here is a different chart to avoid doing mental math.  
+            Here's the testing ratio, showing the cases confirmed by tests
+            as a fraction of simulated new cases:
+
             <ResponsiveContainer width={960} height={300}>
                 <BarChart
                     width={960}
@@ -193,12 +228,6 @@ class MyCommunity extends React.Component {
                         name = "Confirmed Deaths" fill="#a6d854" />
                 </AreaChart>
             </ResponsiveContainer>
-
-            
-
-
-
-
 
         </div>
     }

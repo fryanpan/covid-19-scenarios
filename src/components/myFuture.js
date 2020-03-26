@@ -1,18 +1,13 @@
 import { StaticQuery, graphql} from "gatsby"
 import React from "react"
-import * as d3Format from "d3-format"
-import { scaleLog } from 'd3-scale';
 import {
     BarChart, Bar, XAxis, YAxis, Label, LabelList,
     ResponsiveContainer
 } from 'recharts';
 import { PresetScenarios, PresetCategories } from '../utils/model';
+import { readableNumber } from '../utils/dataUtils'
 
-const log10Scale = scaleLog().base(10);
 
-function readableNumber(x) {
-    return d3Format.format(",.2r")(x);
-}
 
 function nextPowerOf10(x) {
     return Math.pow(10, Math.ceil(Math.log10(x)));
@@ -87,20 +82,20 @@ class MyFuture extends React.Component {
             });
         }
 
-        /** Get data for graphs tha compare across when the hammer happens */
-        var hammerTimingData = [];
+        /** Get data for graphs tha compare across when the flattening happens */
+        var flatteningTimingData = [];
         for(let [key, scenarioData] of PresetScenarios.entries()) {
-            const hammerTimingScenario = scenarios[key].scenario;
-            if(hammerTimingScenario.category != PresetCategories.HAMMER_TIMING) continue;
-            var scenarioName = hammerTimingScenario.name;
+            const flatteningScenario = scenarios[key].scenario;
+            if(flatteningScenario.category != PresetCategories.FLATTENING_TIMING) continue;
+            var scenarioName = flatteningScenario.name;
 
-            hammerTimingData.push({
+            flatteningTimingData.push({
                 label: scenarioName,
                 probability: stats[key].catchCovid.year
             });
         }
 
-        console.log(hammerTimingData);
+        console.log(flatteningTimingData);
 
         // insert some sample values from micromorts
         
@@ -112,7 +107,7 @@ class MyFuture extends React.Component {
             <h2>How likely is it for me to catch COVID-19?</h2>
             <p>
             This chart shows how likely it is for you to catch COVID-19 over the next year, under different plausible scenarios.
-            If the virus has not spread widely yet, then having an effective hammer makes a big difference.
+            If the virus has not spread widely yet, then stronger flattening makes a big difference.
             </p>
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
@@ -161,15 +156,15 @@ class MyFuture extends React.Component {
             </ResponsiveContainer>
 
 
-            <h3>How much does it matter when the "hammer" starts?</h3>
+            <h3>How much does it matter when flattening starts?</h3>
             <p>
                 If you are in an area where the virus is spreading rapidly and testing is incomplete, then it can matter a lot!
-                This chart shows the chance that you will catch COVID-19, with a strong hammer starting on different dates.  
+                This chart shows the chance that you will catch COVID-19, with a strong flattening starting on different dates.  
             </p> 
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
                     layout="vertical"
-                    data={hammerTimingData}
+                    data={flatteningTimingData}
                     margin={{
                         top: 10, right: 100, left: 0, bottom: 20,
                     }}

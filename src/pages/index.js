@@ -49,19 +49,14 @@ class IndexPage extends React.Component {
         </a>.
       </p>
 
-      <p>
-        Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
-        "all models are wrong, but some are useful"</a>.  Rely on your local authorities
-        for the most accurate and up-to-date information.  Hopefully though, this site may answer
-        some questions that your local authorities are not willing to answer yet,
-        becuase there is too much uncertainty.
-      </p>
+     
 
-      <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}>
-      </MyInfo>
+      <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
+
+      <AboutModel modelData={modelData}></AboutModel>
+
       <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
       <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
-      <AboutModel modelData={modelData}></AboutModel>
       <SimulationDataTable modelData={modelData[modelInputs.scenario]}></SimulationDataTable>
 
     </Layout>
@@ -78,7 +73,7 @@ export const query = graphql`
        population
        rInitial
        cfrInitial
-       hammerDate    
+       flatteningDate    
      }
    }
    allDailyDataCsv {

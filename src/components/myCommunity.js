@@ -8,6 +8,8 @@ import {
 
 import moment from 'moment';
 
+import { mergeDataArrays } from "../utils/dataUtils" 
+
 function sum(array, key, i, j) {
     var result = 0;
     for(let k = i; k <= j; ++k) {
@@ -45,38 +47,6 @@ function rollingRatioForState(historicalData, country, state, key, window, outpu
     return computeRollingRatio(stateData, key, window, outputKey);
 }
 
-function mergeRollingRatios(array) {
-    var result = array[0].slice();
-
-    for(let i = 1; i < array.length; ++i) { // merge into result
-        for(let j = 0, k = 0; j < array[i].length;) {
-            const resultElem = result[k];
-            const arrayElem = array[i][j];
-
-            if(k < result.length) {
-                const resultDate = resultElem.date;
-                const arrayDate = arrayElem.date;
-
-                if(arrayDate === resultDate) { // merge the entries
-                    Object.assign(resultElem, arrayElem);
-                    j++;
-                    k++;
-                } else if (arrayDate < resultDate) { // insert from array[j]
-                    result.splice(k, 0, arrayElem);
-                    j++;
-                    k++;
-                } else { // jDate > kDate -- move along in the result array
-                    k++;
-                }
-            } else {
-                result.push(arrayElem);
-                j++;
-            }
-        }
-    }
-    return result;
-}
-
 
 class MyCommunity extends React.Component {    
     render() {        
@@ -93,15 +63,15 @@ class MyCommunity extends React.Component {
 
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
-        const currentScenarioName = modelInputs.country + " (" + modelInputs.state + ")";
+        const currentScenarioName = modelInputs.state;
         const confirmedCasesRatios =
-            mergeRollingRatios([
+            mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
                 rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)')
             ]);
 
         const deathRatios =
-            mergeRollingRatios([
+            mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedDeaths', WINDOW, currentScenarioName),
                 rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'China (Hubei)')
             ]);
@@ -118,16 +88,20 @@ class MyCommunity extends React.Component {
             @TODO Consider changing the graphs below to show chances that someone you know will be infected or die
 
             <h2>Are things getting better?</h2>
-
-            <h3>How do current deaths compare to past deaths?</h3>
             <p>
-            This chart calculates the number of deaths over the past week and how it compares to the week before that.
-
+            This chart calculates the number of confirmed deaths over the past week and how it compares to the week before that.
+            
+            It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
+            This would have immediately started reducing transmission, but most deaths happen 3 or more weeks
+            after contracting the virus.  This is why the new death counts only start moving much lower starting February 19.  
+            Eventually, deaths in each week are only 50% of the week before.
             </p>
+
             <p>
-                The lockdown in Hubei started on January 24, which would have immediately reduced transmission.
-                However, most deaths happen 3 or more weeks after contracting the virus, so the effects of the lockdown
-                only start appearing around February 19.  Eventually, deaths in each week are only 50% of the week before.
+                The key takeaway: if your area has made a major change to flatten the curve, like staying at home
+                or much more extensive testing, look for the changes here in the death ratio about 3 weeks later.
+                Even better, if deaths each week consistently fall below 100% of the past week, then you have likely 
+                flattened below R = 1, and eventually the number of cases will dwindle to zero.
             </p>
             <ResponsiveContainer width={960} height={600}>
                 <LineChart
@@ -141,15 +115,36 @@ class MyCommunity extends React.Component {
                     <Tooltip formatter={percentFormatter}/>
                     <Legend />
 
-                    <ReferenceLine y={1} label="Ratio = 100%" strokeDasharray="3 3" />
+                    <ReferenceLine y={1} label="100% means new deaths were the same as the week before" 
+                        strokeDasharray="3 3" position="top"/>
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
                 </LineChart>
             </ResponsiveContainer>
             <p>
-                If your local authorities have made a major change, like more social distancing or extensive testing, 
-                look for changes in the death ratio about 3 weeks later.
+                Note: this chart comes only from the actual confirmed death counts.  It does not use any data from the 
+                simulated scenarios.
             </p>
+
+            <h2>How well are we testing?</h2>
+            <ResponsiveContainer width={960} height={300}>
+                <BarChart
+                    width={960}
+                    height={300}
+                    data={testData}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                    // barCategoryGap={1}
+                    // barGap={0}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
+                    <Tooltip formatter={percentFormatter}/>
+                    <Legend />
+                    <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
+                </BarChart>
+            </ResponsiveContainer>
 
             <h2>How many people might be infected over time?</h2>
             <ResponsiveContainer width={960} height={300}>
@@ -199,25 +194,7 @@ class MyCommunity extends React.Component {
                 </AreaChart>
             </ResponsiveContainer>
 
-            <h2>How well are we testing?</h2>
-            <ResponsiveContainer width={960} height={300}>
-                <BarChart
-                    width={960}
-                    height={300}
-                    data={testData}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                    // barCategoryGap={1}
-                    // barGap={0}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
-                    <Tooltip formatter={percentFormatter}/>
-                    <Legend />
-                    <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
-                </BarChart>
-            </ResponsiveContainer>
+            
 
 
 

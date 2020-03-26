@@ -237,23 +237,29 @@ const ASSUMPTIONS = {
         // Setup simulation data
         const originalDataLength = inputData.length;
         const bufferedDataLength = originalDataLength + BUFFER_LENGTH;
-        const startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
+        var startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
         const minOutputLength  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate;
+
+        // @TODO handle case better if the threshold date is early
 
         var data = setupData(inputData, BUFFER_LENGTH, ASSUMPTIONS.maxDaysToSimulate + BUFFER_LENGTH, population);
         console.log("Basic Disease Model with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
+        console.log("Exposure simulation starts on ", data[startSimulatingExposureIndex].date);
 
-        // Calculate new exposures based on deaths
+        // Calculate new exposures in the past based on deaths
         for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
-            if(data[i].confirmedDeathsInc > 0) {
-                const scale = 1 / cfrBefore;
-                stateTransitionWithFilter(data, "confirmedDeathsInc", "susceptible", "exposed", i, DEATH_AND_INCUBATION_FILTER, scale, -1);
-            }
-            if(i >= startSimulatingExposureIndex) { // reset to zero
-                data[i].susceptibleDec = 0;
-                data[i].exposedInc = 0;
-            }
+          if(data[i].confirmedDeathsInc > 0) {
+              const scale = 2 / cfrBefore;
+              stateTransitionWithFilter(data, "confirmedDeathsInc", "susceptible", "exposed", i, DEATH_AND_INCUBATION_FILTER, scale, -1);
+          }
         }
+        for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
+          if(i >= startSimulatingExposureIndex) { // reset to zero
+            data[i].susceptibleDec = 0;
+            data[i].exposedInc = 0;
+          }
+        }
+
 
         // Now run the simulation.  At time step i, we've propagated the effects of all transitions from time steps 0 to i-1
         // Now generate any new transitions and propagate transitions at time i to future times
@@ -322,11 +328,18 @@ const ASSUMPTIONS = {
             return moment(x.date).isSame(today, 'day');
         })
 
+
+        const thresholdDayIndex = this.resultData.findIndex(x => {
+          return moment(x.date).isSame(this.thresholdDate, 'day');
+        }) || currentDayIndex;
+
+
         const lastData = this.resultData[this.resultData.length - 1];
         const currentDayData = this.resultData[currentDayIndex];
 
         return {
             currentDayIndex: currentDayIndex,
+            thresholdDayIndex: thresholdDayIndex,
 
             currentTotalInfected: currentDayData.totalInfected,
             currentTotalExposed: currentDayData.totalExposed,

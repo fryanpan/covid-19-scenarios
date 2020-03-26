@@ -44,14 +44,16 @@ class MyInfo extends React.Component {
         // update social distancing information, if location changed
         if(changedLocation) {
             const chosenLocation = availableLocations.find(x => x.country === modelInputs.country && x.state === modelInputs.state);
-            console.log("Changing to hammer date for location", chosenLocation.country, 
-                chosenLocation.state, chosenLocation.hammerDate);
+            console.log("Changing to flattening date for location", chosenLocation.country, 
+                chosenLocation.state, chosenLocation.flatteningDate);
 
-            if(chosenLocation.hammerDate) {
-                modelInputs.hammerDate = moment(chosenLocation.hammerDate).toDate();
-
-                console.log("New hammer date", modelInputs.hammerDate);
+            if(chosenLocation.flatteningDate) {
+                modelInputs.flatteningDate = moment(chosenLocation.flatteningDate).toDate();
+            } else {
+                modelInputs.flatteningDate = moment().toDate();
             }
+
+            console.log("New flattening date", modelInputs.flatteningDate);
         }
 
         return {
@@ -71,7 +73,7 @@ class MyInfo extends React.Component {
         const value = e.target.value;
         const changedLocation = e.target.name === "country" || e.target.name === "state";
 
-        if (name === "hammerDate") {
+        if (name === "flatteningDate") {
             modelInputs[name] = new Date(value);
         } else if (name === "age") {
             modelInputs.age = value === "" ? "" : parseInt(value);
@@ -92,9 +94,9 @@ class MyInfo extends React.Component {
         const country = modelInputs.country;
         const state = modelInputs.state;
         const age = modelInputs.age;
-        const hammerDate = modelInputs.hammerDate;
+        const flatteningDate = modelInputs.flatteningDate;
         const handleChange = this.handleChange.bind(this);
-        console.log(hammerDate);
+        console.log(flatteningDate);
         
         return <div>
             <h1>
@@ -149,7 +151,7 @@ export default props => (
                 nodes {
                     country
                     state
-                    hammerDate
+                    flatteningDate
                 }
             }
         }`}

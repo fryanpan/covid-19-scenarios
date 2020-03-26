@@ -3,57 +3,56 @@ import { BasicDiseaseModelScenario } from './basicDiseaseModel';
 
 /** Scenarios list that we're running */
 const BASE_SCENARIO = {
-  rBefore: 2.2,
+  rBefore: 2.5,
   cfrBefore: 0.014,
-  rAfter: 2.2,
-  cfrAfter: 0.014,
-  thresholdDate: new Date()
+  rAfter: 2.5,
+  cfrAfter: 0.014
 }
 
 export const PresetCategories  = {
   BASIC: "basic",
-  HAMMER_TIMING: "hammerTiming"
+  FLATTENING_TIMING: "flatteningTiming"
 }
 
 /** Scenario data can be either an Object that overrides BASE_SCENARIO, or a function that modifies it */
 export const PresetScenarios = new Map([
-  ["strongDistancing",  {
+  ["strongFlattening",  {
     category: PresetCategories.BASIC, 
-    name: "Strong Hammer",
+    name: "Strong Flattening",
     rAfter: 0.4
-  }],
-
-  ["moderateDistancing", {
-    category: PresetCategories.BASIC,
-    name: "Moderate Hammer",
-    rAfter: 0.8
   }],
 
   ["moderateFlattening", {
     category: PresetCategories.BASIC,
-    name: "Moderate Flatten",
+    name: "Moderate Flattening",
+    rAfter: 0.8
+  }],
+
+  ["mildFlattening", {
+    category: PresetCategories.BASIC,
+    name: "Mild Flattening",
     rAfter: 1.5
   }],
 
-  ["uncontrolled", {
+  ["noFlattening", {
     category: PresetCategories.BASIC,
-    name: "No Controls",
-    rAfter: 2.2
+    name: "No Flattening",
+    rAfter: 2.5
   }],
 
-  createHammerTimingScenario("hammerTwoWeeksEarlier", -2, 'week'),
-  createHammerTimingScenario("hammer", 0, 'day'),
-  createHammerTimingScenario("hammerTwoWeeksLater", 2, 'week'),
-  createHammerTimingScenario("hammerOneMonthLater", 1, 'month')
+  createFlatteningTimingScenario("flatteningTwoWeeksEarlier", -2, 'week'),
+  createFlatteningTimingScenario("flattening", 0, 'day'),
+  createFlatteningTimingScenario("flatteningTwoWeeksLater", 2, 'week'),
+  createFlatteningTimingScenario("flatteningOneMonthLater", 1, 'month')
 ]);
 
-function createHammerTimingScenario(key, numPeriods, periodType) {
+function createFlatteningTimingScenario(key, numPeriods, periodType) {
   return [key, x => {
-    const hammerDate = moment(x.thresholdDate).add(numPeriods, periodType);
-    x.name = "Start on " + hammerDate.format("YYYY-MM-DD");
+    const flatteningDate = moment(x.thresholdDate).add(numPeriods, periodType);
+    x.name = "Start on " + flatteningDate.format("YYYY-MM-DD");
     x.rAfter = 0.4;
-    x.category = PresetCategories.HAMMER_TIMING;
-    x.thresholdDate = hammerDate.toDate();
+    x.category = PresetCategories.FLATTENING_TIMING;
+    x.thresholdDate = flatteningDate.toDate();
   }]
 }
 
@@ -63,8 +62,8 @@ export class ModelInputs {
         this.age = 45;
         this.country = "United States";
         this.state = "California";
-        this.hammerDate = moment("2020-03-17").toDate();
-        this.scenario = "strongDistancing";
+        this.flatteningDate = moment("2020-03-17").toDate();
+        this.scenario = "strongFlattening";
     }
 }
 
@@ -118,7 +117,7 @@ export class ModelManager {
     const locationBaseScenario = Object.assign({
       rBefore: parseFloat(locationData.rInitial),
       cfrBefore: parseFloat(locationData.cfrBefore),
-      thresholdDate: newModelInputs.hammerDate
+      thresholdDate: newModelInputs.flatteningDate
     }, BASE_SCENARIO);
 
     this.scenarios = {};

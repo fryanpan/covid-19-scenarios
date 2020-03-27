@@ -73,7 +73,8 @@ export class ModelInputs {
         this.country = "United States";
         this.state = "California";
         this.flatteningDate = moment("2020-03-19").toDate();
-        this.scenario = "strongFlattening";
+        this.scenario = "strongFlattening"; // @TODO get rid of thiss
+        this.rAfter = 0.8;
     }
 }
 

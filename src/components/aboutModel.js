@@ -1,5 +1,6 @@
 import React from "react"
 import ScenarioEditingComponent from "./scenarioEditingComponent"
+import RSlider from "./rSlider"
 
 import {
     ComposedChart, 
@@ -278,6 +279,7 @@ class AboutModel extends ScenarioEditingComponent {
 
                 <p>
                     Please choose a scenario to use as we answer questions on this page: 
+                    <RSlider name="rAfter" value={modelInputs.rAfter} onChange={this.handleScenarioEditEvent}></RSlider>
                     <select name="scenario" value={modelInputs.scenario} onChange={this.handleScenarioEditEvent}>
                         {
                             [...PresetScenarios.entries()].map(entry => {

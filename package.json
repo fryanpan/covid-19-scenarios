@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "recharts": "^1.8.5",
+    "rheostat": "^4.1.1",
     "typography": "^0.16.19",
     "typography-theme-bootstrap": "^0.16.19",
     "typography-theme-twin-peaks": "^0.16.19",

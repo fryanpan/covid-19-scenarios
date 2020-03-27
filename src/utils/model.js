@@ -1,5 +1,6 @@
 import moment from 'moment';
 import { BasicDiseaseModelScenario } from './basicDiseaseModel';
+import {LocationManager} from "../utils/locationManager"
 
 /** Scenarios list that we're running */
 const BASE_SCENARIO = {
@@ -11,7 +12,8 @@ const BASE_SCENARIO = {
 
 export const PresetCategories  = {
   BASIC: "basic",
-  FLATTENING_TIMING: "flatteningTiming"
+  FLATTENING_TIMING: "flatteningTiming",
+  WORLD: "world" // comparisons around the world
 }
 
 /** Scenario data can be either an Object that overrides BASE_SCENARIO, or a function that modifies it */
@@ -43,7 +45,15 @@ export const PresetScenarios = new Map([
   createFlatteningTimingScenario("flatteningTwoWeeksEarlier", -2, 'week'),
   createFlatteningTimingScenario("flattening", 0, 'day'),
   createFlatteningTimingScenario("flatteningTwoWeeksLater", 2, 'week'),
-  createFlatteningTimingScenario("flatteningOneMonthLater", 1, 'month')
+  createFlatteningTimingScenario("flatteningOneMonthLater", 1, 'month'),
+
+  ["hubeiStrongFlattening", {
+    category: PresetCategories.WORLD,
+    name: "Hubei, China",
+    rBefore: 2.2,
+    thresholdDate: moment("2020-01-24").toDate(),
+    rAfter: 0.4
+  }]
 ]);
 
 function createFlatteningTimingScenario(key, numPeriods, periodType) {
@@ -84,20 +94,9 @@ export class ModelManager {
     this.updateModelInputs(this.modelInputs);
   }
 
-  updateModelInputs(newModelInputs) {
-    console.log("model.updateModelInputs", newModelInputs);
-
-    const lookupCountry = newModelInputs.country;
-    const lookupState = newModelInputs.state;
-
-    const locationData = this.historicalData.allLocationsCsv.nodes.find(x => {
-      return x.country === lookupCountry && x.state === lookupState;
-    })    
-    locationData.population = parseFloat(locationData.population);
-
-    // Load daily data
+  getDailyData(country, state) {
     const dailyData = this.historicalData.allDailyDataCsv.nodes.filter(x => {
-      return x.country === lookupCountry && x.state === lookupState;
+      return x.country === country && x.state === state;
     }).map(x => {
       return {
         date: x.date,
@@ -107,12 +106,27 @@ export class ModelManager {
     });
 
     if(dailyData.length == 0) {
-      alert("Unable to find data for country ", lookupCountry, " and state/province ", lookupState);
+      alert("Unable to find data for country ", country, " and state/province ", state);
       return [];
     }
+    return dailyData;
+  }
+
+  updateModelInputs(newModelInputs) {
+    this.modelInputs = newModelInputs;
+
+    console.log("model.updateModelInputs", newModelInputs);
+
+    const lookupCountry = newModelInputs.country;
+    const lookupState = newModelInputs.state;
+
+    const locationData = LocationManager.lookupLocation(lookupCountry, lookupState);
+    locationData.population = parseFloat(locationData.population);
+
+    // Load daily data
+    var dailyData = this.getDailyData(lookupCountry, lookupState);
     
     // Create and run the preset scenarios
-
     // Base scenario.  Construct additional scenarios from this
     const locationBaseScenario = Object.assign({
       rBefore: parseFloat(locationData.rInitial),
@@ -132,12 +146,20 @@ export class ModelManager {
         Object.assign(scenarioClone, scenarioData);
       }
 
+      // Special case to pull in Wuhan data for now
+      var dailyDataForScenario = dailyData;
+      var populationForScenario = locationData.population;
+      if(key == "hubeiStrongFlattening") {
+        dailyDataForScenario = this.getDailyData("China", "Hubei");
+        populationForScenario = LocationManager.lookupLocation("China", "Hubei").population;
+      }
+
       // Run the scenario
       console.log("Running scenario ", JSON.stringify(scenarioClone));
       this.scenarios[key] = new BasicDiseaseModelScenario(
         scenarioClone.category,
         scenarioClone.name,
-        dailyData,
+        dailyDataForScenario,
         locationData.population,
         scenarioClone.rBefore,
         scenarioClone.cfrBefore,

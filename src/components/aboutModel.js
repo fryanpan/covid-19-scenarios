@@ -28,8 +28,34 @@ function extractDateAndKey(array, key, outputKey) {
 }
 
 class AboutModel extends React.Component {    
+    constructor(props) {
+        super(props)
+        this.state = {
+            modelInputs: this.props.modelInputs,
+            showDetails: false
+        };
+    }
+
+      /** Pass changes back up to the index page component to update all parts of the page*/
+    handleChange(e) {
+        const key = e.target.name;
+        const value = e.target.value;
+        this.props.onModelInputChange(key, value);
+    }
+
+    handleToggleDetails() {
+        this.setState(prevState => {
+            return {
+                showDetails: !prevState.showDetails 
+            }
+        })
+    }
+
     render() {        
         const scenarios = this.props.modelData;
+        const handleChange = this.handleChange.bind(this);
+        const modelInputs = this.props.modelInputs;
+        const chosenScenario = modelInputs.scenario;
 
         /**
          * Combine data from all of the scenarios
@@ -61,8 +87,6 @@ class AboutModel extends React.Component {
         const scenarioDeathData = mergeDataArrays(deadDataArrays);
         const scenarioDeathDataTillNow = scenarioDeathData.slice(0, thresholdDayIndex + 28);
 
-        console.log(scenarioDeathData);
-
         return <div>
             <h1> About the scenarios </h1>
                 <p>
@@ -85,14 +109,13 @@ class AboutModel extends React.Component {
                 </h2>
 
                 <p>
-                    Each scenario here is tuned to the historical confirmed death counts from your location,
-                    and it also takes into account the population.  
-                    The chart below shows how each scenario models new deaths each day
+                    Each scenario here is tuned to the historical confirmed death counts and total population
+                    from your location. The chart below shows how each scenario models new deaths each day
                     compared to the confirmed new death counts from the&nbsp; 
                     <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>. 
                 </p>
                 
-                <ResponsiveContainer width="100%" height={500}>
+                <ResponsiveContainer width="100%" height={400}>
                     <ComposedChart
                         data={scenarioDeathDataTillNow}
                         margin={{
@@ -102,19 +125,23 @@ class AboutModel extends React.Component {
                         <XAxis dataKey="date"/>                        
                         <YAxis type="number" width={100} />
                         <Legend/>
-                        <Tooltip formatter={readableInteger}/>
+                        <Tooltip formatter={readableInteger()}/>
 
                         <Line type="monotone" dataKey="strongFlatteningDeadInc"  
-                            name="Strong Flattening" stroke="#66c2a5" strokeWidth={2} dot={false}/>
+                            name="Strong Flattening" stroke="#66c2a5" 
+                            strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
 
                         <Line type="monotone" dataKey="moderateFlatteningDeadInc"  
-                            name="Moderate Flattening" stroke="#fc8d62" strokeWidth={2} dot={false}/>
+                            name="Moderate Flattening" stroke="#fc8d62" 
+                            strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
 
                         <Line type="monotone" dataKey="mildFlatteningDeadInc"  
-                            name="Mild Flattening" stroke="#8da0cb" strokeWidth={2} dot={false}/>
+                            name="Mild Flattening" stroke="#8da0cb" 
+                            strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
 
                         <Line type="monotone" dataKey="noFlatteningDeadInc"  
-                            name="No Flattening" stroke="#e78ac3" strokeWidth={2} dot={false}/>
+                            name="No Flattening" stroke="#e78ac3" 
+                            strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
 
                         <Bar dataKey="confirmedDeathsInc"
                             name="New Confirmed Deaths" fill="#f00"/>
@@ -122,106 +149,164 @@ class AboutModel extends React.Component {
                 </ResponsiveContainer>
 
                 <p>
-                    Note, this data is based on the "Confirmed Death" counts, which are a total over all time.
-                    By plotting the new deaths each day, it's easier to see insights
-                    with less mental gymanstics.  We'll do our best to keep the mental math to a minimum here.  
-                    Please feel free to write a letter to the editor of your favourite newspaper 
-                    and share this sentiment.
-                </p>
-
-                <p>
-                    <a href="https://www.nytimes.com/2020/03/11/science/coronavirus-curve-mitigation-infection.html">
-                            Flattening </a> is the idea that we can slow the transmission of the virus
-                        to reduce the peak number of cases.  Each location might choose different
-                        measures depending on what works well there and what the economic and social tradeoffs are.
-                        In general, social distancing, effective testing, and better contact tracing are all
-                        likely to be effective.  But there is no 100% correct answer. 
-
-                </p>
-                <p>
-                        For example, California recommends people stay at home and avoid being within 6 feet 
-                        of anyone not from their household.  Taiwan used mobile phones to help track the location
-                        of people who have the virus.  In Israel, my family-in-law tells me that people are now 
-                        limited to walking no more than 100 metres from home for exercise -- too many people
-                        went to the beach.
-                </p>
-                <p>
-                        These are the four flattening scenarios we look at through the rest of this page:
-                </p>
-
-                <ul>
-                    <li>
-                        <b>Strong Flattening</b> Strong measures.  Based on R from Wuhan after January 24, 2020 
-                            (R = {scenarios.strongFlattening.scenario.rAfter}).
-                        </li>
-                    <li>
-                        <b>Moderate Flattening</b> Moderately effective flattening measures.
-                            (R = {scenarios.moderateFlattening.scenario.rAfter})  
-                    </li>
-                    <li>
-                        <b>Mild Flattening</b> Reduce spread, but not enough to avoid continued growth.
-                            Similar to the first few weeks in South Korea, before there was enough testing
-                            and tracing.
-                            (R = {scenarios.mildFlattening.scenario.rAfter})
-                    </li>   
-                    <li>
-                        <b>No Flattening</b> Minimal to no action taken to reduce transmission.
-                            This is based on data from the initial weeks in China.
-                            (R = {scenarios.noFlattening.scenario.rAfter})
-                    </li>   
-                </ul>
-
-                <p>
-                    The key point to flattening measures is how much they reduce the <i>basic reproduction number</i> or <i>R</i>.
-                    This number represents for each person who is infected, how many other people on average
-                    do they infect.  When it is more than 1, then eventually a large percentage of the population
-                    will be infected.  If it less than 1, then a much smaller percentage of the population will be infected.
+                    Please choose a scenario to use as we answer questions on this page: 
+                    <select name="scenario" value={modelInputs.scenario} onChange={handleChange}>
+                        {
+                            [...PresetScenarios.entries()].map(entry => {
+                                const key = entry[0];
+                                const scenarioData = entry[1];
+                                if(scenarioData.category == PresetCategories.BASIC) {
+                                    return <option key={key} value={key}>{scenarioData.name}</option>
+                                } else {
+                                    return "";
+                                }
+                            })
+                        }
+                    </select>
+                    { modelInputs.scenario != "noFlattening" && 
+                        <span>
+                            <br/>Flattening measures&nbsp;
+                            { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
+                            &nbsp; on &nbsp;
+                            <input style={{width: "8rem"}} type="date" name="flatteningDate"
+                                                    value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
+                                                    onChange={handleChange}></input>
+                        </span>
+                    }
                 </p>
                 <p>
-                    For example, let's take the chart above and zoom out to new deaths each day for the next year.
-                    Now, the strong and moderate flattening scenarios
-                    are barely visible.  If you can keep R less than 1, it makes a significant difference.
+                    { modelInputs.scenario == "strongFlattening" &&
+                      <span>
+                        This strong flattening scenario shows what happens with extensive measures to reduce transmission.
+                        This includes a combination of most or all of social distancing (staying at home),
+                        extensive testing, rapid contact tracing, and other measures.  The rate of transmission
+                        in this scenario is based on what happened in Wuhan after lockdown on January 24, 2020.
+                      </span>
+                    }
+                    { modelInputs.scenario == "moderateFlattening" &&
+                      <span>
+                        The moderate flattening scenario shows what happens with many measures in place to reduce transmission,
+                        but not quite as strongly as in Wuhan after the lockdown.  
+                      </span>
+                    }
+                    { modelInputs.scenario == "mildFlattening" &&
+                      <span>
+                        The mild flattening scenario shows what happens with some measures in place to reduce transmission, 
+                        but not enough measures to prevent the number of cases to continue growing.
+                      </span>
+                    }
+                    { modelInputs.scenario == "noFlattening" &&
+                      <span>
+                        The no flattening scenario shows what happens with uncontrolled transmission.  The rate of 
+                        transmission in this scenario is based on historical data from Wuhan before
+                        the lockdown happened on January 24, 2020.
+                      </span>
+                    }
                 </p>
-                <ResponsiveContainer width="100%" height={500}>
-                    <ComposedChart
-                        data={scenarioDeathData}
-                        margin={{
-                            top: 10, right: 100, left: 0, bottom: 20,
-                        }}
-                    >
-                        <XAxis dataKey="date"/>                        
-                        <YAxis type="number" width={100} />
-                        <Legend/>
-                        <Tooltip formatter={readableInteger}/>
+                   
+                <p>
+                    Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
+                    "all models are wrong, but some are useful"</a>.  Rely on your local authorities
+                    for the most accurate and up-to-date information.  Hopefully this site helps 
+                    give you useful context.
+                </p>
 
-                        <Line type="linear" dataKey="strongFlatteningDeadInc"  
-                            name="Strong Flattening" stroke="#66c2a5" strokeWidth={2} dot={false}/>
 
-                        <Line type="linear" dataKey="moderateFlatteningDeadInc"  
-                            name="Moderate Flattening" stroke="#fc8d62" strokeWidth={2} dot={false}/>
+                <p>          
+                   { !this.state.showDetails &&
+                        <span>For more details about each scenario, please <a onClick={this.handleToggleDetails.bind(this)}>
+                            click here</a>&nbsp;
+                        </span>
+                    }
+                </p>     
+                { this.state.showDetails && 
+                    <div>
 
-                        <Line type="linear" dataKey="mildFlatteningDeadInc"  
-                            name="Mild Flattening" stroke="#8da0cb" strokeWidth={2} dot={false}/>
+                        <p>
+                            <a href="https://www.nytimes.com/2020/03/11/science/coronavirus-curve-mitigation-infection.html">
+                                    Flattening </a> is the idea that we can slow the transmission of the virus
+                                to reduce the peak number of cases.  Each location might choose different
+                                measures depending on what works well there and what the economic and social tradeoffs are.
+                                In general, social distancing, effective testing, and better contact tracing are all
+                                likely to be effective.  But there is no 100% correct answer. 
 
-                        <Line type="linear" dataKey="noFlatteningDeadInc"  
-                            name="No Flattening" stroke="#e78ac3" strokeWidth={2} dot={false}/>
+                        </p>
+                        <p>
+                                For example, California recommends people stay at home and avoid being within 6 feet 
+                                of anyone not from their household.  Taiwan used mobile phones to help track the location
+                                of people who have the virus.  In Israel, my family-in-law tells me that people are now 
+                                limited to walking no more than 100 metres from home for exercise -- too many people
+                                went to the beach.
+                        </p>
+                        <p>
+                                These are the four flattening scenarios we look at through the rest of this page:
+                        </p>
 
-                        <Bar dataKey="confirmedDeathsInc"
-                            name="Actual confirmed deaths" fill="#f00"/>
-                    </ComposedChart>
-                </ResponsiveContainer>                
+                        <ul>
+                            <li>
+                                <b>Strong Flattening</b> Strong measures.  Based on R from Wuhan after January 24, 2020 
+                                    (R = {scenarios.strongFlattening.scenario.rAfter}).
+                                </li>
+                            <li>
+                                <b>Moderate Flattening</b> Moderately effective flattening measures.
+                                    (R = {scenarios.moderateFlattening.scenario.rAfter})  
+                            </li>
+                            <li>
+                                <b>Mild Flattening</b> Reduce spread, but not enough to avoid continued growth.
+                                    Similar to the first few weeks in South Korea, before there was enough testing
+                                    and tracing.
+                                    (R = {scenarios.mildFlattening.scenario.rAfter})
+                            </li>   
+                            <li>
+                                <b>No Flattening</b> Minimal to no action taken to reduce transmission.
+                                    This is based on data from the initial weeks in China.
+                                    (R = {scenarios.noFlattening.scenario.rAfter})
+                            </li>   
+                        </ul>
 
-            <p>
-                Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
-                "all models are wrong, but some are useful"</a>.  Rely on your local authorities
-                for the most accurate and up-to-date information.  Hopefully, this site suggests
-                possible answers to your open questions.
-            </p>
-            <p>
-                For example, in Italy and Iran, initially R was more than 3.  But for the purposes of this page,
-                we're assuming that if you're in a place that's taking even a few measures, you are probably
-                doing better than this.
-            </p>                
+                        <p>
+                            The key point to flattening measures is how much they reduce the <i>basic reproduction number</i> or <i>R</i>.
+                            This number represents for each person who is infected, how many other people on average
+                            do they infect.  When it is more than 1, then eventually a large percentage of the population
+                            will be infected.  If it less than 1, then a much smaller percentage of the population will be infected.
+                        </p>
+                        <p>
+                            For example, let's take the chart above and zoom out to new deaths each day for the next year.
+                            Now, the strong and moderate flattening scenarios
+                            are barely visible.  If you can keep R less than 1, it makes a significant difference.
+                        </p>
+                        <ResponsiveContainer width="100%" height={500}>
+                            <ComposedChart
+                                data={scenarioDeathData}
+                                margin={{
+                                    top: 10, right: 100, left: 0, bottom: 20,
+                                }}
+                            >
+                                <XAxis dataKey="date"/>                        
+                                <YAxis type="number" width={100} />
+                                <Legend/>
+                                <Tooltip formatter={readableInteger()}/>
+
+                                <Line type="linear" dataKey="strongFlatteningDeadInc"  
+                                    name="Strong Flattening" stroke="#66c2a5" 
+                                    strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
+
+                                <Line type="linear" dataKey="moderateFlatteningDeadInc"  
+                                    name="Moderate Flattening" stroke="#fc8d62" 
+                                    strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
+
+                                <Line type="linear" dataKey="mildFlatteningDeadInc"  
+                                    name="Mild Flattening" stroke="#8da0cb" 
+                                    strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
+
+                                <Line type="linear" dataKey="noFlatteningDeadInc"  
+                                    name="No Flattening" stroke="#e78ac3" 
+                                    strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
+                            </ComposedChart>
+                        </ResponsiveContainer>                
+    
+                    </div>
+                }
 
         </div>
     }

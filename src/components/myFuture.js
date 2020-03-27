@@ -5,7 +5,7 @@ import {
     ResponsiveContainer
 } from 'recharts';
 import { PresetScenarios, PresetCategories } from '../utils/model';
-import { readableNumber } from '../utils/dataUtils'
+import { readableNumber, readablePercent } from '../utils/dataUtils'
 
 
 
@@ -30,8 +30,8 @@ class MyFuture extends React.Component {
         const endDay = scenario.dailyData[scenario.dailyData.length - 1];
         const population = scenario.scenario.population;
 
-        const monthCatchProbability = (monthLaterDay.totalInfected - currentDay.totalInfected) / population * 1000000;
-        const endCatchProbability = (endDay.totalInfected - currentDay.totalInfected) / population * 1000000;
+        const monthCatchProbability = (monthLaterDay.totalInfected - currentDay.totalInfected) / population;
+        const endCatchProbability = (endDay.totalInfected - currentDay.totalInfected) / population;
 
         result.catchCovid = {
             month: monthCatchProbability,
@@ -52,6 +52,7 @@ class MyFuture extends React.Component {
         return result;
     }    
     render() {
+        const percentFormatter = readablePercent(2);
         const scenarios = this.props.modelData;
         const currentScenario = this.props.modelInputs.scenario;
 
@@ -60,8 +61,29 @@ class MyFuture extends React.Component {
             stats[scenarioKey] = this.computeStats(scenarios[scenarioKey]);
         }
 
-        console.log(scenarios);
-        console.log(stats);
+        /** Get data for the personal COVID-19 chart */
+        const currentStats = stats[currentScenario];
+        var personalCatchData = [
+            {
+                label: "In the next month",
+                value: currentStats.catchCovid.month
+            },
+            {
+                label: "In the next year",
+                value: currentStats.catchCovid.year
+            }
+        ];
+        var personalDieData = [
+            {
+                label: "In the next month",
+                value: currentStats.dieFromCovid.month
+            },
+            {
+                label: "In the next year",
+                value: currentStats.dieFromCovid.year
+            }
+        ];
+
 
         /** Get data for graphs that compare across base scenarios */
         var catchCovidData = [];
@@ -69,6 +91,7 @@ class MyFuture extends React.Component {
         for(let [key, scenarioData] of PresetScenarios.entries()) {
 
             if(scenarioData.category != PresetCategories.BASIC) continue;
+            
 
             const scenarioName = scenarioData.name;
             catchCovidData.push({
@@ -95,8 +118,6 @@ class MyFuture extends React.Component {
             });
         }
 
-        console.log(flatteningTimingData);
-
         // insert some sample values from micromorts
         
         return <div>
@@ -104,26 +125,22 @@ class MyFuture extends React.Component {
                 What does my future look like?
             </h1>
 
-            <h2>How likely is it for me to catch COVID-19?</h2>
             <p>
-            This chart shows how likely it is for you to catch COVID-19 over the next year, under different plausible scenarios.
-            If the virus has not spread widely yet, then stronger flattening makes a big difference.
+            This chart shows how likely it is for you to catch COVID-19:
             </p>
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
                     layout="vertical"
-                    data={catchCovidData}
+                    data={personalCatchData}
                     margin={{
                         top: 10, right: 100, left: 0, bottom: 20,
                     }}
                 >
-                    <XAxis type="number" domain={[ 0, nextPowerOf10 ]}>
-                        <Label value="in a million chance" offset={-15} position="insideBottom" />
-                    </XAxis>
+                    <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
                     <YAxis dataKey="label" type="category" width={200}/>
 
-                    <Bar type="monotone" dataKey="probability"  fill="#8884d8">
-                        <LabelList dataKey="probability" position="right" formatter={readableNumber}/>
+                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                        <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>
@@ -138,28 +155,28 @@ class MyFuture extends React.Component {
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
                     layout="vertical"
-                    width={600}
-                    height={180}
-                    data={dieFromCovidData}
+                    data={personalDieData}
                     margin={{
                         top: 10, right: 100, left: 0, bottom: 20,
                     }}
                 >
-                    <XAxis type="number" domain={[ 0, nextPowerOf10 ]}>
-                        <Label value="in a million chance" offset={-15} position="insideBottom" />
-                    </XAxis>
+                    <XAxis type="number" domain={[0,0.02]} tickFormatter={readablePercent(2)}></XAxis>
                     <YAxis dataKey="label" type="category" width={200}/>
-                    <Bar type="monotone" dataKey="probability"  fill="#8884d8">
-                        <LabelList dataKey="probability" position="right" formatter={readableNumber}/>
+
+                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                        <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>
+
+            TODO: Add some bars based on <a href="https://en.wikipedia.org/wiki/Micromort">micromort</a> data
 
 
             <h3>How much does it matter when flattening starts?</h3>
             <p>
                 If you are in an area where the virus is spreading rapidly and testing is incomplete, then it can matter a lot!
-                This chart shows the chance that you will catch COVID-19, with a strong flattening starting on different dates.  
+                This chart shows the chance that you will catch COVID-19 over the next year, with 
+                &nbsp;{scenarios[currentScenario].scenario.name.toLowerCase()}&nbsp; starting on different dates.  
             </p> 
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
@@ -169,12 +186,10 @@ class MyFuture extends React.Component {
                         top: 10, right: 100, left: 0, bottom: 20,
                     }}
                 >
-                    <XAxis type="number">
-                        <Label value="in a million chance" offset={-15} position="insideBottom" />
-                    </XAxis>
+                    <XAxis type="number" tickFormatter={readablePercent(1)} />
                     <YAxis dataKey="label" type="category" width={200}/>
                     <Bar type="monotone" dataKey="probability"  fill="#8884d8">
-                        <LabelList dataKey="probability" position="right" formatter={readableNumber}/>
+                        <LabelList dataKey="probability" position="right" formatter={(readablePercent(2))}/>
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>

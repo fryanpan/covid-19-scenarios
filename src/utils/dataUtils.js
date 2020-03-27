@@ -47,13 +47,22 @@ export function mergeDataArrays(array) {
     return result;
 }
 
-export function readableNumber(x) {
-    return d3Format.format(",.2r")(x);
+export function readableNumber(precision) {
+    precision = precision || 2;
+    return d3Format.format(`,.${precision}r`);
 }
 
-export function readableInteger(x) {
-    return d3Format.format(",.0r")(x);
+export function readableRatio(precision) {
+    precision = precision || 2;
+    const formatter = d3Format.format(`,.${precision}r`);
+    return x => formatter(x) + 'x';
 }
 
+export function readableInteger() {
+    return d3Format.format(`,d`);
+}
 
-export const log10Scale = scaleLog().base(10);
+export function readablePercent(precision) {
+    precision = precision || 0;
+    return d3Format.format(`,.${precision}p`);
+}

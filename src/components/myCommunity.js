@@ -9,7 +9,7 @@ import {
 
 import moment from 'moment';
 
-import { mergeDataArrays } from "../utils/dataUtils" 
+import { mergeDataArrays, readableRatio, readableNumber, readablePercent, log10Scale } from "../utils/dataUtils" 
 
 function sum(array, key, i, j) {
     var result = 0;
@@ -26,6 +26,7 @@ function sum(array, key, i, j) {
  */
 function computeRollingRatio(data, key, window, outputKey) {
     var result = [];
+    var lastValue = undefined;
 
     for(let i = window * 2 + 1; i < data.length; ++i) {
         const sumNow = data[i][key] - data[i - window][key];
@@ -35,10 +36,13 @@ function computeRollingRatio(data, key, window, outputKey) {
         const value = sumPast !== 0 ? sumNow / sumPast : undefined;
 
         if(value && value > 0) {
-            var entry = { date: date };
-            entry[outputKey] = value;
-            result.push(entry);
+            lastValue = value
+        } else {
+            value = lastValue;
         }
+        var entry = { date: date };
+        entry[outputKey] = value;
+        result.push(entry);
     }
     return result;
 }
@@ -48,6 +52,21 @@ function rollingRatioForState(historicalData, country, state, key, window, outpu
     return computeRollingRatio(stateData, key, window, outputKey);
 }
 
+function metricPerMillionPopulation(scenarioData, key, outputKey) {
+    const population = scenarioData.scenario.population;
+
+    return scenarioData.dailyData.map(x => {
+        var row = {
+            date: x.date
+        };
+        if(x[key] !== 0) {
+            row[outputKey] = x[key] / population * 1000000;
+        }
+        return row;
+    });
+}
+
+
 
 class MyCommunity extends React.Component {    
     render() {        
@@ -56,26 +75,38 @@ class MyCommunity extends React.Component {
         const historicalData = this.props.historicalData;
         const currentScenario = scenarios[modelInputs.scenario];
 
-        const percentFormatter = d3Format.format(",.0%");
-
         /** Keep only days with testing ratios */
         const firstTestIndex = currentScenario.dailyData.findIndex(x => x.testingRatio > 0);
         const testData = currentScenario.dailyData.slice(firstTestIndex, currentScenario.summary.currentDayIndex)
 
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
-        const currentScenarioName = modelInputs.state;
+        const currentScenarioName = modelInputs.state == 'All' ? modelInputs.country : modelInputs.state;
         const confirmedCasesRatios =
             mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)')
+                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)'),
+                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedCases', WINDOW, 'South Korea')
             ]);
 
         const deathRatios =
             mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedDeaths', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'China (Hubei)')
+                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'China (Hubei)'),
+                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedDeaths', WINDOW, 'South Korea')
             ]);
+
+        /** Current scenario active cases per million */
+        const activeCasesPerMillion = 
+            mergeDataArrays([
+                metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
+                metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
+            ]);
+        console.log("Active cases per million", activeCasesPerMillion);
+
+        activeCasesPerMillion.forEach(x => {
+            console.log(x);
+        })
 
         return <div>
             <h1>
@@ -83,30 +114,66 @@ class MyCommunity extends React.Component {
             </h1>
 
             <h2>When might social distancing end?</h2>
-            @TODO: Insert a chart here by active cases per million people
 
-            China started reducing restrictions once they were below 10 per million.
-            Taiwan never went above this level.
-
-            Link to Bill Gates' estimate of 6-10 weeks for developed nations (I assume his team is doing some exceptional modeling)
-
-            <h2>Are things getting better?</h2>
             <p>
-            This chart calculates the number of confirmed deaths over the past week and how it compares to the week before that.
+                We can look for answers in countries that are starting to loosen restrictions, like China,
+                Taiwan, and South Korea.
+                
+                All of these countries reduced active infections to a level low enough that they could depend on 
+                extensive testing, contact tracing, and local restrictions to prevent future growth.
+                For example, instead of shutting down all schools, Taiwan only shuts down a school
+                when there is a confirmed infection. 
+            </p>
+            <p>
+                To guess at when social distancing might end then, we can try to understand two things.
+                When might the number of active infections be low enough?  And are we getting there?
+
+            </p>
+            <h3>How many active cases are there in my community?</h3>
+
+            Here's what the {currentScenarioName.scenario.name.toLowerCase()} model predicts for active infections
+            per million people.  Every place is different, but in China, social distancing restrictions
+            started rolling back once there were fewer than 10 active infections per million people. 
+
+            <ResponsiveContainer width={960} height={400}>
+                <LineChart
+                    data={activeCasesPerMillion}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis type='number' width={100} 
+                        scale="log"
+                        tickFormatter={readableNumber(2)} 
+                        domain={[0.1, 'auto']}/>
+                    <Tooltip formatter={readableNumber(2)}/>
+                    <Legend />
+
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={10} label="This is roughly the level when Hubei started relaxing restrictions"
+                        strokeDasharray="3 3" position="start"/>
+                </LineChart>
+            </ResponsiveContainer>
+
+            <h3>Will we get there?</h3>
+
+            <p>The next question is whether there are signs that we will get there.  Remember that every model is wrong.
+            What does the data from the real world tell us, even if it's not fully accurate?
+            </p>
+
+            <p>
+            One good indicator for this whether the announced counts are going down, and by how much?
+            This chart shows the number of confirmed deaths over the past week as a ratio of the
+            number from one week before that.
             
             It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
-            This would have immediately started reducing transmission, but most deaths happen 3 or more weeks
+            This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
             after contracting the virus.  This is why the new death counts only start moving much lower starting February 19.  
             Eventually, deaths in each week are only 50% of the week before.
             </p>
-
-            <p>
-                The key takeaway: if your area has made a major change to flatten the curve, like staying at home
-                or much more extensive testing, look for the changes here in the death ratio about 3 weeks later.
-                Even better, if deaths each week consistently fall below 100% of the past week, then you have likely 
-                flattened below R = 1, and eventually the number of cases will dwindle to zero.
-            </p>
-            <ResponsiveContainer width={960} height={600}>
+            <ResponsiveContainer width={960} height={400}>
                 <LineChart
                     data={deathRatios}
                     margin={{
@@ -114,22 +181,50 @@ class MyCommunity extends React.Component {
                     }}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={percentFormatter} />
-                    <Tooltip formatter={percentFormatter}/>
+                    <YAxis type='number' width={100} 
+                        tickFormatter={readableRatio(1)} 
+                        scale='log' 
+                        domain={[0.1, 'auto']}/>
+                    <Tooltip formatter={readableRatio(2)}/>
                     <Legend />
 
-                    <ReferenceLine y={1} label="100% means new deaths were the same as the week before" 
-                        strokeDasharray="3 3" position="top"/>
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={3} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={3} dot={false}/>
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={1} label="1x means new deaths this week were the same as a week before" 
+                        strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>
+
             <p>
-                Note: this chart comes only from the actual confirmed death counts.  It does not use any data from the 
-                simulated scenarios.
+                The key takeaway: if your area has added stronger flattening measures, like staying at home
+                or much more extensive testing, then look for changes in the death ratio about 3 weeks later.
+                If the ratio falls consistently well below 1x like in Wuhan, then the number of cases
+                and deaths are going down every week instead of up.
             </p>
 
-            <h2>How well are we testing?</h2>
+            <ResponsiveContainer width={960} height={400}>
+                <LineChart
+                    data={confirmedCasesRatios}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis width={100} tickFormatter={readableRatio(1)}  
+                        scale='log' domain={[0.01, 'auto']} />
+                    <Tooltip formatter={readableRatio(2)}/>
+                    <Legend />
+
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={1} label="1x means new confirmed cases this week were the same as the week before" 
+                        strokeDasharray="3 3" position="start"/>
+                </LineChart>
+            </ResponsiveContainer>            
+
+            {/* <h2>How well are we testing?</h2>
 
             By assuming that the death counts are somewhat accurate, the model can take a guess 
             at how many actual cases there were in the past.  This chart shows the new cases
@@ -148,8 +243,8 @@ class MyCommunity extends React.Component {
                     // barGap={0}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
-                    <Tooltip formatter={percentFormatter}/>
+                    <YAxis width={100} tickFormatter={readablePercent(0)} domain={[0,1]} />
+                    <Tooltip formatter={readablePercent(0)}/>
                     <Legend />
                     <Bar dataKey="confirmedCasesInc" fill="#8884d8" />
                     <Line type="linear" dataKey="infectedInc"
@@ -174,13 +269,13 @@ class MyCommunity extends React.Component {
                     // barGap={0}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={percentFormatter} domain={[0,1]} />
-                    <Tooltip formatter={percentFormatter}/>
+                    <YAxis width={100} tickFormatter={readablePercent(0)} domain={[0,1]} />
+                    <Tooltip formatter={readablePercent(0)}/>
                     <Legend />
                     <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
                 </BarChart>
-            </ResponsiveContainer>
-
+            </ResponsiveContainer> */}
+{/* 
             <h2>How many people might be infected over time?</h2>
             <ResponsiveContainer width={960} height={300}>
                 <AreaChart
@@ -227,7 +322,7 @@ class MyCommunity extends React.Component {
                     <Area type="step" dataKey="confirmedDeaths" strokeWidth={0} 
                         name = "Confirmed Deaths" fill="#a6d854" />
                 </AreaChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer> */}
 
         </div>
     }

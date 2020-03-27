@@ -6,19 +6,76 @@ import MyFuture from "../components/myFuture"
 import SimulationDataTable from "../components/simDataTable"
 import { ModelManager } from "../utils/model"
 import MyCommunity from "../components/myCommunity"
+import { LocationManager } from "../utils/locationManager"
+import moment from "moment"
 
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
+    // Make sure to do this first, so the data is available elsewhere
+    LocationManager.initLocationData(this.props.data.allLocationsCsv.nodes);
+    
     this.state = {
       modelManager: new ModelManager(this.props.data)
     }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
+
   }
 
-  handleModelInputChange(newModelInputs) {
+  /**
+   * Handles updated location data in a modelInputs
+   * 
+   * @param {Boolean} changedLocation Whether the location changed 
+   */
+  handleLocationChange(modelInputs) {
+      console.log("UPdating available locations", modelInputs);
+
+      // update states value
+      var chosenLocation = LocationManager.lookupLocation(modelInputs.country, modelInputs.state);
+      const availableLocations = LocationManager.locationsForCountry(modelInputs.country);
+
+      // Pick a state that works, if it is not one of the existing options
+      if(!chosenLocation) {
+        chosenLocation = availableLocations[0];
+        modelInputs.state = chosenLocation.state;
+      } 
+
+      // Get updated flattening date and other model information
+
+      console.log("Changing to flattening date for location", chosenLocation.country, 
+          chosenLocation.state, chosenLocation.flatteningDate);
+
+      if(chosenLocation.flatteningDate) {
+          modelInputs.flatteningDate = moment(chosenLocation.flatteningDate).toDate();
+      } else {
+          modelInputs.flatteningDate = moment().toDate();
+      }
+
+      console.log("New flattening date", modelInputs.flatteningDate);
+  }
+
+  /* Handles a change to the model inputs */
+  handleModelInputChange(key, value) {
+    // Decide how to change the model inputs
+
+    const newModelInputs = {...this.state.modelManager.modelInputs};
+
+    if (key === "flatteningDate") {
+      newModelInputs[key] = new Date(value);
+    } else if (key === "age") {
+      newModelInputs.age = value === "" ? "" : parseInt(value);
+    } else {
+      newModelInputs[key] = value;
+    }
+
+    if(key == "country" || key == "state") {
+      this.handleLocationChange(newModelInputs);
+    }
+
+    // Update the model manager, re-run scenarios 
     this.state.modelManager.updateModelInputs(newModelInputs);
 
+    // Update the React state
     this.setState(prevState => {
       return {
         modelManager: this.state.modelManager
@@ -32,28 +89,9 @@ class IndexPage extends React.Component {
     const queryData = this.props.data;
 
     return <Layout>
-      <p>
-        Hope you are staying safe.  We are all a part of a pandemic spreading around the world.
-        There are so many&nbsp;
-        <a href="https://www.covidly.com">charts</a>,&nbsp;  
-        <a href="http://gabgoh.github.io/COVID"> disease modeling tools</a>,&nbsp;
-        <a href="https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus">
-          research papers</a>, and news articles.
-
-      </p>
-      <p>
-        This page hopes to do something different.  It focuses on answering questions that
-        are relevant to you and your community. Even though the future is uncertain, it is possible to 
-        &nbsp;<a href="https://hbr.org/1997/11/strategy-under-uncertainty">
-          guess at plausible scenarios
-        </a>.
-      </p>
-
-     
-
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
-      <AboutModel modelData={modelData}></AboutModel>
+      <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
 
       <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
       <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>

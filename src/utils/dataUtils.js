@@ -68,6 +68,11 @@ export function readablePercent(precision) {
     return d3Format.format(`,.${precision}p`);
 }
 
+export function readableSIPrefix(precision) {
+    precision = precision || 2;
+    return d3Format.format(`,.${precision}s`);
+}
+
 export function readableMonth() {
-    
+
 }

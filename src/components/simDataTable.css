@@ -10,7 +10,7 @@ td, th {
 table.simdata { 
     font-size: 0.6rem;
     table-layout: fixed;
-    width: 960px;
+    width: 1200px;
 }
 
 table.inputdata {
@@ -21,5 +21,9 @@ table.inputdata {
 table.simdata td, 
 table.simdata th {
     text-align: right;
+}
+
+.hscroll {
+    overflow-x: auto;
 }
 

@@ -22,3 +22,8 @@ input[type="date"]::-webkit-outer-spin-button {
 input[type="date"]::-ms-clear {
     display: none;
 }
+
+.chartTitle {
+  text-align: center;
+}
+  

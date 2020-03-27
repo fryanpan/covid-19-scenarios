@@ -1054,24 +1054,6 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-24,Cameroon,All,66,0,2
 2020-03-25,Cameroon,All,75,1,2
 2020-03-26,Cameroon,All,75,1,2
-2020-03-09,Canada,Alberta,7,0,0
-2020-03-10,Canada,Alberta,7,0,0
-2020-03-11,Canada,Alberta,19,0,0
-2020-03-12,Canada,Alberta,19,0,0
-2020-03-13,Canada,Alberta,29,0,0
-2020-03-14,Canada,Alberta,29,0,0
-2020-03-15,Canada,Alberta,39,0,0
-2020-03-16,Canada,Alberta,56,0,0
-2020-03-17,Canada,Alberta,74,0,0
-2020-03-18,Canada,Alberta,97,0,0
-2020-03-19,Canada,Alberta,119,0,0
-2020-03-20,Canada,Alberta,146,1,0
-2020-03-21,Canada,Alberta,195,1,0
-2020-03-22,Canada,Alberta,259,1,0
-2020-03-23,Canada,Alberta,301,1,0
-2020-03-24,Canada,Alberta,359,1,0
-2020-03-25,Canada,Alberta,358,2,0
-2020-03-26,Canada,Alberta,486,2,0
 2020-01-26,Canada,All,1,0,0
 2020-01-27,Canada,All,1,0,0
 2020-01-28,Canada,All,2,0,0
@@ -1133,6 +1115,24 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-24,Canada,All,2790,26,110
 2020-03-25,Canada,All,3251,30,183
 2020-03-26,Canada,All,4042,38,184
+2020-03-09,Canada,Alberta,7,0,0
+2020-03-10,Canada,Alberta,7,0,0
+2020-03-11,Canada,Alberta,19,0,0
+2020-03-12,Canada,Alberta,19,0,0
+2020-03-13,Canada,Alberta,29,0,0
+2020-03-14,Canada,Alberta,29,0,0
+2020-03-15,Canada,Alberta,39,0,0
+2020-03-16,Canada,Alberta,56,0,0
+2020-03-17,Canada,Alberta,74,0,0
+2020-03-18,Canada,Alberta,97,0,0
+2020-03-19,Canada,Alberta,119,0,0
+2020-03-20,Canada,Alberta,146,1,0
+2020-03-21,Canada,Alberta,195,1,0
+2020-03-22,Canada,Alberta,259,1,0
+2020-03-23,Canada,Alberta,301,1,0
+2020-03-24,Canada,Alberta,359,1,0
+2020-03-25,Canada,Alberta,358,2,0
+2020-03-26,Canada,Alberta,486,2,0
 2020-01-28,Canada,British Columbia,1,0,0
 2020-01-29,Canada,British Columbia,1,0,0
 2020-01-30,Canada,British Columbia,1,0,0
@@ -7344,36 +7344,6 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-26,United Kingdom,Montserrat,5,0,0
 2020-03-11,United Kingdom,UK,456,8,18
 2020-03-12,United Kingdom,UK,456,8,18
-2020-03-13,United States,Alabama,5,0,0
-2020-03-14,United States,Alabama,6,0,0
-2020-03-15,United States,Alabama,12,0,0
-2020-03-16,United States,Alabama,29,0,0
-2020-03-17,United States,Alabama,39,0,0
-2020-03-18,United States,Alabama,46,0,0
-2020-03-19,United States,Alabama,78,0,0
-2020-03-20,United States,Alabama,83,0,0
-2020-03-21,United States,Alabama,131,0,0
-2020-03-22,United States,Alabama,157,0,0
-2020-03-23,United States,Alabama,196,0,0
-2020-03-24,United States,Alabama,242,0,0
-2020-03-25,United States,Alabama,381,1,0
-2020-03-26,United States,Alabama,517,1,0
-2020-03-10,United States,Alaska,0,0,0
-2020-03-11,United States,Alaska,0,0,0
-2020-03-12,United States,Alaska,0,0,0
-2020-03-13,United States,Alaska,1,0,0
-2020-03-15,United States,Alaska,1,0,0
-2020-03-16,United States,Alaska,1,0,0
-2020-03-17,United States,Alaska,3,0,0
-2020-03-18,United States,Alaska,6,0,0
-2020-03-19,United States,Alaska,9,0,0
-2020-03-20,United States,Alaska,12,0,0
-2020-03-21,United States,Alaska,15,0,0
-2020-03-22,United States,Alaska,20,0,0
-2020-03-23,United States,Alaska,30,0,0
-2020-03-24,United States,Alaska,34,0,0
-2020-03-25,United States,Alaska,41,1,0
-2020-03-26,United States,Alaska,56,1,0
 2020-01-22,United States,All,1,0,0
 2020-01-23,United States,All,1,0,0
 2020-01-24,United States,All,2,0,0
@@ -7439,6 +7409,36 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-24,United States,All,53740,706,348
 2020-03-25,United States,All,65778,942,361
 2020-03-26,United States,All,83836,1209,681
+2020-03-13,United States,Alabama,5,0,0
+2020-03-14,United States,Alabama,6,0,0
+2020-03-15,United States,Alabama,12,0,0
+2020-03-16,United States,Alabama,29,0,0
+2020-03-17,United States,Alabama,39,0,0
+2020-03-18,United States,Alabama,46,0,0
+2020-03-19,United States,Alabama,78,0,0
+2020-03-20,United States,Alabama,83,0,0
+2020-03-21,United States,Alabama,131,0,0
+2020-03-22,United States,Alabama,157,0,0
+2020-03-23,United States,Alabama,196,0,0
+2020-03-24,United States,Alabama,242,0,0
+2020-03-25,United States,Alabama,381,1,0
+2020-03-26,United States,Alabama,517,1,0
+2020-03-10,United States,Alaska,0,0,0
+2020-03-11,United States,Alaska,0,0,0
+2020-03-12,United States,Alaska,0,0,0
+2020-03-13,United States,Alaska,1,0,0
+2020-03-15,United States,Alaska,1,0,0
+2020-03-16,United States,Alaska,1,0,0
+2020-03-17,United States,Alaska,3,0,0
+2020-03-18,United States,Alaska,6,0,0
+2020-03-19,United States,Alaska,9,0,0
+2020-03-20,United States,Alaska,12,0,0
+2020-03-21,United States,Alaska,15,0,0
+2020-03-22,United States,Alaska,20,0,0
+2020-03-23,United States,Alaska,30,0,0
+2020-03-24,United States,Alaska,34,0,0
+2020-03-25,United States,Alaska,41,1,0
+2020-03-26,United States,Alaska,56,1,0
 2020-03-22,United States,American Samoa,0,0,0
 2020-03-23,United States,American Samoa,0,0,0
 2020-03-24,United States,American Samoa,0,0,0

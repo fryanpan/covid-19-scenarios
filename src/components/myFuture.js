@@ -129,6 +129,7 @@ class MyFuture extends React.Component {
             <p>
             This chart shows how likely it is for you to catch COVID-19 with the {currentScenarioName.toLowerCase()} scenario. 
             </p>
+
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
                     layout="vertical"

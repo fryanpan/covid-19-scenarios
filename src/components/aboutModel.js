@@ -92,41 +92,49 @@ class AboutModel extends React.Component {
         return <div>
             <h1> About the scenarios </h1>
                 <p>
-                    
-                    - start from problem to solve instead of technical
-                    - instead of 
-
-                    
-                    In many countries, COVID-19 spread so quickly it overwhelmed the capacity 
-                    to test for the virus.  This is why when we see <i>confirmed cases</i> rapidly increase, it's hard to tell
-                    whether that comes from a real increase in active cases, incomplete testing, or testing delays.
+                    We're inundated with different analyses.  So many numbers and opinions with so much uncertainty.  
+                    Most countries with outbreaks are not testing quickly or comprehensively, so their confirmed 
+                    cases are low.  As of March 24th, for example,
+                    a survey of experts in the US estimated <a href="https://fivethirtyeight.com/features/experts-say-the-coronavirus-outlook-has-worsened-but-the-trajectory-is-still-unclear/">
+                    the official count only includes 9% of actual cases</a>.
                 </p>
-
                 <p>
-                    Might there be a better way to guess at what's happening? There is!  We can use&nbsp; 
-                    <a href="https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca">
-                     the confirmed deaths to estimate how many 
-                    people contracted the virus 2-3 weeks before each death</a>.  From this, we can model transmission 
-                    and predict how the virus spreads. Since many countries focus testing on the most severe cases, 
-                    confirmed deaths are likely more accurate than confirmed cases.
+                    However, the worldwide efforts to research and share knowledge
+                    are also amazing to watch. At this point there is so much we don't know,
+                    yet humanity has discovered more than enough to make headway.
+                </p>
+                <p>
+                    On this page I want to take what we know and aim for accuracy, even under uncertainty. This is why all of the scenarios
+                    here start from the confirmed deaths in {yourLocation}. From there we can estimate 
+                    how many people might have contracted the virus 3 weeks or so before each death.  Then
+                    we can model transmission and predict how the virus spreads.  Since many countries focus 
+                    testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.             
+                </p>
+                <p>
+                    I also want to acknowledge how much is unknown.  This is why the page lets you try out
+                    different scenarios based on the achievable possibilities we've already seen 
+                    in different countries around the world.
                 </p>
 
                 <p>
                     Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
                     "all models are wrong, but some are useful"</a>.  Rely on your local authorities
-                    for the most accurate and up-to-date information.  Hopefully this site helps 
-                    give you useful context.
+                    for the most accurate and up-to-date information.  Hopefully this site helps give you useful context.
                 </p>
 
 
                 <h2>
-                    Four Scenarios
+                    The Scenarios
                 </h2>
 
                 <p>
-                    On this page, you can choose between four scenarios.  They range from the "strong flattening"
-                    scenario, which simulates  strong measures to reduce transmission, based on historical data
-                    from Wuhan, to "no flattening" which simulates the virus spreading with minimal measures.
+                    On this page, you can choose your own scenario based on how much you think your community
+                    can control transmission.  In other words, how much you think you can "flatten the curve"
+                    or "plank the curve."  This page offers you the entire range
+                    of possibilities seen in the real world so far.  This ranges from models that simulate
+                    extensive suppression measures (lockdown at home, extensive testing, contact tracing)
+                    to models that simulate the level of uncontrolled growth in places like Iran, 
+                    which outpaced even the uncontrolled growth in Wuhan.
                 </p>
 
                 <p>          
@@ -236,17 +244,17 @@ class AboutModel extends React.Component {
                     Plotted on top are the new deaths predicted daily by each of the four scenarios. 
                 </p>
                 
+                <h5 class="chartTitle">Actual vs. Predicted Deaths in Your Scenario</h5>
                 <ResponsiveContainer width="100%" height={400}>
                     <ComposedChart
                         data={scenarioDeathDataTillNow}
                         margin={{
-                            top: 10, right: 100, left: 10, bottom: 20,
+                            top: 0, right: 0, left: 0, bottom: 0,
                         }}
                     >
                         <XAxis dataKey="date"/>                        
-                        <YAxis type="number" width={60} label={{ value: 'Daily Deaths', angle: -90, position: 'insideLeft' }} />
+                        <YAxis type="number" />
                         <Legend/>
-                        {/* <Tooltip formatter={readableInteger()}/> */}
 
                         <Line type="monotone" dataKey="strongFlatteningDeadInc"  
                             name="Strong Flattening" stroke="#66c2a5" 
@@ -300,8 +308,10 @@ class AboutModel extends React.Component {
                       <span>
                         This strong flattening scenario shows what happens with extensive measures to reduce transmission.
                         This includes strict social distancing (staying at home),
-                        extensive testing, rapid contact tracing, and other measures.  The rate of transmission
-                        in this scenario is based on what happened in Wuhan after lockdown on January 24, 2020.
+                        extensive testing, rapid contact tracing, and other measures.  After infections
+                        are under control, social distancing measures gradually ease, 
+                        with targeted lockdowns when testing detects local outbreaks. 
+                        The rate of transmission in this scenario is based on what happened in Wuhan after lockdown on January 24, 2020.
                       </span>
                     }
                     { modelInputs.scenario == "moderateFlattening" &&

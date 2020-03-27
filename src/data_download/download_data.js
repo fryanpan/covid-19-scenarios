@@ -206,6 +206,11 @@ async function downloadFiles() {
         const dateCmp = x.date.localeCompare(y.date);
 
         if(countryCmp != 0) return countryCmp;
+
+        /** Always sort All to the top */
+        if(x.state == "All" && y.state != "All") return -1;
+        if(y.state == "All" && x.state != "All") return 1;
+        
         if(stateCmp != 0) return stateCmp;
         return dateCmp;        
     });

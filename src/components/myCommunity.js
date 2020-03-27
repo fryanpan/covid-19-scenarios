@@ -9,7 +9,9 @@ import {
 
 import moment from 'moment';
 
-import { mergeDataArrays, readableRatio, readableNumber, readablePercent, log10Scale } from "../utils/dataUtils" 
+import { mergeDataArrays, readableRatio, readableNumber, readablePercent,
+    readableInteger, 
+    readableSIPrefix } from "../utils/dataUtils" 
 
 function sum(array, key, i, j) {
     var result = 0;
@@ -145,15 +147,17 @@ class MyCommunity extends React.Component {
             after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
             Eventually, deaths in each week are only 50% of the week before.
             </p>
-            <ResponsiveContainer width={960} height={400}>
+
+            <h6 class="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
+            <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={confirmedCasesRatios}
                     margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
+                        top: 0, right: 0, left: 0, bottom: 0,
                     }}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis type='number' width={100} 
+                    <YAxis type='number' 
                         tickFormatter={readableRatio(1)} 
                         scale='log' 
                         domain={[0.1, 'auto']}/>
@@ -163,20 +167,21 @@ class MyCommunity extends React.Component {
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
                     <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1} label="1x means as many people died this week as last week" 
+                    <ReferenceLine y={1}
                         strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>
 
-            <ResponsiveContainer width={960} height={400}>
+            <h6 class="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
+            <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={deathRatios}
                     margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
+                        top: 0, right: 0, left: 0, bottom: 0,
                     }}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis type='number' width={100} 
+                    <YAxis type='number' 
                         tickFormatter={readableRatio(1)} 
                         scale='log' 
                         domain={[0.1, 'auto']}/>
@@ -186,7 +191,7 @@ class MyCommunity extends React.Component {
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
                     <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1} label="1x means as many people died this week as last week" 
+                    <ReferenceLine y={1}  
                         strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>
@@ -203,15 +208,16 @@ class MyCommunity extends React.Component {
             Here's what the your current scenario predicts for active infections
             per million people.  
 
-            <ResponsiveContainer width={960} height={400}>
+            <h6 class="chartTitle">Active Cases Per Million People over Time</h6>
+            <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={activeCasesPerMillion}
                     margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
+                        top: 0, right: 0, left: 0, bottom: 0,
                     }}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis type='number' width={100} 
+                    <YAxis type='number' 
                         scale="log"
                         tickFormatter={readableNumber(2)} 
                         domain={[0.1, 'auto']}/>
@@ -220,7 +226,7 @@ class MyCommunity extends React.Component {
 
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={10} label="This is roughly the level when Hubei started relaxing restrictions"
+                    <ReferenceLine y={10} 
                         strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>
@@ -230,54 +236,52 @@ class MyCommunity extends React.Component {
             <h2>How well are we testing?</h2>
 
             By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
-            at how many actual cases there were in the past.  This chart shows the new cases
-            daily from the model (when people first show symptoms) vs. the increase in confirmed
-            case counts each day from performing tests:
+            at how many actual cases there were in the past.  This chart calculates how
+            complete (or incomplete) tests might be:
 
-            <ResponsiveContainer width={960} height={300}>
-                <ComposedChart
-                    width={960}
-                    height={300}
+            <h6 class="chartTitle">Confirmed Cases as Percentage of Simulated Cases</h6>
+            <ResponsiveContainer width="100%" height={400}>
+                <LineChart
                     data={testData}
                     margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
+                        top: 0, right: 0, left: 0, bottom: 0,
                     }}
                     // barCategoryGap={1}
                     // barGap={0}
                 >
                     <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={readablePercent(0)} domain={[0,1]} />
+                    <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
                     <Tooltip formatter={readablePercent(0)}/>
                     <Legend />
-                    <Bar dataKey="confirmedCasesInc" fill="#8884d8" />
+                    <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
+                        dot={false}/>
+                </LineChart>
+            </ResponsiveContainer> 
+            TODO: Add in South Korea here for comparison
+            
+            This chart shows the new cases
+            daily from the model (when people first show symptoms) vs. the increase in confirmed
+            case counts each day from performing tests:
+
+            <h6 class="chartTitle">New Cases Daily (Confirmed Cases vs. Scenario)</h6>
+            <ResponsiveContainer width="100%" height={300}>
+                <ComposedChart
+                    data={testData}
+                    margin={{
+                        top: 0, right: 0, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis tickFormatter={readableSIPrefix(2)} />
+                    <Tooltip formatter={readableInteger()}/>
+                    <Legend />
+                    <Bar dataKey="confirmedCasesInc" name="Confirmed Cases" fill="#8884d8" />
                     <Line type="linear" dataKey="infectedInc"
-                        strokeWidth={2} name="Simulated New Cases"
+                        strokeWidth={2} name="Scenario"
                         />
                 </ComposedChart>
             </ResponsiveContainer>
 
-            And as promised, here is a different chart to avoid doing mental math.  
-            Here's the testing ratio, showing the cases confirmed by tests
-            as a fraction of simulated new cases:
-
-            <ResponsiveContainer width={960} height={300}>
-                <BarChart
-                    width={960}
-                    height={300}
-                    data={testData}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                    // barCategoryGap={1}
-                    // barGap={0}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={readablePercent(0)} domain={[0,1]} />
-                    <Tooltip formatter={readablePercent(0)}/>
-                    <Legend />
-                    <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
-                </BarChart>
-            </ResponsiveContainer>
 {/* 
             <h2>How many people might be infected over time?</h2>
             <ResponsiveContainer width={960} height={300}>

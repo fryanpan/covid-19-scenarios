@@ -51,10 +51,11 @@ export default class MyInfo extends React.Component {
             <p>
                 <form onSubmit={handleChange}>
                     I am <input type="text"
-                        style={{width: "1.5rem"}} 
+                        style={{width: "3rem"}} 
                         name="age"
                         value={age} 
-                        onChange={handleChange}></input> years old and live in <select name="country" value={country} onChange={handleChange}>
+                        onChange={handleChange}></input> years old
+                    <br/>I'm in <select name="country" value={country} onChange={handleChange}>
                         <option value="" key="__blank"></option>
                         {
                             LocationManager.distinctCountries.map(x => 
@@ -64,7 +65,7 @@ export default class MyInfo extends React.Component {
                     </select>
                     { availableLocations.length > 1 && 
                         <span>
-                        <br/>I want to see information about this state or province: 
+                        <br/>{country == "United States" ? "State:" : "Province:"}&nbsp; 
 
                                 <select name="state" value={state} onChange={handleChange}>
                                     {
@@ -78,7 +79,8 @@ export default class MyInfo extends React.Component {
                 </form>
             </p> 
             <p>
-                Tip: You can also enter in an age and location for a friend or family member elsewhere in the world.
+                Tip: You can also enter in an age and location for a friend or family member elsewhere
+                to see what it's like there.  
             </p>
             
         </div>

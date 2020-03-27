@@ -102,6 +102,13 @@ class IndexPage extends React.Component {
 
       @TODO Make this page more shareable -- keep your personal choices and make it possible to send a link
 
+      @TODO Add more detail about the model -- it's an SEIR model, with some tweaks to simulate
+      a short period when infected people are infectious.  Quantized daily, using box filters
+      to simulate transmission.  Yes, it would be better to solve the continuous differential equations, 
+      but given how much uncertainty there is in the inputs, the mistakes introduced by having a shitty 
+      model implementation probably don't matter.  I spent more time focusing on the insight
+      than the math.  The math needed to be close enough.
+
       <SimulationDataTable modelData={modelData[modelInputs.scenario]}></SimulationDataTable>
 
     </Layout>

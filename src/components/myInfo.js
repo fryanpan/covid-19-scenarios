@@ -38,34 +38,32 @@ export default class MyInfo extends ScenarioEditingComponent {
                 Let's start with some info about you, so we can make this relevant who you are and where you live.
             </p>
             <p>
-                <form onSubmit="return false;">
-                    I am <input type="text"
-                        style={{width: "3rem"}} 
-                        name="age"
-                        value={age} 
-                        onChange={this.handleScenarioEditEvent}></input> years old
-                    <br/>I'm in <select name="country" value={country} onChange={this.handleScenarioEditEvent}>
-                        <option value="" key="__blank"></option>
-                        {
-                            LocationManager.distinctCountries.map(x => 
-                                <option value={x} key={x}>{x}</option>
-                            )
-                        }
-                    </select>
-                    { availableLocations.length > 1 && 
-                        <span>
-                        <br/>{country == "United States" ? "State:" : "Province:"}&nbsp; 
+                I am <input type="text"
+                    style={{width: "3rem"}} 
+                    name="age"
+                    value={age} 
+                    onChange={this.handleScenarioEditEvent}></input> years old
+                <br/>I'm in <select name="country" value={country} onChange={this.handleScenarioEditEvent}>
+                    <option value="" key="__blank"></option>
+                    {
+                        LocationManager.distinctCountries.map(x => 
+                            <option value={x} key={x}>{x}</option>
+                        )
+                    }
+                </select>
+                { availableLocations.length > 1 && 
+                    <span>
+                    <br/>{country == "United States" ? "State:" : "Province:"}&nbsp; 
 
-                                <select name="state" value={state} onChange={this.handleScenarioEditEvent}>
-                                    {
-                                        availableLocations.map(x => 
-                                            <option value={x.state} key={x.state}>{x.state}</option>
-                                        )
-                                    }
-                                </select>
-                        </span>
-                    }     
-                </form>
+                            <select name="state" value={state} onChange={this.handleScenarioEditEvent}>
+                                {
+                                    availableLocations.map(x => 
+                                        <option value={x.state} key={x.state}>{x.state}</option>
+                                    )
+                                }
+                            </select>
+                    </span>
+                }     
             </p> 
             <p>
                 Tip: You can also enter in an age and location for a friend or family member elsewhere

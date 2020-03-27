@@ -247,6 +247,7 @@ class AboutModel extends ScenarioEditingComponent {
                     >
                         <XAxis dataKey="date"/>                        
                         <YAxis type="number" />
+                        <Tooltip/>
                         <Legend/>
 
                         <Line type="monotone" dataKey="strongFlatteningDeadInc"  
@@ -293,6 +294,7 @@ class AboutModel extends ScenarioEditingComponent {
                             <input style={{width: "8rem"}} type="date" name="flatteningDate"
                                                     value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
                                                     onChange={this.handleScenarioEditEvent}></input>
+                            &nbsp;(for example, the day lockdown or shelter-at-home started)
                         </span>
                     }
                 </p>

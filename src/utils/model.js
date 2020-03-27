@@ -72,7 +72,7 @@ export class ModelInputs {
         this.age = 45;
         this.country = "United States";
         this.state = "California";
-        this.flatteningDate = moment("2020-03-17").toDate();
+        this.flatteningDate = moment("2020-03-19").toDate();
         this.scenario = "strongFlattening";
     }
 }

@@ -2,7 +2,10 @@ import React from "react"
 import ScenarioEditingComponent from "./scenarioEditingComponent"
 
 import {
-    ComposedChart, LineChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    ComposedChart, 
+    LineChart, Line, 
+    Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    ReferenceLine,
     ResponsiveContainer
 } from 'recharts';
 
@@ -131,16 +134,7 @@ class AboutModel extends ScenarioEditingComponent {
                     which outpaced even the uncontrolled growth in Wuhan.
                 </p>
 
-                <p>          
-                   { !this.state.showDetails &&
-                        <span>For more details about the scenarios, please <a onClick={this.handleToggleDetails.bind(this)}>
-                            click here to show more</a>&nbsp;
-                        </span>
-                    }
-                    { this.state.showDetails && 
-                        <span><a onClick={this.handleToggleDetails.bind(this)}>Click here</a> to hide the details</span>
-                    }
-                </p>     
+                
                 { this.state.showDetails && 
                     <div>
 
@@ -150,15 +144,22 @@ class AboutModel extends ScenarioEditingComponent {
                                 to reduce the peak number of cases.  Each location might choose different
                                 measures depending on what works well there and what the economic and social tradeoffs are.
                                 In general, social distancing, effective testing, and better contact tracing are all
-                                likely to be effective.  But there is no 100% correct answer. 
-
+                                likely to be effective, but there is no universally correct answer. 
                         </p>
                         <p>
                                 For example, California recommends people stay at home and avoid being within 6 feet 
                                 of anyone not from their household.  Taiwan used mobile phones to help track the location
-                                of people who have the virus.  In Israel, my family-in-law tells me that people are now 
-                                limited to walking no more than 100 metres from home for exercise -- too many people
-                                went to the beach.
+                                of people who have the virus.  South Korea started doing comprehensive drive-through testing
+                                with a turnaround time of one day or less. Germany is limiting people to meeting with no 
+                                more than one other person at at time, but does not have shelter-at-home orders.
+                        </p>
+                        <p>
+                            Please try to keep this in mind as you read the news.  The specific methods that 
+                            works for your community may not be the same as someone else's community.
+                            Especially if they have a very different active case load and urban and social landscape.
+                            While I'm sheltering at home here in Berkeley, California, that doesn't mean everyone
+                            else should.  The important part is that each community takes measures that 
+                            work well enough for them to slow transmission or avoid an uncontrolled outbreak in the first place.
                         </p>
                         <p>
                                 These are the four flattening scenarios we look at through the rest of this page:
@@ -251,6 +252,9 @@ class AboutModel extends ScenarioEditingComponent {
                         <Tooltip formatter={readableInteger()}/>
                         <Legend/>
 
+                        <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
+                            label="Flattening starts" />
+
                         <Line type="monotone" dataKey="strongFlatteningDeadInc"  
                             name="Strong Flattening" stroke="#66c2a5" 
                             strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
@@ -334,6 +338,17 @@ class AboutModel extends ScenarioEditingComponent {
                     Anywhere else on the page, you can change the scenario using the bar up top.
                     @TODO Make the bar a little less janky...
                 </p>
+
+                <p>          
+                   { !this.state.showDetails &&
+                        <span>For more details about the scenarios, please <a onClick={this.handleToggleDetails.bind(this)}>
+                            click here to show more</a>&nbsp;
+                        </span>
+                    }
+                    { this.state.showDetails && 
+                        <span><a onClick={this.handleToggleDetails.bind(this)}>Click here</a> to hide the details</span>
+                    }
+                </p>     
                    
 
 

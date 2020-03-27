@@ -97,6 +97,11 @@ class IndexPage extends React.Component {
 
       <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
       <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
+
+      @TODO Add various acknowledgements and info
+
+      @TODO Make this page more shareable -- keep your personal choices and make it possible to send a link
+
       <SimulationDataTable modelData={modelData[modelInputs.scenario]}></SimulationDataTable>
 
     </Layout>

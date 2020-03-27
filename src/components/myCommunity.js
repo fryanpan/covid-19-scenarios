@@ -147,7 +147,10 @@ class MyCommunity extends React.Component {
             It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
             This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
             after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
-            Eventually, deaths in each week are only 50% of the week before.
+            Eventually, deaths in each week are only 50% of the week before.  Provide similar reference markers
+            for your chosen scenario.  The next three weeks are mostly baked in based on your choices in the past.
+            (This is unfortunately going to be quite sad in New York, but not something any of us has the power to change.
+            We can only change the future).
             </p>
 
             <h6 class="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
@@ -211,7 +214,7 @@ class MyCommunity extends React.Component {
             at how many actual cases there were in the past.  This chart calculates how
             complete (or incomplete) tests might be:
 
-            <h6 class="chartTitle">Confirmed Cases as Percentage of Simulated Cases</h6>
+            <h6 class="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={testData}
@@ -236,7 +239,7 @@ class MyCommunity extends React.Component {
             daily from the model (when people first show symptoms) vs. the increase in confirmed
             case counts each day from performing tests:
 
-            <h6 class="chartTitle">New Cases Daily (Confirmed Cases vs. Scenario)</h6>
+            <h6 class="chartTitle">Total Confirmed Cases vs. Active Cases in Scenario</h6>
             <ResponsiveContainer width="100%" height={300}>
                 <ComposedChart
                     data={testData}
@@ -248,9 +251,9 @@ class MyCommunity extends React.Component {
                     <YAxis tickFormatter={readableSIPrefix(2)} domain={[0, 'auto']}/>
                     <Tooltip formatter={readableInteger()}/>
                     <Legend />
-                    <Bar dataKey="confirmedCasesInc" name="Confirmed Cases" fill="#8884d8" />
-                    <Line type="linear" dataKey="infectedInc"
-                        strokeWidth={2} name="Scenario"
+                    <Bar dataKey="confirmedCases" name="Confirmed Cases" fill="#8884d8" />
+                    <Line type="linear" dataKey="totalInfected"
+                        strokeWidth={2} name="Scenario" dot={false}
                         />
                 </ComposedChart>
             </ResponsiveContainer>
@@ -262,6 +265,11 @@ class MyCommunity extends React.Component {
                 
             TODO: write this section up properly and add a link to Bill Gates' prediction
             of 6-10 weeks in developed nations that work on suppression diligently
+
+            In Hubei, suppression started gradually relaxing somewhere around and
+            active case count of 10 per million.
+
+            @TODO Revise this chart and get rid of the log scale.  It's confusing.
 
             <h6 class="chartTitle">Active Cases Per Million People over Time</h6>
             <ResponsiveContainer width="100%" height={400}>

@@ -1,4 +1,4 @@
-import { TopBar } from "./topBar"
+import TopBar from "./topBar"
 import React from "react"
 import { PresetScenarios, PresetCategories } from "../utils/model"
 import ScenarioEditingComponent from "./scenarioEditingComponent"

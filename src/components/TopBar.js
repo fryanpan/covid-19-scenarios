@@ -1,11 +1,15 @@
 /** Adapted from https://jsfiddle.net/69z2wepo/260640/ */
+
+/**
+ * Takes a parameter minScrollX that says when to start showing the bar
+ */
 export class TopBar extends React.Component {
     state = { isHide: false };
 
     hideBar = () => {
        const { isHide } = this.state
 
-       window.scrollY > 1500 ?
+       window.scrollY > this.props.minScrollX ?
        !isHide && this.setState({ isHide: true })
        :
        isHide && this.setState({ isHide: false });

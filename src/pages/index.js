@@ -14,7 +14,7 @@ class IndexPage extends React.Component {
     super(props);
     // Make sure to do this first, so the data is available elsewhere
     LocationManager.initLocationData(this.props.data.allLocationsCsv.nodes);
-    
+
     this.state = {
       modelManager: new ModelManager(this.props.data)
     }

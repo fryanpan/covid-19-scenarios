@@ -57,6 +57,8 @@ class AboutModel extends React.Component {
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
 
+        const yourLocation = modelInputs.state == 'All' ? modelInputs.country : modelInputs.state;
+
         /**
          * Combine data from all of the scenarios
          */
@@ -90,6 +92,11 @@ class AboutModel extends React.Component {
         return <div>
             <h1> About the scenarios </h1>
                 <p>
+                    
+                    - start from problem to solve instead of technical
+                    - instead of 
+
+                    
                     In many countries, COVID-19 spread so quickly it overwhelmed the capacity 
                     to test for the virus.  This is why when we see <i>confirmed cases</i> rapidly increase, it's hard to tell
                     whether that comes from a real increase in active cases, incomplete testing, or testing delays.
@@ -98,112 +105,12 @@ class AboutModel extends React.Component {
                 <p>
                     Might there be a better way to guess at what's happening? There is!  We can use&nbsp; 
                     <a href="https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca">
-                     the confirmed death counts to estimate how many 
-                    people contracted the virus 2-3 weeks before each death</a>.  Since many countries focus testing 
-                    on the most severe cases, death counts are likely closer to accurate than the confirmed counts.
-                    From this, we can create scenarios that predict what might happen.
+                     the confirmed deaths to estimate how many 
+                    people contracted the virus 2-3 weeks before each death</a>.  From this, we can model transmission 
+                    and predict how the virus spreads. Since many countries focus testing on the most severe cases, 
+                    confirmed deaths are likely more accurate than confirmed cases.
                 </p>
 
-                <h2>
-                    Meet the scenarios
-                </h2>
-
-                <p>
-                    Each scenario here is tuned to the historical confirmed death counts and total population
-                    from your location. The chart below shows how each scenario models new deaths each day
-                    compared to the confirmed new death counts from the&nbsp; 
-                    <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>. 
-                </p>
-                
-                <ResponsiveContainer width="100%" height={400}>
-                    <ComposedChart
-                        data={scenarioDeathDataTillNow}
-                        margin={{
-                            top: 10, right: 100, left: 0, bottom: 20,
-                        }}
-                    >
-                        <XAxis dataKey="date"/>                        
-                        <YAxis type="number" width={100} />
-                        <Legend/>
-                        <Tooltip formatter={readableInteger()}/>
-
-                        <Line type="monotone" dataKey="strongFlatteningDeadInc"  
-                            name="Strong Flattening" stroke="#66c2a5" 
-                            strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="moderateFlatteningDeadInc"  
-                            name="Moderate Flattening" stroke="#fc8d62" 
-                            strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="mildFlatteningDeadInc"  
-                            name="Mild Flattening" stroke="#8da0cb" 
-                            strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="noFlatteningDeadInc"  
-                            name="No Flattening" stroke="#e78ac3" 
-                            strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
-
-                        <Bar dataKey="confirmedDeathsInc"
-                            name="New Confirmed Deaths" fill="#f00"/>
-                    </ComposedChart>
-                </ResponsiveContainer>
-
-                <p>
-                    Please choose a scenario to use as we answer questions on this page: 
-                    <select name="scenario" value={modelInputs.scenario} onChange={handleChange}>
-                        {
-                            [...PresetScenarios.entries()].map(entry => {
-                                const key = entry[0];
-                                const scenarioData = entry[1];
-                                if(scenarioData.category == PresetCategories.BASIC) {
-                                    return <option key={key} value={key}>{scenarioData.name}</option>
-                                } else {
-                                    return "";
-                                }
-                            })
-                        }
-                    </select>
-                    { modelInputs.scenario != "noFlattening" && 
-                        <span>
-                            <br/>Flattening measures&nbsp;
-                            { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
-                            &nbsp; on &nbsp;
-                            <input style={{width: "8rem"}} type="date" name="flatteningDate"
-                                                    value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
-                                                    onChange={handleChange}></input>
-                        </span>
-                    }
-                </p>
-                <p>
-                    { modelInputs.scenario == "strongFlattening" &&
-                      <span>
-                        This strong flattening scenario shows what happens with extensive measures to reduce transmission.
-                        This includes a combination of most or all of social distancing (staying at home),
-                        extensive testing, rapid contact tracing, and other measures.  The rate of transmission
-                        in this scenario is based on what happened in Wuhan after lockdown on January 24, 2020.
-                      </span>
-                    }
-                    { modelInputs.scenario == "moderateFlattening" &&
-                      <span>
-                        The moderate flattening scenario shows what happens with many measures in place to reduce transmission,
-                        but not quite as strongly as in Wuhan after the lockdown.  
-                      </span>
-                    }
-                    { modelInputs.scenario == "mildFlattening" &&
-                      <span>
-                        The mild flattening scenario shows what happens with some measures in place to reduce transmission, 
-                        but not enough measures to prevent the number of cases to continue growing.
-                      </span>
-                    }
-                    { modelInputs.scenario == "noFlattening" &&
-                      <span>
-                        The no flattening scenario shows what happens with uncontrolled transmission.  The rate of 
-                        transmission in this scenario is based on historical data from Wuhan before
-                        the lockdown happened on January 24, 2020.
-                      </span>
-                    }
-                </p>
-                   
                 <p>
                     Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
                     "all models are wrong, but some are useful"</a>.  Rely on your local authorities
@@ -212,11 +119,24 @@ class AboutModel extends React.Component {
                 </p>
 
 
+                <h2>
+                    Four Scenarios
+                </h2>
+
+                <p>
+                    On this page, you can choose between four scenarios.  They range from the "strong flattening"
+                    scenario, which simulates  strong measures to reduce transmission, based on historical data
+                    from Wuhan, to "no flattening" which simulates the virus spreading with minimal measures.
+                </p>
+
                 <p>          
                    { !this.state.showDetails &&
-                        <span>For more details about each scenario, please <a onClick={this.handleToggleDetails.bind(this)}>
-                            click here</a>&nbsp;
+                        <span>For more details about the scenarios, please <a onClick={this.handleToggleDetails.bind(this)}>
+                            click here to show more</a>&nbsp;
                         </span>
+                    }
+                    { this.state.showDetails && 
+                        <span><a onClick={this.handleToggleDetails.bind(this)}>Click here</a> to hide the details</span>
                     }
                 </p>     
                 { this.state.showDetails && 
@@ -282,10 +202,10 @@ class AboutModel extends React.Component {
                                     top: 10, right: 100, left: 0, bottom: 20,
                                 }}
                             >
-                                <XAxis dataKey="date"/>                        
+                                <XAxis dataKey="date" />                        
                                 <YAxis type="number" width={100} />
                                 <Legend/>
-                                <Tooltip formatter={readableInteger()}/>
+                                {/* <Tooltip formatter={readableInteger()}/> */}
 
                                 <Line type="linear" dataKey="strongFlatteningDeadInc"  
                                     name="Strong Flattening" stroke="#66c2a5" 
@@ -307,6 +227,107 @@ class AboutModel extends React.Component {
     
                     </div>
                 }
+
+                <h3>Choose your scenario</h3>
+                <p>
+                    Each scenario here is tuned to the actual historical deaths and total population
+                    from {yourLocation}. The chart below shows the confirmed deaths from the&nbsp; 
+                    <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>.
+                    Plotted on top are the new deaths predicted daily by each of the four scenarios. 
+                </p>
+                
+                <ResponsiveContainer width="100%" height={400}>
+                    <ComposedChart
+                        data={scenarioDeathDataTillNow}
+                        margin={{
+                            top: 10, right: 100, left: 10, bottom: 20,
+                        }}
+                    >
+                        <XAxis dataKey="date"/>                        
+                        <YAxis type="number" width={60} label={{ value: 'Daily Deaths', angle: -90, position: 'insideLeft' }} />
+                        <Legend/>
+                        {/* <Tooltip formatter={readableInteger()}/> */}
+
+                        <Line type="monotone" dataKey="strongFlatteningDeadInc"  
+                            name="Strong Flattening" stroke="#66c2a5" 
+                            strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
+
+                        <Line type="monotone" dataKey="moderateFlatteningDeadInc"  
+                            name="Moderate Flattening" stroke="#fc8d62" 
+                            strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
+
+                        <Line type="monotone" dataKey="mildFlatteningDeadInc"  
+                            name="Mild Flattening" stroke="#8da0cb" 
+                            strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
+
+                        <Line type="monotone" dataKey="noFlatteningDeadInc"  
+                            name="No Flattening" stroke="#e78ac3" 
+                            strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
+
+                        <Bar dataKey="confirmedDeathsInc"
+                            name="Actual Deaths" fill="#f00"/>
+                    </ComposedChart>
+                </ResponsiveContainer>
+
+                <p>
+                    Please choose a scenario to use as we answer questions on this page: 
+                    <select name="scenario" value={modelInputs.scenario} onChange={handleChange}>
+                        {
+                            [...PresetScenarios.entries()].map(entry => {
+                                const key = entry[0];
+                                const scenarioData = entry[1];
+                                if(scenarioData.category == PresetCategories.BASIC) {
+                                    return <option key={key} value={key}>{scenarioData.name}</option>
+                                } else {
+                                    return "";
+                                }
+                            })
+                        }
+                    </select>
+                    { modelInputs.scenario != "noFlattening" && 
+                        <span>
+                            <br/>Flattening measures&nbsp;
+                            { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
+                            &nbsp; on &nbsp;
+                            <input style={{width: "8rem"}} type="date" name="flatteningDate"
+                                                    value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
+                                                    onChange={handleChange}></input>
+                        </span>
+                    }
+                </p>
+                <p>
+                    { modelInputs.scenario == "strongFlattening" &&
+                      <span>
+                        This strong flattening scenario shows what happens with extensive measures to reduce transmission.
+                        This includes strict social distancing (staying at home),
+                        extensive testing, rapid contact tracing, and other measures.  The rate of transmission
+                        in this scenario is based on what happened in Wuhan after lockdown on January 24, 2020.
+                      </span>
+                    }
+                    { modelInputs.scenario == "moderateFlattening" &&
+                      <span>
+                        The moderate flattening scenario shows what happens with many measures in place to reduce transmission,
+                        but not quite as strongly as in Wuhan after the lockdown.  
+                      </span>
+                    }
+                    { modelInputs.scenario == "mildFlattening" &&
+                      <span>
+                        The mild flattening scenario shows what happens with some measures in place to reduce transmission, 
+                        but not enough measures to prevent the number of cases to continue growing.
+                      </span>
+                    }
+                    { modelInputs.scenario == "noFlattening" &&
+                      <span>
+                        The no flattening scenario shows what happens with uncontrolled transmission.  The rate of 
+                        transmission in this scenario is based on historical data from Wuhan before
+                        the lockdown happened on January 24, 2020.
+                      </span>
+                    }
+                </p>
+                   
+
+
+                
 
         </div>
     }

@@ -101,7 +101,7 @@ const ASSUMPTIONS = {
     }
 
     for(let j = 0; j < sourceData.length; ++j) {
-      // Convert cumulative confirmed cases and death counts to deltas
+      // Convert cumulative confirmed cases and confirmed deaths to deltas
       const confirmedCasesAdded = sourceData[j].confirmedCases - (j > 0 ? sourceData[j-1].confirmedCases : 0);
       const confirmedDeathsAdded = sourceData[j].confirmedDeaths - (j > 0 ? sourceData[j-1].confirmedDeaths : 0);
 

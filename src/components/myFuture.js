@@ -55,6 +55,7 @@ class MyFuture extends React.Component {
         const percentFormatter = readablePercent(2);
         const scenarios = this.props.modelData;
         const currentScenario = this.props.modelInputs.scenario;
+        const currentScenarioName = scenarios[currentScenario].scenario.name;
 
         var stats = {};
         for(let scenarioKey in scenarios) {
@@ -126,7 +127,7 @@ class MyFuture extends React.Component {
             </h1>
 
             <p>
-            This chart shows how likely it is for you to catch COVID-19:
+            This chart shows how likely it is for you to catch COVID-19 with the {currentScenarioName.toLowerCase()} scenario. 
             </p>
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
@@ -150,7 +151,7 @@ class MyFuture extends React.Component {
             </h2>
             <p>
                 This chart shows how likely it is for you to die from COVID-19.  It's based on your age and
-                fatality rates from Wuhan.  
+                fatality rates from Wuhan.
             </p>
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart
@@ -171,8 +172,7 @@ class MyFuture extends React.Component {
 
             TODO: Add some bars based on <a href="https://en.wikipedia.org/wiki/Micromort">micromort</a> data
 
-
-            <h3>How much does it matter when flattening starts?</h3>
+            {/* <h3>How much does it matter when flattening starts?</h3>
             <p>
                 If you are in an area where the virus is spreading rapidly and testing is incomplete, then it can matter a lot!
                 This chart shows the chance that you will catch COVID-19 over the next year, with 
@@ -192,7 +192,7 @@ class MyFuture extends React.Component {
                         <LabelList dataKey="probability" position="right" formatter={(readablePercent(2))}/>
                     </Bar>
                 </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer> */}
         </div>
     }
 

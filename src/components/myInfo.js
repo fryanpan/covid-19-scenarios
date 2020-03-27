@@ -78,7 +78,7 @@ export default class MyInfo extends React.Component {
                 </form>
             </p> 
             <p>
-                P.S. You can also enter in an age and location for a friend or family member elsewhere in the world.
+                Tip: You can also enter in an age and location for a friend or family member elsewhere in the world.
             </p>
             
         </div>

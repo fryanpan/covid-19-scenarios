@@ -33,13 +33,11 @@ function computeRollingRatio(data, key, window, outputKey) {
         const sumPast = data[i - window][key] - data[i - window * 2][key];
 
         const date = data[i].date;
-        const value = sumPast !== 0 ? sumNow / sumPast : undefined;
+        var value = sumPast !== 0 ? sumNow / sumPast : undefined;
 
         if(value && value > 0) {
             lastValue = value
-        } else {
-            value = lastValue;
-        }
+        } 
         var entry = { date: date };
         entry[outputKey] = value;
         result.push(entry);
@@ -131,7 +129,7 @@ class MyCommunity extends React.Component {
             </p>
             <h3>How many active cases are there in my community?</h3>
 
-            Here's what the {currentScenarioName.scenario.name.toLowerCase()} model predicts for active infections
+            Here's what the your current scenario predicts for active infections
             per million people.  Every place is different, but in China, social distancing restrictions
             started rolling back once there were fewer than 10 active infections per million people. 
 
@@ -170,7 +168,7 @@ class MyCommunity extends React.Component {
             
             It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
             This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
-            after contracting the virus.  This is why the new death counts only start moving much lower starting February 19.  
+            after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
             Eventually, deaths in each week are only 50% of the week before.
             </p>
             <ResponsiveContainer width={960} height={400}>
@@ -226,7 +224,7 @@ class MyCommunity extends React.Component {
 
             {/* <h2>How well are we testing?</h2>
 
-            By assuming that the death counts are somewhat accurate, the model can take a guess 
+            By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
             at how many actual cases there were in the past.  This chart shows the new cases
             daily from the model (when people first show symptoms) vs. the increase in confirmed
             case counts each day from performing tests:

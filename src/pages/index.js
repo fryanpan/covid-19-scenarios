@@ -8,6 +8,7 @@ import { ModelManager } from "../utils/model"
 import MyCommunity from "../components/myCommunity"
 import { LocationManager } from "../utils/locationManager"
 import moment from "moment"
+import ScenarioBar from "../components/scenarioBar"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -89,6 +90,7 @@ class IndexPage extends React.Component {
     const queryData = this.props.data;
 
     return <Layout>
+      <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
       <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>

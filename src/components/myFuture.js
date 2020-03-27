@@ -147,6 +147,11 @@ class MyFuture extends React.Component {
                 </BarChart>
             </ResponsiveContainer>
 
+            TODO: These charts are being reworked so they layout properly on mobile
+            And instead of random percentages, there will be familiar risks included
+            for comparison (e.g. 5x the chance of dying on a plane flight, 1/2 your normal chance of
+            dying this year, etc.)
+
             <h2>
                 How likely is it for me to die from COVID-19?
             </h2>

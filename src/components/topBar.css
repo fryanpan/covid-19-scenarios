@@ -1,0 +1,18 @@
+.topbar{
+    position: fixed;
+    height:2rem;
+    left:0;
+    top:0;
+    background-color: #fff;
+    width:100%;
+    text-align:center;
+    font-size:22px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    transition:top .3s;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .hide{
+    top:-2rem;
+  }

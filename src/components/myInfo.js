@@ -1,23 +1,13 @@
 import React from "react"
 import { LocationManager } from "../utils/locationManager"
+import ScenarioEditingComponent from "./scenarioEditingComponent"
 
-export default class MyInfo extends React.Component {
+export default class MyInfo extends ScenarioEditingComponent {
     /**
      * 
      * @param {Object} props Expects modelInputs to contain current model inputs
      * And a function handleModelInputChange that updates model inputs to new values 
      */
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    /** Pass changes back up to the index page component to update all parts of the page*/
-    handleChange(e) {
-        const key = e.target.name;
-        const value = e.target.value;
-        this.props.onModelInputChange(key, value);
-    }
 
     render() {
         const modelInputs = this.props.modelInputs;
@@ -25,7 +15,6 @@ export default class MyInfo extends React.Component {
         const state = modelInputs.state;
         const age = modelInputs.age;
         const flatteningDate = modelInputs.flatteningDate;
-        const handleChange = this.handleChange.bind(this);
         const availableLocations = LocationManager.locationsForCountry(country);
         
         return <div>
@@ -49,13 +38,13 @@ export default class MyInfo extends React.Component {
                 Let's start with some info about you, so we can make this relevant who you are and where you live.
             </p>
             <p>
-                <form onSubmit={handleChange}>
+                <form onSubmit="return false;">
                     I am <input type="text"
                         style={{width: "3rem"}} 
                         name="age"
                         value={age} 
-                        onChange={handleChange}></input> years old
-                    <br/>I'm in <select name="country" value={country} onChange={handleChange}>
+                        onChange={this.handleScenarioEditEvent}></input> years old
+                    <br/>I'm in <select name="country" value={country} onChange={this.handleScenarioEditEvent}>
                         <option value="" key="__blank"></option>
                         {
                             LocationManager.distinctCountries.map(x => 
@@ -67,7 +56,7 @@ export default class MyInfo extends React.Component {
                         <span>
                         <br/>{country == "United States" ? "State:" : "Province:"}&nbsp; 
 
-                                <select name="state" value={state} onChange={handleChange}>
+                                <select name="state" value={state} onChange={this.handleScenarioEditEvent}>
                                     {
                                         availableLocations.map(x => 
                                             <option value={x.state} key={x.state}>{x.state}</option>

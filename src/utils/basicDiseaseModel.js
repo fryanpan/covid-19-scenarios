@@ -368,8 +368,8 @@ const ASSUMPTIONS = {
             var newRow = {...data[i]};
             newRow.date = moment(data[i].date).format("YYYY-MM-DD");
             
-            if(data[i].totalInfected > 100) {
-              const testingRatio = Math.min(1, data[i].totalInfected > 0 ? data[i].confirmedCases / data[i].totalInfected : 0);
+            if(data[i].infectedInc > 10) {
+              const testingRatio = Math.min(1, data[i].infectedInc > 0 ? data[i].confirmedCasesInc / data[i].infectedInc : 0);
               newRow.testingRatio = testingRatio;
             } else {
               newRow.testingRatio = 0;

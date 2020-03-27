@@ -39,7 +39,9 @@ function computeRollingRatio(data, key, window, outputKey) {
 
         if(value && value > 0) {
             lastValue = value
-        } 
+        } else {
+            value = lastValue;
+        }
         var entry = { date: date };
         entry[outputKey] = value;
         result.push(entry);
@@ -102,11 +104,6 @@ class MyCommunity extends React.Component {
                 metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
                 metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
             ]);
-        console.log("Active cases per million", activeCasesPerMillion);
-
-        activeCasesPerMillion.forEach(x => {
-            console.log(x);
-        })
 
         return <div>
             <h1>
@@ -126,8 +123,12 @@ class MyCommunity extends React.Component {
             started rolling back once there were fewer than 10 active infections per million people. 
             </p>
             <p>
-                To guess at when social distancing might end, we can look at two things.
-                First, are we stopping the growth in infections and deaths?  And second, when might the number of 
+                To guess at when social distancing might end, we can look at a few things.
+                First, are we stopping the growth in infections and deaths? 
+                Are we testing well enough?  If testing picks up and contains
+                cases more quickly and broadly, then fewer social distancing measures are needed
+                to keep the outbreak under control.
+                When might the number of 
                 active infections be low enough to relaxing strict measures?
 
             </p>
@@ -142,6 +143,7 @@ class MyCommunity extends React.Component {
             One good indicator for this whether the announced counts are going down, and by how much?
             This chart shows the number of actual deaths each week compared to the past week.
             
+            @TODO: Rework this whole paragraph to show dates directly on the chart
             It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
             This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
             after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
@@ -158,8 +160,8 @@ class MyCommunity extends React.Component {
                 >
                     <XAxis dataKey="date"/>
                     <YAxis type='number' 
-                        tickFormatter={readableRatio(1)} 
-                        scale='log' 
+                        tickFormatter={readableRatio(1)}
+                        scale='log'
                         domain={[0.1, 'auto']}/>
                     <Tooltip formatter={readableRatio(2)}/>
                     <Legend />
@@ -202,11 +204,64 @@ class MyCommunity extends React.Component {
                 If the ratio falls consistently well below 1x like in Wuhan, then the number of cases
                 and deaths are going down every week instead of up.
             </p>
+
+            <h2>How well are we testing?</h2>
+
+            By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
+            at how many actual cases there were in the past.  This chart calculates how
+            complete (or incomplete) tests might be:
+
+            <h6 class="chartTitle">Confirmed Cases as Percentage of Simulated Cases</h6>
+            <ResponsiveContainer width="100%" height={400}>
+                <LineChart
+                    data={testData}
+                    margin={{
+                        top: 0, right: 0, left: 0, bottom: 0,
+                    }}
+                    // barCategoryGap={1}
+                    // barGap={0}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
+                    <Tooltip formatter={readablePercent(0)}/>
+                    <Legend />
+                    <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
+                        dot={false}/>
+                </LineChart>
+            </ResponsiveContainer> 
+            TODO: Add in South Korea here for comparison.  They're likely well north of 50%
+            on various simulations
+
+            This chart shows the new cases
+            daily from the model (when people first show symptoms) vs. the increase in confirmed
+            case counts each day from performing tests:
+
+            <h6 class="chartTitle">New Cases Daily (Confirmed Cases vs. Scenario)</h6>
+            <ResponsiveContainer width="100%" height={300}>
+                <ComposedChart
+                    data={testData}
+                    margin={{
+                        top: 0, right: 0, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis tickFormatter={readableSIPrefix(2)} domain={[0, 'auto']}/>
+                    <Tooltip formatter={readableInteger()}/>
+                    <Legend />
+                    <Bar dataKey="confirmedCasesInc" name="Confirmed Cases" fill="#8884d8" />
+                    <Line type="linear" dataKey="infectedInc"
+                        strokeWidth={2} name="Scenario"
+                        />
+                </ComposedChart>
+            </ResponsiveContainer>
             
             <h3>When will we be out of the woods?</h3>
 
             Here's what the your current scenario predicts for active infections
-            per million people.  
+            per million people.
+                
+            TODO: write this section up properly and add a link to Bill Gates' prediction
+            of 6-10 weeks in developed nations that work on suppression diligently
 
             <h6 class="chartTitle">Active Cases Per Million People over Time</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -233,54 +288,7 @@ class MyCommunity extends React.Component {
 
                
 
-            <h2>How well are we testing?</h2>
-
-            By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
-            at how many actual cases there were in the past.  This chart calculates how
-            complete (or incomplete) tests might be:
-
-            <h6 class="chartTitle">Confirmed Cases as Percentage of Simulated Cases</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={testData}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                    // barCategoryGap={1}
-                    // barGap={0}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
-                    <Tooltip formatter={readablePercent(0)}/>
-                    <Legend />
-                    <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
-                        dot={false}/>
-                </LineChart>
-            </ResponsiveContainer> 
-            TODO: Add in South Korea here for comparison
-            
-            This chart shows the new cases
-            daily from the model (when people first show symptoms) vs. the increase in confirmed
-            case counts each day from performing tests:
-
-            <h6 class="chartTitle">New Cases Daily (Confirmed Cases vs. Scenario)</h6>
-            <ResponsiveContainer width="100%" height={300}>
-                <ComposedChart
-                    data={testData}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis tickFormatter={readableSIPrefix(2)} />
-                    <Tooltip formatter={readableInteger()}/>
-                    <Legend />
-                    <Bar dataKey="confirmedCasesInc" name="Confirmed Cases" fill="#8884d8" />
-                    <Line type="linear" dataKey="infectedInc"
-                        strokeWidth={2} name="Scenario"
-                        />
-                </ComposedChart>
-            </ResponsiveContainer>
+           
 
 {/* 
             <h2>How many people might be infected over time?</h2>

@@ -1,4 +1,5 @@
 import React from "react"
+import ScenarioEditingComponent from "./scenarioEditingComponent"
 
 import {
     ComposedChart, LineChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -27,20 +28,13 @@ function extractDateAndKey(array, key, outputKey) {
     });
 }
 
-class AboutModel extends React.Component {    
+class AboutModel extends ScenarioEditingComponent {    
     constructor(props) {
         super(props)
         this.state = {
             modelInputs: this.props.modelInputs,
             showDetails: false
         };
-    }
-
-      /** Pass changes back up to the index page component to update all parts of the page*/
-    handleChange(e) {
-        const key = e.target.name;
-        const value = e.target.value;
-        this.props.onModelInputChange(key, value);
     }
 
     handleToggleDetails() {
@@ -53,7 +47,6 @@ class AboutModel extends React.Component {
 
     render() {        
         const scenarios = this.props.modelData;
-        const handleChange = this.handleChange.bind(this);
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
 
@@ -244,7 +237,7 @@ class AboutModel extends React.Component {
                     Plotted on top are the new deaths predicted daily by each of the four scenarios. 
                 </p>
                 
-                <h5 class="chartTitle">Actual vs. Predicted Deaths in Your Scenario</h5>
+                <h6 class="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
                 <ResponsiveContainer width="100%" height={400}>
                     <ComposedChart
                         data={scenarioDeathDataTillNow}
@@ -279,7 +272,7 @@ class AboutModel extends React.Component {
 
                 <p>
                     Please choose a scenario to use as we answer questions on this page: 
-                    <select name="scenario" value={modelInputs.scenario} onChange={handleChange}>
+                    <select name="scenario" value={modelInputs.scenario} onChange={this.handleScenarioEditEvent}>
                         {
                             [...PresetScenarios.entries()].map(entry => {
                                 const key = entry[0];
@@ -299,7 +292,7 @@ class AboutModel extends React.Component {
                             &nbsp; on &nbsp;
                             <input style={{width: "8rem"}} type="date" name="flatteningDate"
                                                     value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
-                                                    onChange={handleChange}></input>
+                                                    onChange={this.handleScenarioEditEvent}></input>
                         </span>
                     }
                 </p>
@@ -333,6 +326,10 @@ class AboutModel extends React.Component {
                         the lockdown happened on January 24, 2020.
                       </span>
                     }
+                </p>
+                <p>
+                    Anywhere else on the page, you can change the scenario using the bar up top.
+                    @TODO Make the bar a little less janky...
                 </p>
                    
 

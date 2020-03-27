@@ -80,7 +80,8 @@ class AboutModel extends ScenarioEditingComponent {
         const scenarioInfectedDataTillNow = scenarioInfectedData.slice(0, thresholdDayIndex + 15);
         
         const scenarioDeathData = mergeDataArrays(deadDataArrays);
-        const scenarioDeathDataTillNow = scenarioDeathData.slice(0, thresholdDayIndex + 28);
+        const firstDeathIndex = scenarioDeathData.findIndex(x => x.confirmedDeathsInc > 0) || 0;
+        const scenarioDeathDataTillNow = scenarioDeathData.slice(firstDeathIndex, thresholdDayIndex + 28);
 
         return <div>
             <h1> About the scenarios </h1>
@@ -247,7 +248,7 @@ class AboutModel extends ScenarioEditingComponent {
                     >
                         <XAxis dataKey="date"/>                        
                         <YAxis type="number" />
-                        <Tooltip/>
+                        <Tooltip formatter={readableInteger()}/>
                         <Legend/>
 
                         <Line type="monotone" dataKey="strongFlatteningDeadInc"  

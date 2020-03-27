@@ -120,18 +120,88 @@ class MyCommunity extends React.Component {
                 All of these countries reduced active infections to a level low enough that they could depend on 
                 extensive testing, contact tracing, and local restrictions to prevent future growth.
                 For example, instead of shutting down all schools, Taiwan only shuts down a school
-                when there is a confirmed infection. 
+                when there is a confirmed infection. Every place is different, but in China, social distancing restrictions
+            started rolling back once there were fewer than 10 active infections per million people. 
             </p>
             <p>
-                To guess at when social distancing might end then, we can try to understand two things.
-                When might the number of active infections be low enough?  And are we getting there?
+                To guess at when social distancing might end, we can look at two things.
+                First, are we stopping the growth in infections and deaths?  And second, when might the number of 
+                active infections be low enough to relaxing strict measures?
 
             </p>
-            <h3>How many active cases are there in my community?</h3>
+
+            <h3>Are we heading in the right direction?</h3>
+
+            <p>The next question is whether there are signs that we will get there.  Remember that every model is wrong.
+            What does the data from the real world tell us, even if it's not fully accurate?
+            </p>
+
+            <p>
+            One good indicator for this whether the announced counts are going down, and by how much?
+            This chart shows the number of actual deaths each week compared to the past week.
+            
+            It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
+            This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
+            after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
+            Eventually, deaths in each week are only 50% of the week before.
+            </p>
+            <ResponsiveContainer width={960} height={400}>
+                <LineChart
+                    data={confirmedCasesRatios}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis type='number' width={100} 
+                        tickFormatter={readableRatio(1)} 
+                        scale='log' 
+                        domain={[0.1, 'auto']}/>
+                    <Tooltip formatter={readableRatio(2)}/>
+                    <Legend />
+
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={1} label="1x means as many people died this week as last week" 
+                        strokeDasharray="3 3" position="start"/>
+                </LineChart>
+            </ResponsiveContainer>
+
+            <ResponsiveContainer width={960} height={400}>
+                <LineChart
+                    data={deathRatios}
+                    margin={{
+                        top: 10, right: 30, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis type='number' width={100} 
+                        tickFormatter={readableRatio(1)} 
+                        scale='log' 
+                        domain={[0.1, 'auto']}/>
+                    <Tooltip formatter={readableRatio(2)}/>
+                    <Legend />
+
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={1} label="1x means as many people died this week as last week" 
+                        strokeDasharray="3 3" position="start"/>
+                </LineChart>
+            </ResponsiveContainer>
+
+            <p>
+                The key takeaway: if your area has added stronger flattening measures, like staying at home
+                or much more extensive testing, then look for changes in the death ratio about 3 weeks later.
+                If the ratio falls consistently well below 1x like in Wuhan, then the number of cases
+                and deaths are going down every week instead of up.
+            </p>
+            
+            <h3>When will we be out of the woods?</h3>
 
             Here's what the your current scenario predicts for active infections
-            per million people.  Every place is different, but in China, social distancing restrictions
-            started rolling back once there were fewer than 10 active infections per million people. 
+            per million people.  
 
             <ResponsiveContainer width={960} height={400}>
                 <LineChart
@@ -155,74 +225,9 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <h3>Will we get there?</h3>
+               
 
-            <p>The next question is whether there are signs that we will get there.  Remember that every model is wrong.
-            What does the data from the real world tell us, even if it's not fully accurate?
-            </p>
-
-            <p>
-            One good indicator for this whether the announced counts are going down, and by how much?
-            This chart shows the number of confirmed deaths over the past week as a ratio of the
-            number from one week before that.
-            
-            It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
-            This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
-            after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
-            Eventually, deaths in each week are only 50% of the week before.
-            </p>
-            <ResponsiveContainer width={960} height={400}>
-                <LineChart
-                    data={deathRatios}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis type='number' width={100} 
-                        tickFormatter={readableRatio(1)} 
-                        scale='log' 
-                        domain={[0.1, 'auto']}/>
-                    <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
-
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1} label="1x means new deaths this week were the same as a week before" 
-                        strokeDasharray="3 3" position="start"/>
-                </LineChart>
-            </ResponsiveContainer>
-
-            <p>
-                The key takeaway: if your area has added stronger flattening measures, like staying at home
-                or much more extensive testing, then look for changes in the death ratio about 3 weeks later.
-                If the ratio falls consistently well below 1x like in Wuhan, then the number of cases
-                and deaths are going down every week instead of up.
-            </p>
-
-            <ResponsiveContainer width={960} height={400}>
-                <LineChart
-                    data={confirmedCasesRatios}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis width={100} tickFormatter={readableRatio(1)}  
-                        scale='log' domain={[0.01, 'auto']} />
-                    <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
-
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1} label="1x means new confirmed cases this week were the same as the week before" 
-                        strokeDasharray="3 3" position="start"/>
-                </LineChart>
-            </ResponsiveContainer>            
-
-            {/* <h2>How well are we testing?</h2>
+            <h2>How well are we testing?</h2>
 
             By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
             at how many actual cases there were in the past.  This chart shows the new cases
@@ -272,7 +277,7 @@ class MyCommunity extends React.Component {
                     <Legend />
                     <Bar type="monotone" dataKey="testingRatio" fill="#8884d8" />
                 </BarChart>
-            </ResponsiveContainer> */}
+            </ResponsiveContainer>
 {/* 
             <h2>How many people might be infected over time?</h2>
             <ResponsiveContainer width={960} height={300}>

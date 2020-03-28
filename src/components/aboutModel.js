@@ -155,7 +155,7 @@ class AboutModel extends ScenarioEditingComponent {
                     </ComposedChart>
                 </ResponsiveContainer>
 
-                Please choose a scenario.  You can change it any time using the green box on top.<br/>
+                Please choose a scenario.  You can change it any time using the green box on top.<br/><br/>
                     <RSlider name="rAfter" value={modelInputs.rAfter}
                         label="long" 
                         onChange={this.handleScenarioEditEvent}></RSlider>
@@ -168,7 +168,7 @@ class AboutModel extends ScenarioEditingComponent {
                         <input style={{width: "8rem"}} type="date" name="flatteningDate"
                                                 value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
                                                 onChange={this.handleScenarioEditEvent}></input>
-                        <br/>(For example, choose the day when lockdown or shelter-at-home started)
+                        <br/>(For example, choose the day when lockdown or shelter-at-home started)<br/>
                     </span>
                 }<br/>
 

@@ -66,8 +66,8 @@ export default class MyInfo extends ScenarioEditingComponent {
                 }     
             </p> 
             <p>
-                Tip: You can also enter in an age and location for a friend or family member elsewhere
-                to see what it's like there.  
+                Tip: You can also enter in information for a friend or family member
+                to see what it's like for them.  
             </p>
             
         </div>

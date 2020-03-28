@@ -1,6 +1,6 @@
 .topbar{
     position: fixed;
-    height:3.5rem;
+    height:4.5rem;
     right:0;
     top:0;
     background-color: #ccebc5;
@@ -20,5 +20,5 @@
   }
   
   .hide{
-    top:-4rem;
+    top:-4.5rem;
   }

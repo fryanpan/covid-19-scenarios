@@ -9,13 +9,32 @@ export class LocationManager {
      * 
      * @param {Object{}} locationData 
      */
-    static initLocationData(locationData) {
-        this.locations = locationData;
+    static initLocationData(locationData, covidData) {
+        var stateHasData = {};
+        covidData.forEach(x => {
+            const {country, state} = x;
+            if(!stateHasData[country]) {
+                stateHasData[country] = {}
+            }
+            stateHasData[country][state] = true;
+        })
+
+        this.locations = locationData.filter(({ country, state }) => {
+            const hasCountryData = stateHasData[country];
+            const hasData = hasCountryData && stateHasData[country][state];
+
+            if(!hasData) {
+                console.log("Hiding ", country, state, ".  No data.");
+            } else {
+                return true;
+            }
+        });
         this.locations.forEach(x => {
             x.population = x.population ? parseFloat(x.population) : undefined;
             x.rInitial = x.rInitial ? parseFloat(x.rInitial) : undefined;
             x.cfrInitial = x.cfrInitial ? parseFloat(x.rInitial) : undefined;
         })
+
         this.distinctCountries = lodash(this.locations).map(x => x.country).uniq().value();
     }
 

@@ -3,14 +3,12 @@ import ScenarioEditingComponent from "./scenarioEditingComponent"
 import RSlider from "./rSlider"
 
 import {
-    ComposedChart, 
-    LineChart, Line, 
-    Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+    ComposedChart, Line, 
+    Bar, XAxis, YAxis, Tooltip, Legend,
     ReferenceLine,
     ResponsiveContainer
 } from 'recharts';
 
-import { PresetScenarios, PresetCategories } from '../utils/model'
 import * as moment from 'moment'
 import { mergeDataArrays, readableInteger } from '../utils/dataUtils'
 

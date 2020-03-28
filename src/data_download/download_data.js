@@ -17,6 +17,11 @@ const COUNTRY_FIX_MAP = {
     "Iran (Islamic Republic of)": "Iran",
     "Gambia, The": "Gambia",
     "The Gambia": "Gambia",
+    "occupied Palestinian territories": "Palestinian territories",
+    "Palestine": "Palestinian territories",
+    "Republic of Korea": "South Korea",
+    "Congo (Brazzaville)": "Republic of Congo",
+    "Congo (Kinshasa)": "Republic of Congo"
 }
 
 // Used to roll up city level counts to states (for some reason data from mid-Feb to early March is by city)

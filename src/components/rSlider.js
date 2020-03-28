@@ -5,7 +5,6 @@ import ScenarioEditingComponent from "./scenarioEditingComponent"
 import Rheostat from "rheostat";
 import 'rheostat/initialize';
 import 'rheostat/css/rheostat.css';
-import { throttle } from 'lodash';
 
 import "./rSlider.css";
 
@@ -43,8 +42,6 @@ export default class RSlider extends ScenarioEditingComponent {
     // Min and max R values (multipled by 100)
     static MIN = 20;
     static MAX = 400; 
-    static DEFAULT = 40;
-    static THROTTLE_TIME = 400;
 
     // Uses the first matching range for a label.
     // Ranges include both endpoints
@@ -70,16 +67,9 @@ export default class RSlider extends ScenarioEditingComponent {
 
     constructor(props) {
         super(props);
-        this.propagateUpdateThrottled = throttle(this.propagateUpdate.bind(this), RSlider.THROTTLE_TIME);
         
         this.showLabel = this.props.label !== 'none';
         this.allowLong = this.props.label == 'long';
-
-        const initialValue = this.props.value * 100 || RSlider.default;
-        this.state = {
-            value: initialValue,
-            category: this.findCategory(initialValue)
-        }
     }
 
     findCategory(value) {
@@ -93,12 +83,9 @@ export default class RSlider extends ScenarioEditingComponent {
         }
     }
 
-    getDisplayR() {
-        return this.state.value / 100;
-    }
+    handleUpdate(update) {
+        const value = update.values[0];
 
-    propagateUpdate(value) {
-        console.log("Calling propagateUpdate");
         if(this.props.onChange) {
             const result = {
                 target: {
@@ -110,22 +97,13 @@ export default class RSlider extends ScenarioEditingComponent {
         }
     }
 
-    handleUpdate(update) {
-        const value = update.values[0];
-        this.propagateUpdateThrottled(value);
-        this.setState({
-            value: value,
-            category: this.findCategory(value)
-        })
-    }
-
     render() {
-        const value = this.props.value * 100 || RSlider.DEFAULT;
-
+        const category = this.findCategory(this.props.value * 100);
+        
         return <span className="rSlider">
             { this.showLabel && 
                 <div className="label" style={{}}>
-                    {this.state.category} (R = {this.getDisplayR()})  
+                    {category} (R = {this.props.value})  
                 </div>
             }
             <Rheostat
@@ -133,7 +111,7 @@ export default class RSlider extends ScenarioEditingComponent {
                 max={RSlider.MAX}
                 onValuesUpdated={this.handleUpdate.bind(this)}
                 progressBar="white"
-                values={[this.state.value]}
+                values={[this.props.value * 100]}
             >
             </Rheostat>
             

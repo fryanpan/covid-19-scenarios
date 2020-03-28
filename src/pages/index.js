@@ -9,18 +9,25 @@ import MyCommunity from "../components/myCommunity"
 import { LocationManager } from "../utils/locationManager"
 import moment from "moment"
 import ScenarioBar from "../components/scenarioBar"
+import { throttle } from 'lodash';
 
 // @TODO switch to using React Context instead of global ModelManager object
 
 class IndexPage extends React.Component {
+  static MODEL_UPDATE_THROTTLE_TIME = 300;
+
   constructor(props) {
     super(props);
+    // Create a throttled version of the model update
+    this.throttledModelUpdate = throttle(this.updateModels.bind(this), IndexPage.MODEL_UPDATE_THROTTLE_TIME);
     // Make sure to do this first, so the data is available elsewhere
     LocationManager.initLocationData(this.props.data.allLocationsCsv.nodes);
     ModelManager.initWithData(this.props.data);
 
     this.state = {
-      modelManager: ModelManager
+      modelManager: ModelManager,
+      modelInputs: ModelManager.modelInputs 
+      // @TODO fix this mess...it's here because we're throttling model manager updates 
     }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
 
@@ -76,7 +83,17 @@ class IndexPage extends React.Component {
       this.handleLocationChange(newModelInputs);
     }
 
-    // Update the model manager, re-run scenarios 
+    // update the state now
+    this.setState({
+      modelInputs: newModelInputs
+    })
+
+    // update the model manager later
+    this.throttledModelUpdate(newModelInputs);
+  }
+
+  updateModels(newModelInputs) {
+    // Update the model manager, re-run scenarios, but do it on a throttle! 
     this.state.modelManager.updateModelInputs(newModelInputs);
 
     // Update the React state
@@ -89,7 +106,7 @@ class IndexPage extends React.Component {
 
   render() {
     const modelData = this.state.modelManager.getDisplayData();
-    const modelInputs = this.state.modelManager.modelInputs;
+    const modelInputs = this.state.modelInputs;
     const queryData = this.props.data;
 
     return <Layout>

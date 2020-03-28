@@ -53,6 +53,7 @@ class AboutModel extends ScenarioEditingComponent {
         const scenarios = this.props.modelData;
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
+        const flatteningStarted = modelInputs.rAfter < 1.96; // @TODO refactor this...
 
         const yourLocation = modelInputs.state == 'All' ? modelInputs.country : modelInputs.state;
 
@@ -238,8 +239,10 @@ class AboutModel extends ScenarioEditingComponent {
                         <Tooltip formatter={readableInteger()}/>
                         <Legend/>
 
-                        <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
-                            label="Flattening starts" />
+                        { flatteningStarted && 
+                            <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
+                                label="Flattening starts" />
+                        }
 
                         <Line type="monotone" dataKey="currentDeadInc"  
                             name="My Scenario" stroke="#66c2a5" 
@@ -252,18 +255,18 @@ class AboutModel extends ScenarioEditingComponent {
 
                 Please choose a scenario to use as we answer questions on this page:<br/>
                     <RSlider name="rAfter" value={modelInputs.rAfter}
-                        label="both" 
+                        label="long" 
                         onChange={this.handleScenarioEditEvent}></RSlider>
         
-                { modelInputs.scenario != "noFlattening" && 
+                { flatteningStarted && 
                     <span>
-                        <br/>Flattening measures&nbsp;
+                        Flattening measures&nbsp;
                         { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
                         &nbsp; on &nbsp;
                         <input style={{width: "8rem"}} type="date" name="flatteningDate"
                                                 value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
                                                 onChange={this.handleScenarioEditEvent}></input>
-                        &nbsp;(for example, the day lockdown or shelter-at-home started)
+                        <br/>(For example, choose the day when lockdown or shelter-at-home started)
                     </span>
                 }
                 <p>
@@ -296,10 +299,6 @@ class AboutModel extends ScenarioEditingComponent {
                         the lockdown happened on January 24, 2020.
                       </span>
                     }
-                </p>
-                <p>
-                    Anywhere else on the page, you can change the scenario using the bar up top.
-                    @TODO Make the bar a little less janky...
                 </p>
 
                 <p>          

@@ -1,13 +1,12 @@
 .topbar{
     position: fixed;
-    height:4.5rem;
+    height:3.5rem;
     right:0;
     top:0;
     background-color: #ccebc5;
     width:100%;
-    max-width: 480px;
+    max-width: 300px;
     text-align:center;
-    font-size:22px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
     transition:top .3s;
     z-index: 1;
@@ -21,5 +20,5 @@
   }
   
   .hide{
-    top:-5rem;
+    top:-4rem;
   }

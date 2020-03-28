@@ -68,8 +68,6 @@ function metricPerMillionPopulation(scenarioData, key, outputKey) {
     });
 }
 
-
-
 class MyCommunity extends React.Component {    
     render() {        
         const modelInputs = this.props.modelInputs;
@@ -136,47 +134,21 @@ class MyCommunity extends React.Component {
             <h3>Are we reducing transmission enough?</h3>
 
             <p>
-                Let's see how new confirmed cases and deaths compares week over week in {currentScenarioName}.
-                For comparison, In Hubei province in China (where Wuhan is), lockdown started on 
-                January 24.  Roughly 3 weeks later, around February, new cases and deaths stop growing.
-                You can see the ratio of new cases one week to the last week drop below 1x, 
-                meaning each week has fewer new cases than the last.   
+                Let's see how new deaths compares week over week in {currentScenarioName}.
+                This is plotted below, along  with Hubei province in China for comparison.
+                Looking at the data from Hubei, lockdown started on 
+                January 24.  Roughly 3 weeks later, after February 19th, new cases and deaths
+                slow down and drop below a ratio of 1x.  This means the numbers each 
+                week started shrinking instead of growing. 
             </p>
             <p>
-                The key takeaway, if you're on lockdown.  When your community starts makes a big change
-                like strict social distancing or more extensive tests, then look at these charts
-                three weeks later and see if transmission is slowing and by how much?  If you make it
-                consistently below the 1x line, then congratulations, your community is in one of the
-                supression scenarios instead of growth scenarios.
+                The key takeaway, if you're on lockdown is this: when your community 
+                adds much stronger measures like strict social distancing or more extensive 
+                tests, look to see if deaths start declining three weeks later.
+                If you make it consistently below the 1x line, then congratulations, 
+                your community is in one of the supression scenarios instead of growth 
+                scenarios.
             </p>
-
-            <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={confirmedCasesRatios}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis type='number' 
-                        tickFormatter={readableRatio(1)}
-                        scale='log'
-                        domain={[0.01, 'auto']}/>
-                    <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
-
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1}
-                        strokeDasharray="3 3" position="start"/>
-                    { flatteningStarted && 
-                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                            label={"Flattening starts in " + currentScenarioName} />
-                    }
-                </LineChart>
-            </ResponsiveContainer>
 
             <h6 className="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -207,11 +179,42 @@ class MyCommunity extends React.Component {
 
                 </LineChart>
             </ResponsiveContainer>
+
+{/* 
+            <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
+            <ResponsiveContainer width="100%" height={400}>
+                <LineChart
+                    data={confirmedCasesRatios}
+                    margin={{
+                        top: 0, right: 0, left: 0, bottom: 0,
+                    }}
+                >
+                    <XAxis dataKey="date"/>
+                    <YAxis type='number' 
+                        tickFormatter={readableRatio(1)}
+                        scale='log'
+                        domain={[0.01, 'auto']}/>
+                    <Tooltip formatter={readableRatio(2)}/>
+                    <Legend />
+
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <ReferenceLine y={1}
+                        strokeDasharray="3 3" position="start"/>
+                    { flatteningStarted && 
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                            label={"Flattening starts in " + currentScenarioName} />
+                    }
+                </LineChart>
+            </ResponsiveContainer> */}
+
             <p>
                 Note: As you may have seen in these scenarios, any measures your community puts in place 
                 today won't have much effect on new deaths and cases in the next three weeks.  
                 Your community's choices in the past have already determined what will happen
-                in the next three weeks.  Let this be a call to act quickly, when warranted.
+                in the next three weeks.  Let this be a call to act quickly, even if your community
+                has only a few cases or deaths now. 
             </p>
 
             <h2>How well are we testing?</h2>
@@ -219,7 +222,7 @@ class MyCommunity extends React.Component {
             <p>
             Testing is slow and incomplete in so many places.  Without enough testing,
             it's hard to know who's infected and needs to be quarantined.  So often the best alternative
-            is to quarantine everyone.
+            is to quarantine everyone.  
             </p>
 
             <p>Here you can see how your community might be doing on testing.  The chart below compares
@@ -250,8 +253,6 @@ class MyCommunity extends React.Component {
                         dot={false}/>
                 </LineChart>
             </ResponsiveContainer> 
-
-            @TODO Plot South Korea directly on the above graph for comparison
             
             <h3>When will we be out of the woods?</h3>
 
@@ -265,7 +266,7 @@ class MyCommunity extends React.Component {
                 So if you're staying at home and want to guess when it might end, we can look 
                 at other places that are gradually coming out of lockdown.  Take Hubei, China
                 for example where the pandemic started.  When it dropped to somewhere
-                around 10 active cases per million people, it was also loosening restrictions.  
+                around 10 active cases per million people, it started loosening restrictions.  
             </p>
             <p>
                 Try different scenarios and see when your community might get to that point.

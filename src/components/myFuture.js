@@ -54,34 +54,32 @@ class MyFuture extends React.Component {
     render() {
         const percentFormatter = readablePercent(2);
         const scenarios = this.props.modelData;
-        const currentScenario = this.props.modelInputs.scenario;
-        const currentScenarioName = scenarios[currentScenario].scenario.name;
 
+        /** Compute stats for available scenarios */
         var stats = {};
         for(let scenarioKey in scenarios) {
             stats[scenarioKey] = this.computeStats(scenarios[scenarioKey]);
         }
 
         /** Get data for the personal COVID-19 chart */
-        const currentStats = stats[currentScenario];
         var personalCatchData = [
             {
                 label: "In the next month",
-                value: currentStats.catchCovid.month
+                value: stats.current.catchCovid.month
             },
             {
                 label: "In the next year",
-                value: currentStats.catchCovid.year
+                value: stats.current.catchCovid.year
             }
         ];
         var personalDieData = [
             {
                 label: "In the next month",
-                value: currentStats.dieFromCovid.month
+                value: stats.current.dieFromCovid.month
             },
             {
                 label: "In the next year",
-                value: currentStats.dieFromCovid.year
+                value: stats.current.dieFromCovid.year
             }
         ];
 
@@ -106,19 +104,6 @@ class MyFuture extends React.Component {
             });
         }
 
-        /** Get data for graphs tha compare across when the flattening happens */
-        var flatteningTimingData = [];
-        for(let [key, scenarioData] of PresetScenarios.entries()) {
-            const flatteningScenario = scenarios[key].scenario;
-            if(flatteningScenario.category != PresetCategories.FLATTENING_TIMING) continue;
-            var scenarioName = flatteningScenario.name;
-
-            flatteningTimingData.push({
-                label: scenarioName,
-                probability: stats[key].catchCovid.year
-            });
-        }
-
         // insert some sample values from micromorts
         
         return <div>
@@ -127,7 +112,7 @@ class MyFuture extends React.Component {
             </h1>
 
             <p>
-            This chart shows how likely it is for you to catch COVID-19 with the {currentScenarioName.toLowerCase()} scenario. 
+            This chart shows how likely it is for you to catch COVID-19 with your scenario. 
             </p>
 
             <ResponsiveContainer width="100%" height={300}>
@@ -177,28 +162,6 @@ class MyFuture extends React.Component {
             </ResponsiveContainer>
 
             TODO: Add some bars based on <a href="https://en.wikipedia.org/wiki/Micromort">micromort</a> data
-
-            {/* <h3>How much does it matter when flattening starts?</h3>
-            <p>
-                If you are in an area where the virus is spreading rapidly and testing is incomplete, then it can matter a lot!
-                This chart shows the chance that you will catch COVID-19 over the next year, with 
-                &nbsp;{scenarios[currentScenario].scenario.name.toLowerCase()}&nbsp; starting on different dates.  
-            </p> 
-            <ResponsiveContainer width="100%" height={300}>
-                <BarChart
-                    layout="vertical"
-                    data={flatteningTimingData}
-                    margin={{
-                        top: 10, right: 100, left: 0, bottom: 20,
-                    }}
-                >
-                    <XAxis type="number" tickFormatter={readablePercent(1)} />
-                    <YAxis dataKey="label" type="category" width={200}/>
-                    <Bar type="monotone" dataKey="probability"  fill="#8884d8">
-                        <LabelList dataKey="probability" position="right" formatter={(readablePercent(2))}/>
-                    </Bar>
-                </BarChart>
-            </ResponsiveContainer> */}
         </div>
     }
 

@@ -61,25 +61,22 @@ class AboutModel extends ScenarioEditingComponent {
          */
         var infectedDataArrays = [];
         var deadDataArrays = [];
-        for(let [key, scenarioData] of PresetScenarios.entries()) {
-            if(scenarioData.category != PresetCategories.BASIC) continue;
-
-            infectedDataArrays.push(
-                extractDateAndKey(scenarios[key].dailyData, 'infectedInc', key + 'InfectedInc')
-            );
-            deadDataArrays.push(
-                extractDateAndKey(scenarios[key].dailyData, 'deadInc', key + 'DeadInc')
-            )
-        }
         infectedDataArrays.push(
-            extractDateAndKey(scenarios.strongFlattening.dailyData, 'confirmedCasesInc', 'confirmedCasesInc')
+            extractDateAndKey(scenarios.current.dailyData, 'infectedInc',  'currentInfectedInc')
+        );
+        
+        infectedDataArrays.push(
+            extractDateAndKey(scenarios.current.dailyData, 'confirmedCasesInc', 'confirmedCasesInc')
         )
 
         deadDataArrays.push(
-            extractDateAndKey(scenarios.strongFlattening.dailyData, 'confirmedDeathsInc', 'confirmedDeathsInc')
+            extractDateAndKey(scenarios.current.dailyData, 'deadInc', 'currentDeadInc')
+        )
+        deadDataArrays.push(
+            extractDateAndKey(scenarios.current.dailyData, 'confirmedDeathsInc', 'confirmedDeathsInc')
         )
 
-        const thresholdDayIndex = scenarios.strongFlattening.summary.thresholdDayIndex;
+        const thresholdDayIndex = scenarios.current.summary.thresholdDayIndex;
         const scenarioInfectedData = mergeDataArrays(infectedDataArrays);
         const scenarioInfectedDataTillNow = scenarioInfectedData.slice(0, thresholdDayIndex + 15);
         
@@ -169,22 +166,22 @@ class AboutModel extends ScenarioEditingComponent {
                         <ul>
                             <li>
                                 <b>Strong Flattening</b> Strong measures.  Based on R from Wuhan after January 24, 2020 
-                                    (R = {scenarios.strongFlattening.scenario.rAfter}).
+                                    (R = {scenarios.current.scenario.rAfter}).
                                 </li>
                             <li>
                                 <b>Moderate Flattening</b> Moderately effective flattening measures.
-                                    (R = {scenarios.moderateFlattening.scenario.rAfter})  
+                                    (R = {scenarios.current.scenario.rAfter})  
                             </li>
                             <li>
                                 <b>Mild Flattening</b> Reduce spread, but not enough to avoid continued growth.
                                     Similar to the first few weeks in South Korea, before there was enough testing
                                     and tracing.
-                                    (R = {scenarios.mildFlattening.scenario.rAfter})
+                                    (R = {scenarios.current.scenario.rAfter})
                             </li>   
                             <li>
                                 <b>No Flattening</b> Minimal to no action taken to reduce transmission.
                                     This is based on data from the initial weeks in China.
-                                    (R = {scenarios.noFlattening.scenario.rAfter})
+                                    (R = {scenarios.current.scenario.rAfter})
                             </li>   
                         </ul>
 
@@ -211,21 +208,9 @@ class AboutModel extends ScenarioEditingComponent {
                                 <Legend/>
                                 {/* <Tooltip formatter={readableInteger()}/> */}
 
-                                <Line type="linear" dataKey="strongFlatteningDeadInc"  
-                                    name="Strong Flattening" stroke="#66c2a5" 
-                                    strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
-
-                                <Line type="linear" dataKey="moderateFlatteningDeadInc"  
-                                    name="Moderate Flattening" stroke="#fc8d62" 
-                                    strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
-
-                                <Line type="linear" dataKey="mildFlatteningDeadInc"  
-                                    name="Mild Flattening" stroke="#8da0cb" 
-                                    strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
-
-                                <Line type="linear" dataKey="noFlatteningDeadInc"  
-                                    name="No Flattening" stroke="#e78ac3" 
-                                    strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
+                                <Line type="linear" dataKey="currentDeadInc"  
+                                    name="My Scenario" stroke="#66c2a5" 
+                                    strokeWidth={4} dot={false}/>
                             </ComposedChart>
                         </ResponsiveContainer>                
     
@@ -240,7 +225,7 @@ class AboutModel extends ScenarioEditingComponent {
                     Plotted on top are the new deaths predicted daily by each of the four scenarios. 
                 </p>
                 
-                <h6 class="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
+                <h6 className="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
                 <ResponsiveContainer width="100%" height={400}>
                     <ComposedChart
                         data={scenarioDeathDataTillNow}
@@ -256,55 +241,31 @@ class AboutModel extends ScenarioEditingComponent {
                         <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
                             label="Flattening starts" />
 
-                        <Line type="monotone" dataKey="strongFlatteningDeadInc"  
-                            name="Strong Flattening" stroke="#66c2a5" 
-                            strokeWidth={chosenScenario == "strongFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="moderateFlatteningDeadInc"  
-                            name="Moderate Flattening" stroke="#fc8d62" 
-                            strokeWidth={chosenScenario == "moderateFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="mildFlatteningDeadInc"  
-                            name="Mild Flattening" stroke="#8da0cb" 
-                            strokeWidth={chosenScenario == "mildFlattening" ? 4 : 1} dot={false}/>
-
-                        <Line type="monotone" dataKey="noFlatteningDeadInc"  
-                            name="No Flattening" stroke="#e78ac3" 
-                            strokeWidth={chosenScenario == "noFlattening" ? 4 : 1} dot={false}/>
+                        <Line type="monotone" dataKey="currentDeadInc"  
+                            name="My Scenario" stroke="#66c2a5" 
+                            strokeWidth={4} dot={false}/>
 
                         <Bar dataKey="confirmedDeathsInc"
                             name="Actual Deaths" fill="#f00"/>
                     </ComposedChart>
                 </ResponsiveContainer>
 
-                <p>
-                    Please choose a scenario to use as we answer questions on this page: 
-                    <RSlider name="rAfter" value={modelInputs.rAfter} onChange={this.handleScenarioEditEvent}></RSlider>
-                    <select name="scenario" value={modelInputs.scenario} onChange={this.handleScenarioEditEvent}>
-                        {
-                            [...PresetScenarios.entries()].map(entry => {
-                                const key = entry[0];
-                                const scenarioData = entry[1];
-                                if(scenarioData.category == PresetCategories.BASIC) {
-                                    return <option key={key} value={key}>{scenarioData.name}</option>
-                                } else {
-                                    return "";
-                                }
-                            })
-                        }
-                    </select>
-                    { modelInputs.scenario != "noFlattening" && 
-                        <span>
-                            <br/>Flattening measures&nbsp;
-                            { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
-                            &nbsp; on &nbsp;
-                            <input style={{width: "8rem"}} type="date" name="flatteningDate"
-                                                    value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
-                                                    onChange={this.handleScenarioEditEvent}></input>
-                            &nbsp;(for example, the day lockdown or shelter-at-home started)
-                        </span>
-                    }
-                </p>
+                Please choose a scenario to use as we answer questions on this page:<br/>
+                    <RSlider name="rAfter" value={modelInputs.rAfter}
+                        label="both" 
+                        onChange={this.handleScenarioEditEvent}></RSlider>
+        
+                { modelInputs.scenario != "noFlattening" && 
+                    <span>
+                        <br/>Flattening measures&nbsp;
+                        { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
+                        &nbsp; on &nbsp;
+                        <input style={{width: "8rem"}} type="date" name="flatteningDate"
+                                                value={ modelInputs.flatteningDate.toISOString().split('T')[0]}
+                                                onChange={this.handleScenarioEditEvent}></input>
+                        &nbsp;(for example, the day lockdown or shelter-at-home started)
+                    </span>
+                }
                 <p>
                     { modelInputs.scenario == "strongFlattening" &&
                       <span>

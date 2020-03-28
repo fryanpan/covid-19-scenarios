@@ -11,6 +11,11 @@ export class LocationManager {
      */
     static initLocationData(locationData) {
         this.locations = locationData;
+        this.locations.forEach(x => {
+            x.population = x.population ? parseFloat(x.population) : undefined;
+            x.rInitial = x.rInitial ? parseFloat(x.rInitial) : undefined;
+            x.cfrInitial = x.cfrInitial ? parseFloat(x.rInitial) : undefined;
+        })
         this.distinctCountries = lodash(this.locations).map(x => x.country).uniq().value();
     }
 

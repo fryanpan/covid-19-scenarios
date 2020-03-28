@@ -1,10 +1,11 @@
 .topbar{
     position: fixed;
-    height:2rem;
-    left:0;
+    height:4.5rem;
+    right:0;
     top:0;
     background-color: #ccebc5;
     width:100%;
+    max-width: 480px;
     text-align:center;
     font-size:22px;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
@@ -12,7 +13,13 @@
     z-index: 1;
     -webkit-backface-visibility: hidden;
   }
+
+  @media only screen and (max-width: 500px) {
+    .topbar {
+      max-width: 100%;
+    }
+  }
   
   .hide{
-    top:-2rem;
+    top:-5rem;
   }

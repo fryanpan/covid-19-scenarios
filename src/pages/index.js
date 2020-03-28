@@ -10,14 +10,17 @@ import { LocationManager } from "../utils/locationManager"
 import moment from "moment"
 import ScenarioBar from "../components/scenarioBar"
 
+// @TODO switch to using React Context instead of global ModelManager object
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     // Make sure to do this first, so the data is available elsewhere
     LocationManager.initLocationData(this.props.data.allLocationsCsv.nodes);
+    ModelManager.initWithData(this.props.data);
 
     this.state = {
-      modelManager: new ModelManager(this.props.data)
+      modelManager: ModelManager
     }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
 
@@ -109,8 +112,7 @@ class IndexPage extends React.Component {
       model implementation probably don't matter.  I spent more time focusing on the insight
       than the math.  The math needed to be close enough.
 
-      <SimulationDataTable modelData={modelData[modelInputs.scenario]}></SimulationDataTable>
-
+      <SimulationDataTable modelData={modelData}></SimulationDataTable>
     </Layout>
   }
 }

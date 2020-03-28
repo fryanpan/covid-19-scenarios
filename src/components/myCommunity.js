@@ -153,7 +153,7 @@ class MyCommunity extends React.Component {
             We can only change the future).
             </p>
 
-            <h6 class="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
+            <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={confirmedCasesRatios}
@@ -177,7 +177,7 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <h6 class="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
+            <h6 className="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={deathRatios}
@@ -214,7 +214,7 @@ class MyCommunity extends React.Component {
             at how many actual cases there were in the past.  This chart calculates how
             complete (or incomplete) tests might be:
 
-            <h6 class="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
+            <h6 className="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={testData}
@@ -239,7 +239,7 @@ class MyCommunity extends React.Component {
             daily from the model (when people first show symptoms) vs. the increase in confirmed
             case counts each day from performing tests:
 
-            <h6 class="chartTitle">Total Confirmed Cases vs. Active Cases in Scenario</h6>
+            <h6 className="chartTitle">Total Confirmed Cases vs. Active Cases in Scenario</h6>
             <ResponsiveContainer width="100%" height={300}>
                 <ComposedChart
                     data={testData}
@@ -271,7 +271,7 @@ class MyCommunity extends React.Component {
 
             @TODO Revise this chart and get rid of the log scale.  It's confusing.
 
-            <h6 class="chartTitle">Active Cases Per Million People over Time</h6>
+            <h6 className="chartTitle">Active Cases Per Million People over Time</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={activeCasesPerMillion}

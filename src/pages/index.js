@@ -111,6 +111,7 @@ class IndexPage extends React.Component {
 
     return <Layout>
       <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
+      
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
       <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>

@@ -101,7 +101,7 @@ export class ModelManager {
       // Special case to pull in Wuhan data for now
       const { country, state } = scenarioData;
       const dailyData = this.getDailyData(country, state);
-      const { population } = LocationManager.lookupLocation(country, state);  
+      const population = LocationManager.lookupLocation(country, state).population;  
 
       // Run the scenario
       console.log("Running preset scenario ", JSON.stringify(scenarioData));
@@ -117,6 +117,8 @@ export class ModelManager {
         scenarioData.thresholdDate
       );
     }
+
+    console.log("Preset Scenarios", result);
     return result;
   }
 

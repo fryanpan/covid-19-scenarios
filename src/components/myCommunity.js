@@ -76,6 +76,7 @@ class MyCommunity extends React.Component {
         const scenarios = this.props.modelData;
         const historicalData = this.props.historicalData;
         const currentScenario = scenarios[modelInputs.scenario];
+        const flatteningStarted = modelInputs.rAfter < 1.96; // @TODO stop doing this messy thing
 
         /** Keep only days with testing ratios */
         const firstTestIndex = currentScenario.dailyData.findIndex(x => x.testingRatio > 0);
@@ -124,33 +125,29 @@ class MyCommunity extends React.Component {
             </p>
             <p>
                 To guess at when social distancing might end, we can look at a few things.
-                First, are we stopping the growth in infections and deaths? 
+                First, are we stopping the growth in infections? 
                 Are we testing well enough?  If testing picks up and contains
-                cases more quickly and broadly, then fewer social distancing measures are needed
-                to keep the outbreak under control.
-                When might the number of 
-                active infections be low enough to relaxing strict measures?
-
+                cases more quickly and broadly, then fewer social distancing measures will be needed
+                to keep any outbreaks small.
+                And if we are doing all of these things, then when might the number of active
+                infections be low enough to relax strict distancing measures?
             </p>
 
-            <h3>Are we heading in the right direction?</h3>
-
-            <p>The next question is whether there are signs that we will get there.  Remember that every model is wrong.
-            What does the data from the real world tell us, even if it's not fully accurate?
-            </p>
+            <h3>Are we reducing transmission enough?</h3>
 
             <p>
-            One good indicator for this whether the announced counts are going down, and by how much?
-            This chart shows the number of actual deaths each week compared to the past week.
-            
-            @TODO: Rework this whole paragraph to show dates directly on the chart
-            It compares {modelInputs.state} to Hubei in China, where strong flattening measures started on January 24.
-            This immediately started reducing transmission, but  most COVID-19 deaths happen 3 or more weeks
-            after contracting the virus.  This is why the new confirmed deaths only start moving much lower starting February 19.  
-            Eventually, deaths in each week are only 50% of the week before.  Provide similar reference markers
-            for your chosen scenario.  The next three weeks are mostly baked in based on your choices in the past.
-            (This is unfortunately going to be quite sad in New York, but not something any of us has the power to change.
-            We can only change the future).
+                Let's see how new confirmed cases and deaths compares week over week in {currentScenarioName}.
+                For comparison, In Hubei province in China (where Wuhan is), lockdown started on 
+                January 24.  Roughly 3 weeks later, around February, new cases and deaths stop growing.
+                You can see the ratio of new cases one week to the last week drop below 1x, 
+                meaning each week has fewer new cases than the last.   
+            </p>
+            <p>
+                The key takeaway, if you're on lockdown.  When your community starts makes a big change
+                like strict social distancing or more extensive tests, then look at these charts
+                three weeks later and see if transmission is slowing and by how much?  If you make it
+                consistently below the 1x line, then congratulations, your community is in one of the
+                supression scenarios instead of growth scenarios.
             </p>
 
             <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
@@ -165,7 +162,7 @@ class MyCommunity extends React.Component {
                     <YAxis type='number' 
                         tickFormatter={readableRatio(1)}
                         scale='log'
-                        domain={[0.1, 'auto']}/>
+                        domain={[0.01, 'auto']}/>
                     <Tooltip formatter={readableRatio(2)}/>
                     <Legend />
 
@@ -174,6 +171,10 @@ class MyCommunity extends React.Component {
                     <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
                     <ReferenceLine y={1}
                         strokeDasharray="3 3" position="start"/>
+                    { flatteningStarted && 
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                            label={"Flattening starts in " + currentScenarioName} />
+                    }
                 </LineChart>
             </ResponsiveContainer>
 
@@ -198,21 +199,37 @@ class MyCommunity extends React.Component {
                     <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
                     <ReferenceLine y={1}  
                         strokeDasharray="3 3" position="start"/>
+                                            { flatteningStarted &&
+
+                    <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                        label={"Flattening starts in " + currentScenarioName} />
+                }
+
                 </LineChart>
             </ResponsiveContainer>
-
             <p>
-                The key takeaway: if your area has added stronger flattening measures, like staying at home
-                or much more extensive testing, then look for changes in the death ratio about 3 weeks later.
-                If the ratio falls consistently well below 1x like in Wuhan, then the number of cases
-                and deaths are going down every week instead of up.
+                Note: As you may have seen in these scenarios, any measures your community puts in place 
+                today won't have much effect on new deaths and cases in the next three weeks.  
+                Your community's choices in the past have already determined what will happen
+                in the next three weeks.  Let this be a call to act quickly, when warranted.
             </p>
 
             <h2>How well are we testing?</h2>
 
-            By assuming that the confirmed deaths are somewhat accurate, the model can take a guess 
-            at how many actual cases there were in the past.  This chart calculates how
-            complete (or incomplete) tests might be:
+            <p>
+            Testing is slow and incomplete in so many places.  Without enough testing,
+            it's hard to know who's infected and needs to be quarantined.  So often the best alternative
+            is to quarantine everyone.
+            </p>
+
+            <p>Here you can see how your community might be doing on testing.  The chart below compares
+                the total infections predicted by your scenario and the actual total confirmed cases.
+                Please try different scenarios to see how this changes.
+            </p>            
+            <p>
+                For comparison, also try switching the country at the top to South Korea.  They're likely
+                catching around half of their cases.
+            </p>
 
             <h6 className="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -226,50 +243,35 @@ class MyCommunity extends React.Component {
                 >
                     <XAxis dataKey="date"/>
                     <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
-                    <Tooltip formatter={readablePercent(0)}/>
+                    <Tooltip formatter={readablePercent(2)}/>
                     <Legend />
                     <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
+                        name="% of Cases Detected"
                         dot={false}/>
                 </LineChart>
             </ResponsiveContainer> 
-            TODO: Add in South Korea here for comparison.  They're likely well north of 50%
-            on various simulations
 
-            This chart shows the new cases
-            daily from the model (when people first show symptoms) vs. the increase in confirmed
-            case counts each day from performing tests:
-
-            <h6 className="chartTitle">Total Confirmed Cases vs. Active Cases in Scenario</h6>
-            <ResponsiveContainer width="100%" height={300}>
-                <ComposedChart
-                    data={testData}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis tickFormatter={readableSIPrefix(2)} domain={[0, 'auto']}/>
-                    <Tooltip formatter={readableInteger()}/>
-                    <Legend />
-                    <Bar dataKey="confirmedCases" name="Confirmed Cases" fill="#8884d8" />
-                    <Line type="linear" dataKey="totalInfected"
-                        strokeWidth={2} name="Scenario" dot={false}
-                        />
-                </ComposedChart>
-            </ResponsiveContainer>
+            @TODO Plot South Korea directly on the above graph for comparison
             
             <h3>When will we be out of the woods?</h3>
 
-            Here's what the your current scenario predicts for active infections
-            per million people.
-                
-            TODO: write this section up properly and add a link to Bill Gates' prediction
-            of 6-10 weeks in developed nations that work on suppression diligently
+            <p>
+            If your case counts are falling and testing is comprehensive,
+            then your community will start weighing how to reduce suppression measures
+            without risking another major future outbreak.
+            </p>
 
-            In Hubei, suppression started gradually relaxing somewhere around and
-            active case count of 10 per million.
-
-            @TODO Revise this chart and get rid of the log scale.  It's confusing.
+            <p>
+                So if you're staying at home and want to guess when it might end, we can look 
+                at other places that are gradually coming out of lockdown.  Take Hubei, China
+                for example where the pandemic started.  When it dropped to somewhere
+                around 10 active cases per million people, it was also loosening restrictions.  
+            </p>
+            <p>
+                Try different scenarios and see when your community might get to that point.
+                Bill Gates was <a href="https://www.gatesnotes.com/Health/A-coronavirus-AMA">
+                    predicting 6-10 weeks for countries that do a "good job with testing and shut down"</a>
+            </p>
 
             <h6 className="chartTitle">Active Cases Per Million People over Time</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -293,64 +295,8 @@ class MyCommunity extends React.Component {
                         strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>
-
-               
-
-           
-
-{/* 
-            <h2>How many people might be infected over time?</h2>
-            <ResponsiveContainer width={960} height={300}>
-                <AreaChart
-                    width={960}
-                    height={300}
-                    data={currentScenario.dailyData}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis width={100}/>
-                    <Tooltip />
-                    <Legend />
-                    <Area type="linear" dataKey="recovered" strokeWidth={0}
-                        name="Recovered" fill="#66c2a5" />
-                    <Area type="linear" dataKey="infected" strokeWidth={0}
-                        stackId="a"  name = "Infected (has symptoms)" fill="#fc8d62" />
-                    <Area type="linear" dataKey="exposed" strokeWidth={0}
-                        stackId="a" name = "Infected (no symptoms)" fill="#8da0cb" />
-                    <Area type="linear" dataKey="dead" strokeWidth={0}
-                        name = "Dead" fill="#e78ac3" />
-                </AreaChart>
-            </ResponsiveContainer>
-
-            <h2>How many people might die?</h2>
-            <ResponsiveContainer width={960} height={300}>
-                <AreaChart
-                    width={960}
-                    height={300}
-                    data={currentScenario.dailyData}
-                    margin={{
-                        top: 10, right: 30, left: 0, bottom: 0,
-                    }}
-                    // barCategoryGap={1}
-                    // barGap={0}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis width={100} />
-                    <Tooltip />
-                    <Legend />
-                    <Area type="step" dataKey="dead" strokeWidth={0}
-                        name = "Deaths (from simulation)" fill="#e78ac3" />
-                    <Area type="step" dataKey="confirmedDeaths" strokeWidth={0} 
-                        name = "Confirmed Deaths" fill="#a6d854" />
-                </AreaChart>
-            </ResponsiveContainer> */}
-
         </div>
     }
-
 }
-
 
 export default MyCommunity

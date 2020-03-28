@@ -112,7 +112,8 @@ class MyFuture extends React.Component {
             </h1>
 
             <p>
-            This chart shows how likely it is for you to catch COVID-19 with your scenario. 
+            This chart shows how likely it is for you to catch COVID-19 with your scenario.  You can use the green box above
+            to try different scenarios.
             </p>
 
             <ResponsiveContainer width="100%" height={300}>
@@ -161,7 +162,8 @@ class MyFuture extends React.Component {
                 </BarChart>
             </ResponsiveContainer>
 
-            TODO: Add some bars based on <a href="https://en.wikipedia.org/wiki/Micromort">micromort</a> data
+            TODO: Add some bars based on your normal probability of dying next year (before COVID-19)
+            And various other risks
         </div>
     }
 

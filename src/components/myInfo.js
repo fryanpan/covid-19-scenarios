@@ -23,7 +23,9 @@ export default class MyInfo extends ScenarioEditingComponent {
                 There are so many <a href="https://www.covidly.com">charts</a>,
                 <a href="http://gabgoh.github.io/COVID"> disease modeling tools</a>,&nbsp;
                 <a href="https://github.com/midas-network/COVID-19/tree/master/parameter_estimates/2019_novel_coronavirus">
-                research papers</a>, and news articles.
+                research papers</a>, news articles, and&nbsp; 
+                <a href="https://www.gatesnotes.com/Health/A-coronavirus-AMA">thoughtful Q&amp;As
+                from people named Bill</a>.
 
             </p>
             <p>

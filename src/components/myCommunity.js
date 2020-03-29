@@ -1,25 +1,12 @@
 import React from "react"
-import * as d3Format from "d3-format"
-
 import {
-    AreaChart, Area, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-    ComposedChart,
+    XAxis, YAxis, Tooltip, Legend,
     LineChart, Line, ReferenceLine, ResponsiveContainer
 } from 'recharts';
 
 import moment from 'moment';
 
-import { mergeDataArrays, readableRatio, readableNumber, readablePercent,
-    readableInteger, 
-    readableSIPrefix } from "../utils/dataUtils" 
-
-function sum(array, key, i, j) {
-    var result = 0;
-    for(let k = i; k <= j; ++k) {
-        result += parseFloat(array[k][key]);
-    }
-    return result;
-}
+import { mergeDataArrays, readableRatio, readableNumber, readablePercent } from "../utils/dataUtils" 
 
 /** Computes a ratio of past counts for the given key
  * To a period one window length earlier.
@@ -82,7 +69,7 @@ class MyCommunity extends React.Component {
 
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
-        const currentScenarioName = modelInputs.state == 'All' ? modelInputs.country : modelInputs.state;
+        const currentScenarioName = modelInputs.state === 'All' ? modelInputs.country : modelInputs.state;
         const confirmedCasesRatios =
             mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
@@ -103,6 +90,8 @@ class MyCommunity extends React.Component {
                 metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
                 metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
             ]);
+
+        console.log("Hubei", scenarios.hubeiStrongFlattening);
 
         return <div>
             <h1>
@@ -174,7 +163,7 @@ class MyCommunity extends React.Component {
                                             { flatteningStarted &&
 
                     <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                        label={"Flattening starts in " + currentScenarioName} />
+                        label={"Flattening starts"} />
                 }
 
                 </LineChart>

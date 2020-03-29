@@ -1,9 +1,7 @@
 import TopBar from "./topBar"
 import React from "react"
-import { PresetScenarios, PresetCategories } from "../utils/model"
 import ScenarioEditingComponent from "./scenarioEditingComponent"
 import RSlider from "./rSlider"
-import * as moment from "moment"
 
 import "./scenarioBar.css"
 

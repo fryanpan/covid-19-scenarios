@@ -19,16 +19,19 @@ export class LocationManager {
             stateHasData[country][state] = true;
         })
 
+
+        var hidden = [];
         this.locations = locationData.filter(({ country, state }) => {
             const hasCountryData = stateHasData[country];
             const hasData = hasCountryData && stateHasData[country][state];
 
             if(!hasData) {
-                console.log("Hiding ", country, state, ".  No data.");
+                hidden.push(country + " " + state);
             } else {
                 return true;
             }
         });
+        console.log("Hide locations ", hidden);
         this.locations.forEach(x => {
             x.population = x.population ? parseFloat(x.population) : undefined;
             x.rInitial = x.rInitial ? parseFloat(x.rInitial) : undefined;

@@ -53,7 +53,7 @@ class AboutModel extends ScenarioEditingComponent {
         const chosenScenario = modelInputs.scenario;
         const flatteningStarted = modelInputs.rAfter < 1.96; // @TODO refactor this...
 
-        const yourLocation = modelInputs.state == 'All' ? modelInputs.country : modelInputs.state;
+        const yourLocation = modelInputs.state === 'All' ? modelInputs.country : modelInputs.state;
 
         /**
          * Combine data from all of the scenarios
@@ -75,14 +75,13 @@ class AboutModel extends ScenarioEditingComponent {
             extractDateAndKey(scenarios.current.dailyData, 'confirmedDeathsInc', 'confirmedDeathsInc')
         )
 
-        const thresholdDayIndex = scenarios.current.summary.thresholdDayIndex;
-        const scenarioInfectedData = mergeDataArrays(infectedDataArrays);
-        const scenarioInfectedDataTillNow = scenarioInfectedData.slice(0, thresholdDayIndex + 15);
+        // const thresholdDayIndex = scenarios.current.summary.thresholdDayIndex;
+        // const scenarioInfectedData = mergeDataArrays(infectedDataArrays);
+        // const scenarioInfectedDataTillNow = scenarioInfectedData.slice(0, thresholdDayIndex + 15);
         
         const scenarioDeathData = mergeDataArrays(deadDataArrays);
-        const firstDeathIndex = scenarioDeathData.findIndex(x => x.confirmedDeathsInc > 0) || 0;
-        const scenarioDeathDataTillNow = scenarioDeathData.slice(firstDeathIndex, thresholdDayIndex + 90);
-        console.log(scenarioDeathData);
+        // const firstDeathIndex = scenarioDeathData.findIndex(x => x.confirmedDeathsInc > 0) || 0;
+        // const scenarioDeathDataTillNow = scenarioDeathData.slice(firstDeathIndex, thresholdDayIndex + 90);
 
         return <div>
             <h1> About the scenarios </h1>
@@ -199,7 +198,8 @@ class AboutModel extends ScenarioEditingComponent {
 
                 <p>          
                    { !this.state.showDetails &&
-                        <span>For more details about the scenarios, please <a onClick={this.handleToggleDetails.bind(this)}>
+                        <span>For more details about the scenarios, please 
+                            <a onClick={this.handleToggleDetails.bind(this)}>
                             click here to show more</a>&nbsp;
                         </span>
                     }

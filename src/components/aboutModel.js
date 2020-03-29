@@ -39,14 +39,6 @@ class AboutModel extends ScenarioEditingComponent {
         };
     }
 
-    handleToggleDetails() {
-        this.setState(prevState => {
-            return {
-                showDetails: !prevState.showDetails 
-            }
-        })
-    }
-
     render() {        
         const scenarios = this.props.modelData;
         const modelInputs = this.props.modelInputs;
@@ -194,18 +186,6 @@ class AboutModel extends ScenarioEditingComponent {
                     then the number of new cases and deaths will increase over time.  This will continue
                     until a large portion of the population becomes infected.  This is what happens in each 
                     of the growth scenarios above, where R &gt; 1.
-                </p> 
-
-                <p>          
-                   { !this.state.showDetails &&
-                        <span>For more details about the scenarios, please 
-                            <a onClick={this.handleToggleDetails.bind(this)}>
-                            click here to show more</a>&nbsp;
-                        </span>
-                    }
-                    { this.state.showDetails && 
-                        <span><a onClick={this.handleToggleDetails.bind(this)}>Click here</a> to hide the details</span>
-                    }
                 </p>                 
 
         </div>

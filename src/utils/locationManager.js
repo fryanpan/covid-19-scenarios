@@ -27,6 +27,7 @@ export class LocationManager {
 
             if(!hasData) {
                 hidden.push(country + " " + state);
+                return false;
             } else {
                 return true;
             }
@@ -52,7 +53,7 @@ export class LocationManager {
     /** Returns the location data for a given country and state */
     static lookupLocation(country, state) {
         return this.locationsForCountry(country)
-            .find(x => x.state == state);
+            .find(x => x.state === state);
 
     }
 }

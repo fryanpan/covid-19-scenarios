@@ -82,7 +82,7 @@ export class ModelManager {
       }
     });
 
-    if(dailyData.length == 0) {
+    if(dailyData.length === 0) {
       alert("Unable to find data for country ", country, " and state/province ", state);
       return [];
     }

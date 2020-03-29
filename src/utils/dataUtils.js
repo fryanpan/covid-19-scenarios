@@ -1,6 +1,4 @@
-import { scaleLog } from 'd3-scale';
 import * as d3Format from "d3-format"
-import * as moment from "moment"
 
 /**
  * Takes an array of arrays of objects.

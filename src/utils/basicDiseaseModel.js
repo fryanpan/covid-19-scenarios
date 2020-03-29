@@ -135,7 +135,7 @@ const ASSUMPTIONS = {
         }
       })
     }
-    if(end == undefined) {
+    if(end === undefined) {
       end = data.length - bufferAfter - 1;
     }
 

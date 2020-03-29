@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
       newModelInputs[key] = value;
     }
 
-    if(key == "country" || key == "state") {
+    if(key === "country" || key === "state") {
       this.handleLocationChange(newModelInputs);
     }
 

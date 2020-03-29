@@ -255,7 +255,7 @@ class MyCommunity extends React.Component {
                 So if you're staying at home and want to guess when it might end, we can look 
                 at other places that are gradually coming out of lockdown.  Take Hubei, China
                 for example where the pandemic started.  When it dropped to somewhere
-                around 10 active cases per million people, it started loosening restrictions.  
+                around 100 active cases per million people at the end of March, it started loosening restrictions.  
             </p>
             <p>
                 Try different scenarios and see when your community might get to that point.
@@ -281,7 +281,7 @@ class MyCommunity extends React.Component {
 
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={10} 
+                    <ReferenceLine y={100} 
                         strokeDasharray="3 3" position="start"/>
                 </LineChart>
             </ResponsiveContainer>

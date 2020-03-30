@@ -3,6 +3,8 @@ import {
     XAxis, YAxis, Tooltip, Legend,
     LineChart, Line, ReferenceLine, ResponsiveContainer
 } from 'recharts';
+import LazyLoad from 'react-lazyload';
+
 
 import moment from 'moment';
 
@@ -140,34 +142,36 @@ class MyCommunity extends React.Component {
             </p>
 
             <h6 className="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={deathRatios}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis type='number' 
-                        tickFormatter={readableRatio(1)} 
-                        scale='log' 
-                        domain={[0.1, 'auto']}/>
-                    <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
+            <LazyLoad height={400} offset={100}>
+                <ResponsiveContainer width="100%" height={400}>
+                    <LineChart
+                        data={deathRatios}
+                        margin={{
+                            top: 0, right: 0, left: 0, bottom: 0,
+                        }}
+                    >
+                        <XAxis dataKey="date"/>
+                        <YAxis type='number' 
+                            tickFormatter={readableRatio(1)} 
+                            scale='log' 
+                            domain={[0.1, 'auto']}/>
+                        <Tooltip formatter={readableRatio(2)}/>
+                        <Legend />
 
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1}  
-                        strokeDasharray="3 3" position="start"/>
-                                            { flatteningStarted &&
+                        <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                        <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                        <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                        <ReferenceLine y={1}  
+                            strokeDasharray="3 3" position="start"/>
+                                                { flatteningStarted &&
 
-                    <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                        label={"Flattening starts"} />
-                }
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                            label={"Flattening starts"} />
+                    }
 
-                </LineChart>
-            </ResponsiveContainer>
+                    </LineChart>
+                </ResponsiveContainer>
+            </LazyLoad>
 
 {/* 
             <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
@@ -224,24 +228,26 @@ class MyCommunity extends React.Component {
             </p>
 
             <h6 className="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={testData}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                    // barCategoryGap={1}
-                    // barGap={0}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
-                    <Tooltip formatter={readablePercent(2)}/>
-                    <Legend />
-                    <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
-                        name="% of Cases Detected"
-                        dot={false}/>
-                </LineChart>
-            </ResponsiveContainer> 
+            <LazyLoad height={400} offset={100}>
+                <ResponsiveContainer width="100%" height={400}>
+                    <LineChart
+                        data={testData}
+                        margin={{
+                            top: 0, right: 0, left: 0, bottom: 0,
+                        }}
+                        // barCategoryGap={1}
+                        // barGap={0}
+                    >
+                        <XAxis dataKey="date"/>
+                        <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
+                        <Tooltip formatter={readablePercent(2)}/>
+                        <Legend />
+                        <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
+                            name="% of Cases Detected"
+                            dot={false}/>
+                    </LineChart>
+                </ResponsiveContainer> 
+            </LazyLoad>
             
             <h3>When will we be out of the woods?</h3>
 
@@ -264,27 +270,29 @@ class MyCommunity extends React.Component {
             </p>
 
             <h6 className="chartTitle">Active Cases Per Million People over Time</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={activeCasesPerMillion}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis type='number' 
-                        scale="log"
-                        tickFormatter={readableNumber(2)} 
-                        domain={[0.1, 'auto']}/>
-                    <Tooltip formatter={readableNumber(2)}/>
-                    <Legend />
+            <LazyLoad height={400} offset={100}>
+                <ResponsiveContainer width="100%" height={400}>
+                    <LineChart
+                        data={activeCasesPerMillion}
+                        margin={{
+                            top: 0, right: 0, left: 0, bottom: 0,
+                        }}
+                    >
+                        <XAxis dataKey="date"/>
+                        <YAxis type='number' 
+                            scale="log"
+                            tickFormatter={readableNumber(2)} 
+                            domain={[0.1, 'auto']}/>
+                        <Tooltip formatter={readableNumber(2)}/>
+                        <Legend />
 
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={100} 
-                        strokeDasharray="3 3" position="start"/>
-                </LineChart>
-            </ResponsiveContainer>
+                        <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
+                        <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                        <ReferenceLine y={100} 
+                            strokeDasharray="3 3" position="start"/>
+                    </LineChart>
+                </ResponsiveContainer>
+            </LazyLoad>
         </div>
     }
 }

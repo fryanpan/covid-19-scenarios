@@ -6,7 +6,8 @@ import {
 } from 'recharts';
 import { PresetScenarios, PresetCategories } from '../utils/model';
 import { readableNumber, readablePercent, readableRatio } from '../utils/dataUtils'
-import * as lodash from 'lodash';
+import LazyLoad from 'react-lazyload';
+
 
 
 
@@ -154,22 +155,24 @@ class MyFuture extends React.Component {
             to try different scenarios.
             </p>
 
-            <ResponsiveContainer width="100%" height={200}>
-                <BarChart
-                    layout="vertical"
-                    data={personalCatchData}
-                    margin={{
-                        top: 10, right: 50, left: 0, bottom: 20,
-                    }}
-                >
-                    <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
-                    <YAxis dataKey="label" type="category" width={110}/>
+            <LazyLoad height={200} offset={100}>
+                <ResponsiveContainer width="100%" height={200}>
+                    <BarChart
+                        layout="vertical"
+                        data={personalCatchData}
+                        margin={{
+                            top: 10, right: 50, left: 0, bottom: 20,
+                        }}
+                    >
+                        <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
+                        <YAxis dataKey="label" type="category" width={110}/>
 
-                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
-                        <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
-                    </Bar>
-                </BarChart>
-            </ResponsiveContainer>
+                        <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                            <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
+                        </Bar>
+                    </BarChart>
+                </ResponsiveContainer>
+            </LazyLoad>
 
             TODO: These charts are being reworked so they layout properly on mobile
             And instead of random percentages, there will be familiar risks included
@@ -185,22 +188,24 @@ class MyFuture extends React.Component {
                 With COVID-19, your risk of catching the virus and dying increases by this much in your current scenario.  
             </p>
             <h6 className="chartTitle"></h6>
-            <ResponsiveContainer width="100%" height={150}>
-                <BarChart
-                    layout="vertical"
-                    data={yearDieData}
-                    margin={{
-                        top: 0, right: 120, left: 0, bottom: 0,
-                    }}
-                >
-                    <YAxis type="category" dataKey="label" width={120}></YAxis>
-                    <XAxis type="number" tickFormatter={readableRatio(1)} ticks={[1]}></XAxis>
-                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
-                        <LabelList dataKey="detail" position="right"/>
-                    </Bar>
-                    <ReferenceLine x={1}></ReferenceLine>
-                </BarChart>
-            </ResponsiveContainer>
+            <LazyLoad height={150} offset={100}>
+                <ResponsiveContainer width="100%" height={150}>
+                    <BarChart
+                        layout="vertical"
+                        data={yearDieData}
+                        margin={{
+                            top: 0, right: 120, left: 0, bottom: 0,
+                        }}
+                    >
+                        <YAxis type="category" dataKey="label" width={120}></YAxis>
+                        <XAxis type="number" tickFormatter={readableRatio(1)} ticks={[1]}></XAxis>
+                        <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                            <LabelList dataKey="detail" position="right"/>
+                        </Bar>
+                        <ReferenceLine x={1}></ReferenceLine>
+                    </BarChart>
+                </ResponsiveContainer>
+            </LazyLoad>
 
             Note that this chart simply adds together the risk of dying from COVID-19 to the normal risk of dying.
             It's not as simple as this, especially for those with serious existing conditions.       

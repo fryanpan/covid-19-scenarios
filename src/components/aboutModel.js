@@ -3,7 +3,7 @@ import ScenarioEditingComponent from "./scenarioEditingComponent"
 import RSlider from "./rSlider"
 
 import {
-    ComposedChart, Line, LineChart,
+    ComposedChart, Line, 
     Bar, XAxis, YAxis, Tooltip, Legend,
     ReferenceLine,
     ResponsiveContainer
@@ -120,7 +120,7 @@ class AboutModel extends ScenarioEditingComponent {
                 </p>
                 
                 <h6 className="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
-                {/* <ResponsiveContainer width="100%" height={400}>
+                <ResponsiveContainer width="100%" height={400}>
                     <ComposedChart
                         data={scenarioDeathData}
                         margin={{
@@ -144,32 +144,6 @@ class AboutModel extends ScenarioEditingComponent {
                         <Bar dataKey="confirmedDeathsInc"
                             name="Actual Deaths" fill="#f00"/>
                     </ComposedChart>
-                </ResponsiveContainer> */}
-
-                <ResponsiveContainer width="100%" height={400}>
-                    <LineChart
-                        data={scenarioDeathData}
-                        margin={{
-                            top: 0, right: 0, left: 0, bottom: 0,
-                        }}
-                    >
-                        <XAxis dataKey="date"/>                        
-                        <YAxis type="number" />
-                        <Tooltip formatter={readableInteger()}/>
-                        <Legend/>
-
-                        { flatteningStarted && 
-                            <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
-                                label="Flattening starts" />
-                        }
-
-                        <Line type="step" dataKey="currentDeadInc"  
-                            name="My Scenario" stroke="#66c2a5" 
-                            strokeWidth={4} dot={false} isAnimationActive={false}/>
-
-                        <Line type="step" dataKey="confirmedDeathsInc"
-                            name="Actual Deaths" fill="#f00" dot={false} strokeWidth={2} isAnimationActive={false}/>
-                    </LineChart>
                 </ResponsiveContainer>
 
                 Please choose a scenario.  

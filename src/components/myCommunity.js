@@ -91,8 +91,6 @@ class MyCommunity extends React.Component {
                 metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
             ]);
 
-        console.log("Hubei", scenarios.hubeiStrongFlattening);
-
         return <div>
             <h1>
                 How might COVID-19 spread in my community?

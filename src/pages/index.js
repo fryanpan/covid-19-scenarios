@@ -14,7 +14,7 @@ import { throttle } from 'lodash';
 // @TODO switch to using React Context instead of global ModelManager object
 
 class IndexPage extends React.Component {
-  static MODEL_UPDATE_THROTTLE_TIME = 300;
+  static MODEL_UPDATE_THROTTLE_TIME = 500;
 
   constructor(props) {
     super(props);

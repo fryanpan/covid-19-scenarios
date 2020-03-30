@@ -162,7 +162,6 @@ class MyFuture extends React.Component {
                 >
                     <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
                     <YAxis dataKey="label" type="category" width={110}/>
-                    {console.log("Rendering a visible thing!")}
 
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
                         <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>

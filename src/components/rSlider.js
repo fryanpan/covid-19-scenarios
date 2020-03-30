@@ -110,7 +110,7 @@ export default class RSlider extends ScenarioEditingComponent {
                 min={RSlider.MIN}
                 max={RSlider.MAX}
                 onValuesUpdated={this.handleUpdate.bind(this)}
-                progressBar="white"
+                progressBar=""
                 values={[this.props.value * 100]}
             >
             </Rheostat>

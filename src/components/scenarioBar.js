@@ -13,7 +13,7 @@ export default class ScenarioBar extends ScenarioEditingComponent {
                 <RSlider name="rAfter" value={modelInputs.rAfter} label="long"
                     onChange={this.handleScenarioEditEvent}/>
                 { modelInputs.rAfter < 1.96 && 
-                        <span class="measures"> 
+                        <span className="measures"> 
                             Measures start on&nbsp;
                             <input  type="date" name="flatteningDate"
                                                     value={ modelInputs.flatteningDate.toISOString().split('T')[0]}

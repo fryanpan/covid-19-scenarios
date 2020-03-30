@@ -243,8 +243,8 @@ const ASSUMPTIONS = {
         // @TODO handle case better if the threshold date is early
 
         var data = setupData(inputData, BUFFER_LENGTH, ASSUMPTIONS.maxDaysToSimulate + BUFFER_LENGTH, population);
-        console.log("Basic Disease Model with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
-        console.log("Exposure simulation starts on ", data[startSimulatingExposureIndex].date);
+        // console.log("Basic Disease Model with population ", population, " threshold date", thresholdDate, " start simulating exposure index", startSimulatingExposureIndex);
+        // console.log("Exposure simulation starts on ", data[startSimulatingExposureIndex].date);
 
         // Calculate new exposures in the past based on deaths
         for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
@@ -318,7 +318,7 @@ const ASSUMPTIONS = {
 
       this.resultData = trimData(data, BUFFER_LENGTH, minOutputLength);
       const elapsed = +new Date() - startTime;
-      console.log("Ran model in ", elapsed, "ms");
+      // console.log("Ran model in ", elapsed, "ms");
       return this.resultData;
     }
 

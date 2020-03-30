@@ -105,7 +105,7 @@ export class ModelManager {
       const population = LocationManager.lookupLocation(country, state).population;  
 
       // Run the scenario
-      console.log("Running preset scenario ", JSON.stringify(scenarioData));
+      // console.log("Running preset scenario ", JSON.stringify(scenarioData));
       result[key] = new BasicDiseaseModelScenario(
         scenarioData.category,
         scenarioData.name,
@@ -119,14 +119,13 @@ export class ModelManager {
       );
     }
 
-    console.log("Preset Scenarios", result);
     return result;
   }
 
   static updateModelInputs(newModelInputs) {
     this.modelInputs = newModelInputs;
 
-    console.log("model.updateModelInputs", newModelInputs);
+    // console.log("model.updateModelInputs", newModelInputs);
 
     const { country, state, rAfter, flatteningDate } = newModelInputs;
 
@@ -142,7 +141,7 @@ export class ModelManager {
     if(cfrInitial) locationScenario.cfrBefore = cfrInitial;
     if(flatteningDate) locationScenario.thresholdDate = flatteningDate;
 
-    console.log("Running current scenario ", JSON.stringify(locationScenario));
+    // console.log("Running current scenario ", JSON.stringify(locationScenario));
     const diseaseModel = new BasicDiseaseModelScenario(
       locationScenario.category,
       locationScenario.name,

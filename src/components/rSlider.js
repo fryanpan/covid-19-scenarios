@@ -51,16 +51,16 @@ export default class RSlider extends ScenarioEditingComponent {
 
         [ [50, 99], "Moderate suppression" ],
 
-        [ [119, 136], "Flattened, gradual growth (like February in Singapore)", true],
-        [ [100, 140], "Flattened, gradual growth" ],
+        [ [119, 136], "Flattened, slow growth (Feb. in Singapore)", true],
+        [ [100, 140], "Flattened, slow growth" ],
 
-        [ [140, 160], "Flattened, moderate growth (like February in South Korea)", true ],
-        [ [130, 200], "Flattened, moderate growth" ],
+        [ [140, 160], "Flattened with growth (Feb. in South Korea)", true ],
+        [ [130, 200], "Flattened with growth" ],
 
-        [ [196, 255], "Uncontrolled growth (like China before lockdown", true ],
+        [ [196, 255], "Uncontrolled growth (China before lockdown", true ],
         [ [200, 300], "Uncontrolled growth" ],
 
-        [ [360, 420], "Rapid uncontrolled growth (like February in Iran)", true ],
+        [ [360, 420], "Rapid uncontrolled growth (Feb. in Iran)", true ],
         [ [300, RSlider.MAX], "Rapid uncontrolled growth" ]
         
     ]
@@ -99,7 +99,7 @@ export default class RSlider extends ScenarioEditingComponent {
 
     render() {
         const category = this.findCategory(this.props.value * 100);
-        
+
         return <span className="rSlider">
             { this.showLabel && 
                 <div className="label" style={{}}>

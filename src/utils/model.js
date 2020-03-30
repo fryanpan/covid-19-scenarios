@@ -40,6 +40,7 @@ export const PresetScenarios = new Map([
 export class ModelInputs {
     constructor() {
         this.age = 45;
+        this.sex = "Female";
         this.country = "United States";
         this.state = "California";
         this.flatteningDate = moment("2020-03-19").toDate();

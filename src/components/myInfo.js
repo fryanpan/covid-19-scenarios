@@ -11,9 +11,7 @@ export default class MyInfo extends ScenarioEditingComponent {
 
     render() {
         const modelInputs = this.props.modelInputs;
-        const country = modelInputs.country;
-        const state = modelInputs.state;
-        const age = modelInputs.age;
+        const { country, state, age, sex } = modelInputs;
         const flatteningDate = modelInputs.flatteningDate;
         const availableLocations = LocationManager.locationsForCountry(country);
         
@@ -44,7 +42,11 @@ export default class MyInfo extends ScenarioEditingComponent {
                     style={{width: "3rem"}} 
                     name="age"
                     value={age} 
-                    onChange={this.handleScenarioEditEvent}></input> years old
+                    onChange={this.handleScenarioEditEvent}></input> years old and my sex is 
+                    <select value={sex}>
+                        <option value="Male">Male</option> 
+                        <option value="Female">Female</option> 
+                    </select>
                 <br/>I'm in <select name="country" value={country} onChange={this.handleScenarioEditEvent}>
                     <option value="" key="__blank"></option>
                     {

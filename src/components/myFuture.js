@@ -2,10 +2,11 @@ import { StaticQuery, graphql} from "gatsby"
 import React from "react"
 import {
     BarChart, Bar, XAxis, YAxis, Label, LabelList,
-    ResponsiveContainer
+    ResponsiveContainer, ReferenceLine
 } from 'recharts';
 import { PresetScenarios, PresetCategories } from '../utils/model';
-import { readableNumber, readablePercent } from '../utils/dataUtils'
+import { readableNumber, readablePercent, readableRatio } from '../utils/dataUtils'
+import * as lodash from 'lodash';
 
 
 
@@ -17,10 +18,10 @@ class MyFuture extends React.Component {
     /** Computes useful stats based on a single scenario */
     computeStats(scenario) {
         const covidFatalityByAge = this.props.fatalityByAge;
-        const micromortsByAge = this.props.micromortsByAge;
-        const sampleMicromorts = this.props.sampleMicromorts;
 
-        const modelInputs = this.props.modelInputs;
+        const {age, sex } = this.props.modelInputs;
+
+        const existingDeathProbability = this.findPersonalDeathProbability(age, sex);
 
         var result = {};
 
@@ -39,21 +40,73 @@ class MyFuture extends React.Component {
         }
 
 
-        const fatalityEntry = covidFatalityByAge.find(x => parseFloat(x.age) === modelInputs.age);
+        const fatalityEntry = covidFatalityByAge.find(x => parseFloat(x.age) === age);
         const fatalityRate = fatalityEntry ? fatalityEntry.fatalityRate : 0;
         const monthDeathProbability = monthCatchProbability * fatalityRate;
         const endDeathProbability = endCatchProbability * fatalityRate;
 
         result.dieFromCovid = {
-            month: monthDeathProbability,
-            year: endDeathProbability
+            month: monthDeathProbability / existingDeathProbability.month,
+            year: endDeathProbability / existingDeathProbability.year,
+        }
+
+        result.normalDeathProbability = {
+            month: existingDeathProbability.month,
+            year: existingDeathProbability.year
         }
 
         return result;
     }    
+
+    /** Finds related death probabilities given probabilities in values
+     * At least one just smaller than and one just larger than each    
+     **/
+    findRelatedDeathProbabilities(values) {
+        const sampleMicromorts = this.props.sampleMicromorts;
+        const sortedValues = values.sort();
+        const added = new Set();
+        var results = [];
+
+        for(let i = 0, j = 0; i < sortedValues.length && j < sampleMicromorts.length - 1;) {
+            const last = sampleMicromorts[j].micromorts / 1000000;
+            const next = sampleMicromorts[j+1].micromorts / 1000000;
+            const value = sortedValues[i];
+
+            if(last <= value && value < next) { // we want to add last and next, if not added
+                if(!added.get(j)) {
+                    results.add(sampleMicromorts[j])
+                    added.add(j);
+                }
+                if(!added.get(j+1)) {
+                    results.add(sampleMicromorts[j+1]);
+                    added.add(j+1);
+                }
+            }
+        }
+        return results;
+    }
+
+    findPersonalDeathProbability(age, sex) {
+        const micromortsByAge = this.props.micromortsByAge;
+
+        const entry = micromortsByAge.find(x => {
+            return x.age == age && x.sex == sex
+        });
+
+        const perDay = entry.micromortsPerDay / 1000000;
+        return {
+            day: perDay,
+            month: perDay * 365.25 / 12 ,
+            year: perDay * 365.25
+        }
+    }
+
     render() {
-        const percentFormatter = readablePercent(2);
+        const { age, sex } = this.props.modelInputs;
+        const ratioFormatter = readableRatio(2);
+        const numberFormatter = readableNumber(3);
         const scenarios = this.props.modelData;
+
 
         /** Compute stats for available scenarios */
         var stats = {};
@@ -72,37 +125,22 @@ class MyFuture extends React.Component {
                 value: stats.current.catchCovid.year
             }
         ];
-        var personalDieData = [
+        
+        const monthRatio = ratioFormatter(stats.current.dieFromCovid.month);
+        const yearRatio = ratioFormatter(stats.current.dieFromCovid.year);
+        const yearDieData = [
             {
-                label: "In the next month",
-                value: stats.current.dieFromCovid.month
+                label: "Normal Risk",
+                value: 1,
+                detail: "1x"
             },
             {
-                label: "In the next year",
-                value: stats.current.dieFromCovid.year
+                label: "With COVID-19",
+                value: stats.current.dieFromCovid.year + 1,
+                detail: `${yearRatio} more risk`
             }
         ];
 
-
-        /** Get data for graphs that compare across base scenarios */
-        var catchCovidData = [];
-        var dieFromCovidData = [];
-        for(let [key, scenarioData] of PresetScenarios.entries()) {
-
-            if(scenarioData.category != PresetCategories.BASIC) continue;
-            
-
-            const scenarioName = scenarioData.name;
-            catchCovidData.push({
-                label: scenarioName,
-                probability: stats[key].catchCovid.year
-            });
-
-            dieFromCovidData.push({
-                label: scenarioName,
-                probability: stats[key].dieFromCovid.year
-            });
-        }
 
         // insert some sample values from micromorts
         
@@ -116,16 +154,16 @@ class MyFuture extends React.Component {
             to try different scenarios.
             </p>
 
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={200}>
                 <BarChart
                     layout="vertical"
                     data={personalCatchData}
                     margin={{
-                        top: 10, right: 100, left: 0, bottom: 20,
+                        top: 10, right: 50, left: 0, bottom: 20,
                     }}
                 >
                     <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
-                    <YAxis dataKey="label" type="category" width={200}/>
+                    <YAxis dataKey="label" type="category" width={110}/>
 
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
                         <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
@@ -139,31 +177,35 @@ class MyFuture extends React.Component {
             dying this year, etc.)
 
             <h2>
-                How likely is it for me to die from COVID-19?
+                How much will COVID-19 increase my risk of dying?
             </h2>
             <p>
-                This chart shows how likely it is for you to die from COVID-19.  It's based on your age and
-                fatality rates from Wuhan.
+                Before COVID-19, you had a {numberFormatter(stats.current.normalDeathProbability.year * 1000000)} in a million 
+                chance of dying in the next year, based on your age and sex (using data from the US Social Security Administration). 
+                With COVID-19, your risk of catching the virus and dying increases by this much in your current scenario.  
             </p>
-            <ResponsiveContainer width="100%" height={300}>
+            <h6 className="chartTitle"></h6>
+            <ResponsiveContainer width="100%" height={150}>
                 <BarChart
                     layout="vertical"
-                    data={personalDieData}
+                    data={yearDieData}
                     margin={{
-                        top: 10, right: 100, left: 0, bottom: 20,
+                        top: 0, right: 120, left: 0, bottom: 0,
                     }}
                 >
-                    <XAxis type="number" domain={[0,0.02]} tickFormatter={readablePercent(2)}></XAxis>
-                    <YAxis dataKey="label" type="category" width={200}/>
-
+                    <YAxis type="category" dataKey="label" width={120}></YAxis>
+                    <XAxis type="number" tickFormatter={readableRatio(1)} ticks={[1]}></XAxis>
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
-                        <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
+                        <LabelList dataKey="detail" position="right"/>
                     </Bar>
+                    <ReferenceLine x={1}></ReferenceLine>
                 </BarChart>
             </ResponsiveContainer>
 
-            TODO: Add some bars based on your normal probability of dying next year (before COVID-19)
-            And various other risks
+            Note that this chart simply adds together the risk of dying from COVID-19 to the normal risk of dying.
+            It's not as simple as this, especially for those with serious existing conditions.       
+            Also, this chart uses mortality rates by age from the US, which differ from place to place.
+
         </div>
     }
 
@@ -185,7 +227,7 @@ export default props => (
                 nodes {
                     age
                     micromortsPerDay
-                    gender
+                    sex
                 }
             }
             allSampleMicromortsCsv {
@@ -195,6 +237,9 @@ export default props => (
                 }
             }
         }`}
-      render={({ allFatalityByAgeCsv, allMicromortsByAgeCsv, allSampleMicromortsCsv }) => <MyFuture fatalityByAge={allFatalityByAgeCsv.nodes} micromortsByAge={allMicromortsByAgeCsv} sampleMicromorts={allSampleMicromortsCsv} {...props} />}
+      render={({ allFatalityByAgeCsv, allMicromortsByAgeCsv, allSampleMicromortsCsv }) => <MyFuture 
+        fatalityByAge={allFatalityByAgeCsv.nodes} 
+        micromortsByAge={allMicromortsByAgeCsv.nodes} 
+        sampleMicromorts={allSampleMicromortsCsv.nodes} {...props} />}
     />
   )

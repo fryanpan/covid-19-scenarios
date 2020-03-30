@@ -8,8 +8,6 @@ import { PresetScenarios, PresetCategories } from '../utils/model';
 import { readableNumber, readablePercent, readableRatio } from '../utils/dataUtils'
 import * as lodash from 'lodash';
 
-
-
 function nextPowerOf10(x) {
     return Math.pow(10, Math.ceil(Math.log10(x)));
 }
@@ -153,7 +151,7 @@ class MyFuture extends React.Component {
             This chart shows how likely it is for you to catch COVID-19 with your scenario.  You can use the green box above
             to try different scenarios.
             </p>
-
+         
             <ResponsiveContainer width="100%" height={200}>
                 <BarChart
                     layout="vertical"
@@ -164,17 +162,13 @@ class MyFuture extends React.Component {
                 >
                     <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
                     <YAxis dataKey="label" type="category" width={110}/>
+                    {console.log("Rendering a visible thing!")}
 
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
                         <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>
-
-            TODO: These charts are being reworked so they layout properly on mobile
-            And instead of random percentages, there will be familiar risks included
-            for comparison (e.g. 5x the chance of dying on a plane flight, 1/2 your normal chance of
-            dying this year, etc.)
 
             <h2>
                 How much will COVID-19 increase my risk of dying?

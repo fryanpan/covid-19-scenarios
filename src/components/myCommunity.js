@@ -108,7 +108,7 @@ class MyCommunity extends React.Component {
                 extensive testing, contact tracing, and local restrictions to prevent future growth.
                 For example, instead of shutting down all schools, Taiwan only shuts down a school
                 when there is a confirmed infection. Every place is different, but in China, social distancing restrictions
-            started rolling back once there were fewer than 10 active infections per million people. 
+            started gradually rolling back when there were less than 100 active infections per million people. 
             </p>
             <p>
                 To guess at when social distancing might end, we can look at a few things.
@@ -132,9 +132,9 @@ class MyCommunity extends React.Component {
             </p>
             <p>
                 The key takeaway, if you're on lockdown is this: when your community 
-                adds much stronger measures like strict social distancing or more extensive 
-                tests, look to see if deaths start declining three weeks later.
-                If you make it consistently below the 1x line, then congratulations, 
+                adds stronger measures like strict social distancing or more extensive 
+                testing, look to see if deaths start declining three weeks later.
+                If the ratio consistently stays below 1x, then congratulations, 
                 your community is in one of the supression scenarios instead of growth 
                 scenarios.
             </p>
@@ -199,11 +199,11 @@ class MyCommunity extends React.Component {
             </ResponsiveContainer> */}
 
             <p>
-                Note: As you may have seen in these scenarios, any measures your community puts in place 
+                Note: As you may have seen in the scenarios so far, any measures your community puts in place 
                 today won't have much effect on new deaths and cases in the next three weeks.  
-                Your community's choices in the past have already determined what will happen
-                in the next three weeks.  Let this be a call to act quickly, even if your community
-                has only a few cases or deaths now. 
+                Your community's choices in the past have already determined who's currently infected
+                and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
+                when your community has only a few cases.
             </p>
 
             <h2>How well are we testing?</h2>
@@ -247,8 +247,8 @@ class MyCommunity extends React.Component {
 
             <p>
             If your case counts are falling and testing is comprehensive,
-            then your community will start weighing how to reduce suppression measures
-            without risking another major future outbreak.
+            then your community will start considering what suppression measures to relax
+            without risking a large outbreak.
             </p>
 
             <p>

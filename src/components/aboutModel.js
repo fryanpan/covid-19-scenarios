@@ -130,7 +130,7 @@ class AboutModel extends ScenarioEditingComponent {
                         <XAxis dataKey="date"/>                        
                         <YAxis type="number" />
                         <Tooltip formatter={readableInteger()}/>
-                        <Legend/>
+                        <Legend iconType="square"/>
 
                         { flatteningStarted && 
                             <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
@@ -138,11 +138,11 @@ class AboutModel extends ScenarioEditingComponent {
                         }
 
                         <Line type="monotone" dataKey="currentDeadInc"  
-                            name="My Scenario" stroke="#66c2a5" 
+                            name="My Scenario" stroke="#8da0cb" 
                             strokeWidth={4} dot={false}/>
 
                         <Bar dataKey="confirmedDeathsInc"
-                            name="Actual Deaths" fill="#f00"/>
+                            name="Actual Deaths" fill="#fc8d62"/>
                     </ComposedChart>
                 </ResponsiveContainer>
 
@@ -163,6 +163,10 @@ class AboutModel extends ScenarioEditingComponent {
                         <br/>(For example, choose the day when lockdown or shelter-at-home started)<br/>
                     </span>
                 }<br/>
+
+                {/* <RSlider name="rBefore" value={modelInputs.rBefore}
+                        label="long" 
+                        onChange={this.handleScenarioEditEvent}></RSlider> */}
 
                 <p>
                     Each measure your community takes makes a difference, whether that means avoiding group events,

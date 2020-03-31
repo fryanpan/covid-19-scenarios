@@ -70,18 +70,23 @@ class MyCommunity extends React.Component {
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
         const currentScenarioName = modelInputs.state === 'All' ? modelInputs.country : modelInputs.state;
-        const confirmedCasesRatios =
-            mergeDataArrays([
-                rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)'),
-                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedCases', WINDOW, 'South Korea')
-            ]);
+        // const confirmedCasesRatios =
+        //     mergeDataArrays([
+        //         rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
+        //         rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)'),
+        //         rollingRatioForState(historicalData, "South Korea", "All", 'confirmedCases', WINDOW, 'South Korea')
+        //     ]);
+
+        const predictedDeathRatios = computeRollingRatio(currentScenario.dailyData.slice(currentScenario.summary.currentDayIndex - 28, currentScenario.summary.currentDayIndex + 28), 
+            'dead', WINDOW,
+            'Your Scenario');
 
         const deathRatios =
             mergeDataArrays([
                 rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedDeaths', WINDOW, currentScenarioName),
-                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'China (Hubei)'),
-                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedDeaths', WINDOW, 'South Korea')
+                rollingRatioForState(historicalData, "China", "Hubei", 'confirmedDeaths', WINDOW, 'Hubei'),
+                rollingRatioForState(historicalData, "South Korea", "All", 'confirmedDeaths', WINDOW, 'South Korea'),
+                predictedDeathRatios
             ]);
 
         /** Current scenario active cases per million */
@@ -137,7 +142,7 @@ class MyCommunity extends React.Component {
                 scenarios.
             </p>
 
-            <h6 className="chartTitle">Ratio of Actual Deaths This Week vs. Last Week</h6>
+            <h6 className="chartTitle">Ratio of Deaths This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={deathRatios}
@@ -151,17 +156,28 @@ class MyCommunity extends React.Component {
                         scale='log' 
                         domain={[0.1, 'auto']}/>
                     <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
+                    <Legend iconType='square' strokeWidth={2} />
 
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey={currentScenarioName} 
+                        name={currentScenarioName + " (Actual)"} stroke="#8da0cb" strokeWidth={3} dot={false}/>
+                    <Line type="linear" dataKey="Your Scenario" 
+                        name={currentScenarioName + " (Scenario)"} stroke="#c4cde4"  strokeWidth={3} dot={false}
+                        strokeDasharray="3 3"/>
+                    <Line type="linear" dataKey="Hubei"
+                        name="Hubei (Actual)" stroke="#fc8d62"  strokeWidth={2} dot={false}/>
+                    <Line type="linear" dataKey="South Korea"
+                        name="South Korea (Actual)" stroke="#66c2a5"  strokeWidth={2} dot={false}/>
+                        />
                     <ReferenceLine y={1}  
                         strokeDasharray="3 3" position="start"/>
-                                            { flatteningStarted &&
-
-                    <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                                            
+                    { flatteningStarted &&
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
                         label={"Flattening starts"} />
+                }
+                { flatteningStarted &&
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).add(3, 'week').format("YYYY-MM-DD")}
+                        label={"3 weeks later"} />
                 }
 
                 </LineChart>
@@ -234,7 +250,7 @@ class MyCommunity extends React.Component {
                     <XAxis dataKey="date"/>
                     <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
                     <Tooltip formatter={readablePercent(2)}/>
-                    <Legend />
+                    <Legend iconType='square'/>
                     <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
                         name="% of Cases Detected"
                         dot={false}/>
@@ -275,7 +291,7 @@ class MyCommunity extends React.Component {
                         tickFormatter={readableNumber(2)} 
                         domain={[0.1, 'auto']}/>
                     <Tooltip formatter={readableNumber(2)}/>
-                    <Legend />
+                    <Legend iconType='square' />
 
                     <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>

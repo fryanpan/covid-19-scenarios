@@ -4,9 +4,9 @@ import {LocationManager} from "../utils/locationManager"
 
 /** Scenarios list that we're running */
 const BASE_SCENARIO = {
-  rBefore: 2.5,
+  rBefore: 2.2,
   cfrBefore: 0.014,
-  rAfter: 2.5,
+  rAfter: 2.2,
   cfrAfter: 0.014
 }
 
@@ -45,6 +45,7 @@ export class ModelInputs {
         this.state = "California";
         this.flatteningDate = moment("2020-03-19").toDate();
         this.scenario = "current"; // @TODO get rid of this
+        this.rBefore = 2.2;
         this.rAfter = 0.4;
     }
 }
@@ -124,10 +125,11 @@ export class ModelManager {
 
   static updateModelInputs(newModelInputs) {
     this.modelInputs = newModelInputs;
+    console.log("New modelInputs", this.modelInputs);
 
     // console.log("model.updateModelInputs", newModelInputs);
 
-    const { country, state, rAfter, flatteningDate } = newModelInputs;
+    const { country, state, rAfter, rBefore, flatteningDate } = newModelInputs;
 
     // Load daily data and location data
     const { rInitial, cfrInitial, population } = LocationManager.lookupLocation(country, state);
@@ -137,11 +139,12 @@ export class ModelManager {
     // Base scenario.  Construct additional scenarios from this
     const locationScenario = {...BASE_SCENARIO};
     if(rAfter) locationScenario.rAfter = rAfter;
+    if(rBefore) locationScenario.rBefore = rBefore;
     if(rInitial) locationScenario.rBefore = rInitial;
     if(cfrInitial) locationScenario.cfrBefore = cfrInitial;
     if(flatteningDate) locationScenario.thresholdDate = flatteningDate;
 
-    // console.log("Running current scenario ", JSON.stringify(locationScenario));
+    console.log("Running current scenario ", JSON.stringify(locationScenario));
     const diseaseModel = new BasicDiseaseModelScenario(
       locationScenario.category,
       locationScenario.name,

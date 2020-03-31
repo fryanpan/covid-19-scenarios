@@ -43,7 +43,7 @@ export default class MyInfo extends ScenarioEditingComponent {
                     name="age"
                     value={age} 
                     onChange={this.handleScenarioEditEvent}></input> years old and my sex is 
-                    <select value={sex} onChange={this.handleScenarioEditEvent}>
+                    <select name="sex" value={sex} onChange={this.handleScenarioEditEvent}>
                         <option value="Male">Male</option> 
                         <option value="Female">Female</option> 
                     </select>

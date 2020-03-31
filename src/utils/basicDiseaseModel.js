@@ -348,8 +348,8 @@ const ASSUMPTIONS = {
 
             totalInfected: lastData.totalInfected,
             totalExposed: lastData.totalExposed,
-            totalRecovered: lastData.totalRecovered,
-            totalDead: lastData.totalDead,
+            totalRecovered: lastData.recovered,
+            totalDead: lastData.dead,
         }
     }
 

@@ -5,12 +5,12 @@ import RSlider from "./rSlider"
 import {
     ComposedChart, Line, 
     Bar, XAxis, YAxis, Tooltip, Legend,
-    ReferenceLine,
+    ReferenceLine, ReferenceDot,
     ResponsiveContainer
 } from 'recharts';
 
 import * as moment from 'moment'
-import { mergeDataArrays, readableInteger } from '../utils/dataUtils'
+import { mergeDataArrays, readableInteger, listOfMonths, readableMonth } from '../utils/dataUtils'
 
 /**
  * Extracts the date field and one key from each object in an array.
@@ -44,6 +44,8 @@ class AboutModel extends ScenarioEditingComponent {
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
         const flatteningStarted = modelInputs.rAfter < 1.96; // @TODO refactor this...
+        const flatteningStartedBeforeToday = moment(modelInputs.flatteningDate).isBefore(new Date(), 'day');
+        const flatteningVerb = flatteningStartedBeforeToday ? "started" : "will start";
 
         const yourLocation = modelInputs.state === 'All' ? modelInputs.country : modelInputs.state;
 
@@ -70,8 +72,12 @@ class AboutModel extends ScenarioEditingComponent {
         // const thresholdDayIndex = scenarios.current.summary.thresholdDayIndex;
         // const scenarioInfectedData = mergeDataArrays(infectedDataArrays);
         // const scenarioInfectedDataTillNow = scenarioInfectedData.slice(0, thresholdDayIndex + 15);
+        var endOfYearIndex = scenarios.current.dailyData.findIndex( x => moment(x).year() == 2021) ||
+            scenarios.current.dailyData.length - 1;
         
-        const scenarioDeathData = mergeDataArrays(deadDataArrays);
+        const scenarioDeathData = mergeDataArrays(deadDataArrays).slice(0, endOfYearIndex);
+        const maxValue = scenarioDeathData.reduce((prev, cur) => Math.max(prev, cur.currentDeadInc), 0);
+
         // const firstDeathIndex = scenarioDeathData.findIndex(x => x.confirmedDeathsInc > 0) || 0;
         // const scenarioDeathDataTillNow = scenarioDeathData.slice(firstDeathIndex, thresholdDayIndex + 90);
 
@@ -98,7 +104,7 @@ class AboutModel extends ScenarioEditingComponent {
                 </p>
                 <p>
                     Yet, I also want to acknowledge how much is unknown.  This is why you get to try
-                    different scenarios based on knowing how your community is reducing virus transmission.
+                    different scenarios based on how your community might be reducing virus transmission.
                 </p>
 
                 <p>
@@ -127,15 +133,15 @@ class AboutModel extends ScenarioEditingComponent {
                             top: 0, right: 0, left: 0, bottom: 0,
                         }}
                     >
-                        <XAxis dataKey="date"/>                        
+                        <XAxis type="category" dataKey="date" 
+                            ticks={listOfMonths("2020-01-01", "2020-12-01")}
+                            interval={0}
+                            tickFormatter={readableMonth}
+                            />                        
                         <YAxis type="number" />
                         <Tooltip formatter={readableInteger()}/>
                         <Legend iconType="square"/>
 
-                        { flatteningStarted && 
-                            <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
-                                label="Flattening starts" />
-                        }
 
                         <Line type="monotone" dataKey="currentDeadInc"  
                             name="My Scenario" stroke="#8da0cb" 
@@ -143,6 +149,18 @@ class AboutModel extends ScenarioEditingComponent {
 
                         <Bar dataKey="confirmedDeathsInc"
                             name="Actual Deaths" fill="#fc8d62"/>
+
+
+                        { flatteningStarted && 
+                            <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")} />
+                        }
+                        { flatteningStarted && 
+                            <ReferenceDot x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
+                                y={maxValue * 1}
+                                r={0}
+                                inFront={true}
+                                label={"Flattening " + flatteningVerb} />
+                        }
                     </ComposedChart>
                 </ResponsiveContainer>
 
@@ -155,7 +173,7 @@ class AboutModel extends ScenarioEditingComponent {
                 { flatteningStarted && 
                     <span>
                         Flattening measures&nbsp;
-                        { moment(modelInputs.flatteningDate).isBefore(new Date(), 'day') ? "started" : "will start" } 
+                        { flatteningVerb } 
                         &nbsp; on &nbsp;
                         <input style={{width: "8rem"}} type="date" name="flatteningDate"
                                                 value={ modelInputs.flatteningDate.toISOString().split('T')[0]}

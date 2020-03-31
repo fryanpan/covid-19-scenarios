@@ -1,12 +1,13 @@
 import React from "react"
 import {
     XAxis, YAxis, Tooltip, Legend,
-    LineChart, Line, ReferenceLine, ResponsiveContainer
+    LineChart, Line, ReferenceLine, ReferenceDot, ResponsiveContainer
 } from 'recharts';
 
 import moment from 'moment';
 
-import { mergeDataArrays, readableRatio, readableNumber, readablePercent } from "../utils/dataUtils" 
+import { mergeDataArrays, readableRatio, readableNumber, readablePercent, 
+    listOfMonths, readableMonth } from "../utils/dataUtils" 
 
 /** Computes a ratio of past counts for the given key
  * To a period one window length earlier.
@@ -64,18 +65,12 @@ class MyCommunity extends React.Component {
         const flatteningStarted = modelInputs.rAfter < 1.96; // @TODO stop doing this messy thing
 
         /** Keep only days with testing ratios */
-        const firstTestIndex = currentScenario.dailyData.findIndex(x => x.testingRatio > 0);
+        const firstTestIndex = currentScenario.dailyData.findIndex(x => x.testingRatio > 0 && x.infectedInc > 50);
         const testData = currentScenario.dailyData.slice(firstTestIndex, currentScenario.summary.currentDayIndex)
 
         /** Pull some comparison data for R ratios */
         const WINDOW = 7;
         const currentScenarioName = modelInputs.state === 'All' ? modelInputs.country : modelInputs.state;
-        // const confirmedCasesRatios =
-        //     mergeDataArrays([
-        //         rollingRatioForState(historicalData, modelInputs.country, modelInputs.state, 'confirmedCases', WINDOW, currentScenarioName),
-        //         rollingRatioForState(historicalData, "China", "Hubei", 'confirmedCases', WINDOW, 'China (Hubei)'),
-        //         rollingRatioForState(historicalData, "South Korea", "All", 'confirmedCases', WINDOW, 'South Korea')
-        //     ]);
 
         const predictedDeathRatios = computeRollingRatio(currentScenario.dailyData.slice(currentScenario.summary.currentDayIndex - 28, currentScenario.summary.currentDayIndex + 28), 
             'dead', WINDOW,
@@ -95,6 +90,23 @@ class MyCommunity extends React.Component {
                 metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
                 metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
             ]);
+
+        var firstDayBelow100;
+        var maxValue;
+        for(let i = 0; i < activeCasesPerMillion.length; ++i) {
+            const entry = activeCasesPerMillion[i];
+            const date = entry.date;
+            const value = entry[currentScenarioName];
+
+            if(!maxValue || value > maxValue) {
+                maxValue = value;
+            }
+
+            if(value < maxValue && value < 100) {
+                firstDayBelow100 = moment(date).format("YYYY-MM-DD");
+                break;
+            }
+        }
 
         return <div>
             <h1>
@@ -142,7 +154,11 @@ class MyCommunity extends React.Component {
                         top: 0, right: 0, left: 0, bottom: 0,
                     }}
                 >
-                    <XAxis dataKey="date"/>
+                    <XAxis dataKey="date"
+                        ticks={listOfMonths("2020-01-01", "2020-12-01")}
+                        interval={0}
+                        tickFormatter={readableMonth}
+                    />
                     <YAxis type='number' 
                         tickFormatter={readableRatio(1)} 
                         scale='log' 
@@ -164,13 +180,27 @@ class MyCommunity extends React.Component {
                         strokeDasharray="3 3" position="start"/>
                                             
                     { flatteningStarted &&
-                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                        label={"Flattening starts"} />
-                }
-                { flatteningStarted &&
-                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).add(3, 'week').format("YYYY-MM-DD")}
-                        label={"3 weeks later"} />
-                }
+                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}/>
+                    
+                    }
+                    { flatteningStarted &&
+                        <ReferenceDot x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
+                            y={0.2}
+                            r={0}
+                            label={"Flattening starts"} />
+    
+                    }
+                    
+                    { flatteningStarted &&
+                            <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).add(3, 'week').format("YYYY-MM-DD")}/>
+                    }
+                    { flatteningStarted &&
+                        <ReferenceDot x={moment(currentScenario.scenario.thresholdDate).add(3, 'week').format("YYYY-MM-DD")}
+                            y={0.2}
+                            r={0}
+                            label={"3 weeks later"} />
+    
+                    }
 
                 </LineChart>
             </ResponsiveContainer>
@@ -191,6 +221,7 @@ class MyCommunity extends React.Component {
                 and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
                 when your community has only a few cases.
             </p>
+
 
 
 
@@ -233,28 +264,34 @@ class MyCommunity extends React.Component {
             </p>
 
             <p>Here you can see how your community might be doing on testing.  The chart below compares
-                the total infections predicted by your scenario and the actual total confirmed cases.
-                Please try different scenarios to see how this changes.
+                the number of 
+                new confirmed cases from testing vs. the total new infections predicted by your scenario each day.
+                Note that the chart can briefly go over 100%, if there are delays in testing.  When tests catch up
+                there might be many cases from past weeks confirmed on a single day.
             </p>            
             <p>
-                For comparison, also try switching the country at the top to South Korea.  They're likely
-                catching around half of their cases.
+                Please try different scenarios to get a sense for how well your community is testing.
+                For comparison, also try switching the country at the top to South Korea.
             </p>
 
-            <h6 className="chartTitle">Total Confirmed Cases as Percentage of Simulated Cases</h6>
+            <h6 className="chartTitle">Confirmed Cases Each Day As Percentage of New Cases From Scenario</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={testData}
                     margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
+                        top: 0, right: 50, left: 0, bottom: 0,
                     }}
                     // barCategoryGap={1}
                     // barGap={0}
                 >
-                    <XAxis dataKey="date"/>
-                    <YAxis tickFormatter={readablePercent(0)} domain={[0,1]} />
+                    <XAxis dataKey="date"
+                        
+                        interval={7}
+                        tickFormatter={readableMonth}
+                    
+                    />
+                    <YAxis tickFormatter={readablePercent(0)} domain={[0, max => Math.max(max, 1)]} />
                     <Tooltip formatter={readablePercent(2)}/>
-                    <Legend iconType='square'/>
                     <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
                         name="% of Cases Detected"
                         dot={false}/>
@@ -289,7 +326,12 @@ class MyCommunity extends React.Component {
                         top: 0, right: 0, left: 0, bottom: 0,
                     }}
                 >
-                    <XAxis dataKey="date"/>
+                    <XAxis dataKey="date"
+                        ticks={listOfMonths("2020-01-01", "2021-12-01")}
+                        interval={0}
+                        tickFormatter={readableMonth}
+                    
+                    />
                     <YAxis type='number' 
                         scale="log"
                         tickFormatter={readableNumber(2)} 
@@ -301,8 +343,47 @@ class MyCommunity extends React.Component {
                     <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
                     <ReferenceLine y={100} 
                         strokeDasharray="3 3" position="start"/>
+
+                    { modelInputs.rAfter < 0.9 &&
+                        <ReferenceDot x={firstDayBelow100} y={100} 
+                            r={5}></ReferenceDot>
+                    }
+                    { modelInputs.rAfter < 0.9 &&
+                        
+                        <ReferenceDot x={moment(firstDayBelow100).add(1.5, 'week').format("YYYY-MM-DD")} 
+                            y={200} 
+                            r={0}
+                            label={readableMonth(firstDayBelow100)}></ReferenceDot>
+                    }
+
                 </LineChart>
             </ResponsiveContainer>
+
+            <h3>Putting it all together</h3>
+            <p>
+                The three charts in this section are what I check every few days.  Because there is so much
+                uncertainty and variation from place to place, what matters most is not having the perfect 
+                model.  What matters is being able to tell what scenario best represents what is happening
+                right now in your community to plan and act accordingly.
+            </p>
+            <p>
+                For example, I live in California, where shelter-at-home started on March 19th. So I will be 
+                looking for whether our week over week death ratios start falling around April 9th.  And I'll
+                look again about a week later, around April 16th to see where they fall to.  That gives 
+                a rough estimate of what R actually is here with social distancing.  Then I can see how the 
+                "when will we be out of the woods" chart looks with those R values.  I will also look
+                for evidence we're testing well.  My local municipalities have been reasonably thoughtful
+                so far.  Plus they'll have better data than I have, so I will be looking for 
+                updates from them in eary to mid-April as well.
+            </p>
+            <p>
+                I mostly gloss over the news reports of increasing death counts every day.
+                Unfortunately, increasing death counts are what we should expect in an outbreak.
+                More than a month ago, I already wrote down what I would personally do 
+                in each plausible scenario.  What's more interesting to me is knowing
+                what future scenarios are most likely and when we're changing to a different
+                scenario.
+            </p>
         </div>
     }
 }

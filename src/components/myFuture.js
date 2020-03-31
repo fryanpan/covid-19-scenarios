@@ -151,11 +151,11 @@ class MyFuture extends React.Component {
         /** Get data for the personal COVID-19 chart */
         var personalCatchData = [
             {
-                label: "In Next Month",
-                value: stats.current.catchCovid.month
+                label: "Catch Flu",
+                value: 1 / 10
             },
             {
-                label: "In Next Year",
+                label: "Catch COVID-19",
                 value: stats.current.catchCovid.year
             }
         ];
@@ -189,7 +189,7 @@ class MyFuture extends React.Component {
             the chance of getting the flu in a given year is about 1 in 10 (in the US).  
             </p>
          
-            <h6 className="chartTitle">Chance of Catching COVID-19</h6>
+            <h6 className="chartTitle">Chance of Catching COVID-19 Over The Next Year</h6>
             <ResponsiveContainer width="100%" height={150}>
                 <BarChart
                     layout="vertical"
@@ -199,7 +199,7 @@ class MyFuture extends React.Component {
                     }}
                 >
                     <XAxis type="number" domain={[0,1]} ticks={[1]} tickFormatter={x => "1 in 1"}></XAxis>
-                    <YAxis dataKey="label" type="category" width={140}/>
+                    <YAxis dataKey="label" type="category" width={120}/>
 
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
                         <LabelList dataKey="value" position="right" formatter={readableOdds()} width={100}/>

@@ -102,8 +102,11 @@ const ASSUMPTIONS = {
 
     for(let j = 0; j < sourceData.length; ++j) {
       // Convert cumulative confirmed cases and confirmed deaths to deltas
-      const confirmedCasesAdded = sourceData[j].confirmedCases - (j > 0 ? sourceData[j-1].confirmedCases : 0);
-      const confirmedDeathsAdded = sourceData[j].confirmedDeaths - (j > 0 ? sourceData[j-1].confirmedDeaths : 0);
+      var confirmedCasesAdded = sourceData[j].confirmedCases - (j > 0 ? sourceData[j-1].confirmedCases : 0);
+      var confirmedDeathsAdded = sourceData[j].confirmedDeaths - (j > 0 ? sourceData[j-1].confirmedDeaths : 0);
+
+      if(confirmedCasesAdded < 0) confirmedCasesAdded = 0;
+      if(confirmedDeathsAdded < 0) confirmedDeathsAdded = 0;
 
       result.push(new DailyData(simIndex++, curDate, confirmedCasesAdded, confirmedDeathsAdded, susceptible));
       curDate = incDate(curDate, 1);
@@ -156,7 +159,7 @@ const ASSUMPTIONS = {
         this.index = index;
         this.date = date;
 
-        this.confirmedCasesInc = confirmedCasesAdded || 0;
+        this.confirmedCasesInc = confirmedCasesAdded  || 0;
         this.confirmedDeathsInc = confirmedDeathsAdded || 0;
 
         this.confirmedCases = 0;
@@ -369,7 +372,7 @@ const ASSUMPTIONS = {
             newRow.date = moment(data[i].date).format("YYYY-MM-DD");
             
             if(data[i].totalInfected > 100) {
-              const testingRatio = Math.min(1, data[i].totalInfected > 0 ? data[i].confirmedCases / data[i].totalInfected : 0);
+              const testingRatio = Math.min(1, data[i].infectedInc > 0 ? data[i].confirmedCasesInc / data[i].infectedInc : 0);
               newRow.testingRatio = testingRatio;
             } else {
               newRow.testingRatio = 0;

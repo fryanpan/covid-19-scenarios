@@ -1,4 +1,5 @@
 import * as d3Format from "d3-format"
+import * as moment from "moment"
 
 /**
  * Takes an array of arrays of objects.
@@ -82,6 +83,23 @@ export function readableOdds() {
     }
 }
 
-export function readableMonth() {
+/**
+ * Returns a list of months in YYYY-MM-DD format
+ * 
+ * @param {*} start 
+ * @param {*} end 
+ * @returns {String[]} An array of the first day of each month in YYYY-MM-DD format
+ */
+export function listOfMonths(start, end) {
+    var result = [];
+    for(let cur = moment(start).startOf('month'); cur.isSameOrBefore(end, 'month'); cur = cur.add(1, 'month')) {
+        result.push(cur.format("YYYY-MM-DD"));
+    }
+    console.log(result);
+    return result;
+}
+
+export function readableMonth(x) {
+    return moment(x).format("MMM D");
 
 }

@@ -109,10 +109,18 @@ class IndexPage extends React.Component {
     const modelInputs = this.state.modelInputs;
     const queryData = this.props.data;
 
+    const lastDataDate = queryData.allDailyDataCsv.nodes.reduce((prev, cur) => {
+      const curDate = moment(cur.date).format("YYYY-MM-DD");
+      if(curDate > prev) return curDate;
+      return prev;
+    }, "2019-01-01");
+
     return <Layout>
       <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
 
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
+
+      <p>Data on this page was last updated on {lastDataDate}.</p>
 
       <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
 
@@ -127,7 +135,6 @@ class IndexPage extends React.Component {
       <p>
       Please let me know if you have any questions or tips on anything to improve.
       Or if you have any burning questions that need an answer.
-      This is still very much a work-in-progress.
       </p>
 
       {/* @TODO Make this page more shareable -- keep your personal choices and make it possible to send a link

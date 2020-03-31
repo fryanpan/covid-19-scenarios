@@ -1,22 +1,25 @@
-﻿micromorts,activity,
-0.43,Drive 100 miles by car,
-0.45,Snowboard for a day,
-0.71,Ski for a day,
-1,Fly 1000 miles,
-2,Bungee jump once,
-5,Go on one scuba dive,
-7,Run a marathon,
-8,One skydive,
-12,Going for a swim (drowning risk),
-14,"Smoke a pack of cigarettes (cancer, heart disease risk)",
-16,Ride 100 miles on a motorbike,
-120,Give birth via natural birth,
-170,Give birth via C-section,
-430,One basejump,
-430,Being born (on the first day),
-2840,Attempt to climb the Matterhorn,
-10000,Go on a space shuttle flight,
-37932,Hike down from Everest summit,
+﻿probability,activity,source
+0.000000200000000,Die in a plane flight,https://www.discovery.com/about-us/a-message-from-curiosity
+0.000001539080000,Get a royal flush in a 5-card deal,http://www.math.hawaii.edu/~ramsey/Probability/PokerHands.html
+0.000013851700000,Get a straight flush in a 5-card deal,http://www.math.hawaii.edu/~ramsey/Probability/PokerHands.html
+0.001000000000000,Crack an egg with two yolks,https://www.bbc.com/news/magazine-16118149
+0.001197604790419,Catch a foul ball during a baseball game,
+0.001441000000000,Get a full house in a 5-card deal,http://www.math.hawaii.edu/~ramsey/Probability/PokerHands.html
+0.001965400000000,Get a flush in a 5-card deal,http://www.math.hawaii.edu/~ramsey/Probability/PokerHands.html
+0.003924650000000,Get a straight in a 5-card deal,http://www.math.hawaii.edu/~ramsey/Probability/PokerHands.html
+0.027777777777778,Roll a pair of 6s with two die,https://www.sheknows.com/living/articles/1023453/what-are-the-odds-21-statistics-that-will-surprise-you/
+0.100000000000000,Get the flu in 2019 (in USA),
+0.166666666666667,Get food poisoning (in USA),
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
 ,,
 ,,
 ,,

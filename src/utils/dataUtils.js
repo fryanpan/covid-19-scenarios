@@ -71,6 +71,17 @@ export function readableSIPrefix(precision) {
     return d3Format.format(`,.${precision}s`);
 }
 
+export function readableOdds() {
+    const formatter = readableInteger();
+    return x => {
+        if(x > 0.1) {
+            return Math.round(x * 10) + ' in 10'; 
+        } else {
+            return `1 in ${formatter(1 / x)}`;
+        }
+    }
+}
+
 export function readableMonth() {
 
 }

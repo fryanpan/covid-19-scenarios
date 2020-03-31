@@ -5,7 +5,7 @@ import {
     ResponsiveContainer, ReferenceLine
 } from 'recharts';
 import { PresetScenarios, PresetCategories } from '../utils/model';
-import { readableNumber, readablePercent, readableRatio } from '../utils/dataUtils'
+import { readableNumber, readablePercent, readableRatio, readableOdds } from '../utils/dataUtils'
 import * as lodash from 'lodash';
 
 function nextPowerOf10(x) {
@@ -71,14 +71,48 @@ class MyFuture extends React.Component {
             const value = sortedValues[i];
 
             if(last <= value && value < next) { // we want to add last and next, if not added
-                if(!added.get(j)) {
-                    results.add(sampleMicromorts[j])
+                if(!added.has(j)) {
+                    results.push(sampleMicromorts[j])
                     added.add(j);
                 }
-                if(!added.get(j+1)) {
-                    results.add(sampleMicromorts[j+1]);
+                if(!added.has(j+1)) {
+                    results.push(sampleMicromorts[j+1]);
                     added.add(j+1);
                 }
+                i++;
+            } else {
+                j++;
+            }
+        }
+        return results;
+    }
+
+    /** Finds related death probabilities given probabilities in values
+     * At least one just smaller than and one just larger than each    
+     **/
+    findRelatedProbabilities(values) {
+        const sampleProbabilities = this.props.sampleProbabilities;
+        const sortedValues = values.sort();
+        const added = new Set();
+        var results = [];
+
+        for(let i = 0, j = 0; i < sortedValues.length && j < sampleProbabilities.length - 1;) {
+            const last = parseFloat(sampleProbabilities[j].probability);
+            const next = parseFloat(sampleProbabilities[j+1].probability);
+            const value = sortedValues[i];
+
+            if(last <= value && value < next) { // we want to add last and next, if not added
+                if(!added.has(j)) {
+                    results.push(sampleProbabilities[j])
+                    added.add(j);
+                }
+                if(!added.has(j+1)) {
+                    results.push(sampleProbabilities[j+1]);
+                    added.add(j+1);
+                }
+                i++;
+            } else {
+                j++;
             }
         }
         return results;
@@ -86,7 +120,9 @@ class MyFuture extends React.Component {
 
     findPersonalDeathProbability(age, sex) {
         const micromortsByAge = this.props.micromortsByAge;
-
+    
+        age = age || 1;
+        sex = sex || 'Female'
         const entry = micromortsByAge.find(x => {
             return x.age == age && x.sex == sex
         });
@@ -115,11 +151,11 @@ class MyFuture extends React.Component {
         /** Get data for the personal COVID-19 chart */
         var personalCatchData = [
             {
-                label: "In the next month",
+                label: "In Next Month",
                 value: stats.current.catchCovid.month
             },
             {
-                label: "In the next year",
+                label: "In Next Year",
                 value: stats.current.catchCovid.year
             }
         ];
@@ -148,23 +184,25 @@ class MyFuture extends React.Component {
             </h1>
 
             <p>
-            This chart shows how likely it is for you to catch COVID-19 with your scenario.  You can use the green box above
-            to try different scenarios.
+            This chart shows how likely it is for you to catch COVID-19 with your current scenario.  
+            You can use the green box above to try different scenarios.  For comparison,
+            the chance of getting the flu in a given year is about 1 in 10 (in the US).  
             </p>
          
-            <ResponsiveContainer width="100%" height={200}>
+            <h6 className="chartTitle">Chance of Catching COVID-19</h6>
+            <ResponsiveContainer width="100%" height={150}>
                 <BarChart
                     layout="vertical"
                     data={personalCatchData}
                     margin={{
-                        top: 10, right: 50, left: 0, bottom: 20,
+                        top: 10, right: 120, left: 0, bottom: 20,
                     }}
                 >
-                    <XAxis type="number" domain={[0,1]} tickFormatter={readablePercent(0)}></XAxis>
-                    <YAxis dataKey="label" type="category" width={110}/>
+                    <XAxis type="number" domain={[0,1]} ticks={[1]} tickFormatter={x => "1 in 1"}></XAxis>
+                    <YAxis dataKey="label" type="category" width={140}/>
 
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
-                        <LabelList dataKey="value" position="right" formatter={readablePercent(1)}/>
+                        <LabelList dataKey="value" position="right" formatter={readableOdds()} width={100}/>
                     </Bar>
                 </BarChart>
             </ResponsiveContainer>
@@ -173,7 +211,7 @@ class MyFuture extends React.Component {
                 How much will COVID-19 increase my risk of dying?
             </h2>
             <p>
-                Before COVID-19, you had a {numberFormatter(stats.current.normalDeathProbability.year * 1000000)} in a million 
+                Before COVID-19, you had a {readableOdds()(stats.current.normalDeathProbability.year)}&nbsp; 
                 chance of dying in the next year, based on your age and sex (using data from the US Social Security Administration). 
                 With COVID-19, your risk of catching the virus and dying increases by this much in your current scenario.  
             </p>
@@ -186,7 +224,7 @@ class MyFuture extends React.Component {
                         top: 0, right: 120, left: 0, bottom: 0,
                     }}
                 >
-                    <YAxis type="category" dataKey="label" width={120}></YAxis>
+                    <YAxis type="category" dataKey="label" width={140}></YAxis>
                     <XAxis type="number" tickFormatter={readableRatio(1)} ticks={[1]}></XAxis>
                     <Bar type="monotone" dataKey="value"  fill="#8884d8">
                         <LabelList dataKey="detail" position="right"/>
@@ -229,10 +267,17 @@ export default props => (
                     activity
                 }
             }
+            allSampleProbabilitiesCsv {
+                nodes {
+                    probability
+                    activity
+                }
+            }
         }`}
-      render={({ allFatalityByAgeCsv, allMicromortsByAgeCsv, allSampleMicromortsCsv }) => <MyFuture 
+      render={({ allFatalityByAgeCsv, allMicromortsByAgeCsv, allSampleMicromortsCsv, allSampleProbabilitiesCsv }) => <MyFuture 
         fatalityByAge={allFatalityByAgeCsv.nodes} 
         micromortsByAge={allMicromortsByAgeCsv.nodes} 
-        sampleMicromorts={allSampleMicromortsCsv.nodes} {...props} />}
+        sampleMicromorts={allSampleMicromortsCsv.nodes} 
+        sampleProbabilities={allSampleProbabilitiesCsv.nodes} {...props} />}
     />
   )

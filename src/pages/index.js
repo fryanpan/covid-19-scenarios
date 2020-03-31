@@ -10,6 +10,7 @@ import { LocationManager } from "../utils/locationManager"
 import moment from "moment"
 import ScenarioBar from "../components/scenarioBar"
 import { throttle } from 'lodash';
+import "./index.css";
 
 // @TODO switch to using React Context instead of global ModelManager object
 
@@ -26,7 +27,8 @@ class IndexPage extends React.Component {
 
     this.state = {
       modelManager: ModelManager,
-      modelInputs: ModelManager.modelInputs 
+      modelInputs: ModelManager.modelInputs,
+      hideText: false
       // @TODO fix this mess...it's here because we're throttling model manager updates 
     }
     this.handleModelInputChange = this.handleModelInputChange.bind(this);
@@ -104,6 +106,14 @@ class IndexPage extends React.Component {
     });
   }
 
+  hideText() {
+    this.setState(prevState => {
+        return {
+            hideText: !prevState.hideText
+          };
+    })
+  }
+
   render() {
     const modelData = this.state.modelManager.getDisplayData();
     const modelInputs = this.state.modelInputs;
@@ -116,17 +126,30 @@ class IndexPage extends React.Component {
     }, "2019-01-01");
 
     return <Layout>
-      <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
+      <div className={this.state.hideText ? "hideText" : "showText"}>
 
-      <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
+        <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
 
-      <p>Data here was updated on {lastDataDate}.</p>
+        <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
-      <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
+        <p>Data here was updated on {lastDataDate}.<br/>
+          {!this.hideText && 
+            <span>
+                    To skip the explanations and just see charts, <a onClick={this.hideText.bind(this)}>click here</a>
+            </span>
+          }
+          {this.hideText && 
+            <span>
+                    To show explanations, <a onClick={this.hideText.bind(this)}>click here</a>
+            </span>
+          }
+        </p>
 
-      <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
-      <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
+        <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
 
+        <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
+        <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
+      </div>
       <h1>Acknowledgements</h1>
 
       <p>

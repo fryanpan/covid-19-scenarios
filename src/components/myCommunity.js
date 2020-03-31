@@ -112,38 +112,40 @@ class MyCommunity extends React.Component {
             <h1>
                 How might COVID-19 spread in my community?
             </h1>
+            <div class="hideable">
 
             <h2>When might social distancing end?</h2>
 
-            <p>
-                We can look for answers in countries that are starting to loosen restrictions, like China,
-                Taiwan, and South Korea.
-                
-                All of these countries reduced active infections to a level low enough that they could depend on 
-                extensive testing, contact tracing, and local restrictions to prevent future growth.
-                For example, instead of shutting down all schools, Taiwan only shuts down a school
-                when there is a confirmed infection. Every place is different, but in China, social distancing restrictions
-            started gradually rolling back when there were less than 100 active infections per million people. 
-            </p>
-            <p>
-                To guess at when social distancing might end, we can look at a few things.
-                First, are we stopping the growth in infections? 
-                Are we testing well enough?  If testing picks up and contains
-                cases more quickly and broadly, then fewer social distancing measures will be needed
-                to keep any outbreaks small.
-                And if we are doing all of these things, then when might the number of active
-                infections be low enough to relax strict distancing measures?
-            </p>
+                <p>
+                    We can look for answers in countries that are starting to loosen restrictions, like China,
+                    Taiwan, and South Korea.
+                    
+                    All of these countries reduced active infections to a level low enough that they could depend on 
+                    extensive testing, contact tracing, and local restrictions to prevent future growth.
+                    For example, instead of shutting down all schools, Taiwan only shuts down a school
+                    when there is a confirmed infection. Every place is different, but in China, social distancing restrictions
+                started gradually rolling back when there were less than 100 active infections per million people. 
+                </p>
+                <p>
+                    To guess at when social distancing might end, we can look at a few things.
+                    First, are we stopping the growth in infections? 
+                    Are we testing well enough?  If testing picks up and contains
+                    cases more quickly and broadly, then fewer social distancing measures will be needed
+                    to keep any outbreaks small.
+                    And if we are doing all of these things, then when might the number of active
+                    infections be low enough to relax strict distancing measures?
+                </p>
+            </div>
 
             <h3>Are we reducing transmission enough?</h3>
 
-            <p>
+            <p class="hideable">
                 Let's see how new deaths compares week over week in {currentScenarioName}.
                 This is plotted below, along  with Hubei province in China for comparison.
                 Looking at the data from Hubei, lockdown started on 
-                January 24.  Roughly 3 weeks later, after February 19th, new cases and deaths
-                slow down and drop below a ratio of 1x.  This means the numbers each 
-                week started shrinking instead of growing. 
+                January 24.  Roughly 3 weeks later, after February 19th, new deaths
+                slow down and drop below a ratio of 1x.  This means that each week
+                has fewer deaths than the week before. 
             </p>
 
             <h6 className="chartTitle">Ratio of Deaths This Week vs. Last Week</h6>
@@ -178,6 +180,16 @@ class MyCommunity extends React.Component {
                         />
                     <ReferenceLine y={1}  
                         strokeDasharray="3 3" position="start"/>
+
+                    <ReferenceDot x={"2020-02-19"}
+                        y={1.86}
+                        r={6}
+                     />
+                     <ReferenceDot x={"2020-02-19"}
+                        y={2.5}
+                        r={0}
+                        label="Feb 19"
+                     />
                                             
                     { flatteningStarted &&
                         <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}/>
@@ -205,74 +217,46 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <p>
-                The key takeaway, if you're on lockdown is this: when your community 
-                adds stronger measures like strict social distancing or more extensive 
-                testing, look to see if deaths start declining three weeks later.
-                If the ratio consistently stays below 1x, then congratulations, 
-                your community is in one of the supression scenarios instead of growth 
-                scenarios.
-            </p>
+            <div class="hideable">
+                <p>
+                    The key takeaway, if you're on lockdown is this: when your community 
+                    adds stronger measures like strict social distancing or more extensive 
+                    testing, look to see if deaths start declining three weeks later.
+                    If the ratio consistently stays below 1x, then congratulations, 
+                    your community is in one of the supression scenarios instead of growth 
+                    scenarios.
+                </p>
 
-            <p>
-                Also, as you may have seen in the scenarios so far, any measures your community puts in place 
-                today won't have much effect on new deaths and cases in the next 2-3 weeks.  
-                Your community's choices in the past have already determined who's currently infected
-                and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
-                when your community has only a few cases.
-            </p>
-
-
-
-
-{/* 
-            <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={confirmedCasesRatios}
-                    margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"/>
-                    <YAxis type='number' 
-                        tickFormatter={readableRatio(1)}
-                        scale='log'
-                        domain={[0.01, 'auto']}/>
-                    <Tooltip formatter={readableRatio(2)}/>
-                    <Legend />
-
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
-                    <Line type="linear" dataKey="South Korea" stroke="#66c2a5"  strokeWidth={1} dot={false}/>
-                    <ReferenceLine y={1}
-                        strokeDasharray="3 3" position="start"/>
-                    { flatteningStarted && 
-                        <ReferenceLine x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                            label={"Flattening starts in " + currentScenarioName} />
-                    }
-                </LineChart>
-            </ResponsiveContainer> */}
+                <p>
+                    Also, as you may have seen in the scenarios so far, any measures your community puts in place 
+                    today won't have much effect on new deaths and cases in the next 2-3 weeks.  
+                    Your community's choices in the past have already determined who's currently infected
+                    and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
+                    when your community has only a few cases.
+                </p>
+            </div>
 
 
             <h2>How well are we testing?</h2>
+            <div class="hideable">
 
-            <p>
-            Testing is slow and incomplete in so many places.  Without enough testing,
-            it's hard to know who's infected and needs to be quarantined.  So often the best alternative
-            is to quarantine everyone.  
-            </p>
+                <p>
+                Testing is slow and incomplete in so many places.  Without enough testing,
+                it's hard to know who's infected and needs to be quarantined.  So often the best alternative
+                is to quarantine everyone.  
+                </p>
 
-            <p>Here you can see how your community might be doing on testing.  The chart below compares
-                the number of 
-                new confirmed cases from testing vs. the total new infections predicted by your scenario each day.
-                Note that the chart can briefly go over 100%, if there are delays in testing.  When tests catch up
-                there might be many cases from past weeks confirmed on a single day.
-            </p>            
-            <p>
-                Please try different scenarios to get a sense for how well your community is testing.
-                For comparison, also try switching the country at the top to South Korea.
-            </p>
+                <p>Here you can see how your community might be doing on testing.  The chart below compares
+                    the number of 
+                    new confirmed cases from testing vs. the total new infections predicted by your scenario each day.
+                    Note that the chart can briefly go over 100%, if there are delays in testing.  When tests catch up
+                    there might be many cases from past weeks confirmed on a single day.
+                </p>            
+                <p>
+                    Please try different scenarios to get a sense for how well your community is testing.
+                    For comparison, also try switching the country at the top to South Korea.
+                </p>
+            </div>
 
             <h6 className="chartTitle">Confirmed Cases Each Day As Percentage of New Cases From Scenario</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -300,23 +284,25 @@ class MyCommunity extends React.Component {
             
             <h3>When will we be out of the woods?</h3>
 
-            <p>
-            If your case counts are falling and testing is comprehensive,
-            then your community will start considering what suppression measures to relax
-            without risking a large outbreak.
-            </p>
+            <div class="hideable">
+                <p>
+                If your case counts are falling and testing is comprehensive,
+                then your community will start considering what suppression measures to relax
+                without risking a large outbreak.
+                </p>
 
-            <p>
-                So if you're staying at home and want to guess when it might end, we can look 
-                at other places that are gradually coming out of lockdown.  Take Hubei, China
-                for example where the pandemic started.  When it dropped to somewhere
-                around 100 active cases per million people at the end of March, it started loosening restrictions.  
-            </p>
-            <p>
-                Try different scenarios and see when your community might get to that point.
-                Bill Gates was <a href="https://www.gatesnotes.com/Health/A-coronavirus-AMA">
-                    predicting 6-10 weeks for countries that do a "good job with testing and shut down"</a>
-            </p>
+                <p>
+                    So if you're staying at home and want to guess when it might end, we can look 
+                    at other places that are gradually coming out of lockdown.  Take Hubei, China
+                    for example where the pandemic started.  When it dropped to somewhere
+                    around 100 active cases per million people at the end of March, it started loosening restrictions.  
+                </p>
+                <p>
+                    Try different scenarios and see when your community might get to that point.
+                    Bill Gates was <a href="https://www.gatesnotes.com/Health/A-coronavirus-AMA">
+                        predicting 6-10 weeks for countries that do a "good job with testing and shut down"</a>
+                </p>
+            </div>
 
             <h6 className="chartTitle">Active Cases Per Million People over Time</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -359,31 +345,33 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <h3>Putting it all together</h3>
-            <p>
-                The three charts in this section are what I check every few days.  Because there is so much
-                uncertainty and variation from place to place, what matters most is not having the perfect 
-                model.  What matters is being able to tell what scenario best represents what is happening
-                right now in your community to plan and act accordingly.
-            </p>
-            <p>
-                For example, I live in California, where shelter-at-home started on March 19th. So I will be 
-                looking for whether our week over week death ratios start falling around April 9th.  And I'll
-                look again about a week later, around April 16th to see where they fall to.  That gives 
-                a rough estimate of what R actually is here with social distancing.  Then I can see how the 
-                "when will we be out of the woods" chart looks with those R values.  I will also look
-                for evidence we're testing well.  My local municipalities have been reasonably thoughtful
-                so far.  Plus they'll have better data than I have, so I will be looking for 
-                updates from them in eary to mid-April as well.
-            </p>
-            <p>
-                I mostly gloss over the news reports of increasing death counts every day.
-                Unfortunately, increasing death counts are what we should expect in an outbreak.
-                More than a month ago, I already wrote down what I would personally do 
-                in each plausible scenario.  What's more interesting to me is knowing
-                what future scenarios are most likely and when we're changing to a different
-                scenario.
-            </p>
+            <div class="hideable">
+                <h3>Putting it all together</h3>
+                <p>
+                    The three charts in this section are what I check every few days.  Because there is so much
+                    uncertainty and variation from place to place, what matters most is not having the perfect 
+                    model.  What matters is being able to tell what scenario best represents what is happening
+                    right now in your community to plan and act accordingly.
+                </p>
+                <p>
+                    For example, I live in California, where shelter-at-home started on March 19th. So I will be 
+                    looking for whether our week over week death ratios start falling around April 9th.  And I'll
+                    look again about a week later, around April 16th to see where they fall to.  That gives 
+                    a rough estimate of what R actually is here with social distancing.  Then I can see how the 
+                    "when will we be out of the woods" chart looks with those R values.  I will also look
+                    for evidence we're testing well.  My local municipalities have been reasonably thoughtful
+                    so far.  Plus they'll have better data than I have, so I will be looking for 
+                    updates from them in eary to mid-April as well.
+                </p>
+                <p>
+                    I mostly gloss over the news reports of increasing death counts every day.
+                    Unfortunately, increasing death counts are what we should expect in an outbreak.
+                    More than a month ago, I already wrote down what I would personally do 
+                    in each plausible scenario.  What's more interesting to me is knowing
+                    what future scenarios are most likely and when we're changing to a different
+                    scenario.
+                </p>
+            </div>
         </div>
     }
 }

@@ -82,43 +82,44 @@ class AboutModel extends ScenarioEditingComponent {
         // const scenarioDeathDataTillNow = scenarioDeathData.slice(firstDeathIndex, thresholdDayIndex + 90);
 
         return <div>
-            <h1> About the scenarios </h1>
-                <p>
-                    We're inundated with many numbers and opinions with so much uncertainty.  
-                    Most countries with outbreaks are not testing quickly or comprehensively, so their confirmed 
-                    cases are incomplete.  As of March 24th, for example,
-                    a survey of experts in the US estimated <a href="https://fivethirtyeight.com/features/experts-say-the-coronavirus-outlook-has-worsened-but-the-trajectory-is-still-unclear/">
-                    the official count only includes 9% of actual cases</a>.
-                </p>
-                <p>
-                    However, the worldwide efforts to research and share knowledge
-                    are also amazing. At this point there is so much we don't know,
-                    yet humanity has discovered so much!
-                </p>
-                <p>
-                    On this page I want to aim to be accurate, given what we know. 
-                    This is why all of the scenarios here start from the confirmed deaths in {yourLocation}. From there we can estimate 
-                    how many people might have contracted the virus 3 weeks or so before each death.  Then
-                    we can model transmission and predict how the virus spreads.  Since many countries focus 
-                    testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.             
-                </p>
-                <p>
-                    Yet, I also want to acknowledge how much is unknown.  This is why you get to try
-                    different scenarios based on how your community might be reducing virus transmission.
-                </p>
+            <div class='hideable'>
+                <h1> About the scenarios </h1>
+                    <p>
+                        We're inundated with many numbers and opinions with so much uncertainty.  
+                        Most countries with outbreaks are not testing quickly or comprehensively, so their confirmed 
+                        cases are incomplete.  As of March 24th, for example,
+                        a survey of experts in the US estimated <a href="https://fivethirtyeight.com/features/experts-say-the-coronavirus-outlook-has-worsened-but-the-trajectory-is-still-unclear/">
+                        the official count only includes 9% of actual cases</a>.
+                    </p>
+                    <p>
+                        However, the worldwide efforts to research and share knowledge
+                        are also amazing. At this point there is so much we don't know,
+                        yet humanity has discovered so much!
+                    </p>
+                    <p>
+                        On this page I want to aim to be accurate, given what we know. 
+                        This is why all of the scenarios here start from the confirmed deaths in {yourLocation}. From there we can estimate 
+                        how many people might have contracted the virus 3 weeks or so before each death.  Then
+                        we can model transmission and predict how the virus spreads.  Since many countries focus 
+                        testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.             
+                    </p>
+                    <p>
+                        Yet, I also want to acknowledge how much is unknown.  This is why you get to try
+                        different scenarios based on how your community might be reducing virus transmission.
+                    </p>
 
-                <p>
-                    Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
-                    "all models are wrong, but some are useful"</a>.  Rely on your local authorities
-                    for the most accurate and up-to-date information.  Hopefully this site helps give you useful context.
-                </p>
-
+                    <p>
+                        Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
+                        "all models are wrong, but some are useful"</a>.  Rely on your local authorities
+                        for the most accurate and up-to-date information.  Hopefully this site helps give you useful context.
+                    </p>
+            </div>
 
                 <h2>
                     Choose Your Scenario
                 </h2>
 
-                <p>
+                <p class="hideable">
                     Each scenario here is based on the actual historical deaths and total population
                     from {yourLocation}. The chart below shows the confirmed deaths from the&nbsp; 
                     <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>.
@@ -164,8 +165,10 @@ class AboutModel extends ScenarioEditingComponent {
                     </ComposedChart>
                 </ResponsiveContainer>
 
-                Please choose a scenario.  
-                You can change it any time using the green box on top. It's interesting to see the difference between the suppression and growth scenarios.<br/><br/>
+                <p class="hideable">
+                    Please choose a scenario.  
+                    You can change it any time using the green box on top. It's interesting to see the difference between the suppression and growth scenarios.
+                </p>
                     <RSlider name="rAfter" value={modelInputs.rAfter}
                         label="long" 
                         onChange={this.handleScenarioEditEvent}></RSlider>
@@ -186,29 +189,31 @@ class AboutModel extends ScenarioEditingComponent {
                         label="long" 
                         onChange={this.handleScenarioEditEvent}></RSlider> */}
 
-                <p>
-                    Each measure your community takes makes a difference, whether that means avoiding group events,
-                    staying at home, testing rapidly, tracing and quarantining contacts.
-                </p>
+                <div class="hideable">
+                    <p>
+                        Each measure your community takes makes a difference, whether that means avoiding group events,
+                        staying at home, testing rapidly, tracing and quarantining contacts.
+                    </p>
 
-                <p>
-                    When each infected person transmits the virus, on average, to less than one new person,
-                    then the number of new cases and deaths will decrease over time.
-                    This is what happens in the suppression scenarios above, where R&nbsp;&lt;&nbsp;1.
-                    R is the "reproduction number" and indicates how many people each infected person
-                    transmits the virus to in turn. In these scenarios, we don't simulate what happens
-                    once the number of infections drops to a low level and suppression measures relax.
-                </p>
-                <p>
-                    If your community is on lockdown, staying at home, or practicing other strict distancing measures
-                    where you interact with very few other people a day, try one of the suppression scenarios.
-                </p>
-                <p>
-                    If each infected person transmits the virus, on average, to more than one new person,
-                    then the number of new cases and deaths will increase over time.  This will continue
-                    until a large portion of the population becomes infected.  This is what happens in each 
-                    of the growth scenarios above, where R &gt; 1.
-                </p>                 
+                    <p>
+                        When each infected person transmits the virus, on average, to less than one new person,
+                        then the number of new cases and deaths will decrease over time.
+                        This is what happens in the suppression scenarios above, where R&nbsp;&lt;&nbsp;1.
+                        R is the "reproduction number" and indicates how many people each infected person
+                        transmits the virus to in turn. In these scenarios, we don't simulate what happens
+                        once the number of infections drops to a low level and suppression measures relax.
+                    </p>
+                    <p>
+                        If your community is on lockdown, staying at home, or practicing other strict distancing measures
+                        where you interact with very few other people a day, try one of the suppression scenarios.
+                    </p>
+                    <p>
+                        If each infected person transmits the virus, on average, to more than one new person,
+                        then the number of new cases and deaths will increase over time.  This will continue
+                        until a large portion of the population becomes infected.  This is what happens in each 
+                        of the growth scenarios above, where R &gt; 1.
+                    </p>         
+                </div>        
 
         </div>
     }

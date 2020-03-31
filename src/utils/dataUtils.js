@@ -95,7 +95,6 @@ export function listOfMonths(start, end) {
     for(let cur = moment(start).startOf('month'); cur.isSameOrBefore(end, 'month'); cur = cur.add(1, 'month')) {
         result.push(cur.format("YYYY-MM-DD"));
     }
-    console.log(result);
     return result;
 }
 

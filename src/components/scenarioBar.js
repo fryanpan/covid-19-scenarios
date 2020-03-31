@@ -9,7 +9,7 @@ export default class ScenarioBar extends ScenarioEditingComponent {
     render() {
         const modelInputs = this.props.modelInputs;
 
-        return <TopBar minScroll={1400}>
+        return <TopBar minScroll={1200}>
                 <RSlider name="rAfter" value={modelInputs.rAfter} label="long"
                     onChange={this.handleScenarioEditEvent}/>
                 { modelInputs.rAfter < 1.96 && 

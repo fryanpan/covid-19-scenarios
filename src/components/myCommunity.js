@@ -112,7 +112,7 @@ class MyCommunity extends React.Component {
             <h1>
                 How might COVID-19 spread in my community?
             </h1>
-            <div class="hideable">
+            <div className="hideable">
 
             <h2>When might social distancing end?</h2>
 
@@ -139,7 +139,7 @@ class MyCommunity extends React.Component {
 
             <h3>Are we reducing transmission enough?</h3>
 
-            <p class="hideable">
+            <p className="hideable">
                 Let's see how new deaths compares week over week in {currentScenarioName}.
                 This is plotted below, along  with Hubei province in China for comparison.
                 Looking at the data from Hubei, lockdown started on 
@@ -184,8 +184,10 @@ class MyCommunity extends React.Component {
                     <ReferenceDot x={"2020-02-19"}
                         y={1.86}
                         r={6}
+                        className="hideable"
                      />
                      <ReferenceDot x={"2020-02-19"}
+                        className="hideable"
                         y={2.5}
                         r={0}
                         label="Feb 19"
@@ -217,7 +219,7 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <div class="hideable">
+            <div className="hideable">
                 <p>
                     The key takeaway, if you're on lockdown is this: when your community 
                     adds stronger measures like strict social distancing or more extensive 
@@ -238,7 +240,7 @@ class MyCommunity extends React.Component {
 
 
             <h2>How well are we testing?</h2>
-            <div class="hideable">
+            <div className="hideable">
 
                 <p>
                 Testing is slow and incomplete in so many places.  Without enough testing,
@@ -284,7 +286,7 @@ class MyCommunity extends React.Component {
             
             <h3>When will we be out of the woods?</h3>
 
-            <div class="hideable">
+            <div className="hideable">
                 <p>
                 If your case counts are falling and testing is comprehensive,
                 then your community will start considering what suppression measures to relax
@@ -345,7 +347,7 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
-            <div class="hideable">
+            <div className="hideable">
                 <h3>Putting it all together</h3>
                 <p>
                     The three charts in this section are what I check every few days.  Because there is so much

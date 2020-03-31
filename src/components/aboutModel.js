@@ -119,7 +119,7 @@ class AboutModel extends ScenarioEditingComponent {
                     Choose Your Scenario
                 </h2>
 
-                <p class="hideable">
+                <p className="hideable">
                     Each scenario here is based on the actual historical deaths and total population
                     from {yourLocation}. The chart below shows the confirmed deaths from the&nbsp; 
                     <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>.
@@ -165,7 +165,7 @@ class AboutModel extends ScenarioEditingComponent {
                     </ComposedChart>
                 </ResponsiveContainer>
 
-                <p class="hideable">
+                <p className="hideable">
                     Please choose a scenario.  
                     You can change it any time using the green box on top. It's interesting to see the difference between the suppression and growth scenarios.
                 </p>
@@ -189,7 +189,7 @@ class AboutModel extends ScenarioEditingComponent {
                         label="long" 
                         onChange={this.handleScenarioEditEvent}></RSlider> */}
 
-                <div class="hideable">
+                <div className="hideable">
                     <p>
                         Each measure your community takes makes a difference, whether that means avoiding group events,
                         staying at home, testing rapidly, tracing and quarantining contacts.

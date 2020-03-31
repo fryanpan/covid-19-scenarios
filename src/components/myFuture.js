@@ -206,7 +206,7 @@ class MyFuture extends React.Component {
             <h2>
                 Will I catch COVID-19?
             </h2>
-            <p class="hideable">
+            <p className="hideable">
             This chart shows how likely it is for you to catch COVID-19 with your current scenario.  
             You can use the green box above to try different scenarios.  For comparison,
             the chance of getting the flu in a given year is about 1 in 10 (in the US).  
@@ -233,7 +233,7 @@ class MyFuture extends React.Component {
             <h2>
                 How much will COVID-19 increase my risk of dying?
             </h2>
-            <p class="hideable">
+            <p className="hideable">
                 Before COVID-19, you had a {readableOdds()(stats.current.normalDeathProbability.year)}&nbsp; 
                 chance of dying in the next year, based on a {age} year old {sex} (using data from the US Social Security Administration). 
                 With COVID-19, your risk of catching the virus and dying increases by this much in your current scenario.  
@@ -256,7 +256,7 @@ class MyFuture extends React.Component {
                 </BarChart>
             </ResponsiveContainer>
 
-            <p class="hideable">
+            <p className="hideable">
             Note that this chart simply adds together the risk of dying from COVID-19 to the normal risk of dying.
             It's not as simple as this, especially for those with serious existing conditions.       
             Also, this chart uses mortality rates by age from the US, which may not apply to your
@@ -281,7 +281,7 @@ class MyFuture extends React.Component {
                 type="number" value={this.state.numInteractions}
                 onChange={this.handleChange.bind(this)}>
             </input>&nbsp;people in a day.<br/>
-            <span class="hideable">
+            <span className="hideable">
             Enter the number of people that you share space with, within about 6 feet (2 metres).
             </span>
             </p>
@@ -290,7 +290,7 @@ class MyFuture extends React.Component {
                 <b>{readableOdds()(interactWithInfected)}</b>&nbsp; per day.
             </p>
 
-            <p class="hideable">
+            <p className="hideable">
                 The calculation here assumes that each person you meet has an average chance of being infected.
                 This is more likely true in a grocery store than in a healthcare setting.
                 It also assumes that someone who is infected does not self-quarantine.  Interacting with someone

@@ -177,10 +177,10 @@ class AboutModel extends ScenarioEditingComponent {
                     When each infected person transmits the virus, on average, to less than one new person,
                     then the number of new cases and deaths will decrease over time.
                     This is what happens in the suppression scenarios above, where R&nbsp;&lt;&nbsp;1.
-                    In these scenarios, we assume that once a community has reduced infections to a low level, it's possible
-                    to relax measures like social distancing without risking another outbreak.
                     R is the "reproduction number" and indicates how many people each infected person
-                    transmits the virus to in turn. 
+                    transmits the virus to in turn.
+                    In these scenarios, we assume that once a community has reduced infections to a low level,
+                    they stay relatively low.
                 </p>
                 <p>
                     If your community is on lockdown, staying at home, or practicing other strict distancing measures

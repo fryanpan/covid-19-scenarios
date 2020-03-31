@@ -133,14 +133,6 @@ class MyCommunity extends React.Component {
                 slow down and drop below a ratio of 1x.  This means the numbers each 
                 week started shrinking instead of growing. 
             </p>
-            <p>
-                The key takeaway, if you're on lockdown is this: when your community 
-                adds stronger measures like strict social distancing or more extensive 
-                testing, look to see if deaths start declining three weeks later.
-                If the ratio consistently stays below 1x, then congratulations, 
-                your community is in one of the supression scenarios instead of growth 
-                scenarios.
-            </p>
 
             <h6 className="chartTitle">Ratio of Deaths This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -183,6 +175,25 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer>
 
+            <p>
+                The key takeaway, if you're on lockdown is this: when your community 
+                adds stronger measures like strict social distancing or more extensive 
+                testing, look to see if deaths start declining three weeks later.
+                If the ratio consistently stays below 1x, then congratulations, 
+                your community is in one of the supression scenarios instead of growth 
+                scenarios.
+            </p>
+
+            <p>
+                Also, as you may have seen in the scenarios so far, any measures your community puts in place 
+                today won't have much effect on new deaths and cases in the next 2-3 weeks.  
+                Your community's choices in the past have already determined who's currently infected
+                and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
+                when your community has only a few cases.
+            </p>
+
+
+
 {/* 
             <h6 className="chartTitle">Ratio of Confirmed Cases This Week vs. Last Week</h6>
             <ResponsiveContainer width="100%" height={400}>
@@ -212,13 +223,6 @@ class MyCommunity extends React.Component {
                 </LineChart>
             </ResponsiveContainer> */}
 
-            <p>
-                Note: As you may have seen in the scenarios so far, any measures your community puts in place 
-                today won't have much effect on new deaths and cases in the next three weeks.  
-                Your community's choices in the past have already determined who's currently infected
-                and will go on to be hospitalized or die in the next three weeks.  Let this be a call to act quickly, 
-                when your community has only a few cases.
-            </p>
 
             <h2>How well are we testing?</h2>
 

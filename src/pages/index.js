@@ -120,7 +120,7 @@ class IndexPage extends React.Component {
 
       <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
-      <p>Data on this page was last updated on {lastDataDate}.</p>
+      <p>Data here was updated on {lastDataDate}.</p>
 
       <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
 

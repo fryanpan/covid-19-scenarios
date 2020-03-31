@@ -235,7 +235,8 @@ class MyFuture extends React.Component {
 
             Note that this chart simply adds together the risk of dying from COVID-19 to the normal risk of dying.
             It's not as simple as this, especially for those with serious existing conditions.       
-            Also, this chart uses mortality rates by age from the US, which differ from place to place.
+            Also, this chart uses mortality rates by age from the US, which may not apply to your
+            location.
 
         </div>
     }

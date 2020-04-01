@@ -2,8 +2,13 @@
 
 # The Model
 
+The model implemented here is a very crude
+SEIR (Susceptible, Exposed, Infected, Recovered) Model that only keeps track of counts on 
+a daily basis.  It can be made more 
+mathematically accurate, but I elected
+to make the model accurate enough and
+focus more on useful questions to answer.  
 
-# Data Sources
 
 # Initial Setup
 
@@ -12,4 +17,20 @@
     ```
     npm install
     ````
-3. 
+3. To run the development server locally
+    ```
+    gatsby develop
+    ```
+
+
+# Refresh the Data
+
+Data comes from the Johns Hopkins dashboard [Github repo](https://github.com/CSSEGISandData/COVID-19)
+
+Historical data changed formats multiple times, so there is a [download_data.js](./data_download/download_data.js) script that tries to clean up
+various legacy formats.
+
+To refresh the data, please run this:
+```
+    npm run refresh_data
+```

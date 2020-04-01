@@ -98,20 +98,39 @@ class AboutModel extends ScenarioEditingComponent {
                     </p>
                     <p>
                         On this page I want to aim to be accurate, given what we know. 
-                        This is why all of the scenarios here start from the confirmed deaths in {yourLocation}. From there we can estimate 
-                        how many people might have contracted the virus 3 weeks or so before each death.  Then
+                        This is why all of the scenarios below start from the confirmed deaths in {yourLocation}, the location you chose. 
+                        From there we can estimate how many people might have contracted the virus 3 weeks or so before each death.  Then
                         we can model transmission and predict how the virus spreads.  Since many countries focus 
-                        testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.             
+                        testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.
                     </p>
                     <p>
-                        Yet, I also want to acknowledge how much is unknown.  This is why you get to try
-                        different scenarios based on how your community might be reducing virus transmission.
-                    </p>
-
+                        Yet I also want to acknowledge how much is unknown.  We don't know exactly how
+                        quickly virus transmission happens or what fatality and recovery rates look like,
+                        especially.  Plus the
+                        model here is a simplified SEIR disease model.  A single simple curve 
+                        &nbsp;<a href="https://www.tableau.com/about/blog/2020/3/unpredictable-curve-covid-19">does not fully represent the real world</a>.  
+                        Every model out there includes a great deal of uncertainty.  See the FiveThirtyEight post on 
+                        &nbsp;<a href="https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/">
+                            why modeling COVID-19 is hard</a>.
+                    </p> 
                     <p>
-                        Please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
-                        "all models are wrong, but some are useful"</a>.  Rely on your local authorities
-                        for the most accurate and up-to-date information.  Hopefully this site helps give you useful context.
+                        In short, please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
+                        "all models are wrong, but some are useful"</a>.  Rely on your local officials
+                        for the most accurate and up-to-date information. 
+                    </p>
+                  
+                    <p>
+                        However, despite every single scenario here being wrong, I hope the 
+                        range of possibilities gives you a gut feel for what's plassible
+                        in your community, tied to actual, local data.  From that, I hope you 
+                        also gain a gut sense for other questions like
+                        how you might act in each case? What data to look for from officials and when?
+                        Specifically, how can we tell how well suppression efforts are working?  
+                        How does that inform how a community chooses to manage in the future?                       
+                    </p>
+                    <p>
+                        In short, please don't put much trust in any single scenario. Try different
+                        ones and see how they feel.
                     </p>
             </div>
 
@@ -157,7 +176,7 @@ class AboutModel extends ScenarioEditingComponent {
                         }
                         { flatteningStarted && 
                             <ReferenceDot x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
-                                y={maxValue * 1}
+                                y={maxValue * 0.9}
                                 r={0}
                                 inFront={true}
                                 label={"Flattening " + flatteningVerb} />

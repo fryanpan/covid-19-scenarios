@@ -29,6 +29,19 @@ class SimulationDataTable extends React.Component {
 
         return <div>
                 <h1> Simulation Data </h1>
+                <h2>SEIR Model</h2>
+                <p>
+                    The scenarios here are based on an SEIR model (Susceptible, Exposed, Infected, Recovered)
+                    with a mean time to death of 15 days, mean incubation time of 5 days, 
+                    mean infectious time of 3 days, and mean time to recovery of 22 days.
+                    A case fatality rate of 1.4% is used throughout, both to estimate actual
+                    past exposures from deaths and for predicting future deaths.
+                </p>
+                <p>
+                    The model simulates daily counts, instead of modeling a continuous function.
+                    This leads to some inaccuracies, but ultimately there's so much uncertainty
+                    in the input parameters above that calculation inaccuracies don't matter much.
+                </p>
                 { !this.state.showTable && 
                     <a onClick={this.toggleTable.bind(this)}>Show raw data</a>
                 }
@@ -66,6 +79,7 @@ class SimulationDataTable extends React.Component {
                         </table>
 
                         <h2> Output </h2>
+                        
                         <div className="hscroll">
                             <table className="simdata">
                                 <thead>

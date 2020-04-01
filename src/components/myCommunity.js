@@ -57,7 +57,13 @@ function metricPerMillionPopulation(scenarioData, key, outputKey) {
 }
 
 class MyCommunity extends React.Component {    
+
+    componentWillMount() {
+        this.width = window.innerWidth;
+    }
+
     render() {        
+        const isNarrow = this.width < 600;
         const modelInputs = this.props.modelInputs;
         const scenarios = this.props.modelData;
         const historicalData = this.props.historicalData;
@@ -85,12 +91,13 @@ class MyCommunity extends React.Component {
             ]);
 
         /** Current scenario active cases per million */
-        const activeCasesPerMillion = 
+        var activeCasesPerMillion = 
             mergeDataArrays([
                 metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
                 metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
             ]);
 
+        var lastIndexAbove1 = 0;
         var firstDayBelow100;
         var maxValue;
         for(let i = 0; i < activeCasesPerMillion.length; ++i) {
@@ -102,11 +109,15 @@ class MyCommunity extends React.Component {
                 maxValue = value;
             }
 
-            if(value < maxValue && value < 100) {
+            if(value < maxValue && value < 100 && !firstDayBelow100) {
                 firstDayBelow100 = moment(date).format("YYYY-MM-DD");
-                break;
+            }
+            if(value > 1) {
+                lastIndexAbove1 = i;
             }
         }
+
+        activeCasesPerMillion = activeCasesPerMillion.slice(0, lastIndexAbove1);
 
         return <div>
             <h1>
@@ -199,7 +210,7 @@ class MyCommunity extends React.Component {
                     }
                     { flatteningStarted &&
                         <ReferenceDot x={moment(currentScenario.scenario.thresholdDate).format("YYYY-MM-DD")}
-                            y={0.2}
+                            y={0.25}
                             r={0}
                             label={"Flattening starts"} />
     
@@ -210,7 +221,7 @@ class MyCommunity extends React.Component {
                     }
                     { flatteningStarted &&
                         <ReferenceDot x={moment(currentScenario.scenario.thresholdDate).add(3, 'week').format("YYYY-MM-DD")}
-                            y={0.2}
+                            y={0.15}
                             r={0}
                             label={"3 weeks later"} />
     
@@ -270,6 +281,11 @@ class MyCommunity extends React.Component {
                     // barCategoryGap={1}
                     // barGap={0}
                 >
+
+                    <Line type="monotone" dataKey="testingRatio" stroke="#c4cde4" 
+                        strokeWidth={30}
+                        name="% of Cases Detected"
+                        dot={false}/>
                     <XAxis dataKey="date"
                         
                         interval={7}
@@ -278,10 +294,6 @@ class MyCommunity extends React.Component {
                     />
                     <YAxis tickFormatter={readablePercent(0)} domain={[0, max => Math.max(max, 1)]} />
                     <Tooltip formatter={readablePercent(2)}/>
-                    <Line type="linear" dataKey="testingRatio" stroke="#c4cde4" 
-                        strokeWidth={30}
-                        name="% of Cases Detected"
-                        dot={false}/>
                 </LineChart>
             </ResponsiveContainer> 
             
@@ -301,13 +313,13 @@ class MyCommunity extends React.Component {
                     around 100 active cases per million people at the end of March, it started loosening restrictions.  
                 </p>
                 <p>
-                    Try different scenarios and see when your community might get to that point.
+                    Try different scenarios and see when your community might be below 100 active cases per million.
                     Bill Gates was <a href="https://www.gatesnotes.com/Health/A-coronavirus-AMA">
                         predicting 6-10 weeks for countries that do a "good job with testing and shut down"</a>
                 </p>
             </div>
 
-            <h6 className="chartTitle">Active Cases Per Million People over Time</h6>
+            <h6 className="chartTitle">Active Cases Per Million People Over Time</h6>
             <ResponsiveContainer width="100%" height={400}>
                 <LineChart
                     data={activeCasesPerMillion}
@@ -317,7 +329,7 @@ class MyCommunity extends React.Component {
                 >
                     <XAxis dataKey="date"
                         ticks={listOfMonths("2020-01-01", "2021-12-01")}
-                        interval={0}
+                        interval={isNarrow ? 1 : 0}
                         tickFormatter={readableMonth}
                     
                     />
@@ -328,8 +340,8 @@ class MyCommunity extends React.Component {
                     <Tooltip formatter={readableNumber(2)}/>
                     <Legend iconType='square' />
 
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={30} dot={false}/>
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={30} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={isNarrow ? 15 : 30} dot={false}/>
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={isNarrow ? 15 : 30} dot={false}/>
                     <ReferenceLine y={100} 
                         strokeDasharray="3 3" position="start"/>
 

@@ -31,6 +31,7 @@ function extractDateAndKey(array, key, outputKey) {
 }
 
 class AboutModel extends ScenarioEditingComponent {    
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -39,7 +40,14 @@ class AboutModel extends ScenarioEditingComponent {
         };
     }
 
+    componentWillMount() {
+        this.width = window.innerWidth;
+    }
+
     render() {        
+        
+        const isNarrow = this.width < 600;
+
         const scenarios = this.props.modelData;
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
@@ -161,7 +169,7 @@ class AboutModel extends ScenarioEditingComponent {
 
                         <Line type="monotone" dataKey="currentDeadInc"  
                             name="My Scenario" stroke="#cbd5e8" 
-                            strokeWidth={20} dot={false}/>
+                            strokeWidth={10} dot={false}/>
 
                         <Bar dataKey="confirmedDeathsInc"
                             name="Actual Deaths" fill="#fc8d62"/>
@@ -179,7 +187,7 @@ class AboutModel extends ScenarioEditingComponent {
                         }
                         <XAxis type="category" dataKey="date" 
                             ticks={listOfMonths("2020-01-01", "2020-12-01")}
-                            interval={0}
+                            interval={isNarrow ? 1 : 0}
                             tickFormatter={readableMonth}
                             />                        
                         <YAxis type="number" />

@@ -135,7 +135,7 @@ class AboutModel extends ScenarioEditingComponent {
             </div>
 
                 <h2>
-                    Choose Your Scenario
+                    Pick A Scenario
                 </h2>
 
                 <p className="hideable">
@@ -187,7 +187,8 @@ class AboutModel extends ScenarioEditingComponent {
 
                 <p className="hideable">
                     Please choose a scenario.  
-                    You can change it any time using the green box on top. It's interesting to see the difference between the suppression and growth scenarios.
+                    You can change it any time using the green box on top.
+                    It's especially interesting to compare suppression and growth scenarios.
                 </p>
                     <RSlider name="rAfter" value={modelInputs.rAfter}
                         label="long" 

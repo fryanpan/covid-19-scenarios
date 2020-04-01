@@ -142,7 +142,8 @@ class AboutModel extends ScenarioEditingComponent {
                     Each scenario here is based on the actual historical deaths and total population
                     from {yourLocation}. The chart below shows the confirmed deaths from the&nbsp; 
                     <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>.
-                    The line plotted on top shows what your scenario predicts. 
+                    The line plotted on top shows what your scenario predicts.  If your community 
+                    has not had many deaths yet, the model may behave unexpectedly.  
                 </p>
                 
                 <h6 className="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>

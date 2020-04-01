@@ -241,7 +241,7 @@ const ASSUMPTIONS = {
         const originalDataLength = inputData.length;
         const bufferedDataLength = originalDataLength + BUFFER_LENGTH;
         var startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
-        const minLastRow  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate;
+        const minLastRow  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate - 1;
 
         // @TODO handle case better if the threshold date is early
 

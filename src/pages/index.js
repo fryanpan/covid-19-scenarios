@@ -133,12 +133,12 @@ class IndexPage extends React.Component {
         <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
 
         <p>Data will be updated daily (last update on {lastDataDate}).<br/>
-          {!this.hideText && 
+          {!this.state.hideText && 
             <span>
                     To skip the explanations and just see charts, <a onClick={this.hideText.bind(this)}>click here</a>
             </span>
           }
-          {this.hideText && 
+          {this.state.hideText && 
             <span>
                     To show explanations, <a onClick={this.hideText.bind(this)}>click here</a>
             </span>

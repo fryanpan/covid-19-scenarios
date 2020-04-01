@@ -98,16 +98,16 @@ class AboutModel extends ScenarioEditingComponent {
                     </p>
                     <p>
                         On this page I want to aim to be accurate, given what we know. 
-                        This is why all of the scenarios below start from the confirmed deaths in {yourLocation}, the location you chose. 
+                        This is why all of the scenarios below start from the confirmed deaths in {yourLocation}, the location you picked. 
                         From there we can estimate how many people might have contracted the virus 3 weeks or so before each death.  Then
                         we can model transmission and predict how the virus spreads.  Since many countries focus 
                         testing on the most severe cases, confirmed deaths are likely more accurate than confirmed cases.
                     </p>
                     <p>
                         Yet I also want to acknowledge how much is unknown.  We don't know exactly how
-                        quickly virus transmission happens or what fatality and recovery rates look like,
-                        especially.  Plus the
-                        model here is a simplified SEIR disease model.  A single simple curve 
+                        quickly virus transmission happens or what fatality and recovery rates look like
+                        in each community.  Plus the
+                        model here is a simple SEIR disease model.  A simple model like this 
                         &nbsp;<a href="https://www.tableau.com/about/blog/2020/3/unpredictable-curve-covid-19">does not fully represent the real world</a>.  
                         Every model out there includes a great deal of uncertainty.  See the FiveThirtyEight post on 
                         &nbsp;<a href="https://fivethirtyeight.com/features/why-its-so-freaking-hard-to-make-a-good-covid-19-model/">
@@ -116,21 +116,23 @@ class AboutModel extends ScenarioEditingComponent {
                     <p>
                         In short, please remember that <a href="https://en.wikipedia.org/wiki/All_models_are_wrong">
                         "all models are wrong, but some are useful"</a>.  Rely on your local officials
-                        for the most accurate and up-to-date information. 
+                        for the most accurate and up-to-date information.  If you like the charts here more
+                        than your local dashboards, ask your officials for better dashboards :) 
                     </p>
                   
                     <p>
                         However, despite every single scenario here being wrong, I hope the 
                         range of possibilities gives you a gut feel for what's plassible
-                        in your community, tied to actual, local data.  From that, I hope you 
+                        in your community, tied to actual local data.  From that, I hope you 
                         also gain a gut sense for other questions like
-                        how you might act in each case? What data to look for from officials and when?
+                        how you might act? What data to look for from officials and when?
                         Specifically, how can we tell how well suppression efforts are working?  
                         How does that inform how a community chooses to manage in the future?                       
                     </p>
                     <p>
-                        In short, please don't put much trust in any single scenario. Try different
-                        ones and see how they feel.
+                        In short, please don't put much trust in any single scenario here. Try different
+                        scenarios, see how they feel. Hopefully you gain a stronger sense
+                        for what to expect.
                     </p>
             </div>
 
@@ -143,7 +145,7 @@ class AboutModel extends ScenarioEditingComponent {
                     from {yourLocation}. The chart below shows the confirmed deaths from the&nbsp; 
                     <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE Dashboard</a>.
                     The line plotted on top shows what your scenario predicts.  If your community 
-                    has not had many deaths yet, the model may behave unexpectedly.  
+                    has not had many deaths yet, the model may behave oddly.
                 </p>
                 
                 <h6 className="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
@@ -151,22 +153,15 @@ class AboutModel extends ScenarioEditingComponent {
                     <ComposedChart
                         data={scenarioDeathData}
                         margin={{
-                            top: 0, right: 0, left: 0, bottom: 0,
+                            top: 20, right: 0, left: 0, bottom: 0,
                         }}
                     >
-                        <XAxis type="category" dataKey="date" 
-                            ticks={listOfMonths("2020-01-01", "2020-12-01")}
-                            interval={0}
-                            tickFormatter={readableMonth}
-                            />                        
-                        <YAxis type="number" />
-                        <Tooltip formatter={readableInteger()}/>
-                        <Legend iconType="square"/>
+
 
 
                         <Line type="monotone" dataKey="currentDeadInc"  
-                            name="My Scenario" stroke="#8da0cb" 
-                            strokeWidth={4} dot={false}/>
+                            name="My Scenario" stroke="#cbd5e8" 
+                            strokeWidth={20} dot={false}/>
 
                         <Bar dataKey="confirmedDeathsInc"
                             name="Actual Deaths" fill="#fc8d62"/>
@@ -182,13 +177,22 @@ class AboutModel extends ScenarioEditingComponent {
                                 inFront={true}
                                 label={"Flattening " + flatteningVerb} />
                         }
+                        <XAxis type="category" dataKey="date" 
+                            ticks={listOfMonths("2020-01-01", "2020-12-01")}
+                            interval={0}
+                            tickFormatter={readableMonth}
+                            />                        
+                        <YAxis type="number" />
+                        <Tooltip formatter={readableInteger()}/>
+                        <Legend iconType="square"/>
                     </ComposedChart>
                 </ResponsiveContainer>
 
                 <p className="hideable">
                     Please choose a scenario.  
                     You can change it any time using the green box on top.
-                    It's especially interesting to compare suppression and growth scenarios.
+                    It's especially interesting to compare suppression and growth scenarios. On this page, any time we plot 
+                    actual data, it will be in a solid color.  Scenario data will always be in lighter colors. 
                 </p>
                     <RSlider name="rAfter" value={modelInputs.rAfter}
                         label="long" 
@@ -222,7 +226,8 @@ class AboutModel extends ScenarioEditingComponent {
                         This is what happens in the suppression scenarios above, where R&nbsp;&lt;&nbsp;1.
                         R is the "reproduction number" and indicates how many people each infected person
                         transmits the virus to in turn. In these scenarios, we don't simulate what happens
-                        once the number of infections drops to a low level and suppression measures relax.
+                        once the number of infections drops to a low level and suppression measures might
+                        relax.
                     </p>
                     <p>
                         If your community is on lockdown, staying at home, or practicing other strict distancing measures
@@ -232,7 +237,9 @@ class AboutModel extends ScenarioEditingComponent {
                         If each infected person transmits the virus, on average, to more than one new person,
                         then the number of new cases and deaths will increase over time.  This will continue
                         until a large portion of the population becomes infected.  This is what happens in each 
-                        of the growth scenarios above, where R &gt; 1.
+                        of the growth scenarios above, where R &gt; 1.  Healthcare capacity in hospitals 
+                        becomes more important in these scenarios, and the scenarios here do not account for 
+                        what happens when your community runs out of ICU beds in the hospital.
                     </p>         
                 </div>        
 

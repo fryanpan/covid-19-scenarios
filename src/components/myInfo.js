@@ -30,8 +30,8 @@ export default class MyInfo extends ScenarioEditingComponent {
                 This page hopes to do something different.  It focuses on answering questions that
                 are relevant to you and your community. Even though the future is uncertain, it is possible to 
                 &nbsp;<a href="https://hbr.org/1997/11/strategy-under-uncertainty">
-                guess at plausible scenarios
-                </a>.
+                guess at plausible scenarios.</a>  With a rough sense of what to expect,
+                it's easier to put data in context.
             </p>
 
             <p>

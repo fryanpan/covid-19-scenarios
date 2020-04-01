@@ -26,4 +26,9 @@ input[type="date"]::-ms-clear {
 .chartTitle {
   text-align: center;
 }
+
+.scenarioData {
+    color: #cbd5e8;
+    font-weight: bold;
+}
   

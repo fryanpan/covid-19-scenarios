@@ -168,15 +168,15 @@ class MyCommunity extends React.Component {
                     <Tooltip formatter={readableRatio(2)}/>
                     <Legend iconType='square' strokeWidth={2} />
 
+                    <Line type="linear" dataKey="Your Scenario" 
+                        name={currentScenarioName + " (Scenario)"} stroke="#c4cde4"  strokeWidth={40} dot={false}
+                        />
                     <Line type="linear" dataKey={currentScenarioName} 
                         name={currentScenarioName + " (Actual)"} stroke="#8da0cb" strokeWidth={3} dot={false}/>
-                    <Line type="linear" dataKey="Your Scenario" 
-                        name={currentScenarioName + " (Scenario)"} stroke="#c4cde4"  strokeWidth={3} dot={false}
-                        strokeDasharray="3 3"/>
                     <Line type="linear" dataKey="Hubei"
                         name="Hubei (Actual)" stroke="#fc8d62"  strokeWidth={2} dot={false}/>
                     <Line type="linear" dataKey="South Korea"
-                        name="South Korea (Actual)" stroke="#66c2a5"  strokeWidth={2} dot={false}/>
+                        name="South Korea (Actual)" stroke="#ffd92f"  strokeWidth={2} dot={false}/>
                         />
                     <ReferenceLine y={1}  
                         strokeDasharray="3 3" position="start"/>
@@ -278,7 +278,8 @@ class MyCommunity extends React.Component {
                     />
                     <YAxis tickFormatter={readablePercent(0)} domain={[0, max => Math.max(max, 1)]} />
                     <Tooltip formatter={readablePercent(2)}/>
-                    <Line type="linear" dataKey="testingRatio" fill="#8884d8" 
+                    <Line type="linear" dataKey="testingRatio" stroke="#c4cde4" 
+                        strokeWidth={30}
                         name="% of Cases Detected"
                         dot={false}/>
                 </LineChart>
@@ -311,7 +312,7 @@ class MyCommunity extends React.Component {
                 <LineChart
                     data={activeCasesPerMillion}
                     margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
+                        top: 20, right: 0, left: 0, bottom: 0,
                     }}
                 >
                     <XAxis dataKey="date"
@@ -327,8 +328,8 @@ class MyCommunity extends React.Component {
                     <Tooltip formatter={readableNumber(2)}/>
                     <Legend iconType='square' />
 
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#8da0cb" strokeWidth={4} dot={false}/>
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fc8d62"  strokeWidth={1} dot={false}/>
+                    <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={30} dot={false}/>
+                    <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={30} dot={false}/>
                     <ReferenceLine y={100} 
                         strokeDasharray="3 3" position="start"/>
 

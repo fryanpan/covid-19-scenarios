@@ -24,8 +24,8 @@ const ASSUMPTIONS = {
     meanTimeToDeath: 15,
     sdTimeToDeath: 2,
     
-    minDaysToSimulate: 90,
-    maxDaysToSimulate: 365
+    minDaysToSimulate: 275,
+    maxDaysToSimulate: 275
   }
 
   const SIMULATION_STATES = ['susceptible', 'exposed', 'infected', 'infectious', 'recovered', 'dead'];
@@ -121,7 +121,7 @@ const ASSUMPTIONS = {
   }
 
   /** Trims data from the results array */
-  function trimData(data, bufferAfter, minRows) {
+  function trimData(data, bufferAfter, minLastRow) {
     var start, end;
     for(let i = 0; i < data.length - bufferAfter; ++i) {
       const row = data[i];
@@ -142,8 +142,8 @@ const ASSUMPTIONS = {
       end = data.length - bufferAfter - 1;
     }
 
-    if(end < start + minRows) {
-      end = start + minRows - 1;
+    if(end < minLastRow) {
+      end = minLastRow;
     }
     return data.slice(start, end + 1);
   }
@@ -241,7 +241,7 @@ const ASSUMPTIONS = {
         const originalDataLength = inputData.length;
         const bufferedDataLength = originalDataLength + BUFFER_LENGTH;
         var startSimulatingExposureIndex = bufferedDataLength - BUFFER_LENGTH;
-        const minOutputLength  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate;
+        const minLastRow  = bufferedDataLength + ASSUMPTIONS.minDaysToSimulate;
 
         // @TODO handle case better if the threshold date is early
 
@@ -319,7 +319,7 @@ const ASSUMPTIONS = {
         }
       }
 
-      this.resultData = trimData(data, BUFFER_LENGTH, minOutputLength);
+      this.resultData = trimData(data, BUFFER_LENGTH, minLastRow);
       const elapsed = +new Date() - startTime;
       // console.log("Ran model in ", elapsed, "ms");
       return this.resultData;

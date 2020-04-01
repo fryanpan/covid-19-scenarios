@@ -224,7 +224,7 @@ class MyFuture extends React.Component {
                     <XAxis type="number" domain={[0,1]} ticks={[1]} tickFormatter={x => "1 in 1"}></XAxis>
                     <YAxis dataKey="label" type="category" width={120}/>
 
-                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                    <Bar type="monotone" dataKey="value"  fill="#cbd5e8">
                         <LabelList dataKey="value" position="right" formatter={readableOdds()} width={100}/>
                     </Bar>
                 </BarChart>
@@ -249,7 +249,7 @@ class MyFuture extends React.Component {
                 >
                     <YAxis type="category" dataKey="label" width={140}></YAxis>
                     <XAxis type="number" tickFormatter={readableRatio(1)} ticks={[1]}></XAxis>
-                    <Bar type="monotone" dataKey="value"  fill="#8884d8">
+                    <Bar type="monotone" dataKey="value"  fill="#cbd5e8">
                         <LabelList dataKey="detail" position="right"/>
                     </Bar>
                     <ReferenceLine x={1}></ReferenceLine>
@@ -268,11 +268,13 @@ class MyFuture extends React.Component {
             </h2>
 
             <p>
-                In your current scenario, there are {readableInteger()(currentInfected)} infected 
+                In your current scenario, there are &nbsp;<span className="scenarioData">
+                    {readableInteger()(currentInfected)}</span>&nbsp; infected 
                 people in {locationName} out of a population of {readableInteger()(population)}.
             </p>
             <p>
-                The odds that someone is infected is {readableOdds()(currentInfected / population)}.
+                The odds that someone is infected is&nbsp;
+                <span className="scenarioData">{readableOdds()(currentInfected / population)}</span>&nbsp;.
                 This also applies to you.
             </p>
 
@@ -287,7 +289,7 @@ class MyFuture extends React.Component {
             </p>
             <p>
                 Then the odds that I interact with someone who is infected is&nbsp;
-                <b>{readableOdds()(interactWithInfected)}</b>&nbsp; per day.
+                <span className="scenarioData">{readableOdds()(interactWithInfected)}</span>&nbsp; per day.
             </p>
 
             <p className="hideable">
@@ -298,9 +300,9 @@ class MyFuture extends React.Component {
             </p>
             <p>
                 If we assume that anyone who has symptoms quarantines themselves
-                and infectious for only 3 days, then your odds of interacting with some who 
+                and is infectious for only 3 days, then your odds of interacting with some who 
                 is infectious and not in quarantine drops to
-                &nbsp;<b>{readableOdds()(interactWithInfectious)}</b> per day.
+                &nbsp;<span className="scenarioData">{readableOdds()(interactWithInfectious)}</span> per day.
             </p>
            
         </div>

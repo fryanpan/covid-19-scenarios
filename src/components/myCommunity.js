@@ -59,7 +59,7 @@ function metricPerMillionPopulation(scenarioData, key, outputKey) {
 class MyCommunity extends React.Component {    
 
     componentWillMount() {
-        this.width = window.innerWidth;
+        this.width = window ? window.innerWidth : 1000;
     }
 
     render() {        
@@ -292,7 +292,9 @@ class MyCommunity extends React.Component {
                         tickFormatter={readableMonth}
                     
                     />
-                    <YAxis tickFormatter={readablePercent(0)} domain={[0, max => Math.max(max, 1)]} />
+                    <YAxis tickFormatter={readablePercent(0)} 
+                        orientation="right"
+                        domain={[0, max => Math.max(max, 1)]} />
                     <Tooltip formatter={readablePercent(2)}/>
                 </LineChart>
             </ResponsiveContainer> 

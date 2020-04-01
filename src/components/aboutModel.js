@@ -41,7 +41,7 @@ class AboutModel extends ScenarioEditingComponent {
     }
 
     componentWillMount() {
-        this.width = window.innerWidth;
+        this.width = window ? window.innerWidth : 1000;
     }
 
     render() {        

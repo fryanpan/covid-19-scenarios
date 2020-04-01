@@ -159,7 +159,7 @@ class IndexPage extends React.Component {
       <h1>About</h1>
 
       <p>
-      Please let me know if you have any questions or suggestions <a href="mailto:fryanpan@gmail.com">by email</a>.
+      Please let me know if you have any questions or suggestions <a href="mailto:fryanpan@gmail.com">by email</a>.<br/>
       The code and data for this site are on Github <a href="https://github.com/fryanpan/covid-19-scenarios">here</a>.      
       </p>
 

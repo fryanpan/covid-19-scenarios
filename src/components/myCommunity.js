@@ -3,6 +3,8 @@ import {
     XAxis, YAxis, Tooltip, Legend,
     LineChart, Line, ReferenceLine, ReferenceDot, ResponsiveContainer
 } from 'recharts';
+import Media from 'react-media';
+
 
 import moment from 'moment';
 
@@ -57,13 +59,7 @@ function metricPerMillionPopulation(scenarioData, key, outputKey) {
 }
 
 class MyCommunity extends React.Component {    
-
-    componentWillMount() {
-        this.width = window ? window.innerWidth : 1000;
-    }
-
     render() {        
-        const isNarrow = this.width < 600;
         const modelInputs = this.props.modelInputs;
         const scenarios = this.props.modelData;
         const historicalData = this.props.historicalData;
@@ -322,45 +318,54 @@ class MyCommunity extends React.Component {
             </div>
 
             <h6 className="chartTitle">Active Cases Per Million People Over Time</h6>
-            <ResponsiveContainer width="100%" height={400}>
-                <LineChart
-                    data={activeCasesPerMillion}
-                    margin={{
-                        top: 20, right: 0, left: 0, bottom: 0,
-                    }}
-                >
-                    <XAxis dataKey="date"
-                        ticks={listOfMonths("2020-01-01", "2021-12-01")}
-                        interval={isNarrow ? 1 : 0}
-                        tickFormatter={readableMonth}
-                    
-                    />
-                    <YAxis type='number' 
-                        scale="log"
-                        tickFormatter={readableNumber(2)} 
-                        domain={[0.1, 'auto']}/>
-                    <Tooltip formatter={readableNumber(2)}/>
-                    <Legend iconType='square' />
+            <Media queries={{
+                small: "(max-width: 699px)",
+                large: "(min-width: 700px)"
+            }}>
+                {matches => (
+                    <ResponsiveContainer width="100%" height={400}>
 
-                    <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={isNarrow ? 15 : 30} dot={false}/>
-                    <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={isNarrow ? 15 : 30} dot={false}/>
-                    <ReferenceLine y={100} 
-                        strokeDasharray="3 3" position="start"/>
+                        <LineChart
+                            data={activeCasesPerMillion}
+                            margin={{
+                                top: 20, right: 0, left: 0, bottom: 0,
+                            }}
+                        >
+                            <XAxis dataKey="date"
+                                ticks={listOfMonths("2020-01-01", "2021-12-01")}
+                                interval={matches.small ? 1 : 0}
+                                tickFormatter={readableMonth}
+                            
+                            />
+                            <YAxis type='number' 
+                                scale="log"
+                                tickFormatter={readableNumber(2)} 
+                                domain={[0.1, 'auto']}/>
+                            <Tooltip formatter={readableNumber(2)}/>
+                            <Legend iconType='square' />
 
-                    { modelInputs.rAfter < 0.9 &&
-                        <ReferenceDot x={firstDayBelow100} y={100} 
-                            r={5}></ReferenceDot>
-                    }
-                    { modelInputs.rAfter < 0.9 &&
-                        
-                        <ReferenceDot x={moment(firstDayBelow100).add(1.5, 'week').format("YYYY-MM-DD")} 
-                            y={200} 
-                            r={0}
-                            label={readableMonth(firstDayBelow100)}></ReferenceDot>
-                    }
+                            <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={matches.small ? 15 : 30} dot={false}/>
+                            <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={matches.small ? 15 : 30} dot={false}/>
+                            <ReferenceLine y={100} 
+                                strokeDasharray="3 3" position="start"/>
 
-                </LineChart>
-            </ResponsiveContainer>
+                            { modelInputs.rAfter < 0.9 &&
+                                <ReferenceDot x={firstDayBelow100} y={100} 
+                                    r={5}></ReferenceDot>
+                            }
+                            { modelInputs.rAfter < 0.9 &&
+                                
+                                <ReferenceDot x={moment(firstDayBelow100).add(1.5, 'week').format("YYYY-MM-DD")} 
+                                    y={200} 
+                                    r={0}
+                                    label={readableMonth(firstDayBelow100)}></ReferenceDot>
+                            }
+
+                        </LineChart>
+                    </ResponsiveContainer>
+                )}
+            </Media>
+
 
             <div className="hideable">
                 <h3>Putting it all together</h3>

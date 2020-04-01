@@ -1,6 +1,7 @@
 import React from "react"
 import ScenarioEditingComponent from "./scenarioEditingComponent"
 import RSlider from "./rSlider"
+import Media from 'react-media';
 
 import {
     ComposedChart, Line, 
@@ -40,14 +41,7 @@ class AboutModel extends ScenarioEditingComponent {
         };
     }
 
-    componentWillMount() {
-        this.width = window ? window.innerWidth : 1000;
-    }
-
     render() {        
-        
-        const isNarrow = this.width < 600;
-
         const scenarios = this.props.modelData;
         const modelInputs = this.props.modelInputs;
         const chosenScenario = modelInputs.scenario;
@@ -157,44 +151,51 @@ class AboutModel extends ScenarioEditingComponent {
                 </p>
                 
                 <h6 className="chartTitle">Actual vs. Predicted Deaths Each Day in Your Scenario</h6>
-                <ResponsiveContainer width="100%" height={400}>
-                    <ComposedChart
-                        data={scenarioDeathData}
-                        margin={{
-                            top: 20, right: 0, left: 0, bottom: 0,
-                        }}
-                    >
+                <Media queries={{
+                        small: "(max-width: 699px)",
+                        large: "(min-width: 700px)"
+                    }}>
+                    {matches => (
+                        <ResponsiveContainer width="100%" height={400}>
+                            <ComposedChart
+                                data={scenarioDeathData}
+                                margin={{
+                                    top: 20, right: 0, left: 0, bottom: 0,
+                                }}
+                            >
 
 
 
-                        <Line type="monotone" dataKey="currentDeadInc"  
-                            name="My Scenario" stroke="#cbd5e8" 
-                            strokeWidth={10} dot={false}/>
+                                <Line type="monotone" dataKey="currentDeadInc"  
+                                    name="My Scenario" stroke="#cbd5e8" 
+                                    strokeWidth={10} dot={false}/>
 
-                        <Bar dataKey="confirmedDeathsInc"
-                            name="Actual Deaths" fill="#fc8d62"/>
+                                <Bar dataKey="confirmedDeathsInc"
+                                    name="Actual Deaths" fill="#fc8d62"/>
 
 
-                        { flatteningStarted && 
-                            <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")} />
-                        }
-                        { flatteningStarted && 
-                            <ReferenceDot x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
-                                y={maxValue * 0.9}
-                                r={0}
-                                inFront={true}
-                                label={"Flattening " + flatteningVerb} />
-                        }
-                        <XAxis type="category" dataKey="date" 
-                            ticks={listOfMonths("2020-01-01", "2020-12-01")}
-                            interval={isNarrow ? 1 : 0}
-                            tickFormatter={readableMonth}
-                            />                        
-                        <YAxis type="number" />
-                        <Tooltip formatter={readableInteger()}/>
-                        <Legend iconType="square"/>
-                    </ComposedChart>
-                </ResponsiveContainer>
+                                { flatteningStarted && 
+                                    <ReferenceLine x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")} />
+                                }
+                                { flatteningStarted && 
+                                    <ReferenceDot x={moment(scenarios[chosenScenario].scenario.thresholdDate).format("YYYY-MM-DD")}
+                                        y={maxValue * 0.9}
+                                        r={0}
+                                        inFront={true}
+                                        label={"Flattening " + flatteningVerb} />
+                                }
+                                <XAxis type="category" dataKey="date" 
+                                    ticks={listOfMonths("2020-01-01", "2020-12-01")}
+                                    interval={matches.small ? 1 : 0}
+                                    tickFormatter={readableMonth}
+                                    />                        
+                                <YAxis type="number" />
+                                <Tooltip formatter={readableInteger()}/>
+                                <Legend iconType="square"/>
+                            </ComposedChart>    
+                        </ResponsiveContainer>
+                    )}
+                </Media>
 
                 <p className="hideable">
                     Please choose a scenario.  

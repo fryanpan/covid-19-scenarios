@@ -30,6 +30,8 @@ Data comes from the Johns Hopkins dashboard [Github repo](https://github.com/CSS
 Historical data changed formats multiple times, so there is a [download_data.js](./data_download/download_data.js) script that tries to clean up
 various legacy formats.
 
+All of the data driving this site lives in the [src/data](./src/data) folder.
+
 To refresh the data, please run this:
 ```
     npm run refresh_data

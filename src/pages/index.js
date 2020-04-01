@@ -155,9 +155,16 @@ class IndexPage extends React.Component {
       <p>
       Thank you to Fish, Joanna, and Ahon for providing amazing feedback.
       </p>
+
+      <h1>About</h1>
+
       <p>
       Please let me know if you have any questions or tips on anything to improve.
       Or if you have any burning questions that need an answer.
+      I'm available here <a href="mailto:fryanpan@gmail.com">by email</a>.
+      And the code and data for this site are on Github <a href="https://github.com/fryanpan/covid-19-scenarios">here</a>.
+
+      
       </p>
 
       {/* @TODO Make this page more shareable -- keep your personal choices and make it possible to send a link

@@ -142,6 +142,14 @@ class MyCommunity extends React.Component {
                     And if we are doing all of these things, then when might the number of active
                     infections be low enough to relax strict distancing measures?
                 </p>
+
+                <p class="hideable">
+                    Caveat for this entire section -- while these are common questions, your community 
+                    might be managing against a different set of metrics than the ones I picked.  If your community 
+                    is not using these metrics, ask them what they are tracking and using to tell if suppression measures
+                    are effective.
+                </p>
+
             </div>
 
             <h3>Are we reducing transmission enough?</h3>
@@ -293,7 +301,17 @@ class MyCommunity extends React.Component {
                         domain={[0, max => Math.max(max, 1)]} />
                     <Tooltip formatter={readablePercent(2)}/>
                 </LineChart>
-            </ResponsiveContainer> 
+            </ResponsiveContainer>
+
+<br/>
+            <p className="hideable">
+                P.S. If this data is helpful for the you to know, ask your community to provide it.
+                This chart is just a guess based on a fuzzy scenario you picked.
+                Some communities have a better data on 
+                not just how much testing they're doing, but also how fast the turnaround time is to get a result.
+                The less delay, the easier it is to organize quarantines.
+            </p>
+
             
             <h3>When will we be out of the woods?</h3>
 
@@ -365,6 +383,12 @@ class MyCommunity extends React.Component {
                     </ResponsiveContainer>
                 )}
             </Media>
+
+            <p className="hideable">
+                As with the last chart, your community may not be managing towards this metric.
+                If this is information that's useful to know, ask your community for more information
+                about what they are measuring to manage suppression techniques.
+            </p>
 
 
             <div className="hideable">

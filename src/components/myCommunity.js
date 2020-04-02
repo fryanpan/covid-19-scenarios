@@ -414,8 +414,8 @@ class MyCommunity extends React.Component {
                     Unfortunately, increasing death counts are what we should expect in an outbreak.
                     More than a month ago, I already wrote down what I would personally do 
                     in each plausible scenario.  What's more interesting to me is knowing
-                    what future scenarios are most likely and when we're changing to a different
-                    scenario.
+                    what future scenarios are most likely and when we've done enough to 
+                    change our future to a different scenario.
                 </p>
             </div>
         </div>

@@ -335,7 +335,7 @@ class MyCommunity extends React.Component {
                 </p>
             </div>
 
-            <h6 className="chartTitle">Active Cases Per Million People Over Time</h6>
+            <h6 className="chartTitle">Estimated Active Cases Per Million People Over Time</h6>
             <Media queries={{
                 small: "(max-width: 699px)",
                 large: "(min-width: 700px)"

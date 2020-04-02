@@ -36,6 +36,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Afghanistan,All,120,4,2
 2020-03-30,Afghanistan,All,170,4,2
 2020-03-31,Afghanistan,All,174,4,5
+2020-04-01,Afghanistan,All,237,4,5
 2020-03-09,Albania,All,2,0,0
 2020-03-10,Albania,All,10,0,0
 2020-03-11,Albania,All,12,1,0
@@ -59,6 +60,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Albania,All,212,10,33
 2020-03-30,Albania,All,223,11,44
 2020-03-31,Albania,All,243,15,52
+2020-04-01,Albania,All,259,15,67
 2020-02-25,Algeria,All,1,0,0
 2020-02-26,Algeria,All,1,0,0
 2020-02-27,Algeria,All,1,0,0
@@ -95,6 +97,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Algeria,All,511,31,31
 2020-03-30,Algeria,All,584,35,37
 2020-03-31,Algeria,All,716,44,46
+2020-04-01,Algeria,All,847,58,61
 2020-03-02,Andorra,All,1,0,0
 2020-03-03,Andorra,All,1,0,0
 2020-03-04,Andorra,All,1,0,0
@@ -125,6 +128,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Andorra,All,334,6,1
 2020-03-30,Andorra,All,370,8,10
 2020-03-31,Andorra,All,376,12,10
+2020-04-01,Andorra,All,390,14,10
 2020-03-20,Angola,All,1,0,0
 2020-03-21,Angola,All,2,0,0
 2020-03-22,Angola,All,2,0,0
@@ -137,6 +141,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Angola,All,7,2,0
 2020-03-30,Angola,All,7,2,0
 2020-03-31,Angola,All,7,2,1
+2020-04-01,Angola,All,8,2,1
 2020-03-13,Antigua and Barbuda,All,1,0,0
 2020-03-14,Antigua and Barbuda,All,1,0,0
 2020-03-15,Antigua and Barbuda,All,1,0,0
@@ -156,6 +161,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Antigua and Barbuda,All,7,0,0
 2020-03-30,Antigua and Barbuda,All,7,0,0
 2020-03-31,Antigua and Barbuda,All,7,0,0
+2020-04-01,Antigua and Barbuda,All,7,0,0
 2020-03-03,Argentina,All,1,0,0
 2020-03-04,Argentina,All,1,0,0
 2020-03-05,Argentina,All,1,0,0
@@ -185,6 +191,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Argentina,All,745,19,72
 2020-03-30,Argentina,All,820,23,228
 2020-03-31,Argentina,All,1054,27,240
+2020-04-01,Argentina,All,1054,28,248
 2020-03-01,Armenia,All,1,0,0
 2020-03-02,Armenia,All,1,0,0
 2020-03-03,Armenia,All,1,0,0
@@ -216,6 +223,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Armenia,All,424,3,30
 2020-03-30,Armenia,All,482,3,30
 2020-03-31,Armenia,All,532,3,30
+2020-04-01,Armenia,All,571,4,31
 2020-03-13,Aruba,All,2,0,0
 2020-03-14,Aruba,All,2,0,0
 2020-03-15,Aruba,All,2,0,0
@@ -291,6 +299,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,All,3984,16,244
 2020-03-30,Australia,All,4361,17,257
 2020-03-31,Australia,All,4559,18,358
+2020-04-01,Australia,All,4862,20,422
 2020-03-13,Australia,Australian Capital Territory,1,0,0
 2020-03-14,Australia,Australian Capital Territory,1,0,0
 2020-03-15,Australia,Australian Capital Territory,1,0,0
@@ -310,6 +319,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Australian Capital Territory,77,0,2
 2020-03-30,Australia,Australian Capital Territory,78,1,2
 2020-03-31,Australia,Australian Capital Territory,80,1,3
+2020-04-01,Australia,Australian Capital Territory,84,1,8
 2020-03-22,Australia,External territories,0,0,0
 2020-02-21,Australia,From Diamond Princess,4,0,0
 2020-02-22,Australia,From Diamond Princess,7,0,0
@@ -407,6 +417,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,New South Wales,1791,8,4
 2020-03-30,Australia,New South Wales,2032,8,4
 2020-03-31,Australia,New South Wales,2032,8,4
+2020-04-01,Australia,New South Wales,2182,9,4
 2020-03-04,Australia,Northern Territory,1,0,0
 2020-03-05,Australia,Northern Territory,1,0,0
 2020-03-06,Australia,Northern Territory,0,0,0
@@ -435,6 +446,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Northern Territory,15,0,0
 2020-03-30,Australia,Northern Territory,15,0,0
 2020-03-31,Australia,Northern Territory,17,0,0
+2020-04-01,Australia,Northern Territory,19,0,0
 2020-01-30,Australia,Queensland,3,0,0
 2020-01-31,Australia,Queensland,2,0,0
 2020-02-01,Australia,Queensland,3,0,0
@@ -497,6 +509,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Queensland,656,2,8
 2020-03-30,Australia,Queensland,689,2,8
 2020-03-31,Australia,Queensland,743,2,8
+2020-04-01,Australia,Queensland,781,2,8
 2020-02-01,Australia,South Australia,1,0,0
 2020-02-02,Australia,South Australia,2,0,0
 2020-02-03,Australia,South Australia,2,0,0
@@ -557,6 +570,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,South Australia,299,0,6
 2020-03-30,Australia,South Australia,305,0,6
 2020-03-31,Australia,South Australia,337,0,6
+2020-04-01,Australia,South Australia,367,0,6
 2020-03-02,Australia,Tasmania,1,0,0
 2020-03-03,Australia,Tasmania,1,0,0
 2020-03-04,Australia,Tasmania,1,0,0
@@ -587,6 +601,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Tasmania,66,0,5
 2020-03-30,Australia,Tasmania,66,0,5
 2020-03-31,Australia,Tasmania,69,1,5
+2020-04-01,Australia,Tasmania,69,2,5
 2020-01-27,Australia,Victoria,1,0,0
 2020-01-28,Australia,Victoria,1,0,0
 2020-01-29,Australia,Victoria,1,0,0
@@ -652,6 +667,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Victoria,769,4,191
 2020-03-30,Australia,Victoria,821,4,191
 2020-03-31,Australia,Victoria,917,4,291
+2020-04-01,Australia,Victoria,968,4,343
 2020-02-29,Australia,Western Australia,2,0,0
 2020-03-01,Australia,Western Australia,2,1,0
 2020-03-02,Australia,Western Australia,2,1,0
@@ -684,6 +700,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Australia,Western Australia,311,2,28
 2020-03-30,Australia,Western Australia,355,2,41
 2020-03-31,Australia,Western Australia,364,2,41
+2020-04-01,Australia,Western Australia,392,2,48
 2020-02-25,Austria,All,2,0,0
 2020-02-26,Austria,All,2,0,0
 2020-02-27,Austria,All,3,0,0
@@ -720,6 +737,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Austria,All,8788,86,479
 2020-03-30,Austria,All,9618,108,636
 2020-03-31,Austria,All,10180,128,1095
+2020-04-01,Austria,All,10711,146,1436
 2020-02-25,Austria,None,2,0,0
 2020-02-28,Azerbaijan,All,1,0,0
 2020-03-01,Azerbaijan,All,3,0,0
@@ -753,6 +771,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Azerbaijan,All,209,4,15
 2020-03-30,Azerbaijan,All,273,4,26
 2020-03-31,Azerbaijan,All,298,5,26
+2020-04-01,Azerbaijan,All,359,5,26
 2020-03-22,Bahamas,All,4,0,0
 2020-03-23,Bahamas,All,4,0,0
 2020-03-24,Bahamas,All,5,0,1
@@ -763,6 +782,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bahamas,All,11,0,1
 2020-03-30,Bahamas,All,14,0,1
 2020-03-31,Bahamas,All,14,0,1
+2020-04-01,Bahamas,All,21,1,1
 2020-03-19,"Bahamas, The",All,3,0,0
 2020-03-20,"Bahamas, The",All,3,0,0
 2020-03-21,"Bahamas, The",All,4,0,0
@@ -803,6 +823,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bahrain,All,499,4,272
 2020-03-30,Bahrain,All,515,4,279
 2020-03-31,Bahrain,All,567,4,295
+2020-04-01,Bahrain,All,569,4,337
 2020-03-08,Bangladesh,All,3,0,0
 2020-03-09,Bangladesh,All,3,0,0
 2020-03-10,Bangladesh,All,3,0,0
@@ -827,6 +848,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bangladesh,All,48,5,15
 2020-03-30,Bangladesh,All,49,5,19
 2020-03-31,Bangladesh,All,51,5,25
+2020-04-01,Bangladesh,All,54,6,25
 2020-03-17,Barbados,All,2,0,0
 2020-03-18,Barbados,All,2,0,0
 2020-03-19,Barbados,All,5,0,0
@@ -842,6 +864,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Barbados,All,33,0,0
 2020-03-30,Barbados,All,33,0,0
 2020-03-31,Barbados,All,34,0,0
+2020-04-01,Barbados,All,34,0,0
 2020-02-28,Belarus,All,1,0,0
 2020-02-29,Belarus,All,1,0,0
 2020-03-01,Belarus,All,1,0,0
@@ -875,6 +898,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Belarus,All,94,0,32
 2020-03-30,Belarus,All,152,0,32
 2020-03-31,Belarus,All,152,1,47
+2020-04-01,Belarus,All,163,2,53
 2020-02-04,Belgium,All,1,0,0
 2020-02-05,Belgium,All,1,0,0
 2020-02-06,Belgium,All,1,0,0
@@ -932,6 +956,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Belgium,All,10836,431,1359
 2020-03-30,Belgium,All,11899,513,1527
 2020-03-31,Belgium,All,12775,705,1696
+2020-04-01,Belgium,All,13964,828,2132
 2020-03-23,Belize,All,1,0,0
 2020-03-24,Belize,All,1,0,0
 2020-03-25,Belize,All,2,0,0
@@ -941,6 +966,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Belize,All,2,0,0
 2020-03-30,Belize,All,3,0,0
 2020-03-31,Belize,All,3,0,0
+2020-04-01,Belize,All,3,0,0
 2020-03-16,Benin,All,1,0,0
 2020-03-17,Benin,All,1,0,0
 2020-03-18,Benin,All,2,0,0
@@ -957,6 +983,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Benin,All,6,0,0
 2020-03-30,Benin,All,6,0,0
 2020-03-31,Benin,All,9,0,1
+2020-04-01,Benin,All,13,0,1
 2020-03-06,Bhutan,All,1,0,0
 2020-03-07,Bhutan,All,1,0,0
 2020-03-08,Bhutan,All,1,0,0
@@ -983,6 +1010,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bhutan,All,4,0,0
 2020-03-30,Bhutan,All,4,0,0
 2020-03-31,Bhutan,All,4,0,0
+2020-04-01,Bhutan,All,4,0,0
 2020-03-11,Bolivia,All,2,0,0
 2020-03-12,Bolivia,All,2,0,0
 2020-03-13,Bolivia,All,3,0,0
@@ -1004,6 +1032,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bolivia,All,81,1,0
 2020-03-30,Bolivia,All,97,4,0
 2020-03-31,Bolivia,All,107,6,0
+2020-04-01,Bolivia,All,115,7,1
 2020-03-05,Bosnia and Herzegovina,All,2,0,0
 2020-03-06,Bosnia and Herzegovina,All,2,0,0
 2020-03-07,Bosnia and Herzegovina,All,3,0,0
@@ -1031,8 +1060,10 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bosnia and Herzegovina,All,323,6,8
 2020-03-30,Bosnia and Herzegovina,All,368,10,17
 2020-03-31,Bosnia and Herzegovina,All,420,13,17
+2020-04-01,Bosnia and Herzegovina,All,459,13,19
 2020-03-30,Botswana,All,3,0,0
 2020-03-31,Botswana,All,4,1,0
+2020-04-01,Botswana,All,4,1,0
 2020-01-23,Brazil,All,0,0,0
 2020-02-26,Brazil,All,1,0,0
 2020-02-27,Brazil,All,1,0,0
@@ -1069,6 +1100,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Brazil,All,4256,136,6
 2020-03-30,Brazil,All,4579,159,120
 2020-03-31,Brazil,All,5717,201,127
+2020-04-01,Brazil,All,6836,240,127
 2020-03-09,Brunei,All,1,0,0
 2020-03-10,Brunei,All,1,0,0
 2020-03-11,Brunei,All,11,0,0
@@ -1092,6 +1124,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Brunei,All,126,1,34
 2020-03-30,Brunei,All,127,1,38
 2020-03-31,Brunei,All,129,1,45
+2020-04-01,Brunei,All,131,1,52
 2020-03-08,Bulgaria,All,4,0,0
 2020-03-09,Bulgaria,All,4,0,0
 2020-03-10,Bulgaria,All,4,0,0
@@ -1116,6 +1149,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Bulgaria,All,346,8,14
 2020-03-30,Bulgaria,All,359,8,17
 2020-03-31,Bulgaria,All,399,8,17
+2020-04-01,Bulgaria,All,422,10,20
 2020-03-10,Burkina Faso,All,1,0,0
 2020-03-11,Burkina Faso,All,2,0,0
 2020-03-12,Burkina Faso,All,2,0,0
@@ -1138,12 +1172,15 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Burkina Faso,All,222,12,23
 2020-03-30,Burkina Faso,All,246,12,31
 2020-03-31,Burkina Faso,All,261,14,32
+2020-04-01,Burkina Faso,All,282,16,46
 2020-03-27,Burma,All,8,0,0
 2020-03-28,Burma,All,8,0,0
 2020-03-29,Burma,All,10,0,0
 2020-03-30,Burma,All,14,0,0
 2020-03-31,Burma,All,15,1,0
+2020-04-01,Burma,All,15,1,0
 2020-03-31,Burundi,All,2,0,0
+2020-04-01,Burundi,All,2,0,0
 2020-03-20,Cabo Verde,All,1,0,0
 2020-03-21,Cabo Verde,All,3,0,0
 2020-03-22,Cabo Verde,All,3,0,0
@@ -1156,6 +1193,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cabo Verde,All,6,1,0
 2020-03-30,Cabo Verde,All,6,1,0
 2020-03-31,Cabo Verde,All,6,1,0
+2020-04-01,Cabo Verde,All,6,1,0
 2020-01-27,Cambodia,All,1,0,0
 2020-01-28,Cambodia,All,1,0,0
 2020-01-29,Cambodia,All,1,0,0
@@ -1221,6 +1259,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cambodia,All,103,0,21
 2020-03-30,Cambodia,All,107,0,21
 2020-03-31,Cambodia,All,109,0,23
+2020-04-01,Cambodia,All,109,0,25
 2020-03-06,Cameroon,All,1,0,0
 2020-03-07,Cameroon,All,1,0,0
 2020-03-08,Cameroon,All,2,0,0
@@ -1247,6 +1286,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cameroon,All,139,6,5
 2020-03-30,Cameroon,All,139,6,5
 2020-03-31,Cameroon,All,193,6,5
+2020-04-01,Cameroon,All,233,6,10
 2020-01-26,Canada,All,1,0,0
 2020-01-27,Canada,All,1,0,0
 2020-01-28,Canada,All,2,0,0
@@ -1313,6 +1353,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,All,6280,64,466
 2020-03-30,Canada,All,7398,80,466
 2020-03-31,Canada,All,8527,101,1592
+2020-04-01,Canada,All,9560,109,1324
 2020-03-09,Canada,Alberta,7,0,0
 2020-03-10,Canada,Alberta,7,0,0
 2020-03-11,Canada,Alberta,19,0,0
@@ -1336,6 +1377,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Alberta,621,2,0
 2020-03-30,Canada,Alberta,661,3,0
 2020-03-31,Canada,Alberta,690,8,0
+2020-04-01,Canada,Alberta,754,9,0
 2020-01-28,Canada,British Columbia,1,0,0
 2020-01-29,Canada,British Columbia,1,0,0
 2020-01-30,Canada,British Columbia,1,0,0
@@ -1400,6 +1442,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,British Columbia,884,17,0
 2020-03-30,Canada,British Columbia,970,19,0
 2020-03-31,Canada,British Columbia,1013,24,0
+2020-04-01,Canada,British Columbia,1013,24,0
 2020-03-06,Canada,"Calgary, Alberta",1,0,0
 2020-03-07,Canada,"Calgary, Alberta",1,0,0
 2020-03-08,Canada,"Calgary, Alberta",1,0,0
@@ -1413,6 +1456,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Diamond Princess,0,1,0
 2020-03-30,Canada,Diamond Princess,0,1,0
 2020-03-31,Canada,Diamond Princess,0,1,0
+2020-04-01,Canada,Diamond Princess,0,1,0
 2020-03-07,Canada,"Edmonton, Alberta",1,0,0
 2020-03-08,Canada,"Edmonton, Alberta",3,0,0
 2020-03-13,Canada,Grand Princess,2,0,0
@@ -1432,6 +1476,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Grand Princess,13,0,0
 2020-03-30,Canada,Grand Princess,13,0,0
 2020-03-31,Canada,Grand Princess,13,0,0
+2020-04-01,Canada,Grand Princess,13,0,0
 2020-03-13,Canada,Manitoba,4,0,0
 2020-03-14,Canada,Manitoba,4,0,0
 2020-03-15,Canada,Manitoba,4,0,0
@@ -1451,6 +1496,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Manitoba,72,1,0
 2020-03-30,Canada,Manitoba,96,1,0
 2020-03-31,Canada,Manitoba,103,1,0
+2020-04-01,Canada,Manitoba,127,1,0
 2020-03-11,Canada,New Brunswick,1,0,0
 2020-03-12,Canada,New Brunswick,1,0,0
 2020-03-13,Canada,New Brunswick,1,0,0
@@ -1472,6 +1518,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,New Brunswick,66,0,0
 2020-03-30,Canada,New Brunswick,68,0,0
 2020-03-31,Canada,New Brunswick,70,0,0
+2020-04-01,Canada,New Brunswick,81,0,0
 2020-03-15,Canada,Newfoundland and Labrador,1,0,0
 2020-03-16,Canada,Newfoundland and Labrador,1,0,0
 2020-03-17,Canada,Newfoundland and Labrador,3,0,0
@@ -1489,6 +1536,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Newfoundland and Labrador,135,0,0
 2020-03-30,Canada,Newfoundland and Labrador,148,1,0
 2020-03-31,Canada,Newfoundland and Labrador,152,1,0
+2020-04-01,Canada,Newfoundland and Labrador,175,1,0
 2020-03-21,Canada,Northwest Territories,1,0,0
 2020-03-22,Canada,Northwest Territories,1,0,0
 2020-03-26,Canada,Northwest Territories,1,0,0
@@ -1497,6 +1545,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Northwest Territories,1,0,0
 2020-03-30,Canada,Northwest Territories,1,0,0
 2020-03-31,Canada,Northwest Territories,1,0,0
+2020-04-01,Canada,Northwest Territories,2,0,0
 2020-03-16,Canada,Nova Scotia,5,0,0
 2020-03-17,Canada,Nova Scotia,7,0,0
 2020-03-18,Canada,Nova Scotia,12,0,0
@@ -1513,6 +1562,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Nova Scotia,122,0,0
 2020-03-30,Canada,Nova Scotia,127,0,0
 2020-03-31,Canada,Nova Scotia,147,0,0
+2020-04-01,Canada,Nova Scotia,173,0,0
 2020-01-26,Canada,Ontario,1,0,0
 2020-01-27,Canada,Ontario,1,0,0
 2020-01-28,Canada,Ontario,1,0,0
@@ -1579,6 +1629,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Ontario,1355,21,0
 2020-03-30,Canada,Ontario,1706,31,0
 2020-03-31,Canada,Ontario,1966,33,0
+2020-04-01,Canada,Ontario,2392,37,0
 2020-03-15,Canada,Prince Edward Island,1,0,0
 2020-03-16,Canada,Prince Edward Island,1,0,0
 2020-03-17,Canada,Prince Edward Island,1,0,0
@@ -1596,6 +1647,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Prince Edward Island,11,0,0
 2020-03-30,Canada,Prince Edward Island,18,0,0
 2020-03-31,Canada,Prince Edward Island,21,0,0
+2020-04-01,Canada,Prince Edward Island,21,0,0
 2020-02-28,Canada,Quebec,1,0,0
 2020-02-29,Canada,Quebec,1,0,0
 2020-03-01,Canada,Quebec,1,0,0
@@ -1629,6 +1681,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Quebec,2840,22,0
 2020-03-30,Canada,Quebec,3430,22,0
 2020-03-31,Canada,Quebec,4162,31,0
+2020-04-01,Canada,Quebec,4611,33,0
 2020-03-24,Canada,Recovered,0,0,110
 2020-03-25,Canada,Recovered,0,0,183
 2020-03-26,Canada,Recovered,0,0,184
@@ -1637,6 +1690,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Recovered,0,0,466
 2020-03-30,Canada,Recovered,0,0,466
 2020-03-31,Canada,Recovered,0,0,1592
+2020-04-01,Canada,Recovered,0,0,1324
 2020-03-13,Canada,Saskatchewan,2,0,0
 2020-03-14,Canada,Saskatchewan,2,0,0
 2020-03-15,Canada,Saskatchewan,2,0,0
@@ -1656,12 +1710,14 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Canada,Saskatchewan,156,0,0
 2020-03-30,Canada,Saskatchewan,156,2,0
 2020-03-31,Canada,Saskatchewan,184,2,0
+2020-04-01,Canada,Saskatchewan,193,3,0
 2020-03-26,Canada,Yukon,3,0,0
 2020-03-27,Canada,Yukon,3,0,0
 2020-03-28,Canada,Yukon,4,0,0
 2020-03-29,Canada,Yukon,4,0,0
 2020-03-30,Canada,Yukon,4,0,0
 2020-03-31,Canada,Yukon,5,0,0
+2020-04-01,Canada,Yukon,5,0,0
 2020-03-21,Cape Verde,All,1,0,0
 2020-03-13,Cayman Islands,All,1,0,0
 2020-03-14,Cayman Islands,All,1,0,0
@@ -1683,6 +1739,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Central African Republic,All,3,0,0
 2020-03-30,Central African Republic,All,3,0,0
 2020-03-31,Central African Republic,All,3,0,0
+2020-04-01,Central African Republic,All,3,0,0
 2020-03-19,Chad,All,1,0,0
 2020-03-20,Chad,All,1,0,0
 2020-03-21,Chad,All,1,0,0
@@ -1696,6 +1753,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Chad,All,3,0,0
 2020-03-30,Chad,All,5,0,0
 2020-03-31,Chad,All,7,0,0
+2020-04-01,Chad,All,7,0,0
 2020-03-10,Channel Islands,All,1,0,0
 2020-03-03,Chile,All,1,0,0
 2020-03-04,Chile,All,1,0,0
@@ -1726,6 +1784,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Chile,All,2139,7,75
 2020-03-30,Chile,All,2449,8,156
 2020-03-31,Chile,All,2738,12,156
+2020-04-01,Chile,All,3031,16,234
 2020-01-22,China,All,547,17,28
 2020-01-23,China,All,641,18,30
 2020-01-24,China,All,918,26,36
@@ -1796,6 +1855,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,All,82122,3304,75582
 2020-03-30,China,All,82198,3308,75923
 2020-03-31,China,All,82279,3309,76206
+2020-04-01,China,All,82361,3316,76405
 2020-01-22,China,Anhui,1,0,0
 2020-01-23,China,Anhui,9,0,0
 2020-01-24,China,Anhui,15,0,0
@@ -1866,6 +1926,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Anhui,990,6,984
 2020-03-30,China,Anhui,990,6,984
 2020-03-31,China,Anhui,990,6,984
+2020-04-01,China,Anhui,990,6,984
 2020-01-22,China,Beijing,14,0,0
 2020-01-23,China,Beijing,22,0,0
 2020-01-24,China,Beijing,36,0,1
@@ -1936,6 +1997,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Beijing,577,8,412
 2020-03-30,China,Beijing,577,8,415
 2020-03-31,China,Beijing,580,8,418
+2020-04-01,China,Beijing,580,8,418
 2020-01-22,China,Chongqing,6,0,0
 2020-01-23,China,Chongqing,9,0,0
 2020-01-24,China,Chongqing,27,0,0
@@ -2006,6 +2068,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Chongqing,579,6,570
 2020-03-30,China,Chongqing,579,6,570
 2020-03-31,China,Chongqing,579,6,570
+2020-04-01,China,Chongqing,579,6,570
 2020-01-22,China,Fujian,1,0,0
 2020-01-23,China,Fujian,5,0,0
 2020-01-24,China,Fujian,10,0,0
@@ -2076,6 +2139,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Fujian,338,1,295
 2020-03-30,China,Fujian,340,1,295
 2020-03-31,China,Fujian,343,1,295
+2020-04-01,China,Fujian,345,1,298
 2020-01-22,China,Gansu,0,0,0
 2020-01-23,China,Gansu,2,0,0
 2020-01-24,China,Gansu,2,0,0
@@ -2146,6 +2210,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Gansu,138,2,125
 2020-03-30,China,Gansu,138,2,125
 2020-03-31,China,Gansu,138,2,125
+2020-04-01,China,Gansu,138,2,127
 2020-01-22,China,Guangdong,26,0,0
 2020-01-23,China,Guangdong,32,0,2
 2020-01-24,China,Guangdong,53,0,2
@@ -2216,6 +2281,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Guangdong,1475,8,1349
 2020-03-30,China,Guangdong,1484,8,1351
 2020-03-31,China,Guangdong,1494,8,1356
+2020-04-01,China,Guangdong,1501,8,1357
 2020-01-22,China,Guangxi,2,0,0
 2020-01-23,China,Guangxi,5,0,0
 2020-01-24,China,Guangxi,23,0,0
@@ -2286,6 +2352,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Guangxi,254,2,250
 2020-03-30,China,Guangxi,254,2,250
 2020-03-31,China,Guangxi,254,2,250
+2020-04-01,China,Guangxi,254,2,250
 2020-01-22,China,Guizhou,1,0,0
 2020-01-23,China,Guizhou,3,0,0
 2020-01-24,China,Guizhou,3,0,0
@@ -2356,6 +2423,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Guizhou,146,2,144
 2020-03-30,China,Guizhou,146,2,144
 2020-03-31,China,Guizhou,146,2,144
+2020-04-01,China,Guizhou,146,2,144
 2020-01-22,China,Hainan,4,0,0
 2020-01-23,China,Hainan,5,0,0
 2020-01-24,China,Hainan,8,0,0
@@ -2426,6 +2494,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Hainan,168,6,168
 2020-03-30,China,Hainan,168,6,168
 2020-03-31,China,Hainan,168,6,168
+2020-04-01,China,Hainan,168,6,168
 2020-01-22,China,Hebei,1,0,0
 2020-01-23,China,Hebei,1,1,0
 2020-01-24,China,Hebei,2,1,0
@@ -2496,6 +2565,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Hebei,319,6,310
 2020-03-30,China,Hebei,321,6,310
 2020-03-31,China,Hebei,321,6,310
+2020-04-01,China,Hebei,323,6,310
 2020-01-22,China,Heilongjiang,0,0,0
 2020-01-23,China,Heilongjiang,2,0,0
 2020-01-24,China,Heilongjiang,4,1,0
@@ -2566,6 +2636,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Heilongjiang,484,13,469
 2020-03-30,China,Heilongjiang,484,13,469
 2020-03-31,China,Heilongjiang,484,13,469
+2020-04-01,China,Heilongjiang,484,13,469
 2020-01-22,China,Henan,5,0,0
 2020-01-23,China,Henan,5,0,0
 2020-01-24,China,Henan,9,0,0
@@ -2636,6 +2707,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Henan,1276,22,1251
 2020-03-30,China,Henan,1276,22,1251
 2020-03-31,China,Henan,1276,22,1251
+2020-04-01,China,Henan,1276,22,1251
 2020-01-22,China,Hong Kong,0,0,0
 2020-01-23,China,Hong Kong,2,0,0
 2020-01-24,China,Hong Kong,2,0,0
@@ -2706,6 +2778,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Hong Kong,641,4,112
 2020-03-30,China,Hong Kong,682,4,123
 2020-03-31,China,Hong Kong,714,4,128
+2020-04-01,China,Hong Kong,765,4,147
 2020-01-22,China,Hubei,444,17,28
 2020-01-23,China,Hubei,444,17,28
 2020-01-24,China,Hubei,549,24,31
@@ -2776,6 +2849,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Hubei,67801,3182,62570
 2020-03-30,China,Hubei,67801,3186,62889
 2020-03-31,China,Hubei,67801,3187,63153
+2020-04-01,China,Hubei,67802,3193,63326
 2020-01-22,China,Hunan,4,0,0
 2020-01-23,China,Hunan,9,0,0
 2020-01-24,China,Hunan,24,0,0
@@ -2846,6 +2920,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Hunan,1018,4,1014
 2020-03-30,China,Hunan,1018,4,1014
 2020-03-31,China,Hunan,1018,4,1014
+2020-04-01,China,Hunan,1018,4,1014
 2020-01-22,China,Inner Mongolia,0,0,0
 2020-01-23,China,Inner Mongolia,0,0,0
 2020-01-24,China,Inner Mongolia,1,0,0
@@ -2916,6 +2991,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Inner Mongolia,95,1,74
 2020-03-30,China,Inner Mongolia,97,1,74
 2020-03-31,China,Inner Mongolia,107,1,74
+2020-04-01,China,Inner Mongolia,111,1,74
 2020-01-22,China,Jiangsu,1,0,0
 2020-01-23,China,Jiangsu,5,0,0
 2020-01-24,China,Jiangsu,9,0,0
@@ -2986,6 +3062,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Jiangsu,644,0,631
 2020-03-30,China,Jiangsu,645,0,631
 2020-03-31,China,Jiangsu,646,0,631
+2020-04-01,China,Jiangsu,646,0,631
 2020-01-22,China,Jiangxi,2,0,0
 2020-01-23,China,Jiangxi,7,0,0
 2020-01-24,China,Jiangxi,18,0,0
@@ -3056,6 +3133,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Jiangxi,937,1,934
 2020-03-30,China,Jiangxi,937,1,935
 2020-03-31,China,Jiangxi,937,1,935
+2020-04-01,China,Jiangxi,937,1,935
 2020-01-22,China,Jilin,0,0,0
 2020-01-23,China,Jilin,1,0,0
 2020-01-24,China,Jilin,3,0,0
@@ -3126,6 +3204,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Jilin,98,1,92
 2020-03-30,China,Jilin,98,1,92
 2020-03-31,China,Jilin,98,1,92
+2020-04-01,China,Jilin,98,1,92
 2020-01-22,China,Liaoning,2,0,0
 2020-01-23,China,Liaoning,3,0,0
 2020-01-24,China,Liaoning,4,0,0
@@ -3196,6 +3275,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Liaoning,134,2,124
 2020-03-30,China,Liaoning,136,2,124
 2020-03-31,China,Liaoning,139,2,124
+2020-04-01,China,Liaoning,140,2,124
 2020-03-11,China,Macau,10,0,10
 2020-03-12,China,Macau,10,0,10
 2020-03-13,China,Macau,10,0,10
@@ -3217,6 +3297,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Macau,37,0,10
 2020-03-30,China,Macau,38,0,10
 2020-03-31,China,Macau,41,0,10
+2020-04-01,China,Macau,41,0,10
 2020-01-22,China,Ningxia,1,0,0
 2020-01-23,China,Ningxia,1,0,0
 2020-01-24,China,Ningxia,2,0,0
@@ -3287,6 +3368,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Ningxia,75,0,75
 2020-03-30,China,Ningxia,75,0,75
 2020-03-31,China,Ningxia,75,0,75
+2020-04-01,China,Ningxia,75,0,75
 2020-01-22,China,Qinghai,0,0,0
 2020-01-23,China,Qinghai,0,0,0
 2020-01-24,China,Qinghai,0,0,0
@@ -3357,6 +3439,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Qinghai,18,0,18
 2020-03-30,China,Qinghai,18,0,18
 2020-03-31,China,Qinghai,18,0,18
+2020-04-01,China,Qinghai,18,0,18
 2020-01-22,China,Shaanxi,0,0,0
 2020-01-23,China,Shaanxi,3,0,0
 2020-01-24,China,Shaanxi,5,0,0
@@ -3427,6 +3510,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Shaanxi,253,3,242
 2020-03-30,China,Shaanxi,253,3,242
 2020-03-31,China,Shaanxi,253,3,242
+2020-04-01,China,Shaanxi,255,3,242
 2020-01-22,China,Shandong,2,0,0
 2020-01-23,China,Shandong,6,0,0
 2020-01-24,China,Shandong,15,0,0
@@ -3497,6 +3581,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Shandong,772,7,752
 2020-03-30,China,Shandong,773,7,753
 2020-03-31,China,Shandong,774,7,753
+2020-04-01,China,Shandong,774,7,753
 2020-01-22,China,Shanghai,9,0,0
 2020-01-23,China,Shanghai,16,0,0
 2020-01-24,China,Shanghai,20,0,1
@@ -3567,6 +3652,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Shanghai,492,5,334
 2020-03-30,China,Shanghai,498,5,338
 2020-03-31,China,Shanghai,509,5,341
+2020-04-01,China,Shanghai,516,6,341
 2020-01-22,China,Shanxi,1,0,0
 2020-01-23,China,Shanxi,1,0,0
 2020-01-24,China,Shanxi,1,0,0
@@ -3637,6 +3723,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Shanxi,136,0,133
 2020-03-30,China,Shanxi,136,0,133
 2020-03-31,China,Shanxi,136,0,133
+2020-04-01,China,Shanxi,137,0,133
 2020-01-22,China,Sichuan,5,0,0
 2020-01-23,China,Sichuan,8,0,0
 2020-01-24,China,Sichuan,15,0,0
@@ -3707,6 +3794,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Sichuan,550,3,536
 2020-03-30,China,Sichuan,550,3,536
 2020-03-31,China,Sichuan,550,3,536
+2020-04-01,China,Sichuan,552,3,537
 2020-01-22,China,Tianjin,4,0,0
 2020-01-23,China,Tianjin,4,0,0
 2020-01-24,China,Tianjin,8,0,0
@@ -3777,6 +3865,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Tianjin,166,3,133
 2020-03-30,China,Tianjin,174,3,133
 2020-03-31,China,Tianjin,174,3,135
+2020-04-01,China,Tianjin,176,3,135
 2020-01-22,China,Tibet,0,0,0
 2020-01-23,China,Tibet,0,0,0
 2020-01-30,China,Tibet,1,0,0
@@ -3841,6 +3930,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Tibet,1,0,1
 2020-03-30,China,Tibet,1,0,1
 2020-03-31,China,Tibet,1,0,1
+2020-04-01,China,Tibet,1,0,1
 2020-01-22,China,Xinjiang,0,0,0
 2020-01-23,China,Xinjiang,2,0,0
 2020-01-24,China,Xinjiang,2,0,0
@@ -3911,6 +4001,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Xinjiang,76,3,73
 2020-03-30,China,Xinjiang,76,3,73
 2020-03-31,China,Xinjiang,76,3,73
+2020-04-01,China,Xinjiang,76,3,73
 2020-01-22,China,Yunnan,1,0,0
 2020-01-23,China,Yunnan,2,0,0
 2020-01-24,China,Yunnan,5,0,0
@@ -3981,6 +4072,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Yunnan,180,2,172
 2020-03-30,China,Yunnan,180,2,172
 2020-03-31,China,Yunnan,182,2,172
+2020-04-01,China,Yunnan,182,2,172
 2020-01-22,China,Zhejiang,10,0,0
 2020-01-23,China,Zhejiang,27,0,0
 2020-01-24,China,Zhejiang,43,0,1
@@ -4051,6 +4143,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,China,Zhejiang,1254,1,1225
 2020-03-30,China,Zhejiang,1255,1,1225
 2020-03-31,China,Zhejiang,1257,1,1226
+2020-04-01,China,Zhejiang,1257,1,1226
 2020-01-23,Colombia,All,0,0,0
 2020-03-06,Colombia,All,1,0,0
 2020-03-07,Colombia,All,1,0,0
@@ -4078,6 +4171,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Colombia,All,702,10,10
 2020-03-30,Colombia,All,798,12,15
 2020-03-31,Colombia,All,906,16,31
+2020-04-01,Colombia,All,1065,17,39
 2020-03-06,Costa Rica,All,1,0,0
 2020-03-07,Costa Rica,All,1,0,0
 2020-03-08,Costa Rica,All,5,0,0
@@ -4104,6 +4198,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Costa Rica,All,314,2,3
 2020-03-30,Costa Rica,All,330,2,4
 2020-03-31,Costa Rica,All,347,2,4
+2020-04-01,Costa Rica,All,375,2,4
 2020-03-11,Cote d'Ivoire,All,1,0,0
 2020-03-12,Cote d'Ivoire,All,1,0,0
 2020-03-13,Cote d'Ivoire,All,1,0,0
@@ -4125,6 +4220,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cote d'Ivoire,All,165,1,4
 2020-03-30,Cote d'Ivoire,All,168,1,6
 2020-03-31,Cote d'Ivoire,All,179,1,7
+2020-04-01,Cote d'Ivoire,All,190,1,9
 2020-02-25,Croatia,All,1,0,0
 2020-02-26,Croatia,All,3,0,0
 2020-02-27,Croatia,All,3,0,0
@@ -4161,6 +4257,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Croatia,All,713,6,52
 2020-03-30,Croatia,All,790,6,67
 2020-03-31,Croatia,All,867,6,67
+2020-04-01,Croatia,All,963,6,73
 2020-03-11,Cruise Ship,All,696,7,325
 2020-03-12,Cruise Ship,All,696,7,325
 2020-03-13,Cruise Ship,All,696,7,325
@@ -4207,6 +4304,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cuba,All,139,3,4
 2020-03-30,Cuba,All,170,4,4
 2020-03-31,Cuba,All,186,6,8
+2020-04-01,Cuba,All,212,6,12
 2020-03-14,Curacao,All,1,0,0
 2020-03-15,Curacao,All,1,0,0
 2020-03-09,Cyprus,All,2,0,0
@@ -4232,6 +4330,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Cyprus,All,214,5,15
 2020-03-30,Cyprus,All,230,7,22
 2020-03-31,Cyprus,All,262,8,23
+2020-04-01,Cyprus,All,320,9,28
 2020-03-01,Czech Republic,All,3,0,0
 2020-03-02,Czech Republic,All,3,0,0
 2020-03-03,Czech Republic,All,5,0,0
@@ -4263,6 +4362,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Czechia,All,2817,16,11
 2020-03-30,Czechia,All,3001,23,25
 2020-03-31,Czechia,All,3308,31,45
+2020-04-01,Czechia,All,3508,39,61
 2020-02-27,Denmark,All,1,0,0
 2020-02-28,Denmark,All,1,0,0
 2020-02-29,Denmark,All,3,0,0
@@ -4297,6 +4397,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Denmark,All,2395,72,1
 2020-03-30,Denmark,All,2577,77,1
 2020-03-31,Denmark,All,2860,90,1
+2020-04-01,Denmark,All,3107,104,894
 2020-03-11,Denmark,Faroe Islands,2,0,0
 2020-03-12,Denmark,Faroe Islands,2,0,0
 2020-03-13,Denmark,Faroe Islands,3,0,0
@@ -4318,6 +4419,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Denmark,Faroe Islands,159,0,70
 2020-03-30,Denmark,Faroe Islands,168,0,70
 2020-03-31,Denmark,Faroe Islands,169,0,74
+2020-04-01,Denmark,Faroe Islands,173,0,75
 2020-03-19,Denmark,Greenland,2,0,0
 2020-03-20,Denmark,Greenland,2,0,0
 2020-03-21,Denmark,Greenland,2,0,0
@@ -4331,6 +4433,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Denmark,Greenland,10,0,2
 2020-03-30,Denmark,Greenland,10,0,2
 2020-03-31,Denmark,Greenland,10,0,2
+2020-04-01,Denmark,Greenland,10,0,2
 2020-03-25,Diamond Princess,All,712,10,587
 2020-03-26,Diamond Princess,All,712,10,597
 2020-03-27,Diamond Princess,All,712,10,597
@@ -4338,6 +4441,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Diamond Princess,All,712,10,603
 2020-03-30,Diamond Princess,All,712,10,603
 2020-03-31,Diamond Princess,All,712,10,603
+2020-04-01,Diamond Princess,All,712,11,603
 2020-03-18,Djibouti,All,1,0,0
 2020-03-19,Djibouti,All,1,0,0
 2020-03-20,Djibouti,All,1,0,0
@@ -4352,6 +4456,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Djibouti,All,18,0,0
 2020-03-30,Djibouti,All,18,0,0
 2020-03-31,Djibouti,All,30,0,0
+2020-04-01,Djibouti,All,33,0,0
 2020-03-22,Dominica,All,1,0,0
 2020-03-23,Dominica,All,2,0,0
 2020-03-24,Dominica,All,2,0,0
@@ -4362,6 +4467,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Dominica,All,11,0,0
 2020-03-30,Dominica,All,11,0,0
 2020-03-31,Dominica,All,12,0,0
+2020-04-01,Dominica,All,12,0,0
 2020-03-01,Dominican Republic,All,1,0,0
 2020-03-02,Dominican Republic,All,1,0,0
 2020-03-03,Dominican Republic,All,1,0,0
@@ -4393,6 +4499,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Dominican Republic,All,859,39,3
 2020-03-30,Dominican Republic,All,901,42,4
 2020-03-31,Dominican Republic,All,1109,51,5
+2020-04-01,Dominican Republic,All,1284,57,9
 2020-03-21,East Timor,All,1,0,0
 2020-03-01,Ecuador,All,6,0,0
 2020-03-02,Ecuador,All,6,0,0
@@ -4425,6 +4532,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Ecuador,All,1924,58,3
 2020-03-30,Ecuador,All,1962,60,3
 2020-03-31,Ecuador,All,2240,75,54
+2020-04-01,Ecuador,All,2748,93,58
 2020-02-14,Egypt,All,1,0,0
 2020-02-15,Egypt,All,1,0,0
 2020-02-16,Egypt,All,1,0,0
@@ -4472,6 +4580,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Egypt,All,609,40,132
 2020-03-30,Egypt,All,656,41,150
 2020-03-31,Egypt,All,710,46,157
+2020-04-01,Egypt,All,779,52,179
 2020-03-19,El Salvador,All,1,0,0
 2020-03-20,El Salvador,All,1,0,0
 2020-03-21,El Salvador,All,3,0,0
@@ -4485,6 +4594,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,El Salvador,All,24,0,0
 2020-03-30,El Salvador,All,30,0,0
 2020-03-31,El Salvador,All,32,1,0
+2020-04-01,El Salvador,All,32,1,0
 2020-03-15,Equatorial Guinea,All,1,0,0
 2020-03-16,Equatorial Guinea,All,1,0,0
 2020-03-17,Equatorial Guinea,All,1,0,0
@@ -4502,6 +4612,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Equatorial Guinea,All,12,0,0
 2020-03-30,Equatorial Guinea,All,12,0,0
 2020-03-31,Equatorial Guinea,All,12,0,1
+2020-04-01,Equatorial Guinea,All,15,0,1
 2020-03-21,Eritrea,All,1,0,0
 2020-03-22,Eritrea,All,1,0,0
 2020-03-23,Eritrea,All,1,0,0
@@ -4513,6 +4624,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Eritrea,All,12,0,0
 2020-03-30,Eritrea,All,12,0,0
 2020-03-31,Eritrea,All,15,0,0
+2020-04-01,Eritrea,All,15,0,0
 2020-02-27,Estonia,All,1,0,0
 2020-02-28,Estonia,All,1,0,0
 2020-02-29,Estonia,All,1,0,0
@@ -4547,6 +4659,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Estonia,All,679,3,20
 2020-03-30,Estonia,All,715,3,20
 2020-03-31,Estonia,All,745,4,26
+2020-04-01,Estonia,All,779,5,33
 2020-03-14,Eswatini,All,1,0,0
 2020-03-15,Eswatini,All,1,0,0
 2020-03-16,Eswatini,All,1,0,0
@@ -4565,6 +4678,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Eswatini,All,9,0,0
 2020-03-30,Eswatini,All,9,0,0
 2020-03-31,Eswatini,All,9,0,0
+2020-04-01,Eswatini,All,9,0,0
 2020-03-13,Ethiopia,All,1,0,0
 2020-03-14,Ethiopia,All,1,0,0
 2020-03-15,Ethiopia,All,1,0,0
@@ -4584,6 +4698,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Ethiopia,All,21,0,1
 2020-03-30,Ethiopia,All,23,0,4
 2020-03-31,Ethiopia,All,26,0,2
+2020-04-01,Ethiopia,All,29,0,2
 2020-03-04,Faroe Islands,All,1,0,0
 2020-03-05,Faroe Islands,All,1,0,0
 2020-03-06,Faroe Islands,All,1,0,0
@@ -4604,6 +4719,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Fiji,All,5,0,0
 2020-03-30,Fiji,All,5,0,0
 2020-03-31,Fiji,All,5,0,0
+2020-04-01,Fiji,All,5,0,0
 2020-01-29,Finland,All,1,0,0
 2020-01-30,Finland,All,1,0,0
 2020-01-31,Finland,All,1,0,0
@@ -4667,6 +4783,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Finland,All,1240,11,10
 2020-03-30,Finland,All,1352,13,10
 2020-03-31,Finland,All,1418,17,10
+2020-04-01,Finland,All,1446,17,10
 2020-01-24,France,All,2,0,0
 2020-01-25,France,All,3,0,0
 2020-01-26,France,All,3,0,0
@@ -4735,6 +4852,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,All,40174,2606,7202
 2020-03-30,France,All,44550,3024,7927
 2020-03-31,France,All,52128,3523,9444
+2020-04-01,France,All,56989,4032,10934
 2020-03-14,France,Fench Guiana,5,0,0
 2020-03-15,France,French Guiana,7,0,0
 2020-03-16,France,French Guiana,5,0,0
@@ -4753,6 +4871,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,French Guiana,28,0,6
 2020-03-30,France,French Guiana,43,0,6
 2020-03-31,France,French Guiana,43,0,6
+2020-04-01,France,French Guiana,51,0,15
 2020-03-13,France,French Polynesia,3,0,0
 2020-03-14,France,French Polynesia,3,0,0
 2020-03-15,France,French Polynesia,3,0,0
@@ -4772,6 +4891,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,French Polynesia,30,0,0
 2020-03-30,France,French Polynesia,36,0,0
 2020-03-31,France,French Polynesia,36,0,0
+2020-04-01,France,French Polynesia,37,0,0
 2020-03-16,France,Guadeloupe,3,0,0
 2020-03-17,France,Guadeloupe,6,0,0
 2020-03-18,France,Guadeloupe,0,0,0
@@ -4788,6 +4908,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,Guadeloupe,106,4,17
 2020-03-30,France,Guadeloupe,106,4,17
 2020-03-31,France,Guadeloupe,114,4,22
+2020-04-01,France,Guadeloupe,125,6,24
 2020-03-22,France,Martinique,37,1,0
 2020-03-23,France,Martinique,53,1,0
 2020-03-24,France,Martinique,57,1,0
@@ -4798,6 +4919,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,Martinique,93,1,0
 2020-03-30,France,Martinique,93,1,0
 2020-03-31,France,Martinique,128,3,27
+2020-04-01,France,Martinique,135,3,27
 2020-03-15,France,Mayotte,1,0,0
 2020-03-16,France,Mayotte,1,0,0
 2020-03-17,France,Mayotte,1,0,0
@@ -4815,6 +4937,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,Mayotte,63,0,0
 2020-03-30,France,Mayotte,82,0,10
 2020-03-31,France,Mayotte,94,1,10
+2020-04-01,France,Mayotte,94,1,10
 2020-03-19,France,New Caledonia,2,0,0
 2020-03-20,France,New Caledonia,2,0,0
 2020-03-21,France,New Caledonia,4,0,0
@@ -4828,6 +4951,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,New Caledonia,15,0,0
 2020-03-30,France,New Caledonia,15,0,0
 2020-03-31,France,New Caledonia,16,0,0
+2020-04-01,France,New Caledonia,16,0,0
 2020-03-17,France,Reunion,9,0,0
 2020-03-18,France,Reunion,0,0,0
 2020-03-19,France,Reunion,0,0,0
@@ -4843,6 +4967,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,Reunion,183,0,1
 2020-03-30,France,Reunion,224,0,1
 2020-03-31,France,Reunion,247,0,1
+2020-04-01,France,Reunion,281,0,40
 2020-03-11,France,Saint Barthelemy,1,0,0
 2020-03-12,France,Saint Barthelemy,1,0,0
 2020-03-13,France,Saint Barthelemy,1,0,0
@@ -4864,6 +4989,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,Saint Barthelemy,5,0,0
 2020-03-30,France,Saint Barthelemy,6,0,1
 2020-03-31,France,Saint Barthelemy,6,0,1
+2020-04-01,France,Saint Barthelemy,6,0,1
 2020-03-11,France,St Martin,2,0,0
 2020-03-12,France,St Martin,2,0,0
 2020-03-13,France,St Martin,2,0,0
@@ -4885,6 +5011,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,France,St Martin,11,0,0
 2020-03-30,France,St Martin,15,1,2
 2020-03-31,France,St Martin,15,1,2
+2020-04-01,France,St Martin,15,1,2
 2020-03-07,French Guiana,All,5,0,0
 2020-03-08,French Guiana,All,5,0,0
 2020-03-09,French Guiana,All,5,0,0
@@ -4917,6 +5044,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Gabon,All,7,1,0
 2020-03-30,Gabon,All,7,1,0
 2020-03-31,Gabon,All,16,1,0
+2020-04-01,Gabon,All,18,1,0
 2020-03-17,Gambia,All,1,0,0
 2020-03-18,Gambia,All,1,0,0
 2020-03-19,Gambia,All,1,0,0
@@ -4932,6 +5060,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Gambia,All,4,1,0
 2020-03-30,Gambia,All,4,1,0
 2020-03-31,Gambia,All,4,1,0
+2020-04-01,Gambia,All,4,1,2
 2020-02-26,Georgia,All,1,0,0
 2020-02-27,Georgia,All,1,0,0
 2020-02-28,Georgia,All,1,0,0
@@ -4967,6 +5096,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Georgia,All,91,0,18
 2020-03-30,Georgia,All,103,0,20
 2020-03-31,Georgia,All,110,0,21
+2020-04-01,Georgia,All,117,0,23
 2020-01-28,Germany,All,4,0,0
 2020-01-29,Germany,All,4,0,0
 2020-01-30,Germany,All,4,0,0
@@ -5031,6 +5161,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Germany,All,62095,533,9211
 2020-03-30,Germany,All,66885,645,13500
 2020-03-31,Germany,All,71808,775,16100
+2020-04-01,Germany,All,77872,920,18700
 2020-01-28,Germany,Bavaria,4,0,0
 2020-01-29,Germany,Bavaria,4,0,0
 2020-01-30,Germany,Bavaria,4,0,0
@@ -5053,6 +5184,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Ghana,All,152,5,2
 2020-03-30,Ghana,All,152,5,2
 2020-03-31,Ghana,All,161,5,31
+2020-04-01,Ghana,All,195,5,31
 2020-03-04,Gibraltar,All,1,0,0
 2020-03-05,Gibraltar,All,1,0,0
 2020-03-06,Gibraltar,All,1,0,0
@@ -5095,6 +5227,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Greece,All,1156,38,52
 2020-03-30,Greece,All,1212,43,52
 2020-03-31,Greece,All,1314,49,52
+2020-04-01,Greece,All,1415,50,52
 2020-03-16,Greenland,All,1,0,0
 2020-03-17,Greenland,All,1,0,0
 2020-03-18,Greenland,All,1,0,0
@@ -5111,6 +5244,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Grenada,All,9,0,0
 2020-03-30,Grenada,All,9,0,0
 2020-03-31,Grenada,All,9,0,0
+2020-04-01,Grenada,All,9,0,0
 2020-03-13,Guadeloupe,All,1,0,0
 2020-03-14,Guadeloupe,All,1,0,0
 2020-03-15,Guadeloupe,All,3,0,0
@@ -5144,6 +5278,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Guatemala,All,34,1,10
 2020-03-30,Guatemala,All,36,1,10
 2020-03-31,Guatemala,All,38,1,12
+2020-04-01,Guatemala,All,39,1,12
 2020-03-14,Guernsey,All,1,0,0
 2020-03-15,Guernsey,All,1,0,0
 2020-03-16,Guernsey,All,1,0,0
@@ -5171,6 +5306,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Guinea,All,16,0,0
 2020-03-30,Guinea,All,22,0,0
 2020-03-31,Guinea,All,22,0,0
+2020-04-01,Guinea,All,30,0,0
 2020-03-25,Guinea-Bissau,All,2,0,0
 2020-03-26,Guinea-Bissau,All,2,0,0
 2020-03-27,Guinea-Bissau,All,2,0,0
@@ -5178,6 +5314,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Guinea-Bissau,All,2,0,0
 2020-03-30,Guinea-Bissau,All,8,0,0
 2020-03-31,Guinea-Bissau,All,8,0,0
+2020-04-01,Guinea-Bissau,All,9,0,0
 2020-03-12,Guyana,All,1,1,0
 2020-03-13,Guyana,All,1,1,0
 2020-03-14,Guyana,All,1,1,0
@@ -5198,6 +5335,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Guyana,All,8,1,0
 2020-03-30,Guyana,All,8,1,0
 2020-03-31,Guyana,All,12,2,0
+2020-04-01,Guyana,All,19,2,0
 2020-03-20,Haiti,All,2,0,0
 2020-03-21,Haiti,All,2,0,0
 2020-03-22,Haiti,All,2,0,0
@@ -5210,6 +5348,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Haiti,All,15,0,1
 2020-03-30,Haiti,All,15,0,1
 2020-03-31,Haiti,All,15,0,1
+2020-04-01,Haiti,All,16,0,1
 2020-03-10,Holy See,All,1,0,0
 2020-03-11,Holy See,All,1,0,0
 2020-03-12,Holy See,All,1,0,0
@@ -5232,6 +5371,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Holy See,All,6,0,0
 2020-03-30,Holy See,All,6,0,0
 2020-03-31,Holy See,All,6,0,0
+2020-04-01,Holy See,All,6,0,0
 2020-03-11,Honduras,All,2,0,0
 2020-03-12,Honduras,All,2,0,0
 2020-03-13,Honduras,All,2,0,0
@@ -5253,6 +5393,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Honduras,All,110,3,3
 2020-03-30,Honduras,All,139,7,3
 2020-03-31,Honduras,All,141,7,3
+2020-04-01,Honduras,All,172,10,3
 2020-03-04,Hungary,All,2,0,0
 2020-03-05,Hungary,All,2,0,0
 2020-03-06,Hungary,All,2,0,0
@@ -5281,6 +5422,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Hungary,All,408,13,34
 2020-03-30,Hungary,All,447,15,34
 2020-03-31,Hungary,All,492,16,37
+2020-04-01,Hungary,All,525,20,40
 2020-02-28,Iceland,All,1,0,0
 2020-02-29,Iceland,All,1,0,0
 2020-03-01,Iceland,All,3,0,0
@@ -5314,6 +5456,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Iceland,All,1020,2,135
 2020-03-30,Iceland,All,1086,2,157
 2020-03-31,Iceland,All,1135,2,198
+2020-04-01,Iceland,All,1220,2,225
 2020-01-30,India,All,1,0,0
 2020-01-31,India,All,1,0,0
 2020-02-01,India,All,1,0,0
@@ -5376,6 +5519,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,India,All,1024,27,95
 2020-03-30,India,All,1251,32,102
 2020-03-31,India,All,1397,35,123
+2020-04-01,India,All,1998,58,148
 2020-03-02,Indonesia,All,2,0,0
 2020-03-03,Indonesia,All,2,0,0
 2020-03-04,Indonesia,All,2,0,0
@@ -5406,6 +5550,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Indonesia,All,1285,114,64
 2020-03-30,Indonesia,All,1414,122,75
 2020-03-31,Indonesia,All,1528,136,81
+2020-04-01,Indonesia,All,1677,157,103
 2020-02-19,Iran,All,2,2,0
 2020-02-20,Iran,All,5,2,0
 2020-02-21,Iran,All,18,4,0
@@ -5448,6 +5593,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Iran,All,38309,2640,12391
 2020-03-30,Iran,All,41495,2757,13911
 2020-03-31,Iran,All,44605,2898,14656
+2020-04-01,Iran,All,47593,3036,15473
 2020-02-23,Iraq,All,0,0,0
 2020-02-24,Iraq,All,1,0,0
 2020-02-25,Iraq,All,1,0,0
@@ -5486,6 +5632,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Iraq,All,547,42,143
 2020-03-30,Iraq,All,630,46,152
 2020-03-31,Iraq,All,694,50,170
+2020-04-01,Iraq,All,728,52,182
 2020-02-23,Iraq,None,0,0,0
 2020-02-29,Ireland,All,1,0,0
 2020-03-01,Ireland,All,1,0,0
@@ -5519,6 +5666,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Ireland,All,2615,46,5
 2020-03-30,Ireland,All,2910,54,5
 2020-03-31,Ireland,All,3235,71,5
+2020-04-01,Ireland,All,3447,85,5
 2020-02-21,Israel,All,1,0,0
 2020-02-22,Israel,All,1,0,0
 2020-02-23,Israel,All,1,0,0
@@ -5559,6 +5707,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Israel,All,4247,15,132
 2020-03-30,Israel,All,4695,16,161
 2020-03-31,Israel,All,5358,20,224
+2020-04-01,Israel,All,6092,26,241
 2020-02-21,Israel,From Diamond Princess,1,0,0
 2020-02-22,Israel,From Diamond Princess,1,0,0
 2020-02-23,Israel,From Diamond Princess,1,0,0
@@ -5625,6 +5774,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Italy,All,97689,10779,13030
 2020-03-30,Italy,All,101739,11591,14620
 2020-03-31,Italy,All,105792,12428,15729
+2020-04-01,Italy,All,110574,13155,16847
 2020-01-27,Ivory Coast,All,1,0,0
 2020-03-11,Jamaica,All,1,0,0
 2020-03-12,Jamaica,All,2,0,0
@@ -5647,6 +5797,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Jamaica,All,32,1,2
 2020-03-30,Jamaica,All,36,1,2
 2020-03-31,Jamaica,All,36,1,2
+2020-04-01,Jamaica,All,44,3,2
 2020-01-22,Japan,All,2,0,0
 2020-01-23,Japan,All,1,0,0
 2020-01-24,Japan,All,2,0,0
@@ -5717,6 +5868,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Japan,All,1866,54,424
 2020-03-30,Japan,All,1866,54,424
 2020-03-31,Japan,All,1953,56,424
+2020-04-01,Japan,All,2178,57,472
 2020-03-14,Jersey,All,2,0,0
 2020-03-15,Jersey,All,2,0,0
 2020-03-16,Jersey,All,2,0,0
@@ -5754,6 +5906,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Jordan,All,259,3,18
 2020-03-30,Jordan,All,268,5,26
 2020-03-31,Jordan,All,274,5,30
+2020-04-01,Jordan,All,278,5,36
 2020-03-13,Kazakhstan,All,4,0,0
 2020-03-14,Kazakhstan,All,6,0,0
 2020-03-15,Kazakhstan,All,9,0,0
@@ -5773,6 +5926,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Kazakhstan,All,284,1,20
 2020-03-30,Kazakhstan,All,302,1,21
 2020-03-31,Kazakhstan,All,343,2,24
+2020-04-01,Kazakhstan,All,380,3,26
 2020-03-13,Kenya,All,1,0,0
 2020-03-14,Kenya,All,1,0,0
 2020-03-15,Kenya,All,3,0,0
@@ -5792,6 +5946,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Kenya,All,42,1,1
 2020-03-30,Kenya,All,50,1,1
 2020-03-31,Kenya,All,59,1,1
+2020-04-01,Kenya,All,81,1,3
 2020-03-15,Kosovo,All,2,0,0
 2020-03-16,Kosovo,All,2,0,0
 2020-03-17,Kosovo,All,2,0,0
@@ -5805,6 +5960,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Kosovo,All,94,1,1
 2020-03-30,Kosovo,All,94,1,1
 2020-03-31,Kosovo,All,112,1,6
+2020-04-01,Kosovo,All,125,1,10
 2020-02-24,Kuwait,All,1,0,0
 2020-02-25,Kuwait,All,11,0,0
 2020-02-26,Kuwait,All,26,0,0
@@ -5842,6 +5998,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Kuwait,All,255,0,67
 2020-03-30,Kuwait,All,266,0,72
 2020-03-31,Kuwait,All,289,0,73
+2020-04-01,Kuwait,All,317,0,80
 2020-03-18,Kyrgyzstan,All,3,0,0
 2020-03-19,Kyrgyzstan,All,3,0,0
 2020-03-20,Kyrgyzstan,All,6,0,0
@@ -5856,6 +6013,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Kyrgyzstan,All,84,0,0
 2020-03-30,Kyrgyzstan,All,94,0,3
 2020-03-31,Kyrgyzstan,All,107,0,3
+2020-04-01,Kyrgyzstan,All,111,0,3
 2020-03-24,Laos,All,2,0,0
 2020-03-25,Laos,All,3,0,0
 2020-03-26,Laos,All,6,0,0
@@ -5864,6 +6022,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Laos,All,8,0,0
 2020-03-30,Laos,All,8,0,0
 2020-03-31,Laos,All,9,0,0
+2020-04-01,Laos,All,10,0,0
 2020-03-02,Latvia,All,1,0,0
 2020-03-03,Latvia,All,1,0,0
 2020-03-04,Latvia,All,1,0,0
@@ -5894,6 +6053,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Latvia,All,347,0,1
 2020-03-30,Latvia,All,376,0,1
 2020-03-31,Latvia,All,398,0,1
+2020-04-01,Latvia,All,446,0,1
 2020-02-21,Lebanon,All,1,0,0
 2020-02-22,Lebanon,All,1,0,0
 2020-02-23,Lebanon,All,1,0,0
@@ -5934,6 +6094,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Lebanon,All,438,10,30
 2020-03-30,Lebanon,All,446,11,35
 2020-03-31,Lebanon,All,470,12,37
+2020-04-01,Lebanon,All,479,14,43
 2020-02-21,Lebanon,None,1,0,0
 2020-03-16,Liberia,All,1,0,0
 2020-03-17,Liberia,All,1,0,0
@@ -5951,6 +6112,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Liberia,All,3,0,0
 2020-03-30,Liberia,All,3,0,0
 2020-03-31,Liberia,All,3,0,0
+2020-04-01,Liberia,All,6,0,0
 2020-03-24,Libya,All,1,0,0
 2020-03-25,Libya,All,1,0,0
 2020-03-26,Libya,All,1,0,0
@@ -5959,6 +6121,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Libya,All,8,0,0
 2020-03-30,Libya,All,8,0,0
 2020-03-31,Libya,All,10,0,1
+2020-04-01,Libya,All,10,0,0
 2020-03-04,Liechtenstein,All,1,0,0
 2020-03-05,Liechtenstein,All,1,0,0
 2020-03-06,Liechtenstein,All,1,0,0
@@ -5987,6 +6150,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Liechtenstein,All,56,0,0
 2020-03-30,Liechtenstein,All,62,0,0
 2020-03-31,Liechtenstein,All,68,0,0
+2020-04-01,Liechtenstein,All,68,0,0
 2020-02-28,Lithuania,All,1,0,0
 2020-02-29,Lithuania,All,1,0,0
 2020-03-01,Lithuania,All,1,0,0
@@ -6020,6 +6184,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Lithuania,All,460,7,1
 2020-03-30,Lithuania,All,491,7,7
 2020-03-31,Lithuania,All,537,8,7
+2020-04-01,Lithuania,All,581,8,7
 2020-02-29,Luxembourg,All,1,0,0
 2020-03-01,Luxembourg,All,1,0,0
 2020-03-02,Luxembourg,All,1,0,0
@@ -6052,6 +6217,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Luxembourg,All,1950,21,40
 2020-03-30,Luxembourg,All,1988,22,40
 2020-03-31,Luxembourg,All,2178,23,80
+2020-04-01,Luxembourg,All,2319,29,80
 2020-03-10,Macao SAR,All,10,0,10
 2020-03-10,Macao SAR,Macau,10,0,10
 2020-01-22,Macau,All,1,0,0
@@ -6114,6 +6280,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Madagascar,All,39,0,0
 2020-03-30,Madagascar,All,43,0,0
 2020-03-31,Madagascar,All,57,0,0
+2020-04-01,Madagascar,All,57,0,0
 2020-01-23,Malaysia,All,0,0,0
 2020-01-25,Malaysia,All,3,0,0
 2020-01-26,Malaysia,All,4,0,0
@@ -6182,6 +6349,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Malaysia,All,2470,35,388
 2020-03-30,Malaysia,All,2626,37,479
 2020-03-31,Malaysia,All,2766,43,537
+2020-04-01,Malaysia,All,2908,45,645
 2020-03-08,Maldives,All,4,0,0
 2020-03-09,Maldives,All,4,0,0
 2020-03-10,Maldives,All,6,0,0
@@ -6206,6 +6374,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Maldives,All,17,0,13
 2020-03-30,Maldives,All,17,0,13
 2020-03-31,Maldives,All,18,0,13
+2020-04-01,Maldives,All,19,0,13
 2020-03-25,Mali,All,2,0,0
 2020-03-26,Mali,All,4,0,0
 2020-03-27,Mali,All,11,0,0
@@ -6213,6 +6382,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mali,All,18,1,0
 2020-03-30,Mali,All,25,2,0
 2020-03-31,Mali,All,28,2,0
+2020-04-01,Mali,All,31,3,0
 2020-03-07,Malta,All,3,0,0
 2020-03-08,Malta,All,3,0,0
 2020-03-09,Malta,All,3,0,0
@@ -6238,6 +6408,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Malta,All,151,0,2
 2020-03-30,Malta,All,156,0,2
 2020-03-31,Malta,All,169,0,2
+2020-04-01,Malta,All,188,0,2
 2020-03-07,Martinique,All,2,0,0
 2020-03-08,Martinique,All,2,0,0
 2020-03-09,Martinique,All,2,0,0
@@ -6271,6 +6442,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mauritania,All,5,0,2
 2020-03-30,Mauritania,All,5,1,2
 2020-03-31,Mauritania,All,6,1,2
+2020-04-01,Mauritania,All,6,1,2
 2020-03-18,Mauritius,All,3,0,0
 2020-03-19,Mauritius,All,3,0,0
 2020-03-20,Mauritius,All,12,0,0
@@ -6285,6 +6457,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mauritius,All,107,3,0
 2020-03-30,Mauritius,All,128,3,0
 2020-03-31,Mauritius,All,143,5,0
+2020-04-01,Mauritius,All,161,6,0
 2020-03-16,Mayotte,All,1,0,0
 2020-03-17,Mayotte,All,1,0,0
 2020-03-18,Mayotte,All,3,0,0
@@ -6325,6 +6498,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mexico,All,848,16,4
 2020-03-30,Mexico,All,993,20,35
 2020-03-31,Mexico,All,1094,28,35
+2020-04-01,Mexico,All,1215,29,35
 2020-03-08,Moldova,All,1,0,0
 2020-03-09,Moldova,All,1,0,0
 2020-03-11,Moldova,All,3,0,0
@@ -6348,6 +6522,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Moldova,All,263,2,2
 2020-03-30,Moldova,All,298,2,15
 2020-03-31,Moldova,All,353,4,18
+2020-04-01,Moldova,All,423,5,23
 2020-02-29,Monaco,All,1,0,0
 2020-03-01,Monaco,All,1,0,0
 2020-03-02,Monaco,All,1,0,0
@@ -6380,6 +6555,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Monaco,All,46,1,1
 2020-03-30,Monaco,All,49,1,1
 2020-03-31,Monaco,All,52,1,2
+2020-04-01,Monaco,All,55,1,2
 2020-03-10,Mongolia,All,1,0,0
 2020-03-11,Mongolia,All,1,0,0
 2020-03-12,Mongolia,All,1,0,0
@@ -6402,6 +6578,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mongolia,All,12,0,0
 2020-03-30,Mongolia,All,12,0,2
 2020-03-31,Mongolia,All,12,0,2
+2020-04-01,Mongolia,All,14,0,2
 2020-03-17,Montenegro,All,2,0,0
 2020-03-18,Montenegro,All,1,0,0
 2020-03-19,Montenegro,All,3,0,0
@@ -6417,6 +6594,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Montenegro,All,85,1,0
 2020-03-30,Montenegro,All,91,1,0
 2020-03-31,Montenegro,All,109,2,0
+2020-04-01,Montenegro,All,123,2,0
 2020-03-02,Morocco,All,1,0,0
 2020-03-03,Morocco,All,1,0,0
 2020-03-04,Morocco,All,1,0,0
@@ -6447,6 +6625,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Morocco,All,479,26,13
 2020-03-30,Morocco,All,556,33,15
 2020-03-31,Morocco,All,617,36,24
+2020-04-01,Morocco,All,654,39,29
 2020-03-22,Mozambique,All,1,0,0
 2020-03-23,Mozambique,All,1,0,0
 2020-03-24,Mozambique,All,3,0,0
@@ -6457,10 +6636,12 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Mozambique,All,8,0,0
 2020-03-30,Mozambique,All,8,0,0
 2020-03-31,Mozambique,All,8,0,0
+2020-04-01,Mozambique,All,10,0,0
 2020-03-28,MS Zaandam,All,2,0,0
 2020-03-29,MS Zaandam,All,2,0,0
 2020-03-30,MS Zaandam,All,2,0,0
 2020-03-31,MS Zaandam,All,2,0,0
+2020-04-01,MS Zaandam,All,9,2,0
 2020-03-14,Namibia,All,2,0,0
 2020-03-15,Namibia,All,2,0,0
 2020-03-16,Namibia,All,2,0,0
@@ -6479,6 +6660,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Namibia,All,11,0,2
 2020-03-30,Namibia,All,11,0,2
 2020-03-31,Namibia,All,11,0,2
+2020-04-01,Namibia,All,14,0,2
 2020-01-25,Nepal,All,1,0,0
 2020-01-26,Nepal,All,1,0,0
 2020-01-27,Nepal,All,1,0,0
@@ -6546,6 +6728,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Nepal,All,5,0,1
 2020-03-30,Nepal,All,5,0,1
 2020-03-31,Nepal,All,5,0,1
+2020-04-01,Nepal,All,5,0,1
 2020-02-27,Netherlands,All,1,0,0
 2020-02-28,Netherlands,All,1,0,0
 2020-02-29,Netherlands,All,6,0,0
@@ -6580,6 +6763,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Netherlands,All,10866,771,250
 2020-03-30,Netherlands,All,11750,864,250
 2020-03-31,Netherlands,All,12595,1039,250
+2020-04-01,Netherlands,All,13614,1173,250
 2020-03-18,Netherlands,Aruba,2,0,0
 2020-03-19,Netherlands,Aruba,2,0,0
 2020-03-20,Netherlands,Aruba,5,0,0
@@ -6594,6 +6778,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Netherlands,Aruba,50,0,1
 2020-03-30,Netherlands,Aruba,50,0,1
 2020-03-31,Netherlands,Aruba,55,0,1
+2020-04-01,Netherlands,Aruba,55,0,1
 2020-03-16,Netherlands,Curacao,1,0,0
 2020-03-17,Netherlands,Curacao,3,0,0
 2020-03-18,Netherlands,Curacao,3,0,0
@@ -6610,6 +6795,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Netherlands,Curacao,8,1,2
 2020-03-30,Netherlands,Curacao,11,1,2
 2020-03-31,Netherlands,Curacao,11,1,2
+2020-04-01,Netherlands,Curacao,11,1,3
 2020-03-20,Netherlands,Sint Maarten,1,0,0
 2020-03-21,Netherlands,Sint Maarten,1,0,0
 2020-03-22,Netherlands,Sint Maarten,1,0,0
@@ -6622,6 +6808,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Netherlands,Sint Maarten,6,0,0
 2020-03-30,Netherlands,Sint Maarten,6,0,0
 2020-03-31,Netherlands,Sint Maarten,6,0,0
+2020-04-01,Netherlands,Sint Maarten,16,1,6
 2020-02-28,New Zealand,All,1,0,0
 2020-02-29,New Zealand,All,1,0,0
 2020-03-01,New Zealand,All,1,0,0
@@ -6655,6 +6842,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,New Zealand,All,514,1,56
 2020-03-30,New Zealand,All,589,1,63
 2020-03-31,New Zealand,All,647,1,74
+2020-04-01,New Zealand,All,708,1,83
 2020-03-19,Nicaragua,All,1,0,0
 2020-03-20,Nicaragua,All,1,0,0
 2020-03-21,Nicaragua,All,2,0,0
@@ -6668,6 +6856,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Nicaragua,All,4,1,0
 2020-03-30,Nicaragua,All,4,1,0
 2020-03-31,Nicaragua,All,5,1,0
+2020-04-01,Nicaragua,All,5,1,0
 2020-03-20,Niger,All,1,0,0
 2020-03-21,Niger,All,1,0,0
 2020-03-22,Niger,All,2,0,0
@@ -6680,6 +6869,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Niger,All,18,1,0
 2020-03-30,Niger,All,27,3,0
 2020-03-31,Niger,All,27,3,0
+2020-04-01,Niger,All,74,5,0
 2020-02-28,Nigeria,All,1,0,0
 2020-02-29,Nigeria,All,1,0,0
 2020-03-01,Nigeria,All,1,0,0
@@ -6713,6 +6903,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Nigeria,All,111,1,3
 2020-03-30,Nigeria,All,131,2,8
 2020-03-31,Nigeria,All,135,2,8
+2020-04-01,Nigeria,All,174,2,9
 2020-02-28,North Ireland,All,1,0,0
 2020-02-26,North Macedonia,All,1,0,0
 2020-02-27,North Macedonia,All,1,0,0
@@ -6749,6 +6940,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,North Macedonia,All,259,6,3
 2020-03-30,North Macedonia,All,285,7,12
 2020-03-31,North Macedonia,All,329,9,12
+2020-04-01,North Macedonia,All,354,11,17
 2020-02-26,Norway,All,1,0,0
 2020-02-27,Norway,All,1,0,0
 2020-02-28,Norway,All,6,0,0
@@ -6784,6 +6976,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Norway,All,4284,25,7
 2020-03-30,Norway,All,4445,32,12
 2020-03-31,Norway,All,4641,39,13
+2020-04-01,Norway,All,4863,44,13
 2020-03-10,occupied Palestinian territory,All,25,0,0
 2020-03-11,occupied Palestinian territory,All,0,0,0
 2020-03-12,occupied Palestinian territory,All,0,0,0
@@ -6828,6 +7021,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Oman,All,167,0,23
 2020-03-30,Oman,All,179,0,29
 2020-03-31,Oman,All,192,1,34
+2020-04-01,Oman,All,210,1,34
 2020-02-07,Others,All,61,0,0
 2020-02-08,Others,All,61,0,0
 2020-02-09,Others,All,64,0,0
@@ -6929,6 +7123,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Pakistan,All,1597,14,29
 2020-03-30,Pakistan,All,1717,21,76
 2020-03-31,Pakistan,All,1938,26,76
+2020-04-01,Pakistan,All,2118,27,94
 2020-03-05,Palestinian territories,All,4,0,0
 2020-03-06,Palestinian territories,All,16,0,0
 2020-03-07,Palestinian territories,All,22,0,0
@@ -6956,6 +7151,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Panama,All,901,17,4
 2020-03-30,Panama,All,989,24,4
 2020-03-31,Panama,All,1181,30,9
+2020-04-01,Panama,All,1181,30,9
 2020-03-20,Papua New Guinea,All,1,0,0
 2020-03-21,Papua New Guinea,All,1,0,0
 2020-03-22,Papua New Guinea,All,1,0,0
@@ -6968,6 +7164,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Papua New Guinea,All,1,0,0
 2020-03-30,Papua New Guinea,All,1,0,0
 2020-03-31,Papua New Guinea,All,1,0,0
+2020-04-01,Papua New Guinea,All,1,0,0
 2020-03-08,Paraguay,All,1,0,0
 2020-03-09,Paraguay,All,1,0,0
 2020-03-10,Paraguay,All,1,0,0
@@ -6992,6 +7189,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Paraguay,All,59,3,1
 2020-03-30,Paraguay,All,64,3,1
 2020-03-31,Paraguay,All,65,3,1
+2020-04-01,Paraguay,All,69,3,1
 2020-03-06,Peru,All,1,0,0
 2020-03-07,Peru,All,1,0,0
 2020-03-08,Peru,All,6,0,0
@@ -7018,6 +7216,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Peru,All,852,18,16
 2020-03-30,Peru,All,950,24,53
 2020-03-31,Peru,All,1065,30,394
+2020-04-01,Peru,All,1323,38,394
 2020-01-23,Philippines,All,0,0,0
 2020-01-30,Philippines,All,1,0,0
 2020-01-31,Philippines,All,1,0,0
@@ -7081,6 +7280,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Philippines,All,1418,71,42
 2020-03-30,Philippines,All,1546,78,42
 2020-03-31,Philippines,All,2084,88,49
+2020-04-01,Philippines,All,2311,96,50
 2020-03-04,Poland,All,1,0,0
 2020-03-05,Poland,All,1,0,0
 2020-03-06,Poland,All,5,0,0
@@ -7109,6 +7309,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Poland,All,1862,22,7
 2020-03-30,Poland,All,2055,31,7
 2020-03-31,Poland,All,2311,33,7
+2020-04-01,Poland,All,2554,43,47
 2020-03-02,Portugal,All,2,0,0
 2020-03-03,Portugal,All,2,0,0
 2020-03-04,Portugal,All,5,0,0
@@ -7139,6 +7340,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Portugal,All,5962,119,43
 2020-03-30,Portugal,All,6408,140,43
 2020-03-31,Portugal,All,7443,160,43
+2020-04-01,Portugal,All,8251,187,43
 2020-03-16,Puerto Rico,All,3,0,0
 2020-03-17,Puerto Rico,All,0,0,0
 2020-03-18,Puerto Rico,All,0,0,0
@@ -7177,6 +7379,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Qatar,All,634,1,48
 2020-03-30,Qatar,All,693,1,51
 2020-03-31,Qatar,All,781,2,62
+2020-04-01,Qatar,All,835,2,71
 2020-03-11,Republic of Congo,All,1,0,0
 2020-03-12,Republic of Congo,All,1,0,0
 2020-03-13,Republic of Congo,All,2,0,0
@@ -7198,6 +7401,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Republic of Congo,All,84,6,2
 2020-03-30,Republic of Congo,All,100,8,2
 2020-03-31,Republic of Congo,All,117,8,2
+2020-04-01,Republic of Congo,All,128,9,3
 2020-03-08,Republic of Ireland,All,21,0,0
 2020-03-10,Republic of Moldova,All,3,0,0
 2020-03-16,Republic of the Congo,All,1,0,0
@@ -7252,6 +7456,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Romania,All,1815,43,206
 2020-03-30,Romania,All,2109,65,209
 2020-03-31,Romania,All,2245,82,220
+2020-04-01,Romania,All,2460,92,252
 2020-01-31,Russia,All,2,0,0
 2020-02-01,Russia,All,2,0,0
 2020-02-02,Russia,All,2,0,0
@@ -7312,6 +7517,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Russia,All,1534,8,64
 2020-03-30,Russia,All,1836,9,66
 2020-03-31,Russia,All,2337,17,121
+2020-04-01,Russia,All,2777,24,190
 2020-03-10,Russian Federation,All,10,0,3
 2020-03-14,Rwanda,All,1,0,0
 2020-03-15,Rwanda,All,1,0,0
@@ -7331,6 +7537,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Rwanda,All,70,0,0
 2020-03-30,Rwanda,All,70,0,0
 2020-03-31,Rwanda,All,75,0,0
+2020-04-01,Rwanda,All,82,0,0
 2020-03-04,Saint Barthelemy,All,3,0,0
 2020-03-05,Saint Barthelemy,All,3,0,0
 2020-03-06,Saint Barthelemy,All,3,0,0
@@ -7345,6 +7552,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Saint Kitts and Nevis,All,2,0,0
 2020-03-30,Saint Kitts and Nevis,All,7,0,0
 2020-03-31,Saint Kitts and Nevis,All,8,0,0
+2020-04-01,Saint Kitts and Nevis,All,8,0,0
 2020-03-14,Saint Lucia,All,1,0,0
 2020-03-15,Saint Lucia,All,2,0,0
 2020-03-16,Saint Lucia,All,2,0,0
@@ -7363,6 +7571,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Saint Lucia,All,9,0,1
 2020-03-30,Saint Lucia,All,9,0,1
 2020-03-31,Saint Lucia,All,13,0,1
+2020-04-01,Saint Lucia,All,13,0,1
 2020-03-10,Saint Martin,All,2,0,0
 2020-03-14,Saint Vincent and the Grenadines,All,1,0,0
 2020-03-15,Saint Vincent and the Grenadines,All,1,0,0
@@ -7382,6 +7591,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Saint Vincent and the Grenadines,All,1,0,1
 2020-03-30,Saint Vincent and the Grenadines,All,1,0,1
 2020-03-31,Saint Vincent and the Grenadines,All,1,0,1
+2020-04-01,Saint Vincent and the Grenadines,All,1,0,1
 2020-02-27,San Marino,All,1,0,0
 2020-02-28,San Marino,All,1,0,0
 2020-02-29,San Marino,All,1,0,0
@@ -7416,6 +7626,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,San Marino,All,224,22,6
 2020-03-30,San Marino,All,230,25,13
 2020-03-31,San Marino,All,236,26,13
+2020-04-01,San Marino,All,236,26,13
 2020-03-02,Saudi Arabia,All,1,0,0
 2020-03-03,Saudi Arabia,All,1,0,0
 2020-03-04,Saudi Arabia,All,1,0,0
@@ -7446,6 +7657,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Saudi Arabia,All,1299,8,66
 2020-03-30,Saudi Arabia,All,1453,8,115
 2020-03-31,Saudi Arabia,All,1563,10,165
+2020-04-01,Saudi Arabia,All,1720,16,264
 2020-03-02,Senegal,All,1,0,0
 2020-03-03,Senegal,All,2,0,0
 2020-03-04,Senegal,All,4,0,0
@@ -7476,6 +7688,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Senegal,All,142,0,27
 2020-03-30,Senegal,All,162,0,27
 2020-03-31,Senegal,All,175,0,40
+2020-04-01,Senegal,All,190,1,45
 2020-03-06,Serbia,All,1,0,0
 2020-03-07,Serbia,All,1,0,0
 2020-03-08,Serbia,All,1,0,0
@@ -7502,6 +7715,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Serbia,All,741,13,0
 2020-03-30,Serbia,All,785,16,0
 2020-03-31,Serbia,All,900,16,0
+2020-04-01,Serbia,All,1060,28,0
 2020-03-14,Seychelles,All,2,0,0
 2020-03-15,Seychelles,All,2,0,0
 2020-03-16,Seychelles,All,3,0,0
@@ -7520,7 +7734,9 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Seychelles,All,8,0,0
 2020-03-30,Seychelles,All,8,0,0
 2020-03-31,Seychelles,All,10,0,0
+2020-04-01,Seychelles,All,10,0,0
 2020-03-31,Sierra Leone,All,1,0,0
+2020-04-01,Sierra Leone,All,2,0,0
 2020-01-23,Singapore,All,1,0,0
 2020-01-24,Singapore,All,3,0,0
 2020-01-25,Singapore,All,3,0,0
@@ -7590,6 +7806,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Singapore,All,844,3,212
 2020-03-30,Singapore,All,879,3,228
 2020-03-31,Singapore,All,926,3,240
+2020-04-01,Singapore,All,1000,3,245
 2020-03-06,Slovakia,All,1,0,0
 2020-03-07,Slovakia,All,1,0,0
 2020-03-08,Slovakia,All,3,0,0
@@ -7616,6 +7833,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Slovakia,All,314,0,2
 2020-03-30,Slovakia,All,336,0,7
 2020-03-31,Slovakia,All,363,0,3
+2020-04-01,Slovakia,All,400,1,3
 2020-03-05,Slovenia,All,2,0,0
 2020-03-06,Slovenia,All,7,0,0
 2020-03-07,Slovenia,All,7,0,0
@@ -7643,6 +7861,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Slovenia,All,730,11,10
 2020-03-30,Slovenia,All,756,11,10
 2020-03-31,Slovenia,All,802,15,10
+2020-04-01,Slovenia,All,841,15,10
 2020-03-16,Somalia,All,1,0,0
 2020-03-17,Somalia,All,1,0,0
 2020-03-18,Somalia,All,1,0,0
@@ -7659,6 +7878,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Somalia,All,3,0,0
 2020-03-30,Somalia,All,3,0,0
 2020-03-31,Somalia,All,5,0,1
+2020-04-01,Somalia,All,5,0,1
 2020-03-05,South Africa,All,1,0,0
 2020-03-06,South Africa,All,1,0,0
 2020-03-07,South Africa,All,1,0,0
@@ -7686,6 +7906,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,South Africa,All,1280,2,31
 2020-03-30,South Africa,All,1326,3,31
 2020-03-31,South Africa,All,1353,5,31
+2020-04-01,South Africa,All,1380,5,50
 2020-01-22,South Korea,All,1,0,0
 2020-01-23,South Korea,All,1,0,0
 2020-01-24,South Korea,All,2,0,0
@@ -7756,6 +7977,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,South Korea,All,9583,152,5033
 2020-03-30,South Korea,All,9661,158,5228
 2020-03-31,South Korea,All,9786,162,5408
+2020-04-01,South Korea,All,9887,165,5567
 2020-02-01,Spain,All,1,0,0
 2020-02-02,Spain,All,1,0,0
 2020-02-03,Spain,All,1,0,0
@@ -7816,6 +8038,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Spain,All,80110,6803,14709
 2020-03-30,Spain,All,87956,7716,16780
 2020-03-31,Spain,All,95923,8464,19259
+2020-04-01,Spain,All,104118,9387,22647
 2020-01-27,Sri Lanka,All,1,0,0
 2020-01-28,Sri Lanka,All,1,0,0
 2020-01-29,Sri Lanka,All,1,0,0
@@ -7881,6 +8104,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Sri Lanka,All,117,1,11
 2020-03-30,Sri Lanka,All,122,2,15
 2020-03-31,Sri Lanka,All,143,2,17
+2020-04-01,Sri Lanka,All,146,3,21
 2020-03-09,St. Martin,All,2,0,0
 2020-03-13,Sudan,All,1,1,0
 2020-03-14,Sudan,All,1,1,0
@@ -7901,6 +8125,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Sudan,All,6,1,0
 2020-03-30,Sudan,All,6,2,0
 2020-03-31,Sudan,All,7,2,1
+2020-04-01,Sudan,All,7,2,2
 2020-03-14,Suriname,All,1,0,0
 2020-03-15,Suriname,All,1,0,0
 2020-03-16,Suriname,All,1,0,0
@@ -7919,6 +8144,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Suriname,All,8,0,0
 2020-03-30,Suriname,All,8,0,0
 2020-03-31,Suriname,All,9,0,0
+2020-04-01,Suriname,All,10,0,0
 2020-01-31,Sweden,All,1,0,0
 2020-02-01,Sweden,All,1,0,0
 2020-02-02,Sweden,All,1,0,0
@@ -7980,6 +8206,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Sweden,All,3700,110,16
 2020-03-30,Sweden,All,4028,146,16
 2020-03-31,Sweden,All,4435,180,16
+2020-04-01,Sweden,All,4947,239,103
 2020-02-25,Switzerland,All,1,0,0
 2020-02-26,Switzerland,All,1,0,0
 2020-02-27,Switzerland,All,8,0,0
@@ -8016,6 +8243,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Switzerland,All,14829,300,1595
 2020-03-30,Switzerland,All,15922,359,1823
 2020-03-31,Switzerland,All,16605,433,1823
+2020-04-01,Switzerland,All,17768,488,2967
 2020-03-22,Syria,All,1,0,0
 2020-03-23,Syria,All,1,0,0
 2020-03-24,Syria,All,1,0,0
@@ -8026,6 +8254,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Syria,All,9,1,0
 2020-03-30,Syria,All,10,2,0
 2020-03-31,Syria,All,10,2,0
+2020-04-01,Syria,All,10,2,0
 2020-03-10,Taipei and environs,All,47,1,17
 2020-03-10,Taipei and environs,Taiwan,47,1,17
 2020-01-22,Taiwan,All,1,0,0
@@ -8097,6 +8326,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Taiwan,All,298,2,30
 2020-03-30,Taiwan,All,306,5,39
 2020-03-31,Taiwan,All,322,5,39
+2020-04-01,Taiwan,All,329,5,39
 2020-03-16,Tanzania,All,1,0,0
 2020-03-17,Tanzania,All,1,0,0
 2020-03-18,Tanzania,All,3,0,0
@@ -8113,6 +8343,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Tanzania,All,14,0,1
 2020-03-30,Tanzania,All,19,0,1
 2020-03-31,Tanzania,All,19,1,1
+2020-04-01,Tanzania,All,20,1,1
 2020-01-22,Thailand,All,2,0,0
 2020-01-23,Thailand,All,3,0,0
 2020-01-24,Thailand,All,5,0,0
@@ -8183,6 +8414,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Thailand,All,1388,7,97
 2020-03-30,Thailand,All,1524,9,229
 2020-03-31,Thailand,All,1651,10,342
+2020-04-01,Thailand,All,1771,12,505
 2020-03-16,The Bahamas,All,1,0,0
 2020-03-17,The Bahamas,All,1,0,0
 2020-03-18,The Bahamas,All,1,0,0
@@ -8199,6 +8431,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Timor-Leste,All,1,0,0
 2020-03-30,Timor-Leste,All,1,0,0
 2020-03-31,Timor-Leste,All,1,0,0
+2020-04-01,Timor-Leste,All,1,0,0
 2020-03-06,Togo,All,1,0,0
 2020-03-07,Togo,All,1,0,0
 2020-03-08,Togo,All,1,0,0
@@ -8225,6 +8458,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Togo,All,25,1,1
 2020-03-30,Togo,All,30,1,1
 2020-03-31,Togo,All,34,1,10
+2020-04-01,Togo,All,36,2,10
 2020-03-14,Trinidad and Tobago,All,2,0,0
 2020-03-15,Trinidad and Tobago,All,2,0,0
 2020-03-16,Trinidad and Tobago,All,4,0,0
@@ -8243,6 +8477,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Trinidad and Tobago,All,78,3,1
 2020-03-30,Trinidad and Tobago,All,82,3,1
 2020-03-31,Trinidad and Tobago,All,87,3,1
+2020-04-01,Trinidad and Tobago,All,90,5,1
 2020-03-04,Tunisia,All,1,0,0
 2020-03-05,Tunisia,All,1,0,0
 2020-03-06,Tunisia,All,1,0,0
@@ -8271,6 +8506,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Tunisia,All,312,8,2
 2020-03-30,Tunisia,All,312,8,3
 2020-03-31,Tunisia,All,394,10,3
+2020-04-01,Tunisia,All,423,12,5
 2020-03-11,Turkey,All,1,0,0
 2020-03-12,Turkey,All,1,0,0
 2020-03-13,Turkey,All,5,0,0
@@ -8292,6 +8528,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Turkey,All,9217,131,105
 2020-03-30,Turkey,All,10827,168,162
 2020-03-31,Turkey,All,13531,214,243
+2020-04-01,Turkey,All,15679,277,333
 2020-03-21,Uganda,All,1,0,0
 2020-03-22,Uganda,All,1,0,0
 2020-03-23,Uganda,All,9,0,0
@@ -8303,6 +8540,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Uganda,All,33,0,0
 2020-03-30,Uganda,All,33,0,0
 2020-03-31,Uganda,All,44,0,0
+2020-04-01,Uganda,All,44,0,0
 2020-03-03,Ukraine,All,1,0,0
 2020-03-04,Ukraine,All,1,0,0
 2020-03-05,Ukraine,All,1,0,0
@@ -8332,6 +8570,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Ukraine,All,475,10,6
 2020-03-30,Ukraine,All,548,13,8
 2020-03-31,Ukraine,All,645,17,10
+2020-04-01,Ukraine,All,794,20,13
 2020-01-29,United Arab Emirates,All,4,0,0
 2020-01-30,United Arab Emirates,All,4,0,0
 2020-01-31,United Arab Emirates,All,4,0,0
@@ -8395,6 +8634,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Arab Emirates,All,570,3,58
 2020-03-30,United Arab Emirates,All,611,5,61
 2020-03-31,United Arab Emirates,All,664,6,61
+2020-04-01,United Arab Emirates,All,814,8,61
 2020-01-31,United Kingdom,All,2,0,0
 2020-02-01,United Kingdom,All,2,0,0
 2020-02-02,United Kingdom,All,2,0,0
@@ -8456,10 +8696,12 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,All,19522,1228,135
 2020-03-30,United Kingdom,All,22141,1408,135
 2020-03-31,United Kingdom,All,25150,1789,135
+2020-04-01,United Kingdom,All,29474,2352,135
 2020-03-28,United Kingdom,Anguilla,2,0,0
 2020-03-29,United Kingdom,Anguilla,2,0,0
 2020-03-30,United Kingdom,Anguilla,2,0,0
 2020-03-31,United Kingdom,Anguilla,2,0,0
+2020-04-01,United Kingdom,Anguilla,2,0,0
 2020-03-19,United Kingdom,Bermuda,2,0,0
 2020-03-20,United Kingdom,Bermuda,2,0,0
 2020-03-21,United Kingdom,Bermuda,2,0,0
@@ -8473,10 +8715,12 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Bermuda,22,0,2
 2020-03-30,United Kingdom,Bermuda,27,0,2
 2020-03-31,United Kingdom,Bermuda,32,0,10
+2020-04-01,United Kingdom,Bermuda,32,0,10
 2020-03-28,United Kingdom,British Virgin Islands,2,0,0
 2020-03-29,United Kingdom,British Virgin Islands,2,0,0
 2020-03-30,United Kingdom,British Virgin Islands,2,0,0
 2020-03-31,United Kingdom,British Virgin Islands,3,0,0
+2020-04-01,United Kingdom,British Virgin Islands,3,0,0
 2020-03-16,United Kingdom,Cayman Islands,1,1,0
 2020-03-17,United Kingdom,Cayman Islands,1,1,0
 2020-03-18,United Kingdom,Cayman Islands,1,1,0
@@ -8493,6 +8737,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Cayman Islands,8,1,0
 2020-03-30,United Kingdom,Cayman Islands,12,1,0
 2020-03-31,United Kingdom,Cayman Islands,14,1,0
+2020-04-01,United Kingdom,Cayman Islands,22,1,0
 2020-03-11,United Kingdom,Channel Islands,2,0,0
 2020-03-12,United Kingdom,Channel Islands,2,0,0
 2020-03-13,United Kingdom,Channel Islands,2,0,0
@@ -8514,6 +8759,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Channel Islands,108,2,0
 2020-03-30,United Kingdom,Channel Islands,141,2,0
 2020-03-31,United Kingdom,Channel Islands,141,3,0
+2020-04-01,United Kingdom,Channel Islands,172,3,0
 2020-03-11,United Kingdom,Gibraltar,1,0,1
 2020-03-12,United Kingdom,Gibraltar,1,0,1
 2020-03-13,United Kingdom,Gibraltar,1,0,1
@@ -8535,6 +8781,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Gibraltar,65,0,14
 2020-03-30,United Kingdom,Gibraltar,69,0,34
 2020-03-31,United Kingdom,Gibraltar,69,0,34
+2020-04-01,United Kingdom,Gibraltar,81,0,34
 2020-03-20,United Kingdom,Isle of Man,1,0,0
 2020-03-21,United Kingdom,Isle of Man,1,0,0
 2020-03-22,United Kingdom,Isle of Man,5,0,0
@@ -8547,6 +8794,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Isle of Man,42,0,0
 2020-03-30,United Kingdom,Isle of Man,49,0,0
 2020-03-31,United Kingdom,Isle of Man,60,0,0
+2020-04-01,United Kingdom,Isle of Man,68,1,0
 2020-03-18,United Kingdom,Montserrat,1,0,0
 2020-03-19,United Kingdom,Montserrat,1,0,0
 2020-03-20,United Kingdom,Montserrat,1,0,0
@@ -8561,10 +8809,12 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United Kingdom,Montserrat,5,0,0
 2020-03-30,United Kingdom,Montserrat,5,0,0
 2020-03-31,United Kingdom,Montserrat,5,0,0
+2020-04-01,United Kingdom,Montserrat,5,0,0
 2020-03-28,United Kingdom,Turks and Caicos Islands,4,0,0
 2020-03-29,United Kingdom,Turks and Caicos Islands,4,0,0
 2020-03-30,United Kingdom,Turks and Caicos Islands,5,0,0
 2020-03-31,United Kingdom,Turks and Caicos Islands,5,0,0
+2020-04-01,United Kingdom,Turks and Caicos Islands,6,0,0
 2020-03-11,United Kingdom,UK,456,8,18
 2020-03-12,United Kingdom,UK,456,8,18
 2020-01-22,United States,All,1,0,0
@@ -8637,6 +8887,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,All,140886,2467,2665
 2020-03-30,United States,All,161807,2978,5644
 2020-03-31,United States,All,188172,3873,7024
+2020-04-01,United States,All,213372,4757,8474
 2020-03-13,United States,Alabama,5,0,0
 2020-03-14,United States,Alabama,6,0,0
 2020-03-15,United States,Alabama,12,0,0
@@ -8656,6 +8907,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Alabama,825,10,0
 2020-03-30,United States,Alabama,899,10,0
 2020-03-31,United States,Alabama,987,23,0
+2020-04-01,United States,Alabama,1060,27,0
 2020-03-10,United States,Alaska,0,0,0
 2020-03-11,United States,Alaska,0,0,0
 2020-03-12,United States,Alaska,0,0,0
@@ -8677,6 +8929,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Alaska,102,2,0
 2020-03-30,United States,Alaska,114,3,0
 2020-03-31,United States,Alaska,119,3,0
+2020-04-01,United States,Alaska,132,3,0
 2020-03-22,United States,American Samoa,0,0,0
 2020-03-23,United States,American Samoa,0,0,0
 2020-03-24,United States,American Samoa,0,0,0
@@ -8752,6 +9005,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Arizona,919,17,0
 2020-03-30,United States,Arizona,1157,20,0
 2020-03-31,United States,Arizona,1289,24,0
+2020-04-01,United States,Arizona,1530,29,0
 2020-03-10,United States,Arkansas,0,0,0
 2020-03-11,United States,Arkansas,1,0,0
 2020-03-12,United States,Arkansas,6,0,0
@@ -8774,6 +9028,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Arkansas,426,6,0
 2020-03-30,United States,Arkansas,473,7,0
 2020-03-31,United States,Arkansas,523,8,0
+2020-04-01,United States,Arkansas,584,10,0
 2020-01-26,United States,California,2,0,0
 2020-01-27,United States,California,2,0,0
 2020-01-28,United States,California,2,0,0
@@ -8840,6 +9095,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,California,5852,124,0
 2020-03-30,United States,California,7138,146,0
 2020-03-31,United States,California,8210,173,0
+2020-04-01,United States,California,9399,199,0
 2020-01-24,United States,Chicago,1,0,0
 2020-03-06,United States,Colorado,4,0,0
 2020-03-07,United States,Colorado,8,0,0
@@ -8867,6 +9123,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Colorado,2307,47,0
 2020-03-30,United States,Colorado,2311,47,0
 2020-03-31,United States,Colorado,2966,69,0
+2020-04-01,United States,Colorado,2982,69,0
 2020-03-07,United States,Connecticut,2,0,0
 2020-03-08,United States,Connecticut,1,0,0
 2020-03-09,United States,Connecticut,1,0,0
@@ -8892,6 +9149,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Connecticut,1993,34,0
 2020-03-30,United States,Connecticut,2571,36,0
 2020-03-31,United States,Connecticut,3128,69,0
+2020-04-01,United States,Connecticut,3557,85,0
 2020-03-10,United States,Delaware,0,0,0
 2020-03-11,United States,Delaware,1,0,0
 2020-03-12,United States,Delaware,1,0,0
@@ -8914,6 +9172,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Delaware,232,6,0
 2020-03-30,United States,Delaware,264,6,0
 2020-03-31,United States,Delaware,319,10,0
+2020-04-01,United States,Delaware,368,11,0
 2020-03-10,United States,Diamond Princess,46,0,0
 2020-03-11,United States,Diamond Princess,46,0,0
 2020-03-12,United States,Diamond Princess,46,0,0
@@ -8936,6 +9195,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Diamond Princess,49,0,0
 2020-03-30,United States,Diamond Princess,49,0,0
 2020-03-31,United States,Diamond Princess,49,0,0
+2020-04-01,United States,Diamond Princess,49,0,0
 2020-03-10,United States,District of Columbia,5,0,0
 2020-03-11,United States,District of Columbia,10,0,0
 2020-03-12,United States,District of Columbia,10,0,0
@@ -8958,6 +9218,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,District of Columbia,342,5,0
 2020-03-30,United States,District of Columbia,401,9,0
 2020-03-31,United States,District of Columbia,495,9,0
+2020-04-01,United States,District of Columbia,586,9,0
 2020-03-02,United States,Florida,2,0,0
 2020-03-03,United States,Florida,3,0,0
 2020-03-04,United States,Florida,3,0,0
@@ -8988,6 +9249,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Florida,4246,56,0
 2020-03-30,United States,Florida,5473,63,0
 2020-03-31,United States,Florida,6741,85,0
+2020-04-01,United States,Florida,6956,87,0
 2020-03-03,United States,Georgia,2,0,0
 2020-03-04,United States,Georgia,2,0,0
 2020-03-05,United States,Georgia,2,0,0
@@ -9017,6 +9279,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Georgia,2651,80,0
 2020-03-30,United States,Georgia,2808,87,0
 2020-03-31,United States,Georgia,3929,111,0
+2020-04-01,United States,Georgia,4638,139,0
 2020-03-10,United States,Grand Princess,21,0,0
 2020-03-11,United States,Grand Princess,21,0,0
 2020-03-12,United States,Grand Princess,21,0,0
@@ -9039,6 +9302,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Grand Princess,103,3,0
 2020-03-30,United States,Grand Princess,103,3,0
 2020-03-31,United States,Grand Princess,103,3,0
+2020-04-01,United States,Grand Princess,103,3,0
 2020-03-07,United States,Grand Princess Cruise Ship,21,0,0
 2020-03-08,United States,Grand Princess Cruise Ship,21,0,0
 2020-03-09,United States,Grand Princess Cruise Ship,21,0,0
@@ -9059,6 +9323,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Guam,56,1,0
 2020-03-30,United States,Guam,58,1,0
 2020-03-31,United States,Guam,69,2,0
+2020-04-01,United States,Guam,77,3,0
 2020-03-07,United States,Hawaii,1,0,0
 2020-03-08,United States,Hawaii,1,0,0
 2020-03-09,United States,Hawaii,2,0,0
@@ -9084,6 +9349,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Hawaii,149,0,0
 2020-03-30,United States,Hawaii,175,0,0
 2020-03-31,United States,Hawaii,204,0,0
+2020-04-01,United States,Hawaii,224,1,0
 2020-03-10,United States,Idaho,0,0,0
 2020-03-11,United States,Idaho,0,0,0
 2020-03-12,United States,Idaho,0,0,0
@@ -9106,6 +9372,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Idaho,281,5,0
 2020-03-30,United States,Idaho,340,6,0
 2020-03-31,United States,Idaho,515,8,0
+2020-04-01,United States,Idaho,566,9,0
 2020-01-25,United States,Illinois,1,0,0
 2020-01-26,United States,Illinois,1,0,0
 2020-01-27,United States,Illinois,1,0,0
@@ -9173,6 +9440,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Illinois,4596,66,0
 2020-03-30,United States,Illinois,5056,73,0
 2020-03-31,United States,Illinois,5994,99,0
+2020-04-01,United States,Illinois,6980,141,0
 2020-03-06,United States,Indiana,1,0,0
 2020-03-07,United States,Indiana,1,0,0
 2020-03-08,United States,Indiana,2,0,0
@@ -9199,6 +9467,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Indiana,1513,32,0
 2020-03-30,United States,Indiana,1786,35,0
 2020-03-31,United States,Indiana,2158,49,0
+2020-04-01,United States,Indiana,2564,65,0
 2020-03-09,United States,Iowa,3,0,0
 2020-03-10,United States,Iowa,8,0,0
 2020-03-11,United States,Iowa,13,0,0
@@ -9222,6 +9491,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Iowa,336,4,0
 2020-03-30,United States,Iowa,424,6,0
 2020-03-31,United States,Iowa,497,7,0
+2020-04-01,United States,Iowa,547,9,0
 2020-03-07,United States,"Jackson County, OR",1,0,0
 2020-03-08,United States,"Jackson County, OR",2,0,0
 2020-03-09,United States,"Jackson County, OR",2,0,0
@@ -9250,6 +9520,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Kansas,330,7,0
 2020-03-30,United States,Kansas,372,8,0
 2020-03-31,United States,Kansas,434,9,0
+2020-04-01,United States,Kansas,485,10,0
 2020-03-06,United States,Kentucky,1,0,0
 2020-03-07,United States,Kentucky,1,0,0
 2020-03-08,United States,Kentucky,1,0,0
@@ -9276,6 +9547,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Kentucky,438,9,0
 2020-03-30,United States,Kentucky,479,11,0
 2020-03-31,United States,Kentucky,628,11,0
+2020-04-01,United States,Kentucky,632,18,0
 2020-02-22,United States,"Lackland, TX (From Diamond Princess)",2,0,0
 2020-02-23,United States,"Lackland, TX (From Diamond Princess)",2,0,0
 2020-02-24,United States,"Lackland, TX (From Diamond Princess)",0,0,0
@@ -9315,6 +9587,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Louisiana,3540,151,0
 2020-03-30,United States,Louisiana,4025,185,0
 2020-03-31,United States,Louisiana,5237,239,0
+2020-04-01,United States,Louisiana,6424,273,0
 2020-03-10,United States,Maine,0,0,0
 2020-03-11,United States,Maine,0,0,0
 2020-03-12,United States,Maine,0,0,0
@@ -9337,6 +9610,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Maine,253,3,0
 2020-03-30,United States,Maine,275,3,0
 2020-03-31,United States,Maine,303,5,0
+2020-04-01,United States,Maine,303,5,0
 2020-03-06,United States,Maryland,3,0,0
 2020-03-07,United States,Maryland,3,0,0
 2020-03-08,United States,Maryland,5,0,0
@@ -9363,6 +9637,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Maryland,1239,10,0
 2020-03-30,United States,Maryland,1413,15,0
 2020-03-31,United States,Maryland,1660,18,0
+2020-04-01,United States,Maryland,1986,31,0
 2020-02-01,United States,Massachusetts,1,0,0
 2020-02-02,United States,Massachusetts,1,0,0
 2020-02-03,United States,Massachusetts,1,0,0
@@ -9423,6 +9698,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Massachusetts,4955,48,0
 2020-03-30,United States,Massachusetts,5752,56,0
 2020-03-31,United States,Massachusetts,6620,89,0
+2020-04-01,United States,Massachusetts,7738,122,0
 2020-03-10,United States,Michigan,0,0,0
 2020-03-11,United States,Michigan,2,0,0
 2020-03-12,United States,Michigan,2,0,0
@@ -9445,6 +9721,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Michigan,5488,132,0
 2020-03-30,United States,Michigan,6498,184,0
 2020-03-31,United States,Michigan,7615,259,0
+2020-04-01,United States,Michigan,9315,335,0
 2020-03-06,United States,Minnesota,1,0,0
 2020-03-07,United States,Minnesota,1,0,0
 2020-03-08,United States,Minnesota,1,0,0
@@ -9471,6 +9748,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Minnesota,503,9,0
 2020-03-30,United States,Minnesota,576,10,0
 2020-03-31,United States,Minnesota,629,12,0
+2020-04-01,United States,Minnesota,689,17,0
 2020-03-10,United States,Mississippi,0,0,0
 2020-03-11,United States,Mississippi,0,0,0
 2020-03-12,United States,Mississippi,1,0,0
@@ -9493,6 +9771,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Mississippi,759,14,0
 2020-03-30,United States,Mississippi,847,16,0
 2020-03-31,United States,Mississippi,937,20,0
+2020-04-01,United States,Mississippi,1073,22,0
 2020-03-08,United States,Missouri,1,0,0
 2020-03-09,United States,Missouri,1,0,0
 2020-03-10,United States,Missouri,1,0,0
@@ -9517,6 +9796,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Missouri,915,13,0
 2020-03-30,United States,Missouri,1051,13,0
 2020-03-31,United States,Missouri,1357,15,0
+2020-04-01,United States,Missouri,1613,18,0
 2020-03-10,United States,Montana,0,0,0
 2020-03-11,United States,Montana,1,0,0
 2020-03-12,United States,Montana,1,0,0
@@ -9539,6 +9819,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Montana,154,1,0
 2020-03-30,United States,Montana,171,5,0
 2020-03-31,United States,Montana,198,5,0
+2020-04-01,United States,Montana,208,6,0
 2020-02-21,United States,Nebraska,11,0,0
 2020-03-06,United States,Nebraska,1,0,0
 2020-03-07,United States,Nebraska,1,0,0
@@ -9566,6 +9847,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Nebraska,108,2,0
 2020-03-30,United States,Nebraska,145,2,0
 2020-03-31,United States,Nebraska,172,3,0
+2020-04-01,United States,Nebraska,210,4,0
 2020-03-05,United States,Nevada,1,0,0
 2020-03-06,United States,Nevada,2,0,0
 2020-03-07,United States,Nevada,2,0,0
@@ -9593,6 +9875,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Nevada,920,15,0
 2020-03-30,United States,Nevada,1012,15,0
 2020-03-31,United States,Nevada,1114,26,0
+2020-04-01,United States,Nevada,1279,31,0
 2020-03-02,United States,New Hampshire,1,0,0
 2020-03-03,United States,New Hampshire,2,0,0
 2020-03-04,United States,New Hampshire,2,0,0
@@ -9623,6 +9906,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,New Hampshire,214,2,0
 2020-03-30,United States,New Hampshire,314,3,0
 2020-03-31,United States,New Hampshire,357,3,0
+2020-04-01,United States,New Hampshire,367,3,0
 2020-03-05,United States,New Jersey,2,0,0
 2020-03-06,United States,New Jersey,2,0,0
 2020-03-07,United States,New Jersey,4,0,0
@@ -9650,6 +9934,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,New Jersey,13386,161,0
 2020-03-30,United States,New Jersey,16636,198,0
 2020-03-31,United States,New Jersey,18696,267,0
+2020-04-01,United States,New Jersey,22255,355,0
 2020-03-10,United States,New Mexico,0,0,0
 2020-03-11,United States,New Mexico,3,0,0
 2020-03-12,United States,New Mexico,5,0,0
@@ -9672,6 +9957,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,New Mexico,237,2,0
 2020-03-30,United States,New Mexico,237,2,0
 2020-03-31,United States,New Mexico,315,4,0
+2020-04-01,United States,New Mexico,340,5,0
 2020-03-02,United States,New York,1,0,0
 2020-03-03,United States,New York,2,0,0
 2020-03-04,United States,New York,11,0,0
@@ -9702,6 +9988,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,New York,59648,965,0
 2020-03-30,United States,New York,66663,1218,0
 2020-03-31,United States,New York,75833,1550,0
+2020-04-01,United States,New York,83948,1941,0
 2020-03-03,United States,North Carolina,1,0,0
 2020-03-04,United States,North Carolina,1,0,0
 2020-03-05,United States,North Carolina,1,0,0
@@ -9731,6 +10018,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,North Carolina,1191,7,0
 2020-03-30,United States,North Carolina,1313,7,0
 2020-03-31,United States,North Carolina,1535,12,0
+2020-04-01,United States,North Carolina,1675,14,0
 2020-03-10,United States,North Dakota,0,0,0
 2020-03-11,United States,North Dakota,0,0,0
 2020-03-12,United States,North Dakota,1,0,0
@@ -9753,6 +10041,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,North Dakota,98,1,0
 2020-03-30,United States,North Dakota,109,2,0
 2020-03-31,United States,North Dakota,122,3,0
+2020-04-01,United States,North Dakota,142,3,0
 2020-03-22,United States,Northern Mariana Islands,0,0,0
 2020-03-23,United States,Northern Mariana Islands,0,0,0
 2020-03-24,United States,Northern Mariana Islands,0,0,0
@@ -9763,6 +10052,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Northern Mariana Islands,0,0,0
 2020-03-30,United States,Northern Mariana Islands,0,0,0
 2020-03-31,United States,Northern Mariana Islands,2,0,0
+2020-04-01,United States,Northern Mariana Islands,6,1,0
 2020-03-10,United States,Ohio,3,0,0
 2020-03-11,United States,Ohio,4,0,0
 2020-03-12,United States,Ohio,5,0,0
@@ -9785,6 +10075,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Ohio,1653,29,0
 2020-03-30,United States,Ohio,1933,40,0
 2020-03-31,United States,Ohio,2199,55,0
+2020-04-01,United States,Ohio,2547,65,0
 2020-03-07,United States,Oklahoma,1,0,0
 2020-03-08,United States,Oklahoma,1,0,0
 2020-03-09,United States,Oklahoma,1,0,0
@@ -9810,6 +10101,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Oklahoma,429,16,0
 2020-03-30,United States,Oklahoma,481,16,0
 2020-03-31,United States,Oklahoma,568,23,0
+2020-04-01,United States,Oklahoma,721,30,0
 2020-02-22,United States,"Omaha, NE (From Diamond Princess)",11,0,0
 2020-02-23,United States,"Omaha, NE (From Diamond Princess)",11,0,0
 2020-02-24,United States,"Omaha, NE (From Diamond Princess)",0,0,0
@@ -9859,6 +10151,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Oregon,548,13,0
 2020-03-30,United States,Oregon,606,16,0
 2020-03-31,United States,Oregon,690,18,0
+2020-04-01,United States,Oregon,736,19,0
 2020-03-06,United States,Pennsylvania,2,0,0
 2020-03-07,United States,Pennsylvania,2,0,0
 2020-03-08,United States,Pennsylvania,6,0,0
@@ -9885,6 +10178,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Pennsylvania,3432,41,0
 2020-03-30,United States,Pennsylvania,4155,50,0
 2020-03-31,United States,Pennsylvania,4963,63,0
+2020-04-01,United States,Pennsylvania,6009,74,0
 2020-03-14,United States,Puerto Rico,3,0,0
 2020-03-15,United States,Puerto Rico,5,0,0
 2020-03-16,United States,Puerto Rico,5,0,0
@@ -9903,6 +10197,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Puerto Rico,127,3,0
 2020-03-30,United States,Puerto Rico,174,6,0
 2020-03-31,United States,Puerto Rico,239,8,0
+2020-04-01,United States,Puerto Rico,286,11,0
 2020-03-24,United States,Recovered,0,0,348
 2020-03-25,United States,Recovered,0,0,361
 2020-03-26,United States,Recovered,0,0,681
@@ -9911,6 +10206,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Recovered,0,0,2665
 2020-03-30,United States,Recovered,0,0,5644
 2020-03-31,United States,Recovered,0,0,7024
+2020-04-01,United States,Recovered,0,0,8474
 2020-03-01,United States,Rhode Island,1,0,0
 2020-03-02,United States,Rhode Island,2,0,0
 2020-03-03,United States,Rhode Island,2,0,0
@@ -9942,6 +10238,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Rhode Island,294,3,0
 2020-03-30,United States,Rhode Island,408,4,0
 2020-03-31,United States,Rhode Island,488,8,0
+2020-04-01,United States,Rhode Island,566,10,0
 2020-03-07,United States,South Carolina,2,0,0
 2020-03-08,United States,South Carolina,2,0,0
 2020-03-09,United States,South Carolina,6,0,0
@@ -9967,6 +10264,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,South Carolina,774,16,0
 2020-03-30,United States,South Carolina,925,18,0
 2020-03-31,United States,South Carolina,1083,22,0
+2020-04-01,United States,South Carolina,1293,26,0
 2020-03-10,United States,South Dakota,0,0,0
 2020-03-11,United States,South Dakota,8,1,0
 2020-03-12,United States,South Dakota,8,1,0
@@ -9989,6 +10287,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,South Dakota,90,1,0
 2020-03-30,United States,South Dakota,101,1,0
 2020-03-31,United States,South Dakota,108,1,0
+2020-04-01,United States,South Dakota,129,2,0
 2020-03-05,United States,Tennessee,1,0,0
 2020-03-06,United States,Tennessee,1,0,0
 2020-03-07,United States,Tennessee,1,0,0
@@ -10016,6 +10315,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Tennessee,1720,8,0
 2020-03-30,United States,Tennessee,1917,14,0
 2020-03-31,United States,Tennessee,2391,23,0
+2020-04-01,United States,Tennessee,2933,24,0
 2020-02-13,United States,Texas,1,0,0
 2020-02-14,United States,Texas,1,0,0
 2020-02-15,United States,Texas,1,0,0
@@ -10064,6 +10364,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Texas,2792,37,0
 2020-03-30,United States,Texas,3147,45,0
 2020-03-31,United States,Texas,3809,54,0
+2020-04-01,United States,Texas,4355,66,0
 2020-02-22,United States,"Travis, CA (From Diamond Princess)",5,0,0
 2020-02-23,United States,"Travis, CA (From Diamond Princess)",5,0,0
 2020-02-24,United States,"Travis, CA (From Diamond Princess)",0,0,0
@@ -10125,6 +10426,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Utah,720,2,0
 2020-03-30,United States,Utah,804,4,0
 2020-03-31,United States,Utah,888,5,0
+2020-04-01,United States,Utah,888,5,0
 2020-03-08,United States,Vermont,1,0,0
 2020-03-09,United States,Vermont,1,0,0
 2020-03-10,United States,Vermont,1,0,0
@@ -10149,6 +10451,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Vermont,235,12,0
 2020-03-30,United States,Vermont,256,12,0
 2020-03-31,United States,Vermont,293,13,0
+2020-04-01,United States,Vermont,321,16,0
 2020-03-16,United States,Virgin Islands,1,0,0
 2020-03-17,United States,Virgin Islands,2,0,0
 2020-03-18,United States,Virgin Islands,2,0,0
@@ -10163,6 +10466,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Virgin Islands,0,0,0
 2020-03-30,United States,Virgin Islands,0,0,0
 2020-03-31,United States,Virgin Islands,30,0,0
+2020-04-01,United States,Virgin Islands,30,0,0
 2020-03-14,United States,"Virgin Islands, U.S.",1,0,0
 2020-03-15,United States,"Virgin Islands, U.S.",1,0,0
 2020-03-08,United States,Virginia,2,0,0
@@ -10189,6 +10493,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Virginia,890,20,0
 2020-03-30,United States,Virginia,1020,15,0
 2020-03-31,United States,Virginia,1249,27,0
+2020-04-01,United States,Virginia,1483,34,0
 2020-01-22,United States,Washington,1,0,0
 2020-01-23,United States,Washington,1,0,0
 2020-01-24,United States,Washington,1,0,0
@@ -10259,6 +10564,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Washington,4465,198,0
 2020-03-30,United States,Washington,4923,205,0
 2020-03-31,United States,Washington,5432,225,0
+2020-04-01,United States,Washington,5608,234,0
 2020-03-08,United States,"Washington, D.C.",2,0,0
 2020-03-09,United States,"Washington, D.C.",2,0,0
 2020-03-10,United States,West Virginia,0,0,0
@@ -10283,6 +10589,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,West Virginia,113,0,0
 2020-03-30,United States,West Virginia,145,1,0
 2020-03-31,United States,West Virginia,162,1,0
+2020-04-01,United States,West Virginia,191,1,0
 2020-02-05,United States,Wisconsin,1,0,0
 2020-02-06,United States,Wisconsin,1,0,0
 2020-02-07,United States,Wisconsin,1,0,0
@@ -10339,6 +10646,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Wisconsin,1164,18,0
 2020-03-30,United States,Wisconsin,1230,20,0
 2020-03-31,United States,Wisconsin,1412,25,0
+2020-04-01,United States,Wisconsin,1556,27,0
 2020-03-22,United States,Wuhan Evacuee,4,0,0
 2020-03-23,United States,Wuhan Evacuee,4,0,0
 2020-03-24,United States,Wuhan Evacuee,4,0,0
@@ -10364,6 +10672,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,United States,Wyoming,86,0,0
 2020-03-30,United States,Wyoming,94,0,0
 2020-03-31,United States,Wyoming,109,0,0
+2020-04-01,United States,Wyoming,130,0,0
 2020-03-14,Uruguay,All,4,0,0
 2020-03-15,Uruguay,All,4,0,0
 2020-03-16,Uruguay,All,8,0,0
@@ -10382,6 +10691,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Uruguay,All,304,1,0
 2020-03-30,Uruguay,All,310,1,0
 2020-03-31,Uruguay,All,338,1,41
+2020-04-01,Uruguay,All,338,2,41
 2020-03-15,Uzbekistan,All,1,0,0
 2020-03-16,Uzbekistan,All,6,0,0
 2020-03-17,Uzbekistan,All,10,0,0
@@ -10399,6 +10709,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Uzbekistan,All,144,2,7
 2020-03-30,Uzbekistan,All,149,2,7
 2020-03-31,Uzbekistan,All,172,2,7
+2020-04-01,Uzbekistan,All,181,2,12
 2020-03-06,Vatican City,All,1,0,0
 2020-03-07,Vatican City,All,1,0,0
 2020-03-08,Vatican City,All,1,0,0
@@ -10421,6 +10732,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Venezuela,All,119,2,39
 2020-03-30,Venezuela,All,135,3,39
 2020-03-31,Venezuela,All,135,3,39
+2020-04-01,Venezuela,All,143,3,41
 2020-03-10,Viet Nam,All,31,0,16
 2020-01-23,Vietnam,All,2,0,0
 2020-01-24,Vietnam,All,2,0,0
@@ -10490,12 +10802,14 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Vietnam,All,188,0,25
 2020-03-30,Vietnam,All,203,0,55
 2020-03-31,Vietnam,All,212,0,58
+2020-04-01,Vietnam,All,218,0,63
 2020-03-26,West Bank and Gaza,All,84,1,17
 2020-03-27,West Bank and Gaza,All,91,1,17
 2020-03-28,West Bank and Gaza,All,98,1,18
 2020-03-29,West Bank and Gaza,All,109,1,18
 2020-03-30,West Bank and Gaza,All,116,1,18
 2020-03-31,West Bank and Gaza,All,119,1,18
+2020-04-01,West Bank and Gaza,All,134,1,18
 2020-03-18,Zambia,All,2,0,0
 2020-03-19,Zambia,All,2,0,0
 2020-03-20,Zambia,All,2,0,0
@@ -10510,6 +10824,7 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Zambia,All,29,0,0
 2020-03-30,Zambia,All,35,0,0
 2020-03-31,Zambia,All,35,0,0
+2020-04-01,Zambia,All,36,0,0
 2020-03-20,Zimbabwe,All,1,0,0
 2020-03-21,Zimbabwe,All,3,0,0
 2020-03-22,Zimbabwe,All,3,0,0
@@ -10522,4 +10837,5 @@ date,country,state,confirmedCases,confirmedDeaths,confirmedRecoveries
 2020-03-29,Zimbabwe,All,7,1,0
 2020-03-30,Zimbabwe,All,7,1,0
 2020-03-31,Zimbabwe,All,8,1,0
+2020-04-01,Zimbabwe,All,8,1,0
 

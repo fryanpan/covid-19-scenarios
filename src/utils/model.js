@@ -46,7 +46,7 @@ export class ModelInputs {
         this.flatteningDate = moment("2020-03-19").toDate();
         this.scenario = "current"; // @TODO get rid of this
         this.rBefore = 2.2;
-        this.rAfter = 0.4;
+        this.rAfter = 0.5;
     }
 }
 

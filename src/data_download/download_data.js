@@ -210,7 +210,9 @@ async function downloadFiles() {
     // Add incremental columns
     for(let i = 0; i < sortedRows.length; ++i) {
         var cur = sortedRows[i];
-        var isNew = i === 0 || rowCmp(sortedRows[i], sortedRows[i-1]) !== 0;
+        var isNew = i === 0 || 
+                sortedRows[i].country != sortedRows[i-1].country || 
+                sortedRows[i].state != sortedRows[i-1].state;
 
         if(isNew) {
             cur.newCases = cur.confirmedCases;
@@ -223,7 +225,7 @@ async function downloadFiles() {
             cur.newRecoveries = Math.max(0, cur.confirmedRecoveries - last.confirmedRecoveries);
         }
     }
-    
+
     return sortedRows;
 }
 

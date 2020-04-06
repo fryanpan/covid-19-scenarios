@@ -205,7 +205,29 @@ async function downloadFiles() {
     rows = groupRowsByCountryAndState(rows)
     rows = addCountrySums(rows)
 
-    return rows.sort((x, y) => {
+    var sortedRows = rows.sort(rowCmp);
+
+    // Add incremental columns
+    for(let i = 0; i < sortedRows.length; ++i) {
+        var cur = sortedRows[i];
+        var isNew = i === 0 || rowCmp(sortedRows[i], sortedRows[i-1]) !== 0;
+
+        if(isNew) {
+            cur.newCases = cur.confirmedCases;
+            cur.newDeaths = cur.confirmedDeaths;
+            cur.newRecoveries = cur.confirmedRecoveries;
+        } else {
+            const last = sortedRows[i-1];
+            cur.newCases = Math.max(0, cur.confirmedCases - last.confirmedCases);
+            cur.newDeaths = Math.max(0, cur.confirmedDeaths - last.confirmedDeaths);
+            cur.newRecoveries = Math.max(0, cur.confirmedRecoveries - last.confirmedRecoveries);
+        }
+    }
+    
+    return sortedRows;
+}
+
+function rowCmp(x, y) {
         const countryCmp = x.country.localeCompare(y.country);
         const stateCmp = x.state.localeCompare(y.state);
         const dateCmp = x.date.localeCompare(y.date);
@@ -215,10 +237,9 @@ async function downloadFiles() {
         /** Always sort All to the top */
         if(x.state == "All" && y.state != "All") return -1;
         if(y.state == "All" && x.state != "All") return 1;
-        
+
         if(stateCmp != 0) return stateCmp;
         return dateCmp;        
-    });
 }
 
 async function generateData() {
@@ -232,7 +253,10 @@ async function generateData() {
             {id: 'state', title: 'state'},
             {id: 'confirmedCases', title: 'confirmedCases'},
             {id: 'confirmedDeaths', title: 'confirmedDeaths'},
-            {id: 'confirmedRecoveries', title: 'confirmedRecoveries'}
+            {id: 'confirmedRecoveries', title: 'confirmedRecoveries'},
+            {id: 'newCases', title: 'newCases'},
+            {id: 'newDeaths', title: 'newDeaths'},
+            {id: 'newRecoveries', title: 'newRecoveries'},
         ]
     });
 

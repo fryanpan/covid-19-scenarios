@@ -11,7 +11,7 @@ import {
 } from 'recharts';
 
 import * as moment from 'moment'
-import { mergeDataArrays, readableInteger, listOfMonths, readableMonth } from '../utils/dataUtils'
+import { mergeDataArrays, readableInteger, listOfMonths, readableMonth, readableNumber } from '../utils/dataUtils'
 
 /**
  * Extracts the date field and one key from each object in an array.
@@ -188,8 +188,9 @@ class AboutModel extends ScenarioEditingComponent {
                                     ticks={listOfMonths("2020-01-01", "2020-12-01")}
                                     interval={matches.small ? 1 : 0}
                                     tickFormatter={readableMonth}
-                                    />                        
-                                <YAxis type="number" />
+                                    />
+
+                                <YAxis type="number"/>
                                 <Tooltip formatter={readableInteger()}/>
                                 <Legend iconType="square"/>
                             </ComposedChart>    

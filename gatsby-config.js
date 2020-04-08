@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `What Does My Future Look Like with COVID-19?`,
+    title: `What Might My Future Look Like with COVID-19?`,
     description: `Simple scenarios to answer common questions`,
     author: `@fryanpan`,
   },

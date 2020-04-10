@@ -208,6 +208,7 @@ async function downloadFiles() {
     var sortedRows = rows.sort(rowCmp);
 
     // Add incremental columns
+    var locationIndex = 0;
     for(let i = 0; i < sortedRows.length; ++i) {
         var cur = sortedRows[i];
         var isNew = i === 0 || 
@@ -215,14 +216,22 @@ async function downloadFiles() {
                 sortedRows[i].state != sortedRows[i-1].state;
 
         if(isNew) {
+            locationIndex = 0;
             cur.newCases = cur.confirmedCases;
             cur.newDeaths = cur.confirmedDeaths;
             cur.newRecoveries = cur.confirmedRecoveries;
         } else {
+            locationIndex++;
             const last = sortedRows[i-1];
             cur.newCases = Math.max(0, cur.confirmedCases - last.confirmedCases);
             cur.newDeaths = Math.max(0, cur.confirmedDeaths - last.confirmedDeaths);
             cur.newRecoveries = Math.max(0, cur.confirmedRecoveries - last.confirmedRecoveries);
+
+            if(locationIndex >= 7) {
+              cur.newCases7dAgo = sortedRows[i-7].newCases; 
+              cur.newDeaths7dAgo = sortedRows[i-7].newDeaths; 
+              cur.newRecoveries7dAgo = sortedRows[i-7].newRecoveries; 
+            }
         }
     }
 
@@ -259,6 +268,9 @@ async function generateData() {
             {id: 'newCases', title: 'newCases'},
             {id: 'newDeaths', title: 'newDeaths'},
             {id: 'newRecoveries', title: 'newRecoveries'},
+            {id: 'newCases7dAgo', title: 'newCases7dAgo'},
+            {id: 'newDeaths7dAgo', title: 'newDeaths7dAgo'},
+            {id: 'newRecoveries7dAgo', title: 'newRecoveries7dAgo'},
         ]
     });
 

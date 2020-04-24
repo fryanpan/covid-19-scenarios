@@ -68,6 +68,26 @@ const STATE_FIX_MAP = {
     }
 }
 
+METRO_MAP = {
+    // San Francisco Metro
+    "Santa Clara, California": "San Francisco Bay Area",
+    "Alameda, California": "San Francisco Bay Area",
+    "Napa, California": "San Francisco Bay Area",
+    "Solano, California": "San Francisco Bay Area",
+    "Contra Costa, California": "San Francisco Bay Area",
+    "Marin, California": "San Francisco Bay Area",
+    "San Mateo, California": "San Francisco Bay Area",
+    "San Francisco, California": "San Francisco Bay Area",
+    "Sonoma, California": "San Francisco Bay Area",
+
+    // Los Angeles
+    "Los Angeles, California": "Los Angeles Metro",
+    "San Bernadino, California": "Los Angeles Metro",
+    "Ventura, California": "Los Angeles Metro",
+    "Orange, California": "Los Angeles Metro",
+    "Riverside, California": "Los Angeles Metro",
+}
+
 function groupRowsByCountryAndState(rows) {
     return lodash(rows).groupBy(x => {
         return x.country + '::' + x.state + '::' + x.date;
@@ -101,6 +121,10 @@ function extractState(row) {
     return row['Province/State'] || row['Province_State'];
 }
 
+function extractAdmin2(row) {
+    return row['Admin2'];
+}
+
 
 function addCountrySums(rows) {
     process.stderr.write("addCountrySums\n");
@@ -117,6 +141,8 @@ function addCountrySums(rows) {
     // Add to total for any days that are missing
     var extraRows = [];
     rows.forEach(row => {
+        if(row.locationType == 'Metro') return; // skip metro level data
+
         const key = row.country + "::" + row.date;
 
         if(!hasTotal[key]) {
@@ -153,6 +179,8 @@ async function downloadFiles() {
             fileData.forEach(x => {
                 var country = extractCountry(x);
                 var state = extractState(x) || 'All';
+                var admin2 = extractAdmin2(x);
+                const locationType = state == 'All' ? 'Country' : 'State';
 
                 // Special case for HK -- data starts to categorize HK as part of China starting on 3/11
                 if(country == "Hong Kong" || country == "Hong Kong SAR") {
@@ -190,11 +218,27 @@ async function downloadFiles() {
                         date: dateString,
                         country: country.trim(),
                         state: state.trim(),
+                        locationType: locationType,
                         confirmedCases: x['Confirmed'] || 0,
                         confirmedDeaths: x['Deaths'] || 0,
                         confirmedRecoveries: x['Recovered'] || 0,
                         confirmedActive: x['Active'] || 0
                     });
+                }
+
+                const metroKey = `${admin2}, ${state}`;
+                const metro = METRO_MAP[metroKey];
+                if(METRO_MAP[metroKey]) {
+                    rows.push({
+                        date: dateString,
+                        country: country.trim(),
+                        state: metro,
+                        locationType: "Metro",
+                        confirmedCases: x['Confirmed'] || 0,
+                        confirmedDeaths: x['Deaths'] || 0,
+                        confirmedRecoveries: x['Recovered'] || 0,
+                        confirmedActive: x['Active'] || 0
+                    })
                 }
             });
         } catch (e) {
@@ -262,6 +306,7 @@ async function generateData() {
             {id: 'date', title: 'date'},
             {id: 'country', title: 'country'},
             {id: 'state', title: 'state'},
+            {id: 'locationType', title: 'locationType'},
             {id: 'confirmedCases', title: 'confirmedCases'},
             {id: 'confirmedDeaths', title: 'confirmedDeaths'},
             {id: 'confirmedRecoveries', title: 'confirmedRecoveries'},

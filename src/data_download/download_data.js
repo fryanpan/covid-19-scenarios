@@ -86,6 +86,30 @@ METRO_MAP = {
     "Ventura, California": "Los Angeles Metro",
     "Orange, California": "Los Angeles Metro",
     "Riverside, California": "Los Angeles Metro",
+
+    // New York City
+    "New York City, New York": "New York Metro",
+    "Westchester, New York": "New York Metro",
+    "Putnam, New York": "New York Metro",
+    "Rockland, New York": "New York Metro",
+    "Bergen, New Jersey": "New York Metro",
+    "Hudson, New Jersey": "New York Metro",
+    "Passaic, New Jersey": "New York Metro",
+
+    "Suffolk, New York": "New York Metro",
+    "Nassau, New York": "New York Metro",
+
+    "Middlesex, New Jersey": "New York Metro",
+    "Monmouth, New Jersey": "New York Metro",
+    "Ocean, New Jersey": "New York Metro",
+    "Sommerset, New Jersey": "New York Metro",
+
+    "Essex, New Jersey": "New York Metro",
+    "Union, New Jersey": "New York Metro",
+    "Morris, New Jersey": "New York Metro",
+    "Sussex, New Jersey": "New York Metro",
+    "Hunterdon, New Jersey": "New York Metro",
+    "Pike, Pennsylvania": "New York Metro",
 }
 
 function groupRowsByCountryAndState(rows) {

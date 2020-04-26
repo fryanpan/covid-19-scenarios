@@ -112,10 +112,6 @@ METRO_MAP = {
     "Pike, Pennsylvania": "New York Metro",
 }
 
-REALLOCATE_DAYS = {
-    "Hubei:China:2020-04-17": 1290, // reallocate all of the deaths -- China restated probable deaths
-    "New York:United States:2020-04-16": 2468, // New York changed historical reporting to include probables
-}
 
 function groupRowsByCountryAndState(rows) {
     return lodash(rows).groupBy(x => {
@@ -180,7 +176,7 @@ function addCountrySums(rows) {
             extraRows.push(newRow)
 
             if(!addedTotal[key]) {
-                process.stderr.write("Adding total for country " + newRow.country + '\n');
+                process.stderr.write("Adding total for country " + newRow.country + ' ' + newRow.date + '\n');
                 addedTotal[key] = true;
             }
         }
@@ -189,23 +185,31 @@ function addCountrySums(rows) {
     return groupRowsByCountryAndState(rows);
 }
 
-function reallocateRestatedDeaths(rows) {
+function reallocateRestatedDeaths(rows, number) {
     var lastLocation = "";
     var totalRows = 0;
 
     rows.forEach((row, index) => {
-        const rowLocation = row.state + ':' + row.country;
+        const rowLocation = row.state + ':' + row.country + ':' + row.admin2;
         if(rowLocation != lastLocation) {
             lastLocation = rowLocation;
             totalRows = 0;
         }
 
-        const reallocateKey = rowLocation + ':' + row.date;
-        const reallocAmount = REALLOCATE_DAYS[reallocateKey];
+        var reallocAmount = 0;
+        if((row.state == 'New York' && row.date == '2020-04-16')) {
+            const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
+            reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
+        }
+
+        if (row.state == 'Hubei' && row.date == '2020-04-17') {
+            reallocAmount = row.confirmedDeaths - rows[index - 1].confirmedDeaths;
+        }
 
         if(reallocAmount) {
+            process.stderr.write(`Reallocating ${row.state} ${row.admin2} ${reallocAmount}\n`)
             var totalDeaths = rows[index - 1].confirmedDeaths;
-            var ratio = reallocAmount / totalDeaths;
+            var ratio = totalDeaths > 0 ? reallocAmount / totalDeaths : 0;
             var finalDelta = 0;
 
             for(let i = -totalRows; i < 0; ++i) {
@@ -213,8 +217,9 @@ function reallocateRestatedDeaths(rows) {
                 const delta = Math.round(prevRow.confirmedDeaths * ratio);
                 finalDelta = delta;
                 prevRow.confirmedDeaths += delta;
-
             }
+
+            process.stderr.write(`    Checksum: ${reallocAmount} should equal ${finalDelta}\n`);
 
         }
         totalRows++;
@@ -240,7 +245,7 @@ async function downloadFiles() {
             fileData.forEach(x => {
                 var country = extractCountry(x);
                 var state = extractState(x) || 'All';
-                var admin2 = extractAdmin2(x);
+                var admin2 = extractAdmin2(x) || '';
                 const locationType = state == 'All' ? 'Country' : 'State';
 
                 // Special case for HK -- data starts to categorize HK as part of China starting on 3/11
@@ -271,47 +276,65 @@ async function downloadFiles() {
                 const cleanCountry = COUNTRY_FIX_MAP[country];
                 if(cleanCountry) {
                     country = cleanCountry;
-                }
-
+                }                
 
                 if(country && state) {
                     rows.push({
                         date: dateString,
                         country: country.trim(),
                         state: state.trim(),
+                        admin2: admin2,
                         locationType: locationType,
-                        confirmedCases: x['Confirmed'] || 0,
-                        confirmedDeaths: x['Deaths'] || 0,
-                        confirmedRecoveries: x['Recovered'] || 0,
-                        confirmedActive: x['Active'] || 0
+                        confirmedCases: parseInt(x['Confirmed'] || 0),
+                        confirmedDeaths: parseInt(x['Deaths'] || 0),
+                        confirmedRecoveries: parseInt(x['Recovered'] || 0),
+                        confirmedActive: parseInt(x['Active'] || 0)
                     });
                 }
 
-                const metroKey = `${admin2}, ${state}`;
-                const metro = METRO_MAP[metroKey];
-                if(METRO_MAP[metroKey]) {
-                    rows.push({
-                        date: dateString,
-                        country: country.trim(),
-                        state: metro,
-                        locationType: "Metro",
-                        confirmedCases: x['Confirmed'] || 0,
-                        confirmedDeaths: x['Deaths'] || 0,
-                        confirmedRecoveries: x['Recovered'] || 0,
-                        confirmedActive: x['Active'] || 0
-                    })
-                }
+
             });
         } catch (e) {
             process.stderr.write("On date" + dateString + e);
         }
     }
+
+    // Reallocate historical data
+    rows = rows.sort(rowCmpAdmin2);
+    reallocateRestatedDeaths(rows);
+
+    // Add metro rows
+    const originalLength = rows.length;
+    for(let j = 0; j < originalLength; ++j) {
+        const row = rows[j];
+        const admin2 = row.admin2;
+        const state = row.state;
+
+        const metroKey = `${admin2}, ${state}`;
+        const metro = METRO_MAP[metroKey];
+
+
+        if(metro) {
+            rows.push({
+                date: row.date,
+                country: row.country,
+                state: metro,
+                locationType: "Metro",
+                confirmedCases: row.confirmedCases,
+                confirmedDeaths: row.confirmedDeaths,
+                confirmedRecoveries: row.confirmedRecoveries,
+                confirmedActive: row.confirmedActive
+            })
+        }   
+    }    
+
     // Group together fixed rows
     rows = groupRowsByCountryAndState(rows)
+
+    // Add country-level sums, where needed
     rows = addCountrySums(rows)
 
     var sortedRows = rows.sort(rowCmp);
-    reallocateRestatedDeaths(sortedRows);
 
     // Add incremental columns
     var locationIndex = 0;
@@ -357,6 +380,23 @@ function rowCmp(x, y) {
 
         if(stateCmp != 0) return stateCmp;
         return dateCmp;        
+}
+
+function rowCmpAdmin2(x, y) {
+    const countryCmp = x.country.localeCompare(y.country);
+    const stateCmp = x.state.localeCompare(y.state);
+    const admin2Cmp = x.admin2.localeCompare(y.admin2);
+    const dateCmp = x.date.localeCompare(y.date);
+
+    if(countryCmp != 0) return countryCmp;
+
+    /** Always sort All to the top */
+    if(x.state == "All" && y.state != "All") return -1;
+    if(y.state == "All" && x.state != "All") return 1;
+
+    if(stateCmp != 0) return stateCmp;
+    if(admin2Cmp != 0) return admin2Cmp;
+    return dateCmp;        
 }
 
 async function generateData() {

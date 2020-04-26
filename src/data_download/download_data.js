@@ -112,6 +112,11 @@ METRO_MAP = {
     "Pike, Pennsylvania": "New York Metro",
 }
 
+REALLOCATE_DAYS = {
+    "Hubei:China:2020-04-17": 1290, // reallocate all of the deaths -- China restated probable deaths
+    "New York:United States:2020-04-16": 2468, // New York changed historical reporting to include probables
+}
+
 function groupRowsByCountryAndState(rows) {
     return lodash(rows).groupBy(x => {
         return x.country + '::' + x.state + '::' + x.date;
@@ -182,6 +187,38 @@ function addCountrySums(rows) {
     });
     rows = rows.concat(extraRows);
     return groupRowsByCountryAndState(rows);
+}
+
+function reallocateRestatedDeaths(rows) {
+    var lastLocation = "";
+    var totalRows = 0;
+
+    rows.forEach((row, index) => {
+        const rowLocation = row.state + ':' + row.country;
+        if(rowLocation != lastLocation) {
+            lastLocation = rowLocation;
+            totalRows = 0;
+        }
+
+        const reallocateKey = rowLocation + ':' + row.date;
+        const reallocAmount = REALLOCATE_DAYS[reallocateKey];
+
+        if(reallocAmount) {
+            var totalDeaths = rows[index - 1].confirmedDeaths;
+            var ratio = reallocAmount / totalDeaths;
+            var finalDelta = 0;
+
+            for(let i = -totalRows; i < 0; ++i) {
+                const prevRow = rows[index + i];
+                const delta = Math.round(prevRow.confirmedDeaths * ratio);
+                finalDelta = delta;
+                prevRow.confirmedDeaths += delta;
+
+            }
+
+        }
+        totalRows++;
+    });
 }
 
 async function downloadFiles() {
@@ -274,6 +311,7 @@ async function downloadFiles() {
     rows = addCountrySums(rows)
 
     var sortedRows = rows.sort(rowCmp);
+    reallocateRestatedDeaths(sortedRows);
 
     // Add incremental columns
     var locationIndex = 0;

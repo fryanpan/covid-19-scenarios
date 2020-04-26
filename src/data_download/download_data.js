@@ -197,7 +197,7 @@ function reallocateRestatedDeaths(rows, number) {
         }
 
         var reallocAmount = 0;
-        if((row.state == 'New York' && row.date == '2020-04-16')) {
+        if((row.state == 'New York' && (row.date == '2020-04-16' || row.date == '2020-04-17'))) {
             const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
             reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
         }

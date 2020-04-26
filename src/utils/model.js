@@ -2,17 +2,22 @@ import moment from 'moment';
 import { BasicDiseaseModelScenario } from './basicDiseaseModel';
 import {LocationManager} from "../utils/locationManager"
 
+export const PresetCategories  = {
+  WORLD: "world", // comparisons around the world
+  USER: "user", // user created scenarios
+}
+
 /** Scenarios list that we're running */
 const BASE_SCENARIO = {
+  category: PresetCategories.USER,
   rBefore: 2.2,
   cfrBefore: 0.014,
   rAfter: 2.2,
   cfrAfter: 0.014
 }
 
-export const PresetCategories  = {
-  WORLD: "world" // comparisons around the world
-}
+const R_SCENARIOS = [0.5, 0.6, 0.7, 0.8, 0.9, 1.2];
+
 
 /** Scenario data can be either an Object that overrides BASE_SCENARIO, or a function that modifies it */
 export const PresetScenarios = new Map([
@@ -59,7 +64,7 @@ export class ModelManager {
    * 
    * @param {Object} queryData Result of running the model query
    */
-  static initWithData(queryData) {
+  static initWithData(queryData, computeRScenarios) {
     this.modelInputs = new ModelInputs();
     this.scenarios = {};
     this.historicalData = queryData;
@@ -69,6 +74,8 @@ export class ModelManager {
     for(let key in this.presetScenarios) {
       this.presetDisplayData[key] = this.presetScenarios[key].getDisplayData();
     }
+
+    this.computeRScenarios = computeRScenarios;
 
     this.updateModelInputs(this.modelInputs);
   }
@@ -160,6 +167,27 @@ export class ModelManager {
     this.scenarios = {
       current: diseaseModel 
     };
+
+    if(this.computeRScenarios) {
+      R_SCENARIOS.forEach(rValue => {
+        const scenarioKey = "r" + rValue;
+        const scenarioName = locationScenario.name + ' R=' + rValue;
+
+        const rModel = new BasicDiseaseModelScenario(
+          locationScenario.category,
+          scenarioName,
+          dailyData,
+          population,
+          locationScenario.rBefore,
+          locationScenario.cfrBefore,
+          rValue,
+          locationScenario.cfrAfter,
+          locationScenario.thresholdDate
+        );
+
+        this.scenarios[scenarioKey] = rModel;
+      });
+    }
 
     return this.scenarios;
   }

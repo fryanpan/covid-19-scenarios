@@ -23,7 +23,7 @@ class IndexPage extends React.Component {
     this.throttledModelUpdate = throttle(this.updateModels.bind(this), IndexPage.MODEL_UPDATE_THROTTLE_TIME);
     // Make sure to do this first, so the data is available elsewhere
     LocationManager.initLocationData(this.props.data.allLocationsCsv.nodes, this.props.data.allDailyDataCsv.nodes);
-    ModelManager.initWithData(this.props.data);
+    ModelManager.initWithData(this.props.data, true);
 
     this.state = {
       modelManager: ModelManager,

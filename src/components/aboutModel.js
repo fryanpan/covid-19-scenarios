@@ -12,6 +12,7 @@ import {
 
 import * as moment from 'moment'
 import { mergeDataArrays, readableInteger, listOfMonths, readableMonth, readableNumber } from '../utils/dataUtils'
+import { PresetCategories } from '../utils/model'
 
 /**
  * Extracts the date field and one key from each object in an array.
@@ -54,19 +55,16 @@ class AboutModel extends ScenarioEditingComponent {
         /**
          * Combine data from all of the scenarios
          */
-        var infectedDataArrays = [];
         var deadDataArrays = [];
-        infectedDataArrays.push(
-            extractDateAndKey(scenarios.current.dailyData, 'infectedInc',  'currentInfectedInc')
-        );
-        
-        infectedDataArrays.push(
-            extractDateAndKey(scenarios.current.dailyData, 'confirmedCasesInc', 'confirmedCasesInc')
-        )
 
-        deadDataArrays.push(
-            extractDateAndKey(scenarios.current.dailyData, 'deadInc', 'currentDeadInc')
-        )
+        const scenarioKeys = Object.keys(scenarios);
+        for(let key of scenarioKeys) {
+            if(scenarios[key].scenario.category != PresetCategories.USER) continue;
+            deadDataArrays.push(extractDateAndKey(scenarios[key].dailyData, 'deadInc', key + 'DeadInc'))
+        }
+
+        console.log("Scenarios", scenarioKeys, deadDataArrays);
+
         deadDataArrays.push(
             extractDateAndKey(scenarios.current.dailyData, 'confirmedDeathsInc', 'confirmedDeathsInc')
         )
@@ -164,11 +162,11 @@ class AboutModel extends ScenarioEditingComponent {
                                 }}
                             >
 
-
-
-                                <Line type="monotone" dataKey="currentDeadInc"  
-                                    name="My Scenario" stroke="#cbd5e8" 
-                                    strokeWidth={10} dot={false}/>
+                                {scenarioKeys.map(key => {
+                                    return <Line type="monotone" dataKey={`${key}DeadInc`}  
+                                        name={key} stroke="#cbd5e8" 
+                                        strokeWidth={1} dot={false}/>
+                                })}
 
                                 <Bar dataKey="confirmedDeathsInc"
                                     name="Actual Deaths" fill="#fc8d62"/>

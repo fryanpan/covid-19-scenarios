@@ -29,9 +29,9 @@ const ASSUMPTIONS = {
   }
 
   const SIMULATION_STATES = ['susceptible', 'exposed', 'infected', 'infectious', 'recovered', 'dead'];
-  const INCUBATION_FILTER = [ 0, 0, 0.05, 0.1, 0.2, 0.3, 0.2, 0.1, 0.05];
+  const INCUBATION_FILTER = [ 0, 0, 0.05, 0.15, 0.2, 0.2, 0.2, 0.15, 0.05];
   const RECOVERY_FILTER = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.1, 0.2, 0.3, 0.2, 0.1, 0.05 ];
-  const DEATH_FILTER = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.15, 0.6, 0.15, 0.05 ]
+  const DEATH_FILTER = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.05, 0.3, 0.3, 0.3, 0.05 ]
   const DEATH_AND_INCUBATION_FILTER = convolute(INCUBATION_FILTER, DEATH_FILTER);
 
   // Pad with buffer before and after the simulation data to avoid having to check for overflowing array indexes
@@ -252,7 +252,7 @@ const ASSUMPTIONS = {
         // Calculate new exposures in the past based on deaths
         for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
           if(data[i].confirmedDeathsInc > 0) {
-              const scale = 2 / cfrBefore;
+              const scale = 1 / cfrBefore;
               stateTransitionWithFilter(data, "confirmedDeathsInc", "susceptible", "exposed", i, DEATH_AND_INCUBATION_FILTER, scale, -1);
           }
         }

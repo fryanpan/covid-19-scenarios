@@ -8,8 +8,9 @@ import Media from 'react-media';
 
 import moment from 'moment';
 
-import { mergeDataArrays, readableRatio, readableNumber, readablePercent, 
+import { mergeDataArrays, metricPerMillionPopulation, readableRatio, readableNumber, readablePercent, 
     listOfMonths, readableMonth } from "../utils/dataUtils" 
+import { PresetCategories } from "../utils/model";
 
 /** Computes a ratio of past counts for the given key
  * To a period one window length earlier.
@@ -44,20 +45,6 @@ function rollingRatioForState(historicalData, country, state, key, window, outpu
     return computeRollingRatio(stateData, key, window, outputKey);
 }
 
-function metricPerMillionPopulation(scenarioData, key, outputKey) {
-    const population = scenarioData.scenario.population;
-
-    return scenarioData.dailyData.map(x => {
-        var row = {
-            date: x.date
-        };
-        if(x[key] !== 0) {
-            row[outputKey] = x[key] / population * 1000000;
-        }
-        return row;
-    });
-}
-
 class MyCommunity extends React.Component {    
     render() {        
         const modelInputs = this.props.modelInputs;
@@ -87,11 +74,21 @@ class MyCommunity extends React.Component {
             ]);
 
         /** Current scenario active cases per million */
+        var activeCasesSourceArrays =  [
+            metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
+        ];
+        var scenarioKeys = [];
+        for(let key of Object.keys(scenarios)) {
+            if(scenarios[key].scenario.category != PresetCategories.USER) continue;
+            scenarioKeys.push(key);
+            const name = key == 'current' ? currentScenarioName : currentScenarioName + key;
+            activeCasesSourceArrays.push(metricPerMillionPopulation(scenarios[key], 'infected', name));
+        }
+
         var activeCasesPerMillion = 
-            mergeDataArrays([
-                metricPerMillionPopulation(currentScenario, 'infected', currentScenarioName),
-                metricPerMillionPopulation(scenarios["hubeiStrongFlattening"], 'infected', "China (Hubei)")
-            ]);
+            mergeDataArrays(activeCasesSourceArrays);
+
+        console.log(activeCasesPerMillion)
 
         var lastIndexAbove1 = 0;
         var firstDayBelow100;
@@ -363,7 +360,12 @@ class MyCommunity extends React.Component {
                             <Legend iconType='square' />
 
                             <Line type="linear" dataKey="China (Hubei)" stroke="#fdcdac"  strokeWidth={matches.small ? 15 : 30} dot={false}/>
-                            <Line type="linear" dataKey={currentScenarioName} stroke="#c4cde4" strokeWidth={matches.small ? 15 : 30} dot={false}/>
+
+                            {scenarioKeys.map(key => {
+                                return <Line type="linear" dataKey={currentScenarioName + key} 
+                                    stroke="#c4cde4" strokeWidth={1} dot={false}/>
+                            })}
+
                             <ReferenceLine y={100} 
                                 strokeDasharray="3 3" position="start"/>
 

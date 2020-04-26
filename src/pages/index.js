@@ -1,11 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import AboutModel from "../components/aboutModel"
-import MyInfo from "../components/myInfo"
-import MyFuture from "../components/myFuture"
-import SimulationDataTable from "../components/simDataTable"
+import MyInfo2 from "../components/myInfo2"
+import ScenarioView from "../components/scenarioView"
 import { ModelManager } from "../utils/model"
-import MyCommunity from "../components/myCommunity"
 import { LocationManager } from "../utils/locationManager"
 import moment from "moment"
 import ScenarioBar from "../components/scenarioBar"
@@ -127,28 +124,16 @@ class IndexPage extends React.Component {
 
     return <Layout>
       <div className={this.state.hideText ? "hideText" : "showText"}>
+        <ScenarioBar modelInputs={modelInputs}
+          minScroll={50} 
+          onModelInputChange={this.handleModelInputChange}></ScenarioBar>
 
-        <ScenarioBar modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></ScenarioBar>
-
-        <MyInfo modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo>
+        <MyInfo2 modelInputs={modelInputs} onModelInputChange={this.handleModelInputChange}></MyInfo2>
 
         <p>Data will be updated daily (last update on {lastDataDate}).<br/>
-          {!this.state.hideText && 
-            <span>
-                    To skip the explanations and just see charts, <a onClick={this.hideText.bind(this)}>click here</a>
-            </span>
-          }
-          {this.state.hideText && 
-            <span>
-                    To show explanations, <a onClick={this.hideText.bind(this)}>click here</a>
-            </span>
-          }
         </p>
 
-        <AboutModel modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></AboutModel>
-
-        <MyFuture modelData={modelData} modelInputs={modelInputs}></MyFuture>
-        <MyCommunity modelData={modelData} modelInputs={modelInputs} historicalData={queryData.allDailyDataCsv.nodes}></MyCommunity>
+        <ScenarioView modelInputs={modelInputs} modelData={modelData} onModelInputChange={this.handleModelInputChange}></ScenarioView>
       </div>
       <h1>Acknowledgements</h1>
 
@@ -171,8 +156,6 @@ class IndexPage extends React.Component {
       but given how much uncertainty there is in the inputs, the mistakes introduced by having a shitty 
       model implementation probably don't matter.  I spent more time focusing on the insight
       than the math.  The math needed to be close enough. */}
-
-      <SimulationDataTable modelData={modelData}></SimulationDataTable>
     </Layout>
   }
 }

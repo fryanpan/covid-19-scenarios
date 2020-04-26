@@ -47,6 +47,48 @@ export function mergeDataArrays(array) {
     return result;
 }
 
+/**
+ * Computes a metric, per million population, in a scenario
+ * 
+ * @param {Object} scenarioData Result of running a model 
+ * @param {String} key String key to use to lookup a metric from each row of the scenario
+ * @param {String} outputKey Output key to use
+ */
+export function metricPerMillionPopulation(scenarioData, key, outputKey) {
+    const population = scenarioData.scenario.population;
+
+    return scenarioData.dailyData.map(x => {
+        var row = {
+            date: x.date
+        };
+        if(x[key] !== 0) {
+            row[outputKey] = x[key] / population * 1000000;
+        }
+        return row;
+    });
+}
+
+/**
+ * Computes a metric as a fraction of population, in a scenario
+ * 
+ * @param {Object} scenarioData Result of running a model 
+ * @param {String} key String key to use to lookup a metric from each row of the scenario
+ * @param {String} outputKey Output key to use
+ */
+export function metricPopulationRatio(scenarioData, key, outputKey) {
+    const population = scenarioData.scenario.population;
+
+    return scenarioData.dailyData.map(x => {
+        var row = {
+            date: x.date
+        };
+        if(x[key] !== 0) {
+            row[outputKey] = x[key] / population;
+        }
+        return row;
+    });
+}
+
 export function readableNumber(precision) {
     precision = precision || 2;
     return d3Format.format(`,.${precision}r`);

@@ -5,6 +5,7 @@ import {LocationManager} from "../utils/locationManager"
 export const PresetCategories  = {
   WORLD: "world", // comparisons around the world
   USER: "user", // user created scenarios
+  R: "r", // sample scenarios with different r values
 }
 
 /** Scenarios list that we're running */
@@ -16,7 +17,7 @@ const BASE_SCENARIO = {
   cfrAfter: 0.014
 }
 
-const R_SCENARIOS = [0.5, 0.6, 0.7, 0.8, 0.9, 1.2];
+const R_SCENARIOS = [0.5, 0.6, 0.7, 0.8, 0.9];
 
 
 /** Scenario data can be either an Object that overrides BASE_SCENARIO, or a function that modifies it */
@@ -169,12 +170,13 @@ export class ModelManager {
     };
 
     if(this.computeRScenarios) {
+      console.log("Running R Scenarios");
       R_SCENARIOS.forEach(rValue => {
         const scenarioKey = "r" + rValue;
         const scenarioName = locationScenario.name + ' R=' + rValue;
 
         const rModel = new BasicDiseaseModelScenario(
-          locationScenario.category,
+          PresetCategories.R,
           scenarioName,
           dailyData,
           population,

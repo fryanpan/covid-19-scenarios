@@ -252,7 +252,7 @@ const ASSUMPTIONS = {
         // Calculate new exposures in the past based on deaths
         for(let i = BUFFER_LENGTH; i < bufferedDataLength; ++i) {
           if(data[i].confirmedDeathsInc > 0) {
-              const scale = 2 / cfrBefore;
+              const scale = 1 / cfrBefore;
               stateTransitionWithFilter(data, "confirmedDeathsInc", "susceptible", "exposed", i, DEATH_AND_INCUBATION_FILTER, scale, -1);
           }
         }

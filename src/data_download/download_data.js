@@ -82,7 +82,7 @@ METRO_MAP = {
 
     // Los Angeles
     "Los Angeles, California": "Los Angeles Metro",
-    "San Bernadino, California": "Los Angeles Metro",
+    "San Bernardino, California": "Los Angeles Metro",
     "Ventura, California": "Los Angeles Metro",
     "Orange, California": "Los Angeles Metro",
     "Riverside, California": "Los Angeles Metro",
@@ -102,7 +102,7 @@ METRO_MAP = {
     "Middlesex, New Jersey": "New York Metro",
     "Monmouth, New Jersey": "New York Metro",
     "Ocean, New Jersey": "New York Metro",
-    "Sommerset, New Jersey": "New York Metro",
+    "Somerset, New Jersey": "New York Metro",
 
     "Essex, New Jersey": "New York Metro",
     "Union, New Jersey": "New York Metro",
@@ -296,7 +296,7 @@ METRO_MAP = {
     "St. Charles, Missouri": "St. Louis Metro",
     "St. Louis City, Missouri": "St. Louis Metro",
     "Warren, Missouri": "St. Louis Metro",
-    "St. Louis, City of, Missouri": "St. Louis Metro",
+    "St. Louis, Missouri": "St. Louis Metro",
 
     // Baltimore
     "Anne Arundel, Maryland": "Baltimore Metro",
@@ -318,49 +318,6 @@ METRO_MAP = {
     "Gilpin, Colorado": "Denver Metro",
     "Jefferson, Colorado": "Denver Metro",
     "Park, Colorado": "Denver Metro",
-
-    // San Juan
-    "Aguas Buenas Municipality, Puerto Rico": "San Juan Metro",
-    "Aibonito Municipality, Puerto Rico": "San Juan Metro",
-    "Arecibo Municipality, Puerto Rico": "San Juan Metro",
-    "Barceloneta Municipality, Puerto Rico": "San Juan Metro",
-    "Barranquitas Municipality, Puerto Rico": "San Juan Metro",
-    "Bayamón Municipality, Puerto Rico": "San Juan Metro",
-    "Caguas Municipality, Puerto Rico": "San Juan Metro",
-    "Camuy Municipality, Puerto Rico": "San Juan Metro",
-    "Canóvanas Municipality, Puerto Rico": "San Juan Metro",
-    "Carolina Municipality, Puerto Rico": "San Juan Metro",
-    "Cataño Municipality, Puerto Rico": "San Juan Metro",
-    "Cayey Municipality, Puerto Rico": "San Juan Metro",
-    "Ciales Municipality, Puerto Rico": "San Juan Metro",
-    "Cidra Municipality, Puerto Rico": "San Juan Metro",
-    "Comerío Municipality, Puerto Rico": "San Juan Metro",
-    "Corozal Municipality, Puerto Rico": "San Juan Metro",
-    "Dorado Municipality, Puerto Rico": "San Juan Metro",
-    "Florida Municipality, Puerto Rico": "San Juan Metro",
-    "Guaynabo Municipality, Puerto Rico": "San Juan Metro",
-    "Gurabo Municipality, Puerto Rico": "San Juan Metro",
-    "Hatillo Municipality, Puerto Rico": "San Juan Metro",
-    "Humacao Municipality, Puerto Rico": "San Juan Metro",
-    "Juncos Municipality, Puerto Rico": "San Juan Metro",
-    "Las Piedras Municipality, Puerto Rico": "San Juan Metro",
-    "Loíza Municipality, Puerto Rico": "San Juan Metro",
-    "Manatí Municipality, Puerto Rico": "San Juan Metro",
-    "Maunabo Municipality, Puerto Rico": "San Juan Metro",
-    "Morovis Municipality, Puerto Rico": "San Juan Metro",
-    "Naguabo Municipality, Puerto Rico": "San Juan Metro",
-    "Naranjito Municipality, Puerto Rico": "San Juan Metro",
-    "Orocovis Municipality, Puerto Rico": "San Juan Metro",
-    "Quebradillas Municipality, Puerto Rico": "San Juan Metro",
-    "Río Grande Municipality, Puerto Rico": "San Juan Metro",
-    "San Juan Municipality, Puerto Rico": "San Juan Metro",
-    "San Lorenzo Municipality, Puerto Rico": "San Juan Metro",
-    "Toa Alta Municipality, Puerto Rico": "San Juan Metro",
-    "Toa Baja Municipality, Puerto Rico": "San Juan Metro",
-    "Trujillo Alto Municipality, Puerto Rico": "San Juan Metro",
-    "Vega Alta Municipality, Puerto Rico": "San Juan Metro",
-    "Vega Baja Municipality, Puerto Rico": "San Juan Metro",
-    "Yabucoa Municipality, Puerto Rico": "San Juan Metro",
 
     // Charlotte
     "Cabarrus, North Carolina": "Charlotte Metro",
@@ -679,9 +636,9 @@ async function downloadFiles() {
     }    
 
     // Do a check
-    for(let key in Object.keys(METRO_MAP)) {
+    for(let key of Object.keys(METRO_MAP)) {
         if(!foundMetro[key]) {
-            process.stderr.write("Unable to find county ", key, " for metro ", METRO_MAP[key]);
+            process.stderr.write("Unable to find county " + key + " for metro " + METRO_MAP[key] + "\n");
         }
     }
 

@@ -122,6 +122,7 @@ function groupRowsByCountryAndState(rows) {
             date: entries[0].date,
             country: entries[0].country,
             state: entries[0].state,
+            locationType: entries[0].locationType,
             confirmedCases: 0,
             confirmedDeaths: 0,
             confirmedRecoveries: 0

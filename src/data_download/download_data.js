@@ -82,7 +82,7 @@ METRO_MAP = {
 
     // Los Angeles
     "Los Angeles, California": "Los Angeles Metro",
-    "San Bernadino, California": "Los Angeles Metro",
+    "San Bernardino, California": "Los Angeles Metro",
     "Ventura, California": "Los Angeles Metro",
     "Orange, California": "Los Angeles Metro",
     "Riverside, California": "Los Angeles Metro",
@@ -102,7 +102,7 @@ METRO_MAP = {
     "Middlesex, New Jersey": "New York Metro",
     "Monmouth, New Jersey": "New York Metro",
     "Ocean, New Jersey": "New York Metro",
-    "Sommerset, New Jersey": "New York Metro",
+    "Somerset, New Jersey": "New York Metro",
 
     "Essex, New Jersey": "New York Metro",
     "Union, New Jersey": "New York Metro",
@@ -110,6 +110,312 @@ METRO_MAP = {
     "Sussex, New Jersey": "New York Metro",
     "Hunterdon, New Jersey": "New York Metro",
     "Pike, Pennsylvania": "New York Metro",
+
+    // Chicago
+    "Cook, Illinois": "Chicago Metro",
+    "DeKalb, Illinois": "Chicago Metro",
+    "DuPage, Illinois": "Chicago Metro",
+    "Grundy, Illinois": "Chicago Metro",
+    "Kane, Illinois": "Chicago Metro",
+    "Kendall, Illinois": "Chicago Metro",
+    "Lake, Illinois": "Chicago Metro",
+    "McHenry, Illinois": "Chicago Metro",
+    "Will, Illinois": "Chicago Metro",
+    "Jasper, Indiana": "Chicago Metro",
+    "Lake, Indiana": "Chicago Metro",
+    "Newton, Indiana": "Chicago Metro",
+    "Porter, Indiana": "Chicago Metro",
+    "Kenosha, Wisconsin": "Chicago Metro",
+
+    // Dallas Fort-Worth
+    "Collin, Texas": "Dallas Fort-Worth Metro",
+    "Dallas, Texas": "Dallas Fort-Worth Metro",
+    "Denton, Texas": "Dallas Fort-Worth Metro",
+    "Ellis, Texas": "Dallas Fort-Worth Metro",
+    "Hood, Texas": "Dallas Fort-Worth Metro",
+    "Hunt, Texas": "Dallas Fort-Worth Metro",
+    "Johnson, Texas": "Dallas Fort-Worth Metro",
+    "Kaufman, Texas": "Dallas Fort-Worth Metro",
+    "Parker, Texas": "Dallas Fort-Worth Metro",
+    "Rockwall, Texas": "Dallas Fort-Worth Metro",
+    "Somervell, Texas": "Dallas Fort-Worth Metro",
+    "Tarrant, Texas": "Dallas Fort-Worth Metro",
+    "Wise, Texas": "Dallas Fort-Worth Metro",
+
+    // Houston
+    "Austin, Texas": "Houston Metro",
+    "Brazoria, Texas": "Houston Metro",
+    "Chambers, Texas": "Houston Metro",
+    "Fort Bend, Texas": "Houston Metro",
+    "Galveston, Texas": "Houston Metro",
+    "Harris, Texas": "Houston Metro",
+    "Liberty, Texas": "Houston Metro",
+    "Montgomery, Texas": "Houston Metro",
+    "Waller, Texas": "Houston Metro",
+
+    // Philadelphia
+    "New Castle, Delaware": "Philadelphia Metro",
+    "Cecil, Maryland": "Philadelphia Metro",
+    "Burlington, New Jersey": "Philadelphia Metro",
+    "Camden, New Jersey": "Philadelphia Metro",
+    "Gloucester, New Jersey": "Philadelphia Metro",
+    "Salem, New Jersey": "Philadelphia Metro",
+    "Bucks, Pennsylvania": "Philadelphia Metro",
+    "Chester, Pennsylvania": "Philadelphia Metro",
+    "Delaware, Pennsylvania": "Philadelphia Metro",
+    "Montgomery, Pennsylvania": "Philadelphia Metro",
+    "Philadelphia, Pennsylvania": "Philadelphia Metro",
+
+    // Washington
+    "District of Columbia, District of Columbia": "Washington DC Metro",
+    "Calvert, Maryland": "Washington DC Metro",
+    "Charles, Maryland": "Washington DC Metro",
+    "Frederick, Maryland": "Washington DC Metro",
+    "Montgomery, Maryland": "Washington DC Metro",
+    "Prince George's, Maryland": "Washington DC Metro",
+    "Arlington, Virginia": "Washington DC Metro",
+    "Clarke, Virginia": "Washington DC Metro",
+    "Culpeper, Virginia": "Washington DC Metro",
+    "Fairfax, Virginia": "Washington DC Metro",
+    "Fauquier, Virginia": "Washington DC Metro",
+    "Loudoun, Virginia": "Washington DC Metro",
+    "Prince William, Virginia": "Washington DC Metro",
+    "Rappahannock, Virginia": "Washington DC Metro",
+    "Spotsylvania, Virginia": "Washington DC Metro",
+    "Stafford, Virginia": "Washington DC Metro",
+    "Warren, Virginia": "Washington DC Metro",
+    "Alexandria, Virginia": "Washington DC Metro",
+    "Fairfax City, Virginia": "Washington DC Metro",
+    "Falls Church, Virginia": "Washington DC Metro",
+    "Fredericksburg, Virginia": "Washington DC Metro",
+    "Manassas, Virginia": "Washington DC Metro",
+    "Manassas Park, Virginia": "Washington DC Metro",
+    "Jefferson, West Virginia": "Washington DC Metro",
+    
+    // Miami
+    "Broward, Florida": "Miami Metro",
+    "Miami-Dade, Florida": "Miami Metro",
+    "Palm Beach, Florida": "Miami Metro",
+    
+    // Atlanta
+    "Barrow, Georgia": "Atlanta Metro",
+    "Bartow, Georgia": "Atlanta Metro",
+    "Butts, Georgia": "Atlanta Metro",
+    "Carroll, Georgia": "Atlanta Metro",
+    "Cherokee, Georgia": "Atlanta Metro",
+    "Clayton, Georgia": "Atlanta Metro",
+    "Cobb, Georgia": "Atlanta Metro",
+    "Coweta, Georgia": "Atlanta Metro",
+    "Dawson, Georgia": "Atlanta Metro",
+    "DeKalb, Georgia": "Atlanta Metro",
+    "Douglas, Georgia": "Atlanta Metro",
+    "Fayette, Georgia": "Atlanta Metro",
+    "Forsyth, Georgia": "Atlanta Metro",
+    "Fulton, Georgia": "Atlanta Metro",
+    "Gwinnett, Georgia": "Atlanta Metro",
+    "Haralson, Georgia": "Atlanta Metro",
+    "Heard, Georgia": "Atlanta Metro",
+    "Henry, Georgia": "Atlanta Metro",
+    "Jasper, Georgia": "Atlanta Metro",
+    "Lamar, Georgia": "Atlanta Metro",
+    "Meriwether, Georgia": "Atlanta Metro",
+    "Morgan, Georgia": "Atlanta Metro",
+    "Newton, Georgia": "Atlanta Metro",
+    "Paulding, Georgia": "Atlanta Metro",
+    "Pickens, Georgia": "Atlanta Metro",
+    "Pike, Georgia": "Atlanta Metro",
+    "Rockdale, Georgia": "Atlanta Metro",
+    "Spalding, Georgia": "Atlanta Metro",
+    "Walton, Georgia": "Atlanta Metro",
+
+    // Boston
+    "Essex, Massachusetts": "Boston Metro",
+    "Middlesex, Massachusetts": "Boston Metro",
+    "Norfolk, Massachusetts": "Boston Metro",
+    "Plymouth, Massachusetts": "Boston Metro",
+    "Suffolk, Massachusetts": "Boston Metro",
+    "Rockingham, New Hampshire": "Boston Metro",
+    "Strafford, New Hampshire": "Boston Metro",
+
+    // Phoenix
+    "Maricopa, Arizona": "Phoenix Metro",
+    "Pinal, Arizona": "Phoenix Metro",
+
+    // Detroit
+    "Lapeer, Michigan": "Detroit Metro",
+    "Livingston, Michigan": "Detroit Metro",
+    "Macomb, Michigan": "Detroit Metro",
+    "Oakland, Michigan": "Detroit Metro",
+    "St. Clair, Michigan": "Detroit Metro",
+    "Wayne, Michigan": "Detroit Metro",
+
+    // Seattle
+    "King, Washington": "Seattle Metro",
+    "Pierce, Washington": "Seattle Metro",
+    "Snohomish, Washington": "Seattle Metro",
+
+    // Minneapolis
+    "Anoka, Minnesota": "Minneapolis Metro",
+    "Carver, Minnesota": "Minneapolis Metro",
+    "Chisago, Minnesota": "Minneapolis Metro",
+    "Dakota, Minnesota": "Minneapolis Metro",
+    "Hennepin, Minnesota": "Minneapolis Metro",
+    "Isanti, Minnesota": "Minneapolis Metro",
+    "Le Sueur, Minnesota": "Minneapolis Metro",
+    "Mille Lacs, Minnesota": "Minneapolis Metro",
+    "Ramsey, Minnesota": "Minneapolis Metro",
+    "Scott, Minnesota": "Minneapolis Metro",
+    "Sherburne, Minnesota": "Minneapolis Metro",
+    "Sibley, Minnesota": "Minneapolis Metro",
+    "Washington, Minnesota": "Minneapolis Metro",
+    "Wright, Minnesota": "Minneapolis Metro",
+    "Pierce, Wisconsin": "Minneapolis Metro",
+    "St. Croix, Wisconsin": "Minneapolis Metro",
+
+    // San Diego Metro
+    "San Diego, California": "San Diego Metro",
+
+    // Tampa Metro
+    "Hernando, Florida": "Tampa Metro",
+    "Hillsborough, Florida": "Tampa Metro",
+    "Pasco, Florida": "Tampa Metro",
+    "Pinellas, Florida": "Tampa Metro",
+
+    // St. Louis Metro
+    "Bond, Illinois": "St. Louis Metro",
+    "Calhoun, Illinois": "St. Louis Metro",
+    "Clinton, Illinois": "St. Louis Metro",
+    "Jersey, Illinois": "St. Louis Metro",
+    "Macoupin, Illinois": "St. Louis Metro",
+    "Madison, Illinois": "St. Louis Metro",
+    "Monroe, Illinois": "St. Louis Metro",
+    "St. Clair, Illinois": "St. Louis Metro",
+    "Franklin, Missouri": "St. Louis Metro",
+    "Jefferson, Missouri": "St. Louis Metro",
+    "Lincoln, Missouri": "St. Louis Metro",
+    "St. Charles, Missouri": "St. Louis Metro",
+    "St. Louis City, Missouri": "St. Louis Metro",
+    "Warren, Missouri": "St. Louis Metro",
+    "St. Louis, Missouri": "St. Louis Metro",
+
+    // Baltimore
+    "Anne Arundel, Maryland": "Baltimore Metro",
+    "Baltimore, Maryland": "Baltimore Metro",
+    "Carroll, Maryland": "Baltimore Metro",
+    "Harford, Maryland": "Baltimore Metro",
+    "Howard, Maryland": "Baltimore Metro",
+    "Queen Anne's, Maryland": "Baltimore Metro",
+    "Baltimore City, Maryland": "Baltimore Metro",
+
+    // Denver
+    "Adams, Colorado": "Denver Metro",
+    "Arapahoe, Colorado": "Denver Metro",
+    "Broomfield, Colorado": "Denver Metro",
+    "Clear Creek, Colorado": "Denver Metro",
+    "Denver, Colorado": "Denver Metro",
+    "Douglas, Colorado": "Denver Metro",
+    "Elbert, Colorado": "Denver Metro",
+    "Gilpin, Colorado": "Denver Metro",
+    "Jefferson, Colorado": "Denver Metro",
+    "Park, Colorado": "Denver Metro",
+
+    // Charlotte
+    "Cabarrus, North Carolina": "Charlotte Metro",
+    "Gaston, North Carolina": "Charlotte Metro",
+    "Iredell, North Carolina": "Charlotte Metro",
+    "Lincoln, North Carolina": "Charlotte Metro",
+    "Mecklenburg, North Carolina": "Charlotte Metro",
+    "Rowan, North Carolina": "Charlotte Metro",
+    "Union, North Carolina": "Charlotte Metro",
+    "Chester, South Carolina": "Charlotte Metro",
+    "Lancaster, South Carolina": "Charlotte Metro",
+    "York, South Carolina": "Charlotte Metro",
+
+    // Pittsburgh
+    "Allegheny, Pennsylvania": "Pittsburgh Metro",
+    "Armstrong, Pennsylvania": "Pittsburgh Metro",
+    "Beaver, Pennsylvania": "Pittsburgh Metro",
+    "Butler, Pennsylvania": "Pittsburgh Metro",
+    "Fayette, Pennsylvania": "Pittsburgh Metro",
+    "Washington, Pennsylvania": "Pittsburgh Metro",
+    "Westmoreland, Pennsylvania": "Pittsburgh Metro",
+
+    // Portland
+    "Clackamas, Oregon": "Portland Metro",
+    "Columbia, Oregon": "Portland Metro",
+    "Multnomah, Oregon": "Portland Metro",
+    "Washington, Oregon": "Portland Metro",
+    "Yamhill, Oregon": "Portland Metro",
+    "Clark, Washington": "Portland Metro",
+    "Skamania, Washington": "Portland Metro",
+
+    // San Antonio
+    "Atascosa, Texas": "San Antonio Metro",
+    "Bandera, Texas": "San Antonio Metro",
+    "Bexar, Texas": "San Antonio Metro",
+    "Comal, Texas": "San Antonio Metro",
+    "Guadalupe, Texas": "San Antonio Metro",
+    "Kendall, Texas": "San Antonio Metro",
+    "Medina, Texas": "San Antonio Metro",
+    "Wilson, Texas": "San Antonio Metro",
+
+    // Orlando
+    "Lake, Florida": "Orlando Metro",
+    "Orange, Florida": "Orlando Metro",
+    "Osceola, Florida": "Orlando Metro",
+    "Seminole, Florida": "Orlando Metro",
+
+    // Sacramento
+    "El Dorado, California": "Sacramento Metro",
+    "Placer, California": "Sacramento Metro",
+    "Sacramento, California": "Sacramento Metro",
+    "Yolo, California": "Sacramento Metro",
+
+    // Cincinnati
+    "Dearborn, Indiana": "Cincinnati Metro",
+    "Ohio, Indiana": "Cincinnati Metro",
+    "Union, Indiana": "Cincinnati Metro",
+    "Boone, Kentucky": "Cincinnati Metro",
+    "Bracken, Kentucky": "Cincinnati Metro",
+    "Campbell, Kentucky": "Cincinnati Metro",
+    "Gallatin, Kentucky": "Cincinnati Metro",
+    "Grant, Kentucky": "Cincinnati Metro",
+    "Kenton, Kentucky": "Cincinnati Metro",
+    "Pendleton, Kentucky": "Cincinnati Metro",
+    "Brown, Ohio": "Cincinnati Metro",
+    "Butler, Ohio": "Cincinnati Metro",
+    "Clermont, Ohio": "Cincinnati Metro",
+    "Hamilton, Ohio": "Cincinnati Metro",
+    "Warren, Ohio": "Cincinnati Metro",
+
+    // Cleveland
+    "Cuyahoga, Ohio": "Cleveland Metro",
+    "Geauga, Ohio": "Cleveland Metro",
+    "Lake, Ohio": "Cleveland Metro",
+    "Lorain, Ohio": "Cleveland Metro",
+    "Medina, Ohio": "Cleveland Metro",
+
+    // Kansas City
+    "Johnson, Kansas": "Kansas City Metro",
+    "Leavenworth, Kansas": "Kansas City Metro",
+    "Linn, Kansas": "Kansas City Metro",
+    "Miami, Kansas": "Kansas City Metro",
+    "Wyandotte, Kansas": "Kansas City Metro",
+    "Bates, Missouri": "Kansas City Metro",
+    "Caldwell, Missouri": "Kansas City Metro",
+    "Cass, Missouri": "Kansas City Metro",
+    "Clay, Missouri": "Kansas City Metro",
+    "Clinton, Missouri": "Kansas City Metro",
+    "Jackson, Missouri": "Kansas City Metro",
+    "Lafayette, Missouri": "Kansas City Metro",
+    "Platte, Missouri": "Kansas City Metro",
+    "Ray, Missouri": "Kansas City Metro",
+
+    // Las Vegas
+    "Clark, Nevada": "Las Vegas Metro",
+
+
+    
 }
 
 
@@ -305,6 +611,7 @@ async function downloadFiles() {
     reallocateRestatedDeaths(rows);
 
     // Add metro rows
+    var foundMetro = {};
     const originalLength = rows.length;
     for(let j = 0; j < originalLength; ++j) {
         const row = rows[j];
@@ -313,7 +620,7 @@ async function downloadFiles() {
 
         const metroKey = `${admin2}, ${state}`;
         const metro = METRO_MAP[metroKey];
-
+        foundMetro[metroKey] = true;
 
         if(metro) {
             rows.push({
@@ -328,6 +635,13 @@ async function downloadFiles() {
             })
         }   
     }    
+
+    // Do a check
+    for(let key of Object.keys(METRO_MAP)) {
+        if(!foundMetro[key]) {
+            process.stderr.write("Unable to find county " + key + " for metro " + METRO_MAP[key] + "\n");
+        }
+    }
 
     // Group together fixed rows
     rows = groupRowsByCountryAndState(rows)

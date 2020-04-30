@@ -1,215 +1,215 @@
 ﻿country,state,population,rInitial,cfrInitial,flatteningDate,source,notes,continent
-Afghanistan,All,36644000,,,2020-03-29,,,Asia
+Afghanistan,All,36644000,,,3/29/20,,,Asia
 Albania,All,3075000,,,,,,Europe
 Algeria,All,42973000,,,,,,Africa
 American Samoa,All,54000,,,,,,Oceania
 Andorra,All,86000,,,,,,Europe
-Angola,All,22485000,,,2020-03-29,,,Africa
+Angola,All,22485000,,,3/29/20,,,Africa
 Anguilla,All,19000,,,,,,North America
-Antigua and Barbuda,All,99000,,,2020-04-02,,,North America
-Argentina,All,45379000,,,2020-03-19,,,South America
+Antigua and Barbuda,All,99000,,,4/2/20,,,North America
+Argentina,All,45379000,,,3/19/20,,,South America
 Armenia,All,3022000,,,,,,Asia
-Aruba,All,120000,,,2020-03-18,,,North America
-Australia,All,23939000,,,2020-03-29,,,Oceania
-Austria,All,8860000,,,2020-03-17,,,Europe
+Aruba,All,120000,,,3/18/20,,,North America
+Australia,All,23939000,,,3/29/20,,,Oceania
+Austria,All,8860000,,,3/17/20,,,Europe
 Azerbaijan,All,10206000,,,,,,Asia
-Bahamas,All,338000,,,2020-03-20,,,North America
-Bahrain,All,1506000,,,2020-03-27,,,Asia
-Bangladesh,All,169778000,,,2020-03-25,,,Asia
-Barbados,All,295000,,,2020-03-29,,,North America
-Belarus,All,9478000,,,2020-04-05,,Only -30%,Europe
-Belgium,All,11721000,,,2020-03-19,,,Europe
-Belize,All,380000,,,2020-03-25,,,North America
-Benin,All,11957000,,,2020-04-05,,Only -23%,Africa
+Bahamas,All,338000,,,3/20/20,,,North America
+Bahrain,All,1506000,,,3/27/20,,,Asia
+Bangladesh,All,169778000,,,3/25/20,,,Asia
+Barbados,All,295000,,,3/29/20,,,North America
+Belarus,All,9478000,,,4/5/20,,Only -30%,Europe
+Belgium,All,11721000,,,3/19/20,,,Europe
+Belize,All,380000,,,3/25/20,,,North America
+Benin,All,11957000,,,4/5/20,,Only -23%,Africa
 Bermuda,All,72000,,,,,,North America
 Bhutan,All,783000,,,,,,Asia
-Bolivia,All,11640000,,,2020-03-21,,,South America
-Bosnia and Herzegovina,All,3836000,,,2020-03-22,,,Europe
-Botswana,All,2313000,,,2020-04-03,,,Africa
-Brazil,All,216016000,,,2020-03-20,,,South America
+Bolivia,All,11640000,,,3/21/20,,,South America
+Bosnia and Herzegovina,All,3836000,,,3/22/20,,,Europe
+Botswana,All,2313000,,,4/3/20,,,Africa
+Brazil,All,216016000,,,3/20/20,,,South America
 British Virgin Islands,All,38000,,,,,,North America
 Brunei,All,465000,,,,,,Asia
-Bulgaria,All,6967000,,,2020-03-14,,,Europe
-Burkina Faso,All,21978000,,,2020-03-29,,Only -31%,Africa
+Bulgaria,All,6967000,,,3/14/20,,,Europe
+Burkina Faso,All,21978000,,,3/29/20,,Only -31%,Africa
 Burundi,All,12632000,,,,,,Africa
-Cambodia,All,16927000,,,2020-03-22,,,Asia
-Cameroon,All,26970000,,,2020-03-29,,Only -27%,Africa
-Canada,Alberta,4067175,,,2020-03-22,,,North America
-Canada,All,36388000,,,2020-03-22,,,North America
-Canada,British Columbia,4648055,,,2020-03-22,,,North America
-Canada,Manitoba,1278365,,,2020-03-22,,,North America
-Canada,New Brunswick,747101,,,2020-03-20,,,North America
-Canada,Newfoundland and Labrador,519716,,,2020-03-24,,,North America
-Canada,Northwest Territories,41786,,,2020-03-22,,,North America
-Canada,Nova Scotia,923598,,,2020-03-22,,,North America
-Canada,Nunavut,35944,,,2020-03-29,,,North America
-Canada,Ontario,13448494,,,2020-03-22,,,North America
-Canada,Prince Edward Island,142907,,,2020-03-20,,,North America
-Canada,Quebec,8164361,,,2020-03-22,,,North America
-Canada,Saskatchewan,1098352,,,2020-03-20,,,North America
-Canada,Yukon,35874,,,2020-03-22,,,North America
-Cape Verde,All,584000,,,2020-03-22,,,Africa
+Cambodia,All,16927000,,,3/22/20,,,Asia
+Cameroon,All,26970000,,,3/29/20,,Only -27%,Africa
+Canada,Alberta,4067175,,,3/22/20,,,North America
+Canada,All,36388000,,,3/22/20,,,North America
+Canada,British Columbia,4648055,,,3/22/20,,,North America
+Canada,Manitoba,1278365,,,3/22/20,,,North America
+Canada,New Brunswick,747101,,,3/20/20,,,North America
+Canada,Newfoundland and Labrador,519716,,,3/24/20,,,North America
+Canada,Northwest Territories,41786,,,3/22/20,,,North America
+Canada,Nova Scotia,923598,,,3/22/20,,,North America
+Canada,Nunavut,35944,,,3/29/20,,,North America
+Canada,Ontario,13448494,,,3/22/20,,,North America
+Canada,Prince Edward Island,142907,,,3/20/20,,,North America
+Canada,Quebec,8164361,,,3/22/20,,,North America
+Canada,Saskatchewan,1098352,,,3/20/20,,,North America
+Canada,Yukon,35874,,,3/22/20,,,North America
+Cape Verde,All,584000,,,3/22/20,,,Africa
 Cayman Islands,All,62000,,,,,,North America
 Central African Republic,All,5991000,,,,,,Africa
 Chad,All,12756000,,,,,,Africa
-Chile,All,18187000,,,2020-03-20,,,South America
-China,All,1397026000,,,2020-01-24,,,Asia
-China,Anhui,62550000,,,2020-01-24,,,Asia
-China,Beijing,21710000,,,2020-01-24,,,Asia
-China,Chongqing,30750000,,,2020-01-24,,,Asia
-China,Fujian,39110000,,,2020-01-24,,,Asia
-China,Gansu,26260000,,,2020-01-24,,,Asia
-China,Guangdong,111690000,,,2020-01-24,,,Asia
-China,Guangxi,48850000,,,2020-01-24,,,Asia
-China,Guizhou,35550000,,,2020-01-24,,,Asia
-China,Hainan,9170000,,,2020-01-24,,,Asia
-China,Hebei,75200000,,,2020-01-24,,,Asia
-China,Heilongjiang,37890000,,,2020-01-24,,,Asia
-China,Henan,95590000,,,2020-01-24,,,Asia
-China,Hong Kong,7335384,,,2020-01-24,,,Asia
-China,Hubei,59020000,,,2020-01-24,,,Asia
-China,Hunan,68600000,,,2020-01-24,,,Asia
-China,Inner Mongolia,25290000,,,2020-01-24,,,Asia
-China,Jiangsu,80290000,,,2020-01-24,,,Asia
-China,Jiangxi,46220000,,,2020-01-24,,,Asia
-China,Jilin,27170000,,,2020-01-24,,,Asia
-China,Liaoning,43690000,,,2020-01-24,,,Asia
-China,Ningxia,6820000,,,2020-01-24,,,Asia
-China,Qinghai,5980000,,,2020-01-24,,,Asia
-China,Shaanxi,38350000,,,2020-01-24,,,Asia
-China,Shandong,100060000,,,2020-01-24,,,Asia
-China,Shanghai,24180000,,,2020-01-24,,,Asia
-China,Shanxi,36820000,,,2020-01-24,,,Asia
-China,Sichuan,83020000,,,2020-01-24,,,Asia
-China,Tianjin,15570000,,,2020-01-24,,,Asia
-China,Tibet,3370000,,,2020-01-24,,,Asia
-China,Xinjiang,24450000,,,2020-01-24,,,Asia
-China,Yunnan,48010000,,,2020-01-24,,,Asia
-China,Zhejiang,56570000,,,2020-01-24,,,Asia
-Colombia,All,49085000,,,2020-03-20,,,South America
+Chile,All,18187000,,,3/20/20,,,South America
+China,All,1397026000,,,1/24/20,,,Asia
+China,Anhui,62550000,,,1/24/20,,,Asia
+China,Beijing,21710000,,,1/24/20,,,Asia
+China,Chongqing,30750000,,,1/24/20,,,Asia
+China,Fujian,39110000,,,1/24/20,,,Asia
+China,Gansu,26260000,,,1/24/20,,,Asia
+China,Guangdong,111690000,,,1/24/20,,,Asia
+China,Guangxi,48850000,,,1/24/20,,,Asia
+China,Guizhou,35550000,,,1/24/20,,,Asia
+China,Hainan,9170000,,,1/24/20,,,Asia
+China,Hebei,75200000,,,1/24/20,,,Asia
+China,Heilongjiang,37890000,,,1/24/20,,,Asia
+China,Henan,95590000,,,1/24/20,,,Asia
+China,Hong Kong,7335384,,,1/24/20,,,Asia
+China,Hubei,59020000,,,1/24/20,,,Asia
+China,Hunan,68600000,,,1/24/20,,,Asia
+China,Inner Mongolia,25290000,,,1/24/20,,,Asia
+China,Jiangsu,80290000,,,1/24/20,,,Asia
+China,Jiangxi,46220000,,,1/24/20,,,Asia
+China,Jilin,27170000,,,1/24/20,,,Asia
+China,Liaoning,43690000,,,1/24/20,,,Asia
+China,Ningxia,6820000,,,1/24/20,,,Asia
+China,Qinghai,5980000,,,1/24/20,,,Asia
+China,Shaanxi,38350000,,,1/24/20,,,Asia
+China,Shandong,100060000,,,1/24/20,,,Asia
+China,Shanghai,24180000,,,1/24/20,,,Asia
+China,Shanxi,36820000,,,1/24/20,,,Asia
+China,Sichuan,83020000,,,1/24/20,,,Asia
+China,Tianjin,15570000,,,1/24/20,,,Asia
+China,Tibet,3370000,,,1/24/20,,,Asia
+China,Xinjiang,24450000,,,1/24/20,,,Asia
+China,Yunnan,48010000,,,1/24/20,,,Asia
+China,Zhejiang,56570000,,,1/24/20,,,Asia
+Colombia,All,49085000,,,3/20/20,,,South America
 Comoros,All,847000,,,,,,Africa
 Cook Islands,All,9000,,,,,,Oceania
-Costa Rica,All,5098000,,,2020-03-20,,,North America
-Croatia,All,4428000,,,2020-03-20,,,Europe
+Costa Rica,All,5098000,,,3/20/20,,,North America
+Croatia,All,4428000,,,3/20/20,,,Europe
 Cuba,All,10932000,,,,,,North America
 Cura√ßao,All,152000,,,,,,North America
 Cyprus,All,1267000,,,,,,Asia
-Czech Republic,All,10703000,,,2020-03-14,,,Europe
+Czech Republic,All,10703000,,,3/14/20,,,Europe
 Democratic Republic of the Congo,All,89250000,,,,,,Africa
-Denmark,All,5643000,,,2020-03-18,,,Europe
+Denmark,All,5643000,,,3/18/20,,,Europe
 Djibouti,All,922000,,,,,,Africa
 Dominica,All,75000,,,,,,North America
-Dominican Republic,All,11110000,,,2020-03-17,,,North America
-Ecuador,All,16905000,,,2020-03-17,,,South America
-Egypt,All,99667000,,,2020-03-22,,,Africa
-El Salvador,All,6218000,,,2020-03-21,,,North America
+Dominican Republic,All,11110000,,,3/17/20,,,North America
+Ecuador,All,16905000,,,3/17/20,,,South America
+Egypt,All,99667000,,,3/22/20,,,Africa
+El Salvador,All,6218000,,,3/21/20,,,North America
 Equatorial Guinea,All,837000,,,,,,Africa
 Eritrea,All,7260000,,,,,,Africa
-Estonia,All,1229000,,,2020-03-17,,,Europe
+Estonia,All,1229000,,,3/17/20,,,Europe
 Eswatini,All,1514000,,,,,,
 Ethiopia,All,114641000,,,,,,Africa
 Faroe Islands,All,52000,,,,,,
 Federated States of Micronesia,All,103000,,,,,,Oceania
-Fiji,All,936000,,,2020-03-29,,,Oceania
-Finland,All,5572000,,,2020-03-20,,,Europe
-France,All,67849000,,,2020-03-17,,,Europe
+Fiji,All,936000,,,3/29/20,,,Oceania
+Finland,All,5572000,,,3/20/20,,,Europe
+France,All,67849000,,,3/17/20,,,Europe
 French Polynesia,All,296000,,,,,,
-Gabon,All,1877000,,,2020-03-22,,Only -37%,Africa
+Gabon,All,1877000,,,3/22/20,,Only -37%,Africa
 Gambia,All,2174000,,,,,,Africa
-Georgia,All,4931000,,,2020-03-22,,,Asia
-Germany,All,82983000,,,2020-03-20,,,Europe
-Ghana,All,29341000,,,2020-03-30,,,Africa
+Georgia,All,4931000,,,3/22/20,,,Asia
+Germany,All,82983000,,,3/20/20,,,Europe
+Ghana,All,29341000,,,3/30/20,,,Africa
 Gibraltar,All,30000,,,,,,Europe
-Greece,All,10743000,,,2020-03-14,,,Europe
+Greece,All,10743000,,,3/14/20,,,Europe
 Greenland,All,58000,,,,,,North America
 Grenada,All,114000,,,,,,North America
 Guam,All,169000,,,,,,Asia
-Guatemala,All,16265000,,,2020-03-18,,,North America
+Guatemala,All,16265000,,,3/18/20,,,North America
 Guernsey,All,68000,,,,,,
 Guinea,All,13420000,,,,,,Africa
-Guinea-Bissau,All,1893000,,,2020-03-22,,,Africa
+Guinea-Bissau,All,1893000,,,3/22/20,,,Africa
 Guyana,All,751000,,,,,,South America
-Haiti,All,10693000,,,2020-03-22,,Only -34%,North America
-Honduras,All,9466000,,,2020-03-17,,,North America
-Hungary,All,9772000,,,2020-03-22,,,Europe
+Haiti,All,10693000,,,3/22/20,,Only -34%,North America
+Honduras,All,9466000,,,3/17/20,,,North America
+Hungary,All,9772000,,,3/22/20,,,Europe
 Iceland,All,358000,,,,,,Europe
-India,All,1326094000,,,2020-03-22,,,Asia
-Indonesia,All,279080000,,,2020-03-29,,,Asia
-Iran,All,86544000,,,2020-03-05,,,Asia
-Iraq,All,42213000,,,2020-03-17,,,Asia
-Ireland,All,5177000,,,2020-03-18,,,Europe
+India,All,1326094000,,,3/22/20,,,Asia
+Indonesia,All,279080000,,,3/29/20,,,Asia
+Iran,All,86544000,,,3/5/20,,,Asia
+Iraq,All,42213000,,,3/17/20,,,Asia
+Ireland,All,5177000,,,3/18/20,,,Europe
 Isle of Man,All,91000,,,,,,
-Israel,All,9178000,,,2020-03-18,,,Asia
-Italy,All,62403000,,,2020-03-09,,,Europe
-Ivory Coast,All,25504000,,,2020-03-29,,Only -33%,Africa
-Jamaica,All,3052000,,,2020-03-22,,,North America
-Japan,All,126138000,,,2020-02-15,,,Asia
+Israel,All,9178000,,,3/18/20,,,Asia
+Italy,All,62403000,,,3/9/20,,,Europe
+Ivory Coast,All,25504000,,,3/29/20,,Only -33%,Africa
+Jamaica,All,3052000,,,3/22/20,,,North America
+Japan,All,126138000,,,2/15/20,,,Asia
 Jersey,All,102000,,,,,,
-Jordan,All,7690000,,,2020-03-17,,,Asia
-Kazakhstan,All,19092000,,,2020-03-22,,,Asia
-Kenya,All,49859000,,,2020-03-29,,,Africa
+Jordan,All,7690000,,,3/17/20,,,Asia
+Kazakhstan,All,19092000,,,3/22/20,,,Asia
+Kenya,All,49859000,,,3/29/20,,,Africa
 Kiribati,All,112000,,,,,,Oceania
 Kosovo,All,1933000,,,,,,Europe
-Kuwait,All,2994000,,,2020-03-18,,,Asia
-Kyrgyzstan,All,5965000,,,2020-03-20,,,Asia
-Laos,All,7448000,,,2020-03-29,,,Asia
-Latvia,All,1882000,,,2020-03-22,,,Europe
-Lebanon,All,5470000,,,2020-03-14,,,Asia
+Kuwait,All,2994000,,,3/18/20,,,Asia
+Kyrgyzstan,All,5965000,,,3/20/20,,,Asia
+Laos,All,7448000,,,3/29/20,,,Asia
+Latvia,All,1882000,,,3/22/20,,,Europe
+Lebanon,All,5470000,,,3/14/20,,,Asia
 Lesotho,All,1970000,,,,,,Africa
 Liberia,All,4728000,,,,,,Africa
-Libya,All,6943000,,,2020-03-22,,,Africa
-Liechtenstein,All,40000,,,2020-03-19,,,Europe
-Lithuania,All,2732000,,,2020-03-18,,,Europe
-Luxembourg,All,629000,,,2020-03-17,,,Europe
+Libya,All,6943000,,,3/22/20,,,Africa
+Liechtenstein,All,40000,,,3/19/20,,,Europe
+Lithuania,All,2732000,,,3/18/20,,,Europe
+Luxembourg,All,629000,,,3/17/20,,,Europe
 Macau,All,615000,,,,,,Asia
 Madagascar,All,26956000,,,,,,Africa
 Malawi,All,21197000,,,,,,Africa
-Malaysia,All,32653000,,,2020-03-17,,,Asia
+Malaysia,All,32653000,,,3/17/20,,,Asia
 Maldives,All,392000,,,,,,Asia
-Mali,All,19714000,,,2020-04-05,,Only -24%,Africa
-Malta,All,420000,,,2020-03-16,,,Europe
+Mali,All,19714000,,,4/5/20,,Only -24%,Africa
+Malta,All,420000,,,3/16/20,,,Europe
 Marshall Islands,All,78000,,,,,,Oceania
 Mauritania,All,4006000,,,,,,Africa
-Mauritius,All,1380000,,,2020-03-20,,,Africa
-Mexico,All,128650000,,,2020-03-29,,,North America
-Moldova,All,3365000,,,2020-03-17,,,Europe
+Mauritius,All,1380000,,,3/20/20,,,Africa
+Mexico,All,128650000,,,3/29/20,,,North America
+Moldova,All,3365000,,,3/17/20,,,Europe
 Monaco,All,31000,,,,,,Europe
 Mongolia,All,3169000,,,,,,Asia
 Montenegro,All,640000,,,,,,Europe
 Montserrat,All,6000,,,,,,North America
 Morocco,All,34956000,,,,,,Africa
-Mozambique,All,28604000,,,2020-03-22,,Only at -32%,Africa
-Myanmar,All,59126000,,,2020-03-27,,,Asia
-Namibia,All,2263000,,,2020-03-27,,,Africa
+Mozambique,All,28604000,,,3/22/20,,Only at -32%,Africa
+Myanmar,All,59126000,,,3/27/20,,,Asia
+Namibia,All,2263000,,,3/27/20,,,Africa
 Nauru,All,10000,,,,,,Oceania
-Nepal,All,34209000,,,2020-03-23,,,Asia
-Netherlands,All,17281000,,,2020-03-19,,,Europe
+Nepal,All,34209000,,,3/23/20,,,Asia
+Netherlands,All,17281000,,,3/19/20,,,Europe
 New Caledonia,All,291000,,,,,,
-New Zealand,All,4715000,,,2020-03-23,,,Oceania
-Nicaragua,All,6204000,,,2020-03-22,,,North America
-Niger,All,21152000,,,2020-03-29,,Only -23%,Africa
-Nigeria,All,204950000,,,2020-03-27,,,Africa
+New Zealand,All,4715000,,,3/23/20,,,Oceania
+Nicaragua,All,6204000,,,3/22/20,,,North America
+Niger,All,21152000,,,3/29/20,,Only -23%,Africa
+Nigeria,All,204950000,,,3/27/20,,,Africa
 North Korea,All,25644000,,,,,,Asia
-North Macedonia,All,2113000,,,2020-03-14,,,Europe
+North Macedonia,All,2113000,,,3/14/20,,,Europe
 Northern Mariana Islands,All,58000,,,,,,
-Norway,All,5468000,,,2020-03-14,,,Europe
-Oman,All,3635000,,,2020-03-20,,,Asia
-Pakistan,All,213720000,,,2020-03-22,,,Asia
+Norway,All,5468000,,,3/14/20,,,Europe
+Oman,All,3635000,,,3/20/20,,,Asia
+Pakistan,All,213720000,,,3/22/20,,,Asia
 Palau,All,22000,,,,,,Oceania
 Palestinian territories,All,5181000,,,,,,Asia
-Panama,All,3895000,,,2020-03-20,,,North America
-Papua New Guinea,All,7260000,,,2020-03-24,,Only -19%,Oceania
-Paraguay,All,7192000,,,2020-03-15,,,South America
-Peru,All,31915000,,,2020-03-17,,,South America
-Philippines,All,109181000,,,2020-03-17,,,Asia
-Poland,All,38283000,,,2020-03-15,,,Europe
-Portugal,All,10843000,,,2020-03-15,,,Europe
-Puerto Rico,All,3520000,,,2020-03-15,,,North America
-Qatar,All,2445000,,,2020-03-20,,,Asia
+Panama,All,3895000,,,3/20/20,,,North America
+Papua New Guinea,All,7260000,,,3/24/20,,Only -19%,Oceania
+Paraguay,All,7192000,,,3/15/20,,,South America
+Peru,All,31915000,,,3/17/20,,,South America
+Philippines,All,109181000,,,3/17/20,,,Asia
+Poland,All,38283000,,,3/15/20,,,Europe
+Portugal,All,10843000,,,3/15/20,,,Europe
+Puerto Rico,All,3520000,,,3/15/20,,,North America
+Qatar,All,2445000,,,3/20/20,,,Asia
 Republic of the Congo,All,5294000,,,,,,Africa
-Romania,All,21303000,,,2020-03-18,,,Europe
+Romania,All,21303000,,,3/18/20,,,Europe
 Russia,All,145723000,,,,,,Europe
-Rwanda,All,14328000,,,2020-03-22,,,Africa
+Rwanda,All,14328000,,,3/22/20,,,Africa
 Saint Helena,All,8000,,,,,,North America
 Saint Kitts and Nevis,All,54000,,,,,,North America
 Saint Lucia,All,167000,,,,,,North America
@@ -218,112 +218,140 @@ Saint Pierre and Miquelon,All,6000,,,,,,North America
 Saint Vincent and the Grenadines,All,102000,,,,,,North America
 Samoa,All,204000,,,,,,Oceania
 San Marino,All,35000,,,,,,Europe
-Saudi Arabia,All,29819000,,,2020-03-22,,,Asia
-Senegal,All,15737000,,,2020-03-24,,,Africa
+Saudi Arabia,All,29819000,,,3/22/20,,,Asia
+Senegal,All,15737000,,,3/24/20,,,Africa
 Serbia,All,7013000,,,,,,Europe
 Seychelles,All,96000,,,,,,Africa
 Sierra Leone,All,6625000,,,,,,Africa
-Singapore,All,6210000,,,2020-02-01,,Only -23%,Asia
+Singapore,All,6210000,,,2/1/20,,Only -23%,Asia
 Sint Maarten,All,44000,,,,,,
-Slovakia,All,5441000,,,2020-03-13,,,Europe
-Slovenia,All,1952000,,,2020-03-14,,,Europe
+Slovakia,All,5441000,,,3/13/20,,,Europe
+Slovenia,All,1952000,,,3/14/20,,,Europe
 Solomon Islands,All,686000,,,,,,Oceania
 Somalia,All,11758000,,,,,,Africa
-South Africa,All,56464000,,,2020-03-27,,,Africa
-South Korea,All,49362000,1.5,,2020-02-15,,,Asia
+South Africa,All,56464000,,,3/27/20,,,Africa
+South Korea,All,49362000,1.5,,2/15/20,,,Asia
 South Sudan,All,14559000,,,,,,Africa
-Spain,All,50016000,,,2020-03-15,,,Europe
-Sri Lanka,All,22890000,,,2020-03-20,,,Asia
+Spain,All,50016000,,,3/15/20,,,Europe
+Sri Lanka,All,22890000,,,3/20/20,,,Asia
 Sudan,All,41131000,,,,,,Africa
 Suriname,All,610000,,,,,,South America
-Sweden,All,10203000,,,2020-03-15,,Only -25%,Europe
-Switzerland,All,8404000,,,2020-03-17,,,Europe
+Sweden,All,10203000,,,3/15/20,,Only -25%,Europe
+Switzerland,All,8404000,,,3/17/20,,,Europe
 Syria,All,22347000,,,,,,Asia
-Taiwan,All,23604000,,,2020-02-01,,No lockdown,Asia
+Taiwan,All,23604000,,,2/1/20,,No lockdown,Asia
 Tajikistan,All,8874000,,,,,,Asia
-Tanzania,All,58553000,,,2020-04-05,,Only -20%,Africa
-Thailand,All,68978000,,,2020-03-24,,,Asia
+Tanzania,All,58553000,,,4/5/20,,Only -20%,Africa
+Thailand,All,68978000,,,3/24/20,,,Asia
 Timor-Leste,All,1384000,,,,,,
-Togo,All,8609000,,,2020-03-29,,Only -42%,Africa
+Togo,All,8609000,,,3/29/20,,Only -42%,Africa
 Tonga,All,107000,,,,,,Oceania
-Trinidad and Tobago,All,1209000,,,2020-03-29,,,North America
+Trinidad and Tobago,All,1209000,,,3/29/20,,,North America
 Tunisia,All,11495000,,,,,,Africa
-Turkey,All,82018000,,,2020-03-20,,,Asia
+Turkey,All,82018000,,,3/20/20,,,Asia
 Turkmenistan,All,5929000,,,,,,Asia
 Turks and Caicos Islands,All,56000,,,,,,North America
 Tuvalu,All,12000,,,,,,Oceania
-Uganda,All,43518000,,,2020-03-27,,,Africa
+Uganda,All,43518000,,,3/27/20,,,Africa
 Ukraine,All,43923000,,,,,,Europe
-United Arab Emirates,All,6496000,,,2020-03-20,,,Asia
-United Kingdom,All,65762000,,,2020-03-19,,,Europe
-United States,Alabama,4903185,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Alaska,731545,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,All,334504000,,,2020-03-28,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United Arab Emirates,All,6496000,,,3/20/20,,,Asia
+United Kingdom,All,65762000,,,3/19/20,,,Europe
+United States,Atlanta Metro,5549211,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Baltimore Metro,2770738,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Boston Metro,4684299,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Charlotte Metro,2421218,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Chicago Metro,9537289,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Cincinnati Metro,2137406,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Cleveland Metro,2064725,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Dallas Fort-Worth Metro,6810913,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Denver Metro,2697476,,,3/18/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Detroit Metro,4294983,,,3/19/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Houston Metro,6313158,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Kansas City Metro,2054473,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Las Vegas Metro,2027868,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Los Angeles Metro,18788800,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Miami Metro,5828191,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Minneapolis Metro,3459146,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,New York Metro,20320876,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Orlando Metro,2267846,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Philadelphia Metro,6034678,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Phoenix Metro,4398762,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Pittsburgh Metro,2360867,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Portland Metro,2314554,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Sacramento Metro,2215770,,,3/19/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,San Antonio Metro,2277550,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,San Diego Metro,3211252,,,3/19/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,San Francisco Bay Area,7750000,,,3/17/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,San Juan Metro,2478905,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Seattle Metro,3610105,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,St. Louis Metro,2801056,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Tampa Metro,2870569,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Washington DC Metro,5949859,,,3/17/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,
+United States,Alabama,4903185,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Alaska,731545,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,All,334504000,,,3/28/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
 United States,American Samoa,55641,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Arizona,7278717,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Arkansas,3017825,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,California,39512223,,,2020-03-19,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Los Angeles Metro,18788800,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,San Francisco Bay Area,7750000,,,2020-03-17,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Colorado,5758736,,,2020-03-18,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Connecticut,3565287,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Delaware,973764,,,2020-03-24,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,District of Columbia,705749,,,2020-03-17,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Florida,21477737,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Georgia,10617423,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Arizona,7278717,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Arkansas,3017825,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,California,39512223,,,3/19/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Colorado,5758736,,,3/18/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Connecticut,3565287,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Delaware,973764,,,3/24/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,District of Columbia,705749,,,3/17/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Florida,21477737,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Georgia,10617423,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
 United States,Guam,165718,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Hawaii,1415872,,,2020-03-23,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Idaho,1792065,,,2020-03-25,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Illinois,12671821,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Indiana,6732219,,,2020-03-23,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Iowa,3155070,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Kansas,2913314,,,2020-03-28,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Kentucky,4467673,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Louisiana,4648794,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Maine,1344212,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Maryland,6045680,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Massachusetts,6949503,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Michigan,9986857,,,2020-03-19,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Minnesota,5639632,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Mississippi,2976149,,,2020-04-01,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Missouri,6137428,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Montana,1068778,,,2020-03-21,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Nebraska,1934408,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Nevada,3080156,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,New Hampshire,1359711,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,New Jersey,8882190,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,New Mexico,2096829,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,New York,19453561,3,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,New York Metro,20320876,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,North Carolina,10488084,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,North Dakota,762062,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Hawaii,1415872,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Idaho,1792065,,,3/25/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Illinois,12671821,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Indiana,6732219,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Iowa,3155070,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Kansas,2913314,,,3/28/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Kentucky,4467673,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Louisiana,4648794,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Maine,1344212,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Maryland,6045680,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Massachusetts,6949503,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Michigan,9986857,,,3/19/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Minnesota,5639632,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Mississippi,2976149,,,4/1/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Missouri,6137428,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Montana,1068778,,,3/21/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Nebraska,1934408,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Nevada,3080156,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,New Hampshire,1359711,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,New Jersey,8882190,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,New Mexico,2096829,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,New York,19453561,3,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,North Carolina,10488084,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,North Dakota,762062,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
 United States,Northern Mariana Islands,55194,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Ohio,11689100,,,2020-03-23,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Oklahoma,3956971,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Oregon,4217737,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Pennsylvania,12801989,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Ohio,11689100,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Oklahoma,3956971,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Oregon,4217737,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Pennsylvania,12801989,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
 United States,Puerto Rico,3193694,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Rhode Island,1059361,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,South Carolina,5148714,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,South Dakota,884659,,,2020-03-27,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Tennessee,6833174,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Texas,28995881,,,2020-03-22,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Rhode Island,1059361,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,South Carolina,5148714,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,South Dakota,884659,,,3/27/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Tennessee,6833174,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Texas,28995881,,,3/22/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
 United States,U.S. Virgin Islands,104914,,,,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Utah,3205958,,,2020-03-21,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Vermont,623989,,,2020-03-21,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Virginia,8535519,,,2020-03-21,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Washington,7614893,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,West Virginia,1787147,,,2020-03-23,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Wisconsin,5822434,,,2020-03-21,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States,Wyoming,578759,,,2020-03-20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-United States Virgin Islands,All,101000,,,2020-03-29,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
-Uruguay,All,3388000,,,2020-03-17,,,South America
+United States,Utah,3205958,,,3/21/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Vermont,623989,,,3/21/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Virginia,8535519,,,3/21/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Washington,7614893,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,West Virginia,1787147,,,3/23/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Wisconsin,5822434,,,3/21/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States,Wyoming,578759,,,3/20/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+United States Virgin Islands,All,101000,,,3/29/20,https://www.gstatic.com/covid19/mobility/2020-04-05_US_Mobility_Report_en.pdf,,North America
+Uruguay,All,3388000,,,3/17/20,,,South America
 Uzbekistan,All,30566000,,,,,,Asia
 Vanuatu,All,299000,,,,,,Oceania
-Venezuela,All,31276000,,,2020-03-17,,,South America
-Vietnam,All,98722000,,,2020-03-27,,,Asia
+Venezuela,All,31276000,,,3/17/20,,,South America
+Vietnam,All,98722000,,,3/27/20,,,Asia
 Wallis and Futuna,All,16000,,,,,,
 Western Sahara,All,653000,,,,,,Africa
 Yemen,All,29885000,,,,,,Asia
-Zambia,All,17427000,,,2020-04-05,,Only -24%,Africa
-Zimbabwe,All,15832000,,,2020-03-30,,,Africa
+Zambia,All,17427000,,,4/5/20,,Only -24%,Africa
+Zimbabwe,All,15832000,,,3/30/20,,,Africa

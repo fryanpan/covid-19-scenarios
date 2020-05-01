@@ -70,15 +70,15 @@ const STATE_FIX_MAP = {
 
 METRO_MAP = {
     // San Francisco Metro
-    "Santa Clara, California": "San Francisco Bay Area",
-    "Alameda, California": "San Francisco Bay Area",
-    "Napa, California": "San Francisco Bay Area",
-    "Solano, California": "San Francisco Bay Area",
-    "Contra Costa, California": "San Francisco Bay Area",
-    "Marin, California": "San Francisco Bay Area",
-    "San Mateo, California": "San Francisco Bay Area",
-    "San Francisco, California": "San Francisco Bay Area",
-    "Sonoma, California": "San Francisco Bay Area",
+    "Santa Clara, California": "San Francisco Metro",
+    "Alameda, California": "San Francisco Metro",
+    "Napa, California": "San Francisco Metro",
+    "Solano, California": "San Francisco Metro",
+    "Contra Costa, California": "San Francisco Metro",
+    "Marin, California": "San Francisco Metro",
+    "San Mateo, California": "San Francisco Metro",
+    "San Francisco, California": "San Francisco Metro",
+    "Sonoma, California": "San Francisco Metro",
 
     // Los Angeles
     "Los Angeles, California": "Los Angeles Metro",

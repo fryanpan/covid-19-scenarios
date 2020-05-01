@@ -480,6 +480,7 @@ function addCountrySums(rows) {
         if(!hasTotal[key]) {
             var newRow = lodash.clone(row);
             newRow.state = 'All';
+            newRow.locationType = 'Country';
             extraRows.push(newRow)
 
             if(!addedTotal[key]) {
@@ -553,7 +554,7 @@ async function downloadFiles() {
                 var country = extractCountry(x);
                 var state = extractState(x) || 'All';
                 var admin2 = extractAdmin2(x) || '';
-                const locationType = state == 'All' ? 'Country' : 'State';
+                const locationType = (state == 'All') ? 'Country' : 'State';
 
                 // Special case for HK -- data starts to categorize HK as part of China starting on 3/11
                 if(country == "Hong Kong" || country == "Hong Kong SAR") {

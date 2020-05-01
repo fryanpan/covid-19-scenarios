@@ -19997,46 +19997,46 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-04-28,United States,San Diego Metro,Metro,3141,113,0,98,2,0,57,1,0
 2020-04-29,United States,San Diego Metro,Metro,3432,120,0,291,7,0,166,24,0
 2020-04-30,United States,San Diego Metro,Metro,3432,120,0,0,0,0,152,4,0
-2020-03-22,United States,San Francisco Bay Area,Metro,694,11,0,694,11,0,,,
-2020-03-23,United States,San Francisco Bay Area,Metro,847,14,0,153,3,0,,,
-2020-03-24,United States,San Francisco Bay Area,Metro,1008,21,0,161,7,0,,,
-2020-03-25,United States,San Francisco Bay Area,Metro,1158,27,0,150,6,0,,,
-2020-03-26,United States,San Francisco Bay Area,Metro,1403,32,0,245,5,0,,,
-2020-03-27,United States,San Francisco Bay Area,Metro,1608,35,0,205,3,0,,,
-2020-03-28,United States,San Francisco Bay Area,Metro,1722,43,0,114,8,0,,,
-2020-03-29,United States,San Francisco Bay Area,Metro,1877,46,0,155,3,0,694,11,0
-2020-03-30,United States,San Francisco Bay Area,Metro,2200,52,0,323,6,0,153,3,0
-2020-03-31,United States,San Francisco Bay Area,Metro,2350,61,0,150,9,0,161,7,0
-2020-04-01,United States,San Francisco Bay Area,Metro,2589,65,0,239,4,0,150,6,0
-2020-04-02,United States,San Francisco Bay Area,Metro,2802,73,0,213,8,0,245,5,0
-2020-04-03,United States,San Francisco Bay Area,Metro,3044,81,0,242,8,0,205,3,0
-2020-04-04,United States,San Francisco Bay Area,Metro,3294,88,0,250,7,0,114,8,0
-2020-04-05,United States,San Francisco Bay Area,Metro,3619,90,0,325,2,0,155,3,0
-2020-04-06,United States,San Francisco Bay Area,Metro,3721,93,0,102,3,0,323,6,0
-2020-04-07,United States,San Francisco Bay Area,Metro,3936,109,0,215,16,0,150,9,0
-2020-04-08,United States,San Francisco Bay Area,Metro,4201,115,0,265,6,0,239,4,0
-2020-04-09,United States,San Francisco Bay Area,Metro,4317,116,0,116,1,0,213,8,0
-2020-04-10,United States,San Francisco Bay Area,Metro,4597,125,0,280,9,0,242,8,0
-2020-04-11,United States,San Francisco Bay Area,Metro,4781,132,0,184,7,0,250,7,0
-2020-04-12,United States,San Francisco Bay Area,Metro,4927,136,0,146,4,0,325,2,0
-2020-04-13,United States,San Francisco Bay Area,Metro,5230,146,0,303,10,0,102,3,0
-2020-04-14,United States,San Francisco Bay Area,Metro,5309,146,0,79,0,0,215,16,0
-2020-04-15,United States,San Francisco Bay Area,Metro,5641,169,0,332,23,0,265,6,0
-2020-04-16,United States,San Francisco Bay Area,Metro,5784,185,0,143,16,0,116,1,0
-2020-04-17,United States,San Francisco Bay Area,Metro,6008,196,0,224,11,0,280,9,0
-2020-04-18,United States,San Francisco Bay Area,Metro,6227,197,0,219,1,0,184,7,0
-2020-04-19,United States,San Francisco Bay Area,Metro,6307,199,0,80,2,0,146,4,0
-2020-04-20,United States,San Francisco Bay Area,Metro,6562,211,0,255,12,0,303,10,0
-2020-04-21,United States,San Francisco Bay Area,Metro,6687,212,0,125,1,0,79,0,0
-2020-04-22,United States,San Francisco Bay Area,Metro,6785,236,0,98,24,0,332,23,0
-2020-04-23,United States,San Francisco Bay Area,Metro,7028,243,0,243,7,0,143,16,0
-2020-04-24,United States,San Francisco Bay Area,Metro,7222,252,0,194,9,0,224,11,0
-2020-04-25,United States,San Francisco Bay Area,Metro,7345,259,0,123,7,0,219,1,0
-2020-04-26,United States,San Francisco Bay Area,Metro,7498,264,0,153,5,0,80,2,0
-2020-04-27,United States,San Francisco Bay Area,Metro,7636,264,0,138,0,0,255,12,0
-2020-04-28,United States,San Francisco Bay Area,Metro,7825,277,0,189,13,0,125,1,0
-2020-04-29,United States,San Francisco Bay Area,Metro,7965,281,0,140,4,0,98,24,0
-2020-04-30,United States,San Francisco Bay Area,Metro,8130,293,0,165,12,0,243,7,0
+2020-03-22,United States,San Francisco Metro,Metro,694,11,0,694,11,0,,,
+2020-03-23,United States,San Francisco Metro,Metro,847,14,0,153,3,0,,,
+2020-03-24,United States,San Francisco Metro,Metro,1008,21,0,161,7,0,,,
+2020-03-25,United States,San Francisco Metro,Metro,1158,27,0,150,6,0,,,
+2020-03-26,United States,San Francisco Metro,Metro,1403,32,0,245,5,0,,,
+2020-03-27,United States,San Francisco Metro,Metro,1608,35,0,205,3,0,,,
+2020-03-28,United States,San Francisco Metro,Metro,1722,43,0,114,8,0,,,
+2020-03-29,United States,San Francisco Metro,Metro,1877,46,0,155,3,0,694,11,0
+2020-03-30,United States,San Francisco Metro,Metro,2200,52,0,323,6,0,153,3,0
+2020-03-31,United States,San Francisco Metro,Metro,2350,61,0,150,9,0,161,7,0
+2020-04-01,United States,San Francisco Metro,Metro,2589,65,0,239,4,0,150,6,0
+2020-04-02,United States,San Francisco Metro,Metro,2802,73,0,213,8,0,245,5,0
+2020-04-03,United States,San Francisco Metro,Metro,3044,81,0,242,8,0,205,3,0
+2020-04-04,United States,San Francisco Metro,Metro,3294,88,0,250,7,0,114,8,0
+2020-04-05,United States,San Francisco Metro,Metro,3619,90,0,325,2,0,155,3,0
+2020-04-06,United States,San Francisco Metro,Metro,3721,93,0,102,3,0,323,6,0
+2020-04-07,United States,San Francisco Metro,Metro,3936,109,0,215,16,0,150,9,0
+2020-04-08,United States,San Francisco Metro,Metro,4201,115,0,265,6,0,239,4,0
+2020-04-09,United States,San Francisco Metro,Metro,4317,116,0,116,1,0,213,8,0
+2020-04-10,United States,San Francisco Metro,Metro,4597,125,0,280,9,0,242,8,0
+2020-04-11,United States,San Francisco Metro,Metro,4781,132,0,184,7,0,250,7,0
+2020-04-12,United States,San Francisco Metro,Metro,4927,136,0,146,4,0,325,2,0
+2020-04-13,United States,San Francisco Metro,Metro,5230,146,0,303,10,0,102,3,0
+2020-04-14,United States,San Francisco Metro,Metro,5309,146,0,79,0,0,215,16,0
+2020-04-15,United States,San Francisco Metro,Metro,5641,169,0,332,23,0,265,6,0
+2020-04-16,United States,San Francisco Metro,Metro,5784,185,0,143,16,0,116,1,0
+2020-04-17,United States,San Francisco Metro,Metro,6008,196,0,224,11,0,280,9,0
+2020-04-18,United States,San Francisco Metro,Metro,6227,197,0,219,1,0,184,7,0
+2020-04-19,United States,San Francisco Metro,Metro,6307,199,0,80,2,0,146,4,0
+2020-04-20,United States,San Francisco Metro,Metro,6562,211,0,255,12,0,303,10,0
+2020-04-21,United States,San Francisco Metro,Metro,6687,212,0,125,1,0,79,0,0
+2020-04-22,United States,San Francisco Metro,Metro,6785,236,0,98,24,0,332,23,0
+2020-04-23,United States,San Francisco Metro,Metro,7028,243,0,243,7,0,143,16,0
+2020-04-24,United States,San Francisco Metro,Metro,7222,252,0,194,9,0,224,11,0
+2020-04-25,United States,San Francisco Metro,Metro,7345,259,0,123,7,0,219,1,0
+2020-04-26,United States,San Francisco Metro,Metro,7498,264,0,153,5,0,80,2,0
+2020-04-27,United States,San Francisco Metro,Metro,7636,264,0,138,0,0,255,12,0
+2020-04-28,United States,San Francisco Metro,Metro,7825,277,0,189,13,0,125,1,0
+2020-04-29,United States,San Francisco Metro,Metro,7965,281,0,140,4,0,98,24,0
+2020-04-30,United States,San Francisco Metro,Metro,8130,293,0,165,12,0,243,7,0
 2020-03-22,United States,Seattle Metro,Metro,1627,86,0,1627,86,0,,,
 2020-03-23,United States,Seattle Metro,Metro,1815,99,0,188,13,0,,,
 2020-03-24,United States,Seattle Metro,Metro,1922,104,0,107,5,0,,,

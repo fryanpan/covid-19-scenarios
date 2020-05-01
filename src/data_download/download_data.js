@@ -496,6 +496,7 @@ function addCountrySums(rows) {
 function reallocateRestatedDeaths(rows, number) {
     var lastLocation = "";
     var totalRows = 0;
+    var fromStart = true; 
 
     rows.forEach((row, index) => {
         const rowLocation = row.state + ':' + row.country + ':' + row.admin2;
@@ -510,19 +511,29 @@ function reallocateRestatedDeaths(rows, number) {
             reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
         }
 
+        if(row.state == 'New York' && row.date == '2020-04-23') {
+            const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
+            reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
+            totalRows = 3;
+            fromStart = false;
+        }
+
+
         if (row.state == 'Hubei' && row.date == '2020-04-17') {
             reallocAmount = row.confirmedDeaths - rows[index - 1].confirmedDeaths;
         }
 
         if(reallocAmount) {
             process.stderr.write(`Reallocating ${row.state} ${row.admin2} ${reallocAmount}\n`)
-            var totalDeaths = rows[index - 1].confirmedDeaths;
+            const initialDeaths = fromStart ? 0 : rows[index - totalRows - 1].confirmedDeaths;
+            var totalDeaths = rows[index - 1].confirmedDeaths - initialDeaths; 
             var ratio = totalDeaths > 0 ? reallocAmount / totalDeaths : 0;
             var finalDelta = 0;
 
+
             for(let i = -totalRows; i < 0; ++i) {
                 const prevRow = rows[index + i];
-                const delta = Math.round(prevRow.confirmedDeaths * ratio);
+                const delta = Math.round((prevRow.confirmedDeaths - initialDeaths) * ratio);
                 finalDelta = delta;
                 prevRow.confirmedDeaths += delta;
             }

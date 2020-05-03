@@ -16788,48 +16788,48 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,All,Country,13679,200,0,5894,82,0,382,4,4
 2020-03-20,United States,All,Country,19100,244,0,5421,44,0,516,7,0
 2020-03-21,United States,All,Country,25513,307,0,6413,63,0,547,7,0
-2020-03-22,United States,All,Country,33848,453,0,8335,146,0,773,9,0
-2020-03-23,United States,All,Country,43663,594,0,9815,141,0,1133,22,5
-2020-03-24,United States,All,Country,53736,761,348,10073,167,348,1789,23,0
-2020-03-25,United States,All,Country,65778,1026,361,12042,265,13,1364,10,0
-2020-03-26,United States,All,Country,83836,1328,681,18058,302,320,5894,82,0
-2020-03-27,United States,All,Country,101657,1736,869,17821,408,188,5421,44,0
-2020-03-28,United States,All,Country,121465,2247,1072,19808,511,203,6413,63,0
-2020-03-29,United States,All,Country,140909,2757,2665,19444,510,1593,8335,146,0
-2020-03-30,United States,All,Country,161831,3316,5644,20922,559,2979,9815,141,0
-2020-03-31,United States,All,Country,188172,4270,7024,26341,954,1380,10073,167,348
-2020-04-01,United States,All,Country,213372,5246,8474,25200,976,1450,12042,265,13
-2020-04-02,United States,All,Country,243599,6525,9001,30227,1279,527,18058,302,320
-2020-04-03,United States,All,Country,275586,7767,9707,31987,1242,706,17821,408,188
-2020-04-04,United States,All,Country,308853,9227,14652,33267,1460,4945,19808,511,203
-2020-04-05,United States,All,Country,337072,10592,17448,28219,1365,2796,19444,510,1593
-2020-04-06,United States,All,Country,366667,12282,19581,29595,1690,2133,20922,559,2979
-2020-04-07,United States,All,Country,396223,14446,21763,29556,2164,2182,26341,954,1380
-2020-04-08,United States,All,Country,429052,16661,23559,32829,2215,1796,25200,976,1450
-2020-04-09,United States,All,Country,461437,18692,25410,32385,2031,1851,30227,1279,527
-2020-04-10,United States,All,Country,496535,21086,28790,35098,2394,3380,31987,1242,706
-2020-04-11,United States,All,Country,526396,23196,31270,29861,2110,2480,33267,1460,4945
-2020-04-12,United States,All,Country,555313,24982,32988,28917,1786,1718,28219,1365,2796
-2020-04-13,United States,All,Country,580619,26688,43482,25306,1706,10494,29595,1690,2133
-2020-04-14,United States,All,Country,607670,29230,47763,27051,2542,4281,29556,2164,2182
-2020-04-15,United States,All,Country,636350,31958,52096,28680,2728,4333,32829,2215,1796
-2020-04-16,United States,All,Country,667801,34091,54703,31451,2133,2607,32385,2031,1851
-2020-04-17,United States,All,Country,699706,36773,58545,31905,2682,3842,35098,2394,3380
-2020-04-18,United States,All,Country,732197,38664,64840,32491,1891,6295,29861,2110,2480
-2020-04-19,United States,All,Country,759086,40661,70337,26889,1997,5497,28917,1786,1718
-2020-04-20,United States,All,Country,784326,42388,72329,25240,1727,1992,25306,1706,10494
-2020-04-21,United States,All,Country,811865,45342,75204,27539,2954,2875,27051,2542,4281
-2020-04-22,United States,All,Country,840220,47862,77366,28355,2520,2162,28680,2728,4333
-2020-04-23,United States,All,Country,869170,49954,80203,28950,2092,2837,31451,2133,2607
-2020-04-24,United States,All,Country,905333,51949,99079,36163,1995,18876,31905,2682,3842
-2020-04-25,United States,All,Country,938154,53755,100372,32821,1806,1293,32491,1891,6295
-2020-04-26,United States,All,Country,965783,54881,106988,27629,1126,6616,26889,1997,5497
-2020-04-27,United States,All,Country,988197,56259,111424,22414,1378,4436,25240,1727,1992
-2020-04-28,United States,All,Country,1012582,58355,115936,24385,2096,4512,27539,2954,2875
-2020-04-29,United States,All,Country,1039909,60967,120720,27327,2612,4784,28355,2520,2162
-2020-04-30,United States,All,Country,1069424,62996,153947,29515,2029,33227,28950,2092,2837
-2020-05-01,United States,All,Country,1103461,64943,164015,34037,1947,10068,36163,1995,18876
-2020-05-02,United States,All,Country,1132539,66369,175382,29078,1426,11367,32821,1806,1293
+2020-03-22,United States,All,Country,33848,458,0,8335,151,0,773,9,0
+2020-03-23,United States,All,Country,43663,600,0,9815,142,0,1133,22,5
+2020-03-24,United States,All,Country,53736,827,348,10073,227,348,1789,23,0
+2020-03-25,United States,All,Country,65778,1095,361,12042,268,13,1364,10,0
+2020-03-26,United States,All,Country,83836,1398,681,18058,303,320,5894,82,0
+2020-03-27,United States,All,Country,101657,1817,869,17821,419,188,5421,44,0
+2020-03-28,United States,All,Country,121465,2327,1072,19808,510,203,6413,63,0
+2020-03-29,United States,All,Country,140909,2781,2665,19444,454,1593,8335,151,0
+2020-03-30,United States,All,Country,161831,3348,5644,20922,567,2979,9815,142,0
+2020-03-31,United States,All,Country,188172,4555,7024,26341,1207,1380,10073,227,348
+2020-04-01,United States,All,Country,213372,5300,8474,25200,745,1450,12042,268,13
+2020-04-02,United States,All,Country,243599,6654,9001,30227,1354,527,18058,303,320
+2020-04-03,United States,All,Country,275586,8093,9707,31987,1439,706,17821,419,188
+2020-04-04,United States,All,Country,308853,9334,14652,33267,1241,4945,19808,510,203
+2020-04-05,United States,All,Country,337072,10953,17448,28219,1619,2796,19444,454,1593
+2020-04-06,United States,All,Country,366667,12599,19581,29595,1646,2133,20922,567,2979
+2020-04-07,United States,All,Country,396223,14773,21763,29556,2174,2182,26341,1207,1380
+2020-04-08,United States,All,Country,429052,16982,23559,32829,2209,1796,25200,745,1450
+2020-04-09,United States,All,Country,461437,19045,25410,32385,2063,1851,30227,1354,527
+2020-04-10,United States,All,Country,496535,21502,28790,35098,2457,3380,31987,1439,706
+2020-04-11,United States,All,Country,526396,23688,31270,29861,2186,2480,33267,1241,4945
+2020-04-12,United States,All,Country,555313,25493,32988,28917,1805,1718,28219,1619,2796
+2020-04-13,United States,All,Country,580619,27046,43482,25306,1553,10494,29595,1646,2133
+2020-04-14,United States,All,Country,607670,29623,47763,27051,2577,4281,29556,2174,2182
+2020-04-15,United States,All,Country,636350,32455,52096,28680,2832,4333,32829,2209,1796
+2020-04-16,United States,All,Country,667801,34629,54703,31451,2174,2607,32385,2063,1851
+2020-04-17,United States,All,Country,699706,37323,58545,31905,2694,3842,35098,2457,3380
+2020-04-18,United States,All,Country,732197,39246,64840,32491,1923,6295,29861,2186,2480
+2020-04-19,United States,All,Country,759086,41259,70337,26889,2013,5497,28917,1805,1718
+2020-04-20,United States,All,Country,784326,42735,72329,25240,1476,1992,25306,1553,10494
+2020-04-21,United States,All,Country,811865,45765,75204,27539,3030,2875,27051,2577,4281
+2020-04-22,United States,All,Country,840220,48245,77366,28355,2480,2162,28680,2832,4333
+2020-04-23,United States,All,Country,869170,50280,80203,28950,2035,2837,31451,2174,2607
+2020-04-24,United States,All,Country,905333,52199,99079,36163,1919,18876,31905,2694,3842
+2020-04-25,United States,All,Country,938154,54014,100372,32821,1815,1293,32491,1923,6295
+2020-04-26,United States,All,Country,965783,55145,106988,27629,1131,6616,26889,2013,5497
+2020-04-27,United States,All,Country,988197,56529,111424,22414,1384,4436,25240,1476,1992
+2020-04-28,United States,All,Country,1012582,58592,115936,24385,2063,4512,27539,3030,2875
+2020-04-29,United States,All,Country,1039909,61074,120720,27327,2482,4784,28355,2480,2162
+2020-04-30,United States,All,Country,1069424,62996,153947,29515,1922,33227,28950,2035,2837
+2020-05-01,United States,All,Country,1103461,64943,164015,34037,1947,10068,36163,1919,18876
+2020-05-02,United States,All,Country,1132539,66369,175382,29078,1426,11367,32821,1815,1293
 2020-03-13,United States,Alabama,State,5,0,0,5,0,0,,,
 2020-03-14,United States,Alabama,State,6,0,0,1,0,0,,,
 2020-03-15,United States,Alabama,State,12,0,0,6,0,0,,,
@@ -17145,36 +17145,36 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-27,United States,Baltimore Metro,Metro,345,1,0,84,0,0,,,
 2020-03-28,United States,Baltimore Metro,Metro,449,1,0,104,0,0,,,
 2020-03-29,United States,Baltimore Metro,Metro,580,3,0,131,2,0,104,1,0
-2020-03-30,United States,Baltimore Metro,Metro,654,5,0,74,2,0,19,0,0
-2020-03-31,United States,Baltimore Metro,Metro,779,8,0,125,3,0,25,0,0
-2020-04-01,United States,Baltimore Metro,Metro,947,8,0,168,0,0,33,0,0
-2020-04-02,United States,Baltimore Metro,Metro,1126,14,0,179,6,0,80,0,0
-2020-04-03,United States,Baltimore Metro,Metro,1337,18,0,211,4,0,84,0,0
-2020-04-04,United States,Baltimore Metro,Metro,1494,25,0,157,7,0,104,0,0
-2020-04-05,United States,Baltimore Metro,Metro,1709,30,0,215,5,0,131,2,0
-2020-04-06,United States,Baltimore Metro,Metro,1860,40,0,151,10,0,74,2,0
-2020-04-07,United States,Baltimore Metro,Metro,1950,47,0,90,7,0,125,3,0
-2020-04-08,United States,Baltimore Metro,Metro,2465,56,0,515,9,0,168,0,0
-2020-04-09,United States,Baltimore Metro,Metro,2742,63,0,277,7,0,179,6,0
-2020-04-10,United States,Baltimore Metro,Metro,2975,78,0,233,15,0,211,4,0
-2020-04-11,United States,Baltimore Metro,Metro,3248,99,0,273,21,0,157,7,0
-2020-04-12,United States,Baltimore Metro,Metro,3483,113,0,235,14,0,215,5,0
-2020-04-13,United States,Baltimore Metro,Metro,3755,122,0,272,9,0,151,10,0
-2020-04-14,United States,Baltimore Metro,Metro,3950,140,0,195,18,0,90,7,0
-2020-04-15,United States,Baltimore Metro,Metro,4247,141,0,297,1,0,515,9,0
-2020-04-16,United States,Baltimore Metro,Metro,4486,144,0,239,3,0,277,7,0
-2020-04-17,United States,Baltimore Metro,Metro,4766,145,0,280,1,0,233,15,0
-2020-04-18,United States,Baltimore Metro,Metro,5082,176,0,316,31,0,273,21,0
-2020-04-19,United States,Baltimore Metro,Metro,5235,195,0,153,19,0,235,14,0
-2020-04-20,United States,Baltimore Metro,Metro,5609,204,0,374,9,0,272,9,0
-2020-04-21,United States,Baltimore Metro,Metro,5778,222,0,169,18,0,195,18,0
+2020-03-30,United States,Baltimore Metro,Metro,654,8,0,74,5,0,19,0,0
+2020-03-31,United States,Baltimore Metro,Metro,779,15,0,125,7,0,25,0,0
+2020-04-01,United States,Baltimore Metro,Metro,947,15,0,168,0,0,33,0,0
+2020-04-02,United States,Baltimore Metro,Metro,1126,28,0,179,13,0,80,0,0
+2020-04-03,United States,Baltimore Metro,Metro,1337,35,0,211,7,0,84,0,0
+2020-04-04,United States,Baltimore Metro,Metro,1494,46,0,157,11,0,104,0,0
+2020-04-05,United States,Baltimore Metro,Metro,1709,58,0,215,12,0,131,2,0
+2020-04-06,United States,Baltimore Metro,Metro,1860,75,0,151,17,0,74,5,0
+2020-04-07,United States,Baltimore Metro,Metro,1950,102,0,90,27,0,125,7,0
+2020-04-08,United States,Baltimore Metro,Metro,2465,118,0,515,16,0,168,0,0
+2020-04-09,United States,Baltimore Metro,Metro,2742,125,0,277,7,0,179,13,0
+2020-04-10,United States,Baltimore Metro,Metro,2975,144,0,233,19,0,211,7,0
+2020-04-11,United States,Baltimore Metro,Metro,3248,186,0,273,42,0,157,11,0
+2020-04-12,United States,Baltimore Metro,Metro,3483,200,0,235,14,0,215,12,0
+2020-04-13,United States,Baltimore Metro,Metro,3755,219,0,272,19,0,151,17,0
+2020-04-14,United States,Baltimore Metro,Metro,3950,240,0,195,21,0,90,27,0
+2020-04-15,United States,Baltimore Metro,Metro,4247,241,0,297,1,0,515,16,0
+2020-04-16,United States,Baltimore Metro,Metro,4486,244,0,239,3,0,277,7,0
+2020-04-17,United States,Baltimore Metro,Metro,4766,232,0,280,0,0,233,19,0
+2020-04-18,United States,Baltimore Metro,Metro,5082,273,0,316,41,0,273,42,0
+2020-04-19,United States,Baltimore Metro,Metro,5235,292,0,153,19,0,235,14,0
+2020-04-20,United States,Baltimore Metro,Metro,5609,301,0,374,9,0,272,19,0
+2020-04-21,United States,Baltimore Metro,Metro,5778,222,0,169,0,0,195,21,0
 2020-04-22,United States,Baltimore Metro,Metro,6038,243,0,260,21,0,297,1,0
 2020-04-23,United States,Baltimore Metro,Metro,6384,257,0,346,14,0,239,3,0
-2020-04-24,United States,Baltimore Metro,Metro,6681,269,0,297,12,0,280,1,0
-2020-04-25,United States,Baltimore Metro,Metro,7032,293,0,351,24,0,316,31,0
+2020-04-24,United States,Baltimore Metro,Metro,6681,269,0,297,12,0,280,0,0
+2020-04-25,United States,Baltimore Metro,Metro,7032,293,0,351,24,0,316,41,0
 2020-04-26,United States,Baltimore Metro,Metro,7355,297,0,323,4,0,153,19,0
 2020-04-27,United States,Baltimore Metro,Metro,7612,328,0,257,31,0,374,9,0
-2020-04-28,United States,Baltimore Metro,Metro,7810,354,0,198,26,0,169,18,0
+2020-04-28,United States,Baltimore Metro,Metro,7810,354,0,198,26,0,169,0,0
 2020-04-29,United States,Baltimore Metro,Metro,8094,383,0,284,29,0,260,21,0
 2020-04-30,United States,Baltimore Metro,Metro,8393,410,0,299,27,0,346,14,0
 2020-05-01,United States,Baltimore Metro,Metro,8827,421,0,434,11,0,297,12,0
@@ -17416,35 +17416,35 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-31,United States,Cincinnati Metro,Metro,247,3,0,45,1,0,20,0,0
 2020-04-01,United States,Cincinnati Metro,Metro,288,3,0,41,0,0,14,0,0
 2020-04-02,United States,Cincinnati Metro,Metro,332,5,0,44,2,0,12,0,0
-2020-04-03,United States,Cincinnati Metro,Metro,373,11,0,41,6,0,14,1,0
-2020-04-04,United States,Cincinnati Metro,Metro,498,12,0,125,1,0,31,1,0
-2020-04-05,United States,Cincinnati Metro,Metro,546,14,0,48,2,0,30,0,0
-2020-04-06,United States,Cincinnati Metro,Metro,640,20,0,94,6,0,23,0,0
-2020-04-07,United States,Cincinnati Metro,Metro,694,30,0,54,10,0,45,1,0
-2020-04-08,United States,Cincinnati Metro,Metro,744,32,0,50,2,0,41,0,0
-2020-04-09,United States,Cincinnati Metro,Metro,842,33,0,98,1,0,44,2,0
-2020-04-10,United States,Cincinnati Metro,Metro,906,34,0,64,1,0,41,6,0
-2020-04-11,United States,Cincinnati Metro,Metro,942,37,0,36,3,0,125,1,0
-2020-04-12,United States,Cincinnati Metro,Metro,1049,38,0,107,1,0,48,2,0
-2020-04-13,United States,Cincinnati Metro,Metro,1147,42,0,98,4,0,94,6,0
-2020-04-14,United States,Cincinnati Metro,Metro,1122,49,0,0,7,0,54,10,0
-2020-04-15,United States,Cincinnati Metro,Metro,1169,52,0,47,3,0,50,2,0
-2020-04-16,United States,Cincinnati Metro,Metro,1249,59,0,80,7,0,98,1,0
-2020-04-17,United States,Cincinnati Metro,Metro,1328,62,0,79,3,0,64,1,0
-2020-04-18,United States,Cincinnati Metro,Metro,1415,66,0,87,4,0,36,3,0
-2020-04-19,United States,Cincinnati Metro,Metro,1467,70,0,52,4,0,107,1,0
-2020-04-20,United States,Cincinnati Metro,Metro,1511,76,0,44,6,0,98,4,0
-2020-04-21,United States,Cincinnati Metro,Metro,1575,83,0,64,7,0,0,7,0
-2020-04-22,United States,Cincinnati Metro,Metro,1626,94,0,51,11,0,47,3,0
-2020-04-23,United States,Cincinnati Metro,Metro,1767,97,0,141,3,0,80,7,0
-2020-04-24,United States,Cincinnati Metro,Metro,1865,101,0,98,4,0,79,3,0
-2020-04-25,United States,Cincinnati Metro,Metro,1937,104,0,72,3,0,87,4,0
-2020-04-26,United States,Cincinnati Metro,Metro,1994,107,0,57,3,0,52,4,0
-2020-04-27,United States,Cincinnati Metro,Metro,2046,108,0,52,1,0,44,6,0
-2020-04-28,United States,Cincinnati Metro,Metro,2156,117,0,110,9,0,64,7,0
-2020-04-29,United States,Cincinnati Metro,Metro,2244,130,0,88,13,0,51,11,0
+2020-04-03,United States,Cincinnati Metro,Metro,373,12,0,41,7,0,14,1,0
+2020-04-04,United States,Cincinnati Metro,Metro,498,13,0,125,1,0,31,1,0
+2020-04-05,United States,Cincinnati Metro,Metro,546,15,0,48,2,0,30,0,0
+2020-04-06,United States,Cincinnati Metro,Metro,640,22,0,94,7,0,23,0,0
+2020-04-07,United States,Cincinnati Metro,Metro,694,33,0,54,11,0,45,1,0
+2020-04-08,United States,Cincinnati Metro,Metro,744,35,0,50,2,0,41,0,0
+2020-04-09,United States,Cincinnati Metro,Metro,842,36,0,98,1,0,44,2,0
+2020-04-10,United States,Cincinnati Metro,Metro,906,37,0,64,1,0,41,7,0
+2020-04-11,United States,Cincinnati Metro,Metro,942,40,0,36,3,0,125,1,0
+2020-04-12,United States,Cincinnati Metro,Metro,1049,41,0,107,1,0,48,2,0
+2020-04-13,United States,Cincinnati Metro,Metro,1147,46,0,98,5,0,94,7,0
+2020-04-14,United States,Cincinnati Metro,Metro,1122,53,0,0,7,0,54,11,0
+2020-04-15,United States,Cincinnati Metro,Metro,1169,57,0,47,4,0,50,2,0
+2020-04-16,United States,Cincinnati Metro,Metro,1249,64,0,80,7,0,98,1,0
+2020-04-17,United States,Cincinnati Metro,Metro,1328,67,0,79,3,0,64,1,0
+2020-04-18,United States,Cincinnati Metro,Metro,1415,71,0,87,4,0,36,3,0
+2020-04-19,United States,Cincinnati Metro,Metro,1467,76,0,52,5,0,107,1,0
+2020-04-20,United States,Cincinnati Metro,Metro,1511,82,0,44,6,0,98,5,0
+2020-04-21,United States,Cincinnati Metro,Metro,1575,90,0,64,8,0,0,7,0
+2020-04-22,United States,Cincinnati Metro,Metro,1626,102,0,51,12,0,47,4,0
+2020-04-23,United States,Cincinnati Metro,Metro,1767,105,0,141,3,0,80,7,0
+2020-04-24,United States,Cincinnati Metro,Metro,1865,110,0,98,5,0,79,3,0
+2020-04-25,United States,Cincinnati Metro,Metro,1937,113,0,72,3,0,87,4,0
+2020-04-26,United States,Cincinnati Metro,Metro,1994,117,0,57,4,0,52,5,0
+2020-04-27,United States,Cincinnati Metro,Metro,2046,118,0,52,1,0,44,6,0
+2020-04-28,United States,Cincinnati Metro,Metro,2156,127,0,110,9,0,64,8,0
+2020-04-29,United States,Cincinnati Metro,Metro,2244,130,0,88,3,0,51,12,0
 2020-04-30,United States,Cincinnati Metro,Metro,2397,133,0,153,3,0,141,3,0
-2020-05-01,United States,Cincinnati Metro,Metro,2544,137,0,147,4,0,98,4,0
+2020-05-01,United States,Cincinnati Metro,Metro,2544,137,0,147,4,0,98,5,0
 2020-05-02,United States,Cincinnati Metro,Metro,2635,142,0,91,5,0,72,3,0
 2020-03-22,United States,Cleveland Metro,Metro,162,1,0,162,1,0,,,
 2020-03-23,United States,Cleveland Metro,Metro,198,1,0,36,0,0,,,
@@ -17464,27 +17464,27 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-04-06,United States,Cleveland Metro,Metro,1198,24,0,67,2,0,73,3,0
 2020-04-07,United States,Cleveland Metro,Metro,1248,29,0,50,5,0,48,3,0
 2020-04-08,United States,Cleveland Metro,Metro,1333,36,0,85,7,0,74,3,0
-2020-04-09,United States,Cleveland Metro,Metro,1405,39,0,72,3,0,110,4,0
-2020-04-10,United States,Cleveland Metro,Metro,1462,39,0,57,0,0,144,1,0
-2020-04-11,United States,Cleveland Metro,Metro,1546,42,0,84,3,0,14,1,0
-2020-04-12,United States,Cleveland Metro,Metro,1613,43,0,67,1,0,57,2,0
-2020-04-13,United States,Cleveland Metro,Metro,1678,46,0,65,3,0,67,2,0
-2020-04-14,United States,Cleveland Metro,Metro,1736,58,0,58,12,0,50,5,0
-2020-04-15,United States,Cleveland Metro,Metro,1812,66,0,76,8,0,85,7,0
-2020-04-16,United States,Cleveland Metro,Metro,1897,71,0,85,5,0,72,3,0
-2020-04-17,United States,Cleveland Metro,Metro,1984,82,0,87,11,0,57,0,0
-2020-04-18,United States,Cleveland Metro,Metro,2105,88,0,121,6,0,84,3,0
-2020-04-19,United States,Cleveland Metro,Metro,2128,90,0,23,2,0,67,1,0
-2020-04-20,United States,Cleveland Metro,Metro,2259,99,0,131,9,0,65,3,0
-2020-04-21,United States,Cleveland Metro,Metro,2367,109,0,108,10,0,58,12,0
-2020-04-22,United States,Cleveland Metro,Metro,2450,125,0,83,16,0,76,8,0
-2020-04-23,United States,Cleveland Metro,Metro,2527,130,0,77,5,0,85,5,0
-2020-04-24,United States,Cleveland Metro,Metro,2612,139,0,85,9,0,87,11,0
-2020-04-25,United States,Cleveland Metro,Metro,2679,144,0,67,5,0,121,6,0
-2020-04-26,United States,Cleveland Metro,Metro,2733,144,0,54,0,0,23,2,0
-2020-04-27,United States,Cleveland Metro,Metro,2796,149,0,63,5,0,131,9,0
-2020-04-28,United States,Cleveland Metro,Metro,2860,163,0,64,14,0,108,10,0
-2020-04-29,United States,Cleveland Metro,Metro,2931,167,0,71,4,0,83,16,0
+2020-04-09,United States,Cleveland Metro,Metro,1405,40,0,72,4,0,110,4,0
+2020-04-10,United States,Cleveland Metro,Metro,1462,40,0,57,0,0,144,1,0
+2020-04-11,United States,Cleveland Metro,Metro,1546,43,0,84,3,0,14,1,0
+2020-04-12,United States,Cleveland Metro,Metro,1613,44,0,67,1,0,57,2,0
+2020-04-13,United States,Cleveland Metro,Metro,1678,47,0,65,3,0,67,2,0
+2020-04-14,United States,Cleveland Metro,Metro,1736,59,0,58,12,0,50,5,0
+2020-04-15,United States,Cleveland Metro,Metro,1812,67,0,76,8,0,85,7,0
+2020-04-16,United States,Cleveland Metro,Metro,1897,72,0,85,5,0,72,4,0
+2020-04-17,United States,Cleveland Metro,Metro,1984,83,0,87,11,0,57,0,0
+2020-04-18,United States,Cleveland Metro,Metro,2105,90,0,121,7,0,84,3,0
+2020-04-19,United States,Cleveland Metro,Metro,2128,92,0,23,2,0,67,1,0
+2020-04-20,United States,Cleveland Metro,Metro,2259,101,0,131,9,0,65,3,0
+2020-04-21,United States,Cleveland Metro,Metro,2367,111,0,108,10,0,58,12,0
+2020-04-22,United States,Cleveland Metro,Metro,2450,127,0,83,16,0,76,8,0
+2020-04-23,United States,Cleveland Metro,Metro,2527,132,0,77,5,0,85,5,0
+2020-04-24,United States,Cleveland Metro,Metro,2612,141,0,85,9,0,87,11,0
+2020-04-25,United States,Cleveland Metro,Metro,2679,146,0,67,5,0,121,7,0
+2020-04-26,United States,Cleveland Metro,Metro,2733,146,0,54,0,0,23,2,0
+2020-04-27,United States,Cleveland Metro,Metro,2796,151,0,63,5,0,131,9,0
+2020-04-28,United States,Cleveland Metro,Metro,2860,165,0,64,14,0,108,10,0
+2020-04-29,United States,Cleveland Metro,Metro,2931,167,0,71,2,0,83,16,0
 2020-04-30,United States,Cleveland Metro,Metro,3067,177,0,136,10,0,77,5,0
 2020-05-01,United States,Cleveland Metro,Metro,3184,183,0,117,6,0,85,9,0
 2020-05-02,United States,Cleveland Metro,Metro,3286,184,0,102,1,0,67,5,0
@@ -17504,47 +17504,47 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,Colorado,State,277,4,0,93,2,0,11,0,0
 2020-03-20,United States,Colorado,State,363,4,0,86,0,0,4,0,0
 2020-03-21,United States,Colorado,State,390,4,0,27,0,0,52,1,0
-2020-03-22,United States,Colorado,State,591,6,0,201,2,0,30,0,0
-2020-03-23,United States,Colorado,State,704,7,0,113,1,0,29,0,0
-2020-03-24,United States,Colorado,State,723,8,0,19,1,0,0,1,0
-2020-03-25,United States,Colorado,State,1021,16,0,298,8,0,24,0,0
-2020-03-26,United States,Colorado,State,1430,19,0,409,3,0,93,2,0
-2020-03-27,United States,Colorado,State,1433,27,0,3,8,0,86,0,0
-2020-03-28,United States,Colorado,State,1740,31,0,307,4,0,27,0,0
-2020-03-29,United States,Colorado,State,2307,47,0,567,16,0,201,2,0
-2020-03-30,United States,Colorado,State,2311,47,0,4,0,0,113,1,0
-2020-03-31,United States,Colorado,State,2966,69,0,655,22,0,19,1,0
-2020-04-01,United States,Colorado,State,2982,69,0,16,0,0,298,8,0
-2020-04-02,United States,Colorado,State,3342,80,0,360,11,0,409,3,0
-2020-04-03,United States,Colorado,State,3742,97,0,400,17,0,3,8,0
-2020-04-04,United States,Colorado,State,4188,111,0,446,14,0,307,4,0
-2020-04-05,United States,Colorado,State,4950,140,0,762,29,0,567,16,0
-2020-04-06,United States,Colorado,State,5183,150,0,233,10,0,4,0,0
-2020-04-07,United States,Colorado,State,5429,179,0,246,29,0,655,22,0
-2020-04-08,United States,Colorado,State,5655,193,0,226,14,0,16,0,0
-2020-04-09,United States,Colorado,State,5655,193,0,0,0,0,360,11,0
-2020-04-10,United States,Colorado,State,6202,226,0,547,33,0,400,17,0
-2020-04-11,United States,Colorado,State,6513,250,0,311,24,0,446,14,0
-2020-04-12,United States,Colorado,State,7307,289,0,794,39,0,762,29,0
-2020-04-13,United States,Colorado,State,7691,306,0,384,17,0,233,10,0
-2020-04-14,United States,Colorado,State,7950,327,0,259,21,0,246,29,0
-2020-04-15,United States,Colorado,State,7956,328,0,6,1,0,226,14,0
-2020-04-16,United States,Colorado,State,8286,355,0,330,27,0,0,0,0
-2020-04-17,United States,Colorado,State,8691,372,0,405,17,0,547,33,0
-2020-04-18,United States,Colorado,State,9047,389,0,356,17,0,311,24,0
-2020-04-19,United States,Colorado,State,9730,420,0,683,31,0,794,39,0
-2020-04-20,United States,Colorado,State,9730,420,0,0,0,0,384,17,0
-2020-04-21,United States,Colorado,State,10473,483,0,743,63,0,259,21,0
-2020-04-22,United States,Colorado,State,10891,506,0,418,23,0,6,1,0
-2020-04-23,United States,Colorado,State,11278,552,0,387,46,0,330,27,0
-2020-04-24,United States,Colorado,State,12256,674,0,978,122,0,405,17,0
-2020-04-25,United States,Colorado,State,12968,684,0,712,10,0,356,17,0
-2020-04-26,United States,Colorado,State,13441,688,0,473,4,0,683,31,0
+2020-03-22,United States,Colorado,State,591,7,0,201,3,0,30,0,0
+2020-03-23,United States,Colorado,State,704,8,0,113,1,0,29,0,0
+2020-03-24,United States,Colorado,State,723,9,0,19,1,0,0,1,0
+2020-03-25,United States,Colorado,State,1021,19,0,298,10,0,24,0,0
+2020-03-26,United States,Colorado,State,1430,22,0,409,3,0,93,2,0
+2020-03-27,United States,Colorado,State,1433,38,0,3,16,0,86,0,0
+2020-03-28,United States,Colorado,State,1740,38,0,307,0,0,27,0,0
+2020-03-29,United States,Colorado,State,2307,56,0,567,18,0,201,3,0
+2020-03-30,United States,Colorado,State,2311,56,0,4,0,0,113,1,0
+2020-03-31,United States,Colorado,State,2966,84,0,655,28,0,19,1,0
+2020-04-01,United States,Colorado,State,2982,84,0,16,0,0,298,10,0
+2020-04-02,United States,Colorado,State,3342,98,0,360,14,0,409,3,0
+2020-04-03,United States,Colorado,State,3742,115,0,400,17,0,3,16,0
+2020-04-04,United States,Colorado,State,4188,131,0,446,16,0,307,0,0
+2020-04-05,United States,Colorado,State,4950,164,0,762,33,0,567,18,0
+2020-04-06,United States,Colorado,State,5183,174,0,233,10,0,4,0,0
+2020-04-07,United States,Colorado,State,5429,232,0,246,58,0,655,28,0
+2020-04-08,United States,Colorado,State,5655,226,0,226,0,0,16,0,0
+2020-04-09,United States,Colorado,State,5655,226,0,0,0,0,360,14,0
+2020-04-10,United States,Colorado,State,6202,292,0,547,66,0,400,17,0
+2020-04-11,United States,Colorado,State,6513,292,0,311,0,0,446,16,0
+2020-04-12,United States,Colorado,State,7307,336,0,794,44,0,762,33,0
+2020-04-13,United States,Colorado,State,7691,355,0,384,19,0,233,10,0
+2020-04-14,United States,Colorado,State,7950,380,0,259,25,0,246,58,0
+2020-04-15,United States,Colorado,State,7956,381,0,6,1,0,226,0,0
+2020-04-16,United States,Colorado,State,8286,414,0,330,33,0,0,0,0
+2020-04-17,United States,Colorado,State,8691,433,0,405,19,0,547,66,0
+2020-04-18,United States,Colorado,State,9047,454,0,356,21,0,311,0,0
+2020-04-19,United States,Colorado,State,9730,489,0,683,35,0,794,44,0
+2020-04-20,United States,Colorado,State,9730,489,0,0,0,0,384,19,0
+2020-04-21,United States,Colorado,State,10473,562,0,743,73,0,259,25,0
+2020-04-22,United States,Colorado,State,10891,590,0,418,28,0,6,1,0
+2020-04-23,United States,Colorado,State,11278,638,0,387,48,0,330,33,0
+2020-04-24,United States,Colorado,State,12256,674,0,978,36,0,405,19,0
+2020-04-25,United States,Colorado,State,12968,684,0,712,10,0,356,21,0
+2020-04-26,United States,Colorado,State,13441,688,0,473,4,0,683,35,0
 2020-04-27,United States,Colorado,State,13879,706,0,438,18,0,0,0,0
-2020-04-28,United States,Colorado,State,14316,736,0,437,30,0,743,63,0
-2020-04-29,United States,Colorado,State,14758,766,0,442,30,0,418,23,0
-2020-04-30,United States,Colorado,State,15284,777,0,526,11,0,387,46,0
-2020-05-01,United States,Colorado,State,15793,821,0,509,44,0,978,122,0
+2020-04-28,United States,Colorado,State,14316,736,0,437,30,0,743,73,0
+2020-04-29,United States,Colorado,State,14758,766,0,442,30,0,418,28,0
+2020-04-30,United States,Colorado,State,15284,777,0,526,11,0,387,48,0
+2020-05-01,United States,Colorado,State,15793,821,0,509,44,0,978,36,0
 2020-05-02,United States,Colorado,State,16225,832,0,432,11,0,712,10,0
 2020-03-07,United States,Connecticut,State,2,0,0,2,0,0,,,
 2020-03-08,United States,Connecticut,State,1,0,0,0,0,0,,,
@@ -17561,90 +17561,90 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,Connecticut,State,159,2,0,91,2,0,2,0,0
 2020-03-20,United States,Connecticut,State,194,3,0,35,1,0,6,0,0
 2020-03-21,United States,Connecticut,State,194,4,0,0,1,0,11,0,0
-2020-03-22,United States,Connecticut,State,327,8,0,133,4,0,2,0,0
-2020-03-23,United States,Connecticut,State,415,10,0,88,2,0,6,0,0
-2020-03-24,United States,Connecticut,State,618,12,0,203,2,0,38,0,0
-2020-03-25,United States,Connecticut,State,875,19,0,257,7,0,0,0,0
-2020-03-26,United States,Connecticut,State,1012,21,0,137,2,0,91,2,0
-2020-03-27,United States,Connecticut,State,1291,27,0,279,6,0,35,1,0
-2020-03-28,United States,Connecticut,State,1524,33,0,233,6,0,0,1,0
-2020-03-29,United States,Connecticut,State,1993,34,0,469,1,0,133,4,0
-2020-03-30,United States,Connecticut,State,2571,36,0,578,2,0,88,2,0
-2020-03-31,United States,Connecticut,State,3128,69,0,557,33,0,203,2,0
-2020-04-01,United States,Connecticut,State,3557,85,0,429,16,0,257,7,0
-2020-04-02,United States,Connecticut,State,3824,112,0,267,27,0,137,2,0
-2020-04-03,United States,Connecticut,State,4914,131,0,1090,19,0,279,6,0
-2020-04-04,United States,Connecticut,State,5276,165,0,362,34,0,233,6,0
-2020-04-05,United States,Connecticut,State,5675,189,0,399,24,0,469,1,0
-2020-04-06,United States,Connecticut,State,6906,206,0,1231,17,0,578,2,0
-2020-04-07,United States,Connecticut,State,7781,277,0,875,71,0,557,33,0
-2020-04-08,United States,Connecticut,State,7781,326,0,0,49,0,429,16,0
-2020-04-09,United States,Connecticut,State,9784,380,0,2003,54,0,267,27,0
-2020-04-10,United States,Connecticut,State,10538,448,0,754,68,0,1090,19,0
-2020-04-11,United States,Connecticut,State,11510,494,0,972,46,0,362,34,0
-2020-04-12,United States,Connecticut,State,12035,554,0,525,60,0,399,24,0
-2020-04-13,United States,Connecticut,State,13381,602,0,1346,48,0,1231,17,0
-2020-04-14,United States,Connecticut,State,13989,671,0,608,69,0,875,71,0
-2020-04-15,United States,Connecticut,State,14755,868,0,766,197,0,0,49,0
-2020-04-16,United States,Connecticut,State,15884,971,0,1129,103,0,2003,54,0
-2020-04-17,United States,Connecticut,State,16809,1036,0,925,65,0,754,68,0
-2020-04-18,United States,Connecticut,State,17550,1086,0,741,50,0,972,46,0
-2020-04-19,United States,Connecticut,State,17962,1127,0,412,41,0,525,60,0
-2020-04-20,United States,Connecticut,State,19815,1331,0,1853,204,0,1346,48,0
-2020-04-21,United States,Connecticut,State,20360,1423,0,545,92,0,608,69,0
-2020-04-22,United States,Connecticut,State,22469,1544,0,2109,121,0,766,197,0
-2020-04-23,United States,Connecticut,State,23100,1639,0,631,95,0,1129,103,0
-2020-04-24,United States,Connecticut,State,23936,1767,0,836,128,0,925,65,0
-2020-04-25,United States,Connecticut,State,24583,1865,0,647,98,0,741,50,0
-2020-04-26,United States,Connecticut,State,25269,1924,0,686,59,0,412,41,0
-2020-04-27,United States,Connecticut,State,25997,2012,0,728,88,0,1853,204,0
+2020-03-22,United States,Connecticut,State,327,9,0,133,5,0,2,0,0
+2020-03-23,United States,Connecticut,State,415,11,0,88,2,0,6,0,0
+2020-03-24,United States,Connecticut,State,618,13,0,203,2,0,38,0,0
+2020-03-25,United States,Connecticut,State,875,20,0,257,7,0,0,0,0
+2020-03-26,United States,Connecticut,State,1012,22,0,137,2,0,91,2,0
+2020-03-27,United States,Connecticut,State,1291,30,0,279,8,0,35,1,0
+2020-03-28,United States,Connecticut,State,1524,37,0,233,7,0,0,1,0
+2020-03-29,United States,Connecticut,State,1993,38,0,469,1,0,133,5,0
+2020-03-30,United States,Connecticut,State,2571,41,0,578,3,0,88,2,0
+2020-03-31,United States,Connecticut,State,3128,77,0,557,36,0,203,2,0
+2020-04-01,United States,Connecticut,State,3557,96,0,429,19,0,257,7,0
+2020-04-02,United States,Connecticut,State,3824,125,0,267,29,0,137,2,0
+2020-04-03,United States,Connecticut,State,4914,148,0,1090,23,0,279,8,0
+2020-04-04,United States,Connecticut,State,5276,187,0,362,39,0,233,7,0
+2020-04-05,United States,Connecticut,State,5675,214,0,399,27,0,469,1,0
+2020-04-06,United States,Connecticut,State,6906,233,0,1231,19,0,578,3,0
+2020-04-07,United States,Connecticut,State,7781,315,0,875,82,0,557,36,0
+2020-04-08,United States,Connecticut,State,7781,364,0,0,49,0,429,19,0
+2020-04-09,United States,Connecticut,State,9784,433,0,2003,69,0,267,29,0
+2020-04-10,United States,Connecticut,State,10538,510,0,754,77,0,1090,23,0
+2020-04-11,United States,Connecticut,State,11510,563,0,972,53,0,362,39,0
+2020-04-12,United States,Connecticut,State,12035,632,0,525,69,0,399,27,0
+2020-04-13,United States,Connecticut,State,13381,687,0,1346,55,0,1231,19,0
+2020-04-14,United States,Connecticut,State,13989,765,0,608,78,0,875,82,0
+2020-04-15,United States,Connecticut,State,14755,992,0,766,227,0,0,49,0
+2020-04-16,United States,Connecticut,State,15884,1112,0,1129,120,0,2003,69,0
+2020-04-17,United States,Connecticut,State,16809,1188,0,925,76,0,754,77,0
+2020-04-18,United States,Connecticut,State,17550,1245,0,741,57,0,972,53,0
+2020-04-19,United States,Connecticut,State,17962,1291,0,412,46,0,525,69,0
+2020-04-20,United States,Connecticut,State,19815,1331,0,1853,40,0,1346,55,0
+2020-04-21,United States,Connecticut,State,20360,1423,0,545,92,0,608,78,0
+2020-04-22,United States,Connecticut,State,22469,1544,0,2109,121,0,766,227,0
+2020-04-23,United States,Connecticut,State,23100,1639,0,631,95,0,1129,120,0
+2020-04-24,United States,Connecticut,State,23936,1767,0,836,128,0,925,76,0
+2020-04-25,United States,Connecticut,State,24583,1865,0,647,98,0,741,57,0
+2020-04-26,United States,Connecticut,State,25269,1924,0,686,59,0,412,46,0
+2020-04-27,United States,Connecticut,State,25997,2012,0,728,88,0,1853,40,0
 2020-04-28,United States,Connecticut,State,26312,2087,0,315,75,0,545,92,0
 2020-04-29,United States,Connecticut,State,26767,2169,0,455,82,0,2109,121,0
 2020-04-30,United States,Connecticut,State,27700,2257,0,933,88,0,631,95,0
 2020-05-01,United States,Connecticut,State,28764,2339,0,1064,82,0,836,128,0
 2020-05-02,United States,Connecticut,State,29287,2436,0,523,97,0,647,98,0
 2020-03-22,United States,Dallas Fort-Worth Metro,Metro,251,4,0,251,4,0,,,
-2020-03-23,United States,Dallas Fort-Worth Metro,Metro,286,6,0,35,2,0,,,
-2020-03-24,United States,Dallas Fort-Worth Metro,Metro,333,7,0,47,1,0,,,
-2020-03-25,United States,Dallas Fort-Worth Metro,Metro,455,8,0,122,1,0,,,
-2020-03-26,United States,Dallas Fort-Worth Metro,Metro,570,10,0,115,2,0,,,
-2020-03-27,United States,Dallas Fort-Worth Metro,Metro,731,10,0,161,0,0,,,
-2020-03-28,United States,Dallas Fort-Worth Metro,Metro,867,13,0,136,3,0,,,
-2020-03-29,United States,Dallas Fort-Worth Metro,Metro,959,15,0,92,2,0,251,4,0
-2020-03-30,United States,Dallas Fort-Worth Metro,Metro,1127,16,0,168,1,0,35,2,0
-2020-03-31,United States,Dallas Fort-Worth Metro,Metro,1321,20,0,194,4,0,47,1,0
-2020-04-01,United States,Dallas Fort-Worth Metro,Metro,1469,24,0,148,4,0,122,1,0
-2020-04-02,United States,Dallas Fort-Worth Metro,Metro,1692,30,0,223,6,0,115,2,0
-2020-04-03,United States,Dallas Fort-Worth Metro,Metro,1892,34,0,200,4,0,161,0,0
-2020-04-04,United States,Dallas Fort-Worth Metro,Metro,2135,40,0,243,6,0,136,3,0
-2020-04-05,United States,Dallas Fort-Worth Metro,Metro,2223,43,0,88,3,0,92,2,0
-2020-04-06,United States,Dallas Fort-Worth Metro,Metro,2338,46,0,115,3,0,168,1,0
-2020-04-07,United States,Dallas Fort-Worth Metro,Metro,2554,52,0,216,6,0,194,4,0
-2020-04-08,United States,Dallas Fort-Worth Metro,Metro,2750,55,0,196,3,0,148,4,0
-2020-04-09,United States,Dallas Fort-Worth Metro,Metro,3019,59,0,269,4,0,223,6,0
-2020-04-10,United States,Dallas Fort-Worth Metro,Metro,3241,65,0,222,6,0,200,4,0
-2020-04-11,United States,Dallas Fort-Worth Metro,Metro,3415,73,0,174,8,0,243,6,0
-2020-04-12,United States,Dallas Fort-Worth Metro,Metro,3626,80,0,211,7,0,88,3,0
-2020-04-13,United States,Dallas Fort-Worth Metro,Metro,3841,84,0,215,4,0,115,3,0
-2020-04-14,United States,Dallas Fort-Worth Metro,Metro,4003,100,0,162,16,0,216,6,0
-2020-04-15,United States,Dallas Fort-Worth Metro,Metro,4214,104,0,211,4,0,196,3,0
-2020-04-16,United States,Dallas Fort-Worth Metro,Metro,4465,117,0,251,13,0,269,4,0
-2020-04-17,United States,Dallas Fort-Worth Metro,Metro,4700,127,0,235,10,0,222,6,0
-2020-04-18,United States,Dallas Fort-Worth Metro,Metro,4935,137,0,235,10,0,174,8,0
-2020-04-19,United States,Dallas Fort-Worth Metro,Metro,5054,138,0,119,1,0,211,7,0
-2020-04-20,United States,Dallas Fort-Worth Metro,Metro,5169,139,0,115,1,0,215,4,0
-2020-04-21,United States,Dallas Fort-Worth Metro,Metro,5331,145,0,162,6,0,162,16,0
-2020-04-22,United States,Dallas Fort-Worth Metro,Metro,5564,151,0,233,6,0,211,4,0
-2020-04-23,United States,Dallas Fort-Worth Metro,Metro,5950,162,0,386,11,0,251,13,0
-2020-04-24,United States,Dallas Fort-Worth Metro,Metro,6237,172,0,287,10,0,235,10,0
-2020-04-25,United States,Dallas Fort-Worth Metro,Metro,6464,181,0,227,9,0,235,10,0
-2020-04-26,United States,Dallas Fort-Worth Metro,Metro,6718,184,0,254,3,0,119,1,0
-2020-04-27,United States,Dallas Fort-Worth Metro,Metro,6755,188,0,37,4,0,115,1,0
-2020-04-28,United States,Dallas Fort-Worth Metro,Metro,7089,201,0,334,13,0,162,6,0
-2020-04-29,United States,Dallas Fort-Worth Metro,Metro,7235,210,0,146,9,0,233,6,0
-2020-04-30,United States,Dallas Fort-Worth Metro,Metro,7723,231,0,488,21,0,386,11,0
+2020-03-23,United States,Dallas Fort-Worth Metro,Metro,286,7,0,35,3,0,,,
+2020-03-24,United States,Dallas Fort-Worth Metro,Metro,333,8,0,47,1,0,,,
+2020-03-25,United States,Dallas Fort-Worth Metro,Metro,455,9,0,122,1,0,,,
+2020-03-26,United States,Dallas Fort-Worth Metro,Metro,570,11,0,115,2,0,,,
+2020-03-27,United States,Dallas Fort-Worth Metro,Metro,731,11,0,161,0,0,,,
+2020-03-28,United States,Dallas Fort-Worth Metro,Metro,867,14,0,136,3,0,,,
+2020-03-29,United States,Dallas Fort-Worth Metro,Metro,959,16,0,92,2,0,251,4,0
+2020-03-30,United States,Dallas Fort-Worth Metro,Metro,1127,18,0,168,2,0,35,3,0
+2020-03-31,United States,Dallas Fort-Worth Metro,Metro,1321,22,0,194,4,0,47,1,0
+2020-04-01,United States,Dallas Fort-Worth Metro,Metro,1469,26,0,148,4,0,122,1,0
+2020-04-02,United States,Dallas Fort-Worth Metro,Metro,1692,32,0,223,6,0,115,2,0
+2020-04-03,United States,Dallas Fort-Worth Metro,Metro,1892,36,0,200,4,0,161,0,0
+2020-04-04,United States,Dallas Fort-Worth Metro,Metro,2135,43,0,243,7,0,136,3,0
+2020-04-05,United States,Dallas Fort-Worth Metro,Metro,2223,46,0,88,3,0,92,2,0
+2020-04-06,United States,Dallas Fort-Worth Metro,Metro,2338,49,0,115,3,0,168,2,0
+2020-04-07,United States,Dallas Fort-Worth Metro,Metro,2554,55,0,216,6,0,194,4,0
+2020-04-08,United States,Dallas Fort-Worth Metro,Metro,2750,58,0,196,3,0,148,4,0
+2020-04-09,United States,Dallas Fort-Worth Metro,Metro,3019,62,0,269,4,0,223,6,0
+2020-04-10,United States,Dallas Fort-Worth Metro,Metro,3241,69,0,222,7,0,200,4,0
+2020-04-11,United States,Dallas Fort-Worth Metro,Metro,3415,77,0,174,8,0,243,7,0
+2020-04-12,United States,Dallas Fort-Worth Metro,Metro,3626,85,0,211,8,0,88,3,0
+2020-04-13,United States,Dallas Fort-Worth Metro,Metro,3841,89,0,215,4,0,115,3,0
+2020-04-14,United States,Dallas Fort-Worth Metro,Metro,4003,106,0,162,17,0,216,6,0
+2020-04-15,United States,Dallas Fort-Worth Metro,Metro,4214,110,0,211,4,0,196,3,0
+2020-04-16,United States,Dallas Fort-Worth Metro,Metro,4465,124,0,251,14,0,269,4,0
+2020-04-17,United States,Dallas Fort-Worth Metro,Metro,4700,135,0,235,11,0,222,7,0
+2020-04-18,United States,Dallas Fort-Worth Metro,Metro,4935,146,0,235,11,0,174,8,0
+2020-04-19,United States,Dallas Fort-Worth Metro,Metro,5054,147,0,119,1,0,211,8,0
+2020-04-20,United States,Dallas Fort-Worth Metro,Metro,5169,148,0,115,1,0,215,4,0
+2020-04-21,United States,Dallas Fort-Worth Metro,Metro,5331,154,0,162,6,0,162,17,0
+2020-04-22,United States,Dallas Fort-Worth Metro,Metro,5564,161,0,233,7,0,211,4,0
+2020-04-23,United States,Dallas Fort-Worth Metro,Metro,5950,173,0,386,12,0,251,14,0
+2020-04-24,United States,Dallas Fort-Worth Metro,Metro,6237,183,0,287,10,0,235,11,0
+2020-04-25,United States,Dallas Fort-Worth Metro,Metro,6464,193,0,227,10,0,235,11,0
+2020-04-26,United States,Dallas Fort-Worth Metro,Metro,6718,196,0,254,3,0,119,1,0
+2020-04-27,United States,Dallas Fort-Worth Metro,Metro,6755,200,0,37,4,0,115,1,0
+2020-04-28,United States,Dallas Fort-Worth Metro,Metro,7089,201,0,334,1,0,162,6,0
+2020-04-29,United States,Dallas Fort-Worth Metro,Metro,7235,210,0,146,9,0,233,7,0
+2020-04-30,United States,Dallas Fort-Worth Metro,Metro,7723,231,0,488,21,0,386,12,0
 2020-05-01,United States,Dallas Fort-Worth Metro,Metro,7944,234,0,221,3,0,287,10,0
-2020-05-02,United States,Dallas Fort-Worth Metro,Metro,8386,244,0,442,10,0,227,9,0
+2020-05-02,United States,Dallas Fort-Worth Metro,Metro,8386,244,0,442,10,0,227,10,0
 2020-03-10,United States,Delaware,State,0,0,0,0,0,0,,,
 2020-03-11,United States,Delaware,State,1,0,0,1,0,0,,,
 2020-03-12,United States,Delaware,State,1,0,0,0,0,0,,,
@@ -17702,44 +17702,44 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-22,United States,Denver Metro,Metro,280,0,0,280,0,0,,,
 2020-03-23,United States,Denver Metro,Metro,335,0,0,55,0,0,,,
 2020-03-24,United States,Denver Metro,Metro,343,0,0,8,0,0,,,
-2020-03-25,United States,Denver Metro,Metro,468,5,0,125,5,0,,,
-2020-03-26,United States,Denver Metro,Metro,646,5,0,178,0,0,,,
-2020-03-27,United States,Denver Metro,Metro,646,5,0,0,0,0,,,
-2020-03-28,United States,Denver Metro,Metro,795,9,0,149,4,0,,,
-2020-03-29,United States,Denver Metro,Metro,1100,13,0,305,4,0,280,0,0
-2020-03-30,United States,Denver Metro,Metro,1100,13,0,0,0,0,55,0,0
-2020-03-31,United States,Denver Metro,Metro,1530,22,0,430,9,0,8,0,0
-2020-04-01,United States,Denver Metro,Metro,1530,22,0,0,0,0,125,5,0
-2020-04-02,United States,Denver Metro,Metro,1728,26,0,198,4,0,178,0,0
-2020-04-03,United States,Denver Metro,Metro,1944,40,0,216,14,0,0,0,0
-2020-04-04,United States,Denver Metro,Metro,2197,50,0,253,10,0,149,4,0
-2020-04-05,United States,Denver Metro,Metro,2599,62,0,402,12,0,305,4,0
-2020-04-06,United States,Denver Metro,Metro,2703,66,0,104,4,0,0,0,0
-2020-04-07,United States,Denver Metro,Metro,2872,66,0,169,0,0,430,9,0
-2020-04-08,United States,Denver Metro,Metro,3036,100,0,164,34,0,0,0,0
-2020-04-09,United States,Denver Metro,Metro,3036,100,0,0,0,0,198,4,0
-2020-04-10,United States,Denver Metro,Metro,3400,100,0,364,0,0,216,14,0
-2020-04-11,United States,Denver Metro,Metro,3651,133,0,251,33,0,253,10,0
-2020-04-12,United States,Denver Metro,Metro,4153,152,0,502,19,0,402,12,0
-2020-04-13,United States,Denver Metro,Metro,4387,160,0,234,8,0,104,4,0
-2020-04-14,United States,Denver Metro,Metro,4554,172,0,167,12,0,169,0,0
-2020-04-15,United States,Denver Metro,Metro,4554,172,0,0,0,0,164,34,0
-2020-04-16,United States,Denver Metro,Metro,4744,191,0,190,19,0,0,0,0
-2020-04-17,United States,Denver Metro,Metro,5015,198,0,271,7,0,364,0,0
-2020-04-18,United States,Denver Metro,Metro,5292,208,0,277,10,0,251,33,0
-2020-04-19,United States,Denver Metro,Metro,5702,230,0,410,22,0,502,19,0
-2020-04-20,United States,Denver Metro,Metro,5702,230,0,0,0,0,234,8,0
-2020-04-21,United States,Denver Metro,Metro,6192,277,0,490,47,0,167,12,0
-2020-04-22,United States,Denver Metro,Metro,6429,294,0,237,17,0,0,0,0
-2020-04-23,United States,Denver Metro,Metro,6710,326,0,281,32,0,190,19,0
-2020-04-24,United States,Denver Metro,Metro,7412,397,0,702,71,0,271,7,0
-2020-04-25,United States,Denver Metro,Metro,7716,403,0,304,6,0,277,10,0
-2020-04-26,United States,Denver Metro,Metro,7982,404,0,266,1,0,410,22,0
+2020-03-25,United States,Denver Metro,Metro,468,6,0,125,6,0,,,
+2020-03-26,United States,Denver Metro,Metro,646,6,0,178,0,0,,,
+2020-03-27,United States,Denver Metro,Metro,646,6,0,0,0,0,,,
+2020-03-28,United States,Denver Metro,Metro,795,10,0,149,4,0,,,
+2020-03-29,United States,Denver Metro,Metro,1100,14,0,305,4,0,280,0,0
+2020-03-30,United States,Denver Metro,Metro,1100,14,0,0,0,0,55,0,0
+2020-03-31,United States,Denver Metro,Metro,1530,25,0,430,11,0,8,0,0
+2020-04-01,United States,Denver Metro,Metro,1530,25,0,0,0,0,125,6,0
+2020-04-02,United States,Denver Metro,Metro,1728,29,0,198,4,0,178,0,0
+2020-04-03,United States,Denver Metro,Metro,1944,44,0,216,15,0,0,0,0
+2020-04-04,United States,Denver Metro,Metro,2197,56,0,253,12,0,149,4,0
+2020-04-05,United States,Denver Metro,Metro,2599,69,0,402,13,0,305,4,0
+2020-04-06,United States,Denver Metro,Metro,2703,72,0,104,3,0,0,0,0
+2020-04-07,United States,Denver Metro,Metro,2872,72,0,169,0,0,430,11,0
+2020-04-08,United States,Denver Metro,Metro,3036,112,0,164,40,0,0,0,0
+2020-04-09,United States,Denver Metro,Metro,3036,112,0,0,0,0,198,4,0
+2020-04-10,United States,Denver Metro,Metro,3400,112,0,364,0,0,216,15,0
+2020-04-11,United States,Denver Metro,Metro,3651,150,0,251,38,0,253,12,0
+2020-04-12,United States,Denver Metro,Metro,4153,172,0,502,22,0,402,13,0
+2020-04-13,United States,Denver Metro,Metro,4387,182,0,234,10,0,104,3,0
+2020-04-14,United States,Denver Metro,Metro,4554,195,0,167,13,0,169,0,0
+2020-04-15,United States,Denver Metro,Metro,4554,195,0,0,0,0,164,40,0
+2020-04-16,United States,Denver Metro,Metro,4744,216,0,190,21,0,0,0,0
+2020-04-17,United States,Denver Metro,Metro,5015,224,0,271,8,0,364,0,0
+2020-04-18,United States,Denver Metro,Metro,5292,236,0,277,12,0,251,38,0
+2020-04-19,United States,Denver Metro,Metro,5702,260,0,410,24,0,502,22,0
+2020-04-20,United States,Denver Metro,Metro,5702,260,0,0,0,0,234,10,0
+2020-04-21,United States,Denver Metro,Metro,6192,315,0,490,55,0,167,13,0
+2020-04-22,United States,Denver Metro,Metro,6429,334,0,237,19,0,0,0,0
+2020-04-23,United States,Denver Metro,Metro,6710,368,0,281,34,0,190,21,0
+2020-04-24,United States,Denver Metro,Metro,7412,397,0,702,29,0,271,8,0
+2020-04-25,United States,Denver Metro,Metro,7716,403,0,304,6,0,277,12,0
+2020-04-26,United States,Denver Metro,Metro,7982,404,0,266,1,0,410,24,0
 2020-04-27,United States,Denver Metro,Metro,8239,416,0,257,12,0,0,0,0
-2020-04-28,United States,Denver Metro,Metro,8481,442,0,242,26,0,490,47,0
-2020-04-29,United States,Denver Metro,Metro,8751,458,0,270,16,0,237,17,0
-2020-04-30,United States,Denver Metro,Metro,9078,464,0,327,6,0,281,32,0
-2020-05-01,United States,Denver Metro,Metro,9403,499,0,325,35,0,702,71,0
+2020-04-28,United States,Denver Metro,Metro,8481,442,0,242,26,0,490,55,0
+2020-04-29,United States,Denver Metro,Metro,8751,458,0,270,16,0,237,19,0
+2020-04-30,United States,Denver Metro,Metro,9078,464,0,327,6,0,281,34,0
+2020-05-01,United States,Denver Metro,Metro,9403,499,0,325,35,0,702,29,0
 2020-05-02,United States,Denver Metro,Metro,9701,503,0,298,4,0,304,6,0
 2020-03-22,United States,Detroit Metro,Metro,909,8,0,909,8,0,,,
 2020-03-23,United States,Detroit Metro,Metro,1158,14,0,249,6,0,,,
@@ -18184,39 +18184,39 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-26,United States,Houston Metro,Metro,413,2,0,98,1,0,,,
 2020-03-27,United States,Houston Metro,Metro,461,3,0,48,1,0,,,
 2020-03-28,United States,Houston Metro,Metro,725,3,0,264,0,0,,,
-2020-03-29,United States,Houston Metro,Metro,848,4,0,123,1,0,143,1,0
-2020-03-30,United States,Houston Metro,Metro,913,7,0,65,3,0,20,0,0
-2020-03-31,United States,Houston Metro,Metro,1138,9,0,225,2,0,89,0,0
-2020-04-01,United States,Houston Metro,Metro,1338,11,0,200,2,0,63,0,0
-2020-04-02,United States,Houston Metro,Metro,1516,12,0,178,1,0,98,1,0
-2020-04-03,United States,Houston Metro,Metro,1737,19,0,221,7,0,48,1,0
-2020-04-04,United States,Houston Metro,Metro,1989,23,0,252,4,0,264,0,0
-2020-04-05,United States,Houston Metro,Metro,2226,30,0,237,7,0,123,1,0
-2020-04-06,United States,Houston Metro,Metro,2742,33,0,516,3,0,65,3,0
-2020-04-07,United States,Houston Metro,Metro,3136,35,0,394,2,0,225,2,0
-2020-04-08,United States,Houston Metro,Metro,3465,47,0,329,12,0,200,2,0
-2020-04-09,United States,Houston Metro,Metro,4242,51,0,777,4,0,178,1,0
-2020-04-10,United States,Houston Metro,Metro,4545,63,0,303,12,0,221,7,0
-2020-04-11,United States,Houston Metro,Metro,4950,67,0,405,4,0,252,4,0
-2020-04-12,United States,Houston Metro,Metro,5069,70,0,119,3,0,237,7,0
-2020-04-13,United States,Houston Metro,Metro,5220,73,0,151,3,0,516,3,0
-2020-04-14,United States,Houston Metro,Metro,5464,81,0,244,8,0,394,2,0
-2020-04-15,United States,Houston Metro,Metro,5792,93,0,328,12,0,329,12,0
-2020-04-16,United States,Houston Metro,Metro,6029,100,0,237,7,0,777,4,0
-2020-04-17,United States,Houston Metro,Metro,6286,107,0,257,7,0,303,12,0
-2020-04-18,United States,Houston Metro,Metro,6617,112,0,331,5,0,405,4,0
-2020-04-19,United States,Houston Metro,Metro,6812,117,0,195,5,0,119,3,0
-2020-04-20,United States,Houston Metro,Metro,7010,122,0,198,5,0,151,3,0
-2020-04-21,United States,Houston Metro,Metro,7249,126,0,239,4,0,244,8,0
-2020-04-22,United States,Houston Metro,Metro,7395,128,0,146,2,0,328,12,0
-2020-04-23,United States,Houston Metro,Metro,7702,134,0,307,6,0,237,7,0
-2020-04-24,United States,Houston Metro,Metro,7923,137,0,221,3,0,257,7,0
-2020-04-25,United States,Houston Metro,Metro,7951,138,0,28,1,0,331,5,0
-2020-04-26,United States,Houston Metro,Metro,8157,139,0,206,1,0,195,5,0
-2020-04-27,United States,Houston Metro,Metro,8220,140,0,63,1,0,198,5,0
-2020-04-28,United States,Houston Metro,Metro,8481,161,0,261,21,0,239,4,0
+2020-03-29,United States,Houston Metro,Metro,848,5,0,123,2,0,143,1,0
+2020-03-30,United States,Houston Metro,Metro,913,9,0,65,4,0,20,0,0
+2020-03-31,United States,Houston Metro,Metro,1138,11,0,225,2,0,89,0,0
+2020-04-01,United States,Houston Metro,Metro,1338,13,0,200,2,0,63,0,0
+2020-04-02,United States,Houston Metro,Metro,1516,14,0,178,1,0,98,1,0
+2020-04-03,United States,Houston Metro,Metro,1737,22,0,221,8,0,48,1,0
+2020-04-04,United States,Houston Metro,Metro,1989,27,0,252,5,0,264,0,0
+2020-04-05,United States,Houston Metro,Metro,2226,34,0,237,7,0,123,2,0
+2020-04-06,United States,Houston Metro,Metro,2742,38,0,516,4,0,65,4,0
+2020-04-07,United States,Houston Metro,Metro,3136,40,0,394,2,0,225,2,0
+2020-04-08,United States,Houston Metro,Metro,3465,53,0,329,13,0,200,2,0
+2020-04-09,United States,Houston Metro,Metro,4242,58,0,777,5,0,178,1,0
+2020-04-10,United States,Houston Metro,Metro,4545,72,0,303,14,0,221,8,0
+2020-04-11,United States,Houston Metro,Metro,4950,78,0,405,6,0,252,5,0
+2020-04-12,United States,Houston Metro,Metro,5069,81,0,119,3,0,237,7,0
+2020-04-13,United States,Houston Metro,Metro,5220,85,0,151,4,0,516,4,0
+2020-04-14,United States,Houston Metro,Metro,5464,94,0,244,9,0,394,2,0
+2020-04-15,United States,Houston Metro,Metro,5792,108,0,328,14,0,329,13,0
+2020-04-16,United States,Houston Metro,Metro,6029,116,0,237,8,0,777,5,0
+2020-04-17,United States,Houston Metro,Metro,6286,123,0,257,7,0,303,14,0
+2020-04-18,United States,Houston Metro,Metro,6617,129,0,331,6,0,405,6,0
+2020-04-19,United States,Houston Metro,Metro,6812,135,0,195,6,0,119,3,0
+2020-04-20,United States,Houston Metro,Metro,7010,141,0,198,6,0,151,4,0
+2020-04-21,United States,Houston Metro,Metro,7249,145,0,239,4,0,244,9,0
+2020-04-22,United States,Houston Metro,Metro,7395,147,0,146,2,0,328,14,0
+2020-04-23,United States,Houston Metro,Metro,7702,154,0,307,7,0,237,8,0
+2020-04-24,United States,Houston Metro,Metro,7923,157,0,221,3,0,257,7,0
+2020-04-25,United States,Houston Metro,Metro,7951,158,0,28,1,0,331,6,0
+2020-04-26,United States,Houston Metro,Metro,8157,159,0,206,1,0,195,6,0
+2020-04-27,United States,Houston Metro,Metro,8220,160,0,63,1,0,198,6,0
+2020-04-28,United States,Houston Metro,Metro,8481,161,0,261,1,0,239,4,0
 2020-04-29,United States,Houston Metro,Metro,8852,175,0,371,14,0,146,2,0
-2020-04-30,United States,Houston Metro,Metro,9161,180,0,309,5,0,307,6,0
+2020-04-30,United States,Houston Metro,Metro,9161,180,0,309,5,0,307,7,0
 2020-05-01,United States,Houston Metro,Metro,9467,194,0,306,14,0,221,3,0
 2020-05-02,United States,Houston Metro,Metro,9706,202,0,239,8,0,28,1,0
 2020-03-10,United States,Idaho,State,0,0,0,0,0,0,,,
@@ -18388,48 +18388,48 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,Indiana,State,60,2,0,21,0,0,2,0,0
 2020-03-20,United States,Indiana,State,86,2,0,26,0,0,0,0,0
 2020-03-21,United States,Indiana,State,128,4,0,42,2,0,3,0,0
-2020-03-22,United States,Indiana,State,204,6,0,76,2,0,4,0,0
-2020-03-23,United States,Indiana,State,270,7,0,66,1,0,5,1,0
-2020-03-24,United States,Indiana,State,368,12,0,98,5,0,5,1,0
-2020-03-25,United States,Indiana,State,477,14,0,109,2,0,9,0,0
-2020-03-26,United States,Indiana,State,645,17,0,168,3,0,21,0,0
-2020-03-27,United States,Indiana,State,979,25,0,334,8,0,26,0,0
-2020-03-28,United States,Indiana,State,1233,31,0,254,6,0,42,2,0
-2020-03-29,United States,Indiana,State,1513,32,0,280,1,0,76,2,0
-2020-03-30,United States,Indiana,State,1786,35,0,273,3,0,66,1,0
-2020-03-31,United States,Indiana,State,2158,49,0,372,14,0,98,5,0
-2020-04-01,United States,Indiana,State,2564,65,0,406,16,0,109,2,0
-2020-04-02,United States,Indiana,State,3038,78,0,474,13,0,168,3,0
-2020-04-03,United States,Indiana,State,3437,102,0,399,24,0,334,8,0
-2020-04-04,United States,Indiana,State,3953,116,0,516,14,0,254,6,0
-2020-04-05,United States,Indiana,State,4411,127,0,458,11,0,280,1,0
-2020-04-06,United States,Indiana,State,4956,143,0,545,16,0,273,3,0
-2020-04-07,United States,Indiana,State,5510,173,0,554,30,0,372,14,0
-2020-04-08,United States,Indiana,State,5943,203,0,433,30,0,406,16,0
-2020-04-09,United States,Indiana,State,6351,245,0,408,42,0,474,13,0
-2020-04-10,United States,Indiana,State,6907,300,0,556,55,0,399,24,0
-2020-04-11,United States,Indiana,State,7435,330,0,528,30,0,516,14,0
-2020-04-12,United States,Indiana,State,7928,343,0,493,13,0,458,11,0
-2020-04-13,United States,Indiana,State,8359,350,0,431,7,0,545,16,0
-2020-04-14,United States,Indiana,State,8527,387,0,168,37,0,554,30,0
-2020-04-15,United States,Indiana,State,8960,436,0,433,49,0,433,30,0
-2020-04-16,United States,Indiana,State,9542,477,0,582,41,0,408,42,0
-2020-04-17,United States,Indiana,State,10154,522,0,612,45,0,556,55,0
-2020-04-18,United States,Indiana,State,10641,545,0,487,23,0,528,30,0
-2020-04-19,United States,Indiana,State,11211,562,0,570,17,0,493,13,0
-2020-04-20,United States,Indiana,State,11688,577,0,477,15,0,431,7,0
-2020-04-21,United States,Indiana,State,12097,635,0,409,58,0,168,37,0
-2020-04-22,United States,Indiana,State,12438,666,0,341,31,0,433,49,0
-2020-04-23,United States,Indiana,State,13039,706,0,601,40,0,582,41,0
-2020-04-24,United States,Indiana,State,13681,741,0,642,35,0,612,45,0
-2020-04-25,United States,Indiana,State,14399,786,0,718,45,0,487,23,0
-2020-04-26,United States,Indiana,State,15012,813,0,613,27,0,570,17,0
-2020-04-27,United States,Indiana,State,15961,844,0,949,31,0,477,15,0
-2020-04-28,United States,Indiana,State,16588,901,0,627,57,0,409,58,0
-2020-04-29,United States,Indiana,State,17182,964,0,594,63,0,341,31,0
-2020-04-30,United States,Indiana,State,17835,1114,0,653,150,0,601,40,0
-2020-05-01,United States,Indiana,State,18630,1175,0,795,61,0,642,35,0
-2020-05-02,United States,Indiana,State,19295,1115,0,665,0,0,718,45,0
+2020-03-22,United States,Indiana,State,204,7,0,76,3,0,4,0,0
+2020-03-23,United States,Indiana,State,270,8,0,66,1,0,5,1,0
+2020-03-24,United States,Indiana,State,368,14,0,98,6,0,5,1,0
+2020-03-25,United States,Indiana,State,477,16,0,109,2,0,9,0,0
+2020-03-26,United States,Indiana,State,645,19,0,168,3,0,21,0,0
+2020-03-27,United States,Indiana,State,979,28,0,334,9,0,26,0,0
+2020-03-28,United States,Indiana,State,1233,35,0,254,7,0,42,2,0
+2020-03-29,United States,Indiana,State,1513,36,0,280,1,0,76,3,0
+2020-03-30,United States,Indiana,State,1786,39,0,273,3,0,66,1,0
+2020-03-31,United States,Indiana,State,2158,55,0,372,16,0,98,6,0
+2020-04-01,United States,Indiana,State,2564,72,0,406,17,0,109,2,0
+2020-04-02,United States,Indiana,State,3038,86,0,474,14,0,168,3,0
+2020-04-03,United States,Indiana,State,3437,114,0,399,28,0,334,9,0
+2020-04-04,United States,Indiana,State,3953,128,0,516,14,0,254,7,0
+2020-04-05,United States,Indiana,State,4411,140,0,458,12,0,280,1,0
+2020-04-06,United States,Indiana,State,4956,156,0,545,16,0,273,3,0
+2020-04-07,United States,Indiana,State,5510,190,0,554,34,0,372,16,0
+2020-04-08,United States,Indiana,State,5943,223,0,433,33,0,406,17,0
+2020-04-09,United States,Indiana,State,6351,273,0,408,50,0,474,14,0
+2020-04-10,United States,Indiana,State,6907,338,0,556,65,0,399,28,0
+2020-04-11,United States,Indiana,State,7435,371,0,528,33,0,516,14,0
+2020-04-12,United States,Indiana,State,7928,386,0,493,15,0,458,12,0
+2020-04-13,United States,Indiana,State,8359,393,0,431,7,0,545,16,0
+2020-04-14,United States,Indiana,State,8527,436,0,168,43,0,554,34,0
+2020-04-15,United States,Indiana,State,8960,490,0,433,54,0,433,33,0
+2020-04-16,United States,Indiana,State,9542,535,0,582,45,0,408,50,0
+2020-04-17,United States,Indiana,State,10154,586,0,612,51,0,556,65,0
+2020-04-18,United States,Indiana,State,10641,612,0,487,26,0,528,33,0
+2020-04-19,United States,Indiana,State,11211,629,0,570,17,0,493,15,0
+2020-04-20,United States,Indiana,State,11688,644,0,477,15,0,431,7,0
+2020-04-21,United States,Indiana,State,12097,707,0,409,63,0,168,43,0
+2020-04-22,United States,Indiana,State,12438,741,0,341,34,0,433,54,0
+2020-04-23,United States,Indiana,State,13039,786,0,601,45,0,582,45,0
+2020-04-24,United States,Indiana,State,13681,824,0,642,38,0,612,51,0
+2020-04-25,United States,Indiana,State,14399,875,0,718,51,0,487,26,0
+2020-04-26,United States,Indiana,State,15012,904,0,613,29,0,570,17,0
+2020-04-27,United States,Indiana,State,15961,938,0,949,34,0,477,15,0
+2020-04-28,United States,Indiana,State,16588,1000,0,627,62,0,409,63,0
+2020-04-29,United States,Indiana,State,17182,1071,0,594,71,0,341,34,0
+2020-04-30,United States,Indiana,State,17835,1114,0,653,43,0,601,45,0
+2020-05-01,United States,Indiana,State,18630,1175,0,795,61,0,642,38,0
+2020-05-02,United States,Indiana,State,19295,1115,0,665,0,0,718,51,0
 2020-03-09,United States,Iowa,State,3,0,0,3,0,0,,,
 2020-03-10,United States,Iowa,State,8,0,0,5,0,0,,,
 2020-03-11,United States,Iowa,State,13,0,0,5,0,0,,,
@@ -18758,46 +18758,46 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,Louisiana,State,392,10,0,135,6,0,13,0,0
 2020-03-20,United States,Louisiana,State,538,14,0,146,4,0,17,0,0
 2020-03-21,United States,Louisiana,State,585,16,0,47,2,0,41,1,0
-2020-03-22,United States,Louisiana,State,837,20,0,252,4,0,14,1,0
-2020-03-23,United States,Louisiana,State,1172,35,0,335,15,0,45,1,0
-2020-03-24,United States,Louisiana,State,1388,46,0,216,11,0,60,1,0
-2020-03-25,United States,Louisiana,State,1795,65,0,407,19,0,61,0,0
-2020-03-26,United States,Louisiana,State,2304,83,0,509,18,0,135,6,0
-2020-03-27,United States,Louisiana,State,2744,119,0,440,36,0,146,4,0
-2020-03-28,United States,Louisiana,State,3315,137,0,571,18,0,47,2,0
-2020-03-29,United States,Louisiana,State,3540,151,0,225,14,0,252,4,0
-2020-03-30,United States,Louisiana,State,4025,185,0,485,34,0,335,15,0
-2020-03-31,United States,Louisiana,State,5237,239,0,1212,54,0,216,11,0
-2020-04-01,United States,Louisiana,State,6424,273,0,1187,34,0,407,19,0
-2020-04-02,United States,Louisiana,State,9149,310,0,2725,37,0,509,18,0
-2020-04-03,United States,Louisiana,State,10297,370,0,1148,60,0,440,36,0
-2020-04-04,United States,Louisiana,State,12496,409,0,2199,39,0,571,18,0
-2020-04-05,United States,Louisiana,State,13010,477,0,514,68,0,225,14,0
-2020-04-06,United States,Louisiana,State,14867,512,0,1857,35,0,485,34,0
-2020-04-07,United States,Louisiana,State,16284,582,0,1417,70,0,1212,54,0
-2020-04-08,United States,Louisiana,State,17030,652,0,746,70,0,1187,34,0
-2020-04-09,United States,Louisiana,State,18283,702,0,1253,50,0,2725,37,0
-2020-04-10,United States,Louisiana,State,19253,755,0,970,53,0,1148,60,0
-2020-04-11,United States,Louisiana,State,20014,806,0,761,51,0,2199,39,0
-2020-04-12,United States,Louisiana,State,20595,840,0,581,34,0,514,68,0
-2020-04-13,United States,Louisiana,State,21016,884,0,421,44,0,1857,35,0
-2020-04-14,United States,Louisiana,State,21518,1013,0,502,129,0,1417,70,0
-2020-04-15,United States,Louisiana,State,21951,1103,0,433,90,0,746,70,0
-2020-04-16,United States,Louisiana,State,22532,1156,0,581,53,0,1253,50,0
-2020-04-17,United States,Louisiana,State,23118,1213,0,586,57,0,970,53,0
-2020-04-18,United States,Louisiana,State,23580,1267,0,462,54,0,761,51,0
-2020-04-19,United States,Louisiana,State,23928,1296,0,348,29,0,581,34,0
-2020-04-20,United States,Louisiana,State,24523,1328,0,595,32,0,421,44,0
-2020-04-21,United States,Louisiana,State,24854,1405,0,331,77,0,502,129,0
-2020-04-22,United States,Louisiana,State,25258,1473,0,404,68,0,433,90,0
-2020-04-23,United States,Louisiana,State,25739,1599,0,481,126,0,581,53,0
-2020-04-24,United States,Louisiana,State,26140,1660,0,401,61,0,586,57,0
+2020-03-22,United States,Louisiana,State,837,21,0,252,5,0,14,1,0
+2020-03-23,United States,Louisiana,State,1172,36,0,335,15,0,45,1,0
+2020-03-24,United States,Louisiana,State,1388,106,0,216,70,0,60,1,0
+2020-03-25,United States,Louisiana,State,1795,125,0,407,19,0,61,0,0
+2020-03-26,United States,Louisiana,State,2304,143,0,509,18,0,135,6,0
+2020-03-27,United States,Louisiana,State,2744,179,0,440,36,0,146,4,0
+2020-03-28,United States,Louisiana,State,3315,197,0,571,18,0,47,2,0
+2020-03-29,United States,Louisiana,State,3540,152,0,225,0,0,252,5,0
+2020-03-30,United States,Louisiana,State,4025,186,0,485,34,0,335,15,0
+2020-03-31,United States,Louisiana,State,5237,476,0,1212,290,0,216,70,0
+2020-04-01,United States,Louisiana,State,6424,275,0,1187,0,0,407,19,0
+2020-04-02,United States,Louisiana,State,9149,370,0,2725,95,0,509,18,0
+2020-04-03,United States,Louisiana,State,10297,610,0,1148,240,0,440,36,0
+2020-04-04,United States,Louisiana,State,12496,413,0,2199,0,0,571,18,0
+2020-04-05,United States,Louisiana,State,13010,718,0,514,305,0,225,0,0
+2020-04-06,United States,Louisiana,State,14867,694,0,1857,0,0,485,34,0
+2020-04-07,United States,Louisiana,State,16284,706,0,1417,12,0,1212,290,0
+2020-04-08,United States,Louisiana,State,17030,776,0,746,70,0,1187,0,0
+2020-04-09,United States,Louisiana,State,18283,826,0,1253,50,0,2725,95,0
+2020-04-10,United States,Louisiana,State,19253,880,0,970,54,0,1148,240,0
+2020-04-11,United States,Louisiana,State,20014,990,0,761,110,0,2199,0,0
+2020-04-12,United States,Louisiana,State,20595,1024,0,581,34,0,514,305,0
+2020-04-13,United States,Louisiana,State,21016,894,0,421,0,0,1857,0,0
+2020-04-14,United States,Louisiana,State,21518,1026,0,502,132,0,1417,12,0
+2020-04-15,United States,Louisiana,State,21951,1176,0,433,150,0,746,70,0
+2020-04-16,United States,Louisiana,State,22532,1231,0,581,55,0,1253,50,0
+2020-04-17,United States,Louisiana,State,23118,1289,0,586,58,0,970,54,0
+2020-04-18,United States,Louisiana,State,23580,1343,0,462,54,0,761,110,0
+2020-04-19,United States,Louisiana,State,23928,1372,0,348,29,0,581,34,0
+2020-04-20,United States,Louisiana,State,24523,1405,0,595,33,0,421,0,0
+2020-04-21,United States,Louisiana,State,24854,1541,0,331,136,0,502,132,0
+2020-04-22,United States,Louisiana,State,25258,1550,0,404,9,0,433,150,0
+2020-04-23,United States,Louisiana,State,25739,1599,0,481,49,0,581,55,0
+2020-04-24,United States,Louisiana,State,26140,1660,0,401,61,0,586,58,0
 2020-04-25,United States,Louisiana,State,26512,1707,0,372,47,0,462,54,0
 2020-04-26,United States,Louisiana,State,26773,1729,0,261,22,0,348,29,0
-2020-04-27,United States,Louisiana,State,27068,1740,0,295,11,0,595,32,0
-2020-04-28,United States,Louisiana,State,27286,1801,0,218,61,0,331,77,0
-2020-04-29,United States,Louisiana,State,27660,1845,0,374,44,0,404,68,0
-2020-04-30,United States,Louisiana,State,28001,1905,0,341,60,0,481,126,0
+2020-04-27,United States,Louisiana,State,27068,1740,0,295,11,0,595,33,0
+2020-04-28,United States,Louisiana,State,27286,1801,0,218,61,0,331,136,0
+2020-04-29,United States,Louisiana,State,27660,1845,0,374,44,0,404,9,0
+2020-04-30,United States,Louisiana,State,28001,1905,0,341,60,0,481,49,0
 2020-05-01,United States,Louisiana,State,28711,1970,0,710,65,0,401,61,0
 2020-05-02,United States,Louisiana,State,29140,1993,0,429,23,0,372,47,0
 2020-03-10,United States,Maine,State,0,0,0,0,0,0,,,
@@ -18878,36 +18878,36 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-27,United States,Maryland,State,775,5,0,192,1,0,42,0,0
 2020-03-28,United States,Maryland,State,995,5,0,220,0,0,44,1,0
 2020-03-29,United States,Maryland,State,1239,10,0,244,5,0,51,1,0
-2020-03-30,United States,Maryland,State,1413,15,0,174,5,0,46,0,0
-2020-03-31,United States,Maryland,State,1660,18,0,247,3,0,59,1,0
-2020-04-01,United States,Maryland,State,1986,31,0,326,13,0,76,0,0
-2020-04-02,United States,Maryland,State,2331,36,0,345,5,0,158,0,0
-2020-04-03,United States,Maryland,State,2758,43,0,427,7,0,192,1,0
-2020-04-04,United States,Maryland,State,3125,54,0,367,11,0,220,0,0
-2020-04-05,United States,Maryland,State,3617,67,0,492,13,0,244,5,0
-2020-04-06,United States,Maryland,State,4045,91,0,428,24,0,174,5,0
-2020-04-07,United States,Maryland,State,4371,103,0,326,12,0,247,3,0
-2020-04-08,United States,Maryland,State,5529,124,0,1158,21,0,326,13,0
-2020-04-09,United States,Maryland,State,6185,138,0,656,14,0,345,5,0
-2020-04-10,United States,Maryland,State,6968,171,0,783,33,0,427,7,0
-2020-04-11,United States,Maryland,State,7694,206,0,726,35,0,367,11,0
-2020-04-12,United States,Maryland,State,8225,236,0,531,30,0,492,13,0
-2020-04-13,United States,Maryland,State,8936,262,0,711,26,0,428,24,0
-2020-04-14,United States,Maryland,State,9472,302,0,536,40,0,326,12,0
-2020-04-15,United States,Maryland,State,10032,311,0,560,9,0,1158,21,0
-2020-04-16,United States,Maryland,State,10784,319,0,752,8,0,656,14,0
-2020-04-17,United States,Maryland,State,11572,334,0,788,15,0,783,33,0
-2020-04-18,United States,Maryland,State,12326,421,0,754,87,0,726,35,0
-2020-04-19,United States,Maryland,State,12847,461,0,521,40,0,531,30,0
-2020-04-20,United States,Maryland,State,13684,582,0,837,121,0,711,26,0
-2020-04-21,United States,Maryland,State,14193,652,0,509,70,0,536,40,0
+2020-03-30,United States,Maryland,State,1413,18,0,174,8,0,46,0,0
+2020-03-31,United States,Maryland,State,1660,25,0,247,7,0,59,1,0
+2020-04-01,United States,Maryland,State,1986,38,0,326,13,0,76,0,0
+2020-04-02,United States,Maryland,State,2331,50,0,345,12,0,158,0,0
+2020-04-03,United States,Maryland,State,2758,60,0,427,10,0,192,1,0
+2020-04-04,United States,Maryland,State,3125,75,0,367,15,0,220,0,0
+2020-04-05,United States,Maryland,State,3617,95,0,492,20,0,244,5,0
+2020-04-06,United States,Maryland,State,4045,126,0,428,31,0,174,8,0
+2020-04-07,United States,Maryland,State,4371,158,0,326,32,0,247,7,0
+2020-04-08,United States,Maryland,State,5529,186,0,1158,28,0,326,13,0
+2020-04-09,United States,Maryland,State,6185,200,0,656,14,0,345,12,0
+2020-04-10,United States,Maryland,State,6968,237,0,783,37,0,427,10,0
+2020-04-11,United States,Maryland,State,7694,293,0,726,56,0,367,15,0
+2020-04-12,United States,Maryland,State,8225,323,0,531,30,0,492,20,0
+2020-04-13,United States,Maryland,State,8936,359,0,711,36,0,428,31,0
+2020-04-14,United States,Maryland,State,9472,402,0,536,43,0,326,32,0
+2020-04-15,United States,Maryland,State,10032,411,0,560,9,0,1158,28,0
+2020-04-16,United States,Maryland,State,10784,419,0,752,8,0,656,14,0
+2020-04-17,United States,Maryland,State,11572,421,0,788,2,0,783,37,0
+2020-04-18,United States,Maryland,State,12326,518,0,754,97,0,726,56,0
+2020-04-19,United States,Maryland,State,12847,558,0,521,40,0,531,30,0
+2020-04-20,United States,Maryland,State,13684,587,0,837,29,0,711,36,0
+2020-04-21,United States,Maryland,State,14193,652,0,509,65,0,536,43,0
 2020-04-22,United States,Maryland,State,14775,698,0,582,46,0,560,9,0
 2020-04-23,United States,Maryland,State,15737,748,0,962,50,0,752,8,0
-2020-04-24,United States,Maryland,State,16616,798,0,879,50,0,788,15,0
-2020-04-25,United States,Maryland,State,17766,875,0,1150,77,0,754,87,0
+2020-04-24,United States,Maryland,State,16616,798,0,879,50,0,788,2,0
+2020-04-25,United States,Maryland,State,17766,875,0,1150,77,0,754,97,0
 2020-04-26,United States,Maryland,State,18581,910,0,815,35,0,521,40,0
-2020-04-27,United States,Maryland,State,19487,945,0,906,35,0,837,121,0
-2020-04-28,United States,Maryland,State,20113,1016,0,626,71,0,509,70,0
+2020-04-27,United States,Maryland,State,19487,945,0,906,35,0,837,29,0
+2020-04-28,United States,Maryland,State,20113,1016,0,626,71,0,509,65,0
 2020-04-29,United States,Maryland,State,20849,1078,0,736,62,0,582,46,0
 2020-04-30,United States,Maryland,State,21742,1140,0,893,62,0,962,50,0
 2020-05-01,United States,Maryland,State,23472,1080,0,1730,0,0,879,50,0
@@ -19930,48 +19930,48 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-19,United States,Ohio,State,119,0,0,33,0,0,1,0,0
 2020-03-20,United States,Ohio,State,173,2,0,54,2,0,8,0,0
 2020-03-21,United States,Ohio,State,248,3,0,75,1,0,13,0,0
-2020-03-22,United States,Ohio,State,356,3,0,108,0,0,11,0,0
-2020-03-23,United States,Ohio,State,443,6,0,87,3,0,13,0,0
-2020-03-24,United States,Ohio,State,567,8,0,124,2,0,17,0,0
-2020-03-25,United States,Ohio,State,704,11,0,137,3,0,19,0,0
-2020-03-26,United States,Ohio,State,868,15,0,164,4,0,33,0,0
-2020-03-27,United States,Ohio,State,1137,19,0,269,4,0,54,2,0
-2020-03-28,United States,Ohio,State,1406,25,0,269,6,0,75,1,0
-2020-03-29,United States,Ohio,State,1653,29,0,247,4,0,108,0,0
-2020-03-30,United States,Ohio,State,1933,40,0,280,11,0,87,3,0
-2020-03-31,United States,Ohio,State,2199,55,0,266,15,0,124,2,0
-2020-04-01,United States,Ohio,State,2547,65,0,348,10,0,137,3,0
-2020-04-02,United States,Ohio,State,2901,81,0,354,16,0,164,4,0
-2020-04-03,United States,Ohio,State,3312,91,0,411,10,0,269,4,0
-2020-04-04,United States,Ohio,State,3739,102,0,427,11,0,269,6,0
-2020-04-05,United States,Ohio,State,4043,119,0,304,17,0,247,4,0
-2020-04-06,United States,Ohio,State,4453,142,0,410,23,0,280,11,0
-2020-04-07,United States,Ohio,State,4782,167,0,329,25,0,266,15,0
-2020-04-08,United States,Ohio,State,5148,193,0,366,26,0,348,10,0
-2020-04-09,United States,Ohio,State,5512,213,0,364,20,0,354,16,0
-2020-04-10,United States,Ohio,State,5878,231,0,366,18,0,411,10,0
-2020-04-11,United States,Ohio,State,6250,247,0,372,16,0,427,11,0
-2020-04-12,United States,Ohio,State,6604,253,0,354,6,0,304,17,0
-2020-04-13,United States,Ohio,State,6975,274,0,371,21,0,410,23,0
-2020-04-14,United States,Ohio,State,7285,324,0,310,50,0,329,25,0
-2020-04-15,United States,Ohio,State,7794,362,0,509,38,0,366,26,0
-2020-04-16,United States,Ohio,State,8414,407,0,620,45,0,364,20,0
-2020-04-17,United States,Ohio,State,9107,418,0,693,11,0,366,18,0
-2020-04-18,United States,Ohio,State,10222,451,0,1115,33,0,372,16,0
-2020-04-19,United States,Ohio,State,11602,471,0,1380,20,0,354,6,0
-2020-04-20,United States,Ohio,State,12919,509,0,1317,38,0,371,21,0
-2020-04-21,United States,Ohio,State,13725,557,0,806,48,0,310,50,0
-2020-04-22,United States,Ohio,State,14117,610,0,392,53,0,509,38,0
-2020-04-23,United States,Ohio,State,14694,656,0,577,46,0,620,45,0
-2020-04-24,United States,Ohio,State,15169,690,0,475,34,0,693,11,0
-2020-04-25,United States,Ohio,State,15587,711,0,418,21,0,1115,33,0
-2020-04-26,United States,Ohio,State,15972,728,0,385,17,0,1380,20,0
-2020-04-27,United States,Ohio,State,16325,753,0,353,25,0,1317,38,0
-2020-04-28,United States,Ohio,State,16769,799,0,444,46,0,806,48,0
-2020-04-29,United States,Ohio,State,17303,937,0,534,138,0,392,53,0
-2020-04-30,United States,Ohio,State,18027,976,0,724,39,0,577,46,0
-2020-05-01,United States,Ohio,State,18743,1003,0,716,27,0,475,34,0
-2020-05-02,United States,Ohio,State,19335,1022,0,592,19,0,418,21,0
+2020-03-22,United States,Ohio,State,356,4,0,108,1,0,11,0,0
+2020-03-23,United States,Ohio,State,443,7,0,87,3,0,13,0,0
+2020-03-24,United States,Ohio,State,567,9,0,124,2,0,17,0,0
+2020-03-25,United States,Ohio,State,704,12,0,137,3,0,19,0,0
+2020-03-26,United States,Ohio,State,868,16,0,164,4,0,33,0,0
+2020-03-27,United States,Ohio,State,1137,20,0,269,4,0,54,2,0
+2020-03-28,United States,Ohio,State,1406,26,0,269,6,0,75,1,0
+2020-03-29,United States,Ohio,State,1653,30,0,247,4,0,108,1,0
+2020-03-30,United States,Ohio,State,1933,43,0,280,13,0,87,3,0
+2020-03-31,United States,Ohio,State,2199,59,0,266,16,0,124,2,0
+2020-04-01,United States,Ohio,State,2547,69,0,348,10,0,137,3,0
+2020-04-02,United States,Ohio,State,2901,88,0,354,19,0,164,4,0
+2020-04-03,United States,Ohio,State,3312,100,0,411,12,0,269,4,0
+2020-04-04,United States,Ohio,State,3739,113,0,427,13,0,269,6,0
+2020-04-05,United States,Ohio,State,4043,132,0,304,19,0,247,4,0
+2020-04-06,United States,Ohio,State,4453,159,0,410,27,0,280,13,0
+2020-04-07,United States,Ohio,State,4782,188,0,329,29,0,266,16,0
+2020-04-08,United States,Ohio,State,5148,217,0,366,29,0,348,10,0
+2020-04-09,United States,Ohio,State,5512,241,0,364,24,0,354,19,0
+2020-04-10,United States,Ohio,State,5878,259,0,366,18,0,411,12,0
+2020-04-11,United States,Ohio,State,6250,281,0,372,22,0,427,13,0
+2020-04-12,United States,Ohio,State,6604,288,0,354,7,0,304,19,0
+2020-04-13,United States,Ohio,State,6975,311,0,371,23,0,410,27,0
+2020-04-14,United States,Ohio,State,7285,364,0,310,53,0,329,29,0
+2020-04-15,United States,Ohio,State,7794,407,0,509,43,0,366,29,0
+2020-04-16,United States,Ohio,State,8414,461,0,620,54,0,364,24,0
+2020-04-17,United States,Ohio,State,9107,473,0,693,12,0,366,18,0
+2020-04-18,United States,Ohio,State,10222,510,0,1115,37,0,372,22,0
+2020-04-19,United States,Ohio,State,11602,535,0,1380,25,0,354,7,0
+2020-04-20,United States,Ohio,State,12919,575,0,1317,40,0,371,23,0
+2020-04-21,United States,Ohio,State,13725,628,0,806,53,0,310,53,0
+2020-04-22,United States,Ohio,State,14117,690,0,392,62,0,509,43,0
+2020-04-23,United States,Ohio,State,14694,746,0,577,56,0,620,54,0
+2020-04-24,United States,Ohio,State,15169,786,0,475,40,0,693,12,0
+2020-04-25,United States,Ohio,State,15587,808,0,418,22,0,1115,37,0
+2020-04-26,United States,Ohio,State,15972,826,0,385,18,0,1380,25,0
+2020-04-27,United States,Ohio,State,16325,854,0,353,28,0,1317,40,0
+2020-04-28,United States,Ohio,State,16769,906,0,444,52,0,806,53,0
+2020-04-29,United States,Ohio,State,17303,937,0,534,31,0,392,62,0
+2020-04-30,United States,Ohio,State,18027,976,0,724,39,0,577,56,0
+2020-05-01,United States,Ohio,State,18743,1003,0,716,27,0,475,40,0
+2020-05-02,United States,Ohio,State,19335,1022,0,592,19,0,418,22,0
 2020-03-07,United States,Oklahoma,State,1,0,0,1,0,0,,,
 2020-03-08,United States,Oklahoma,State,1,0,0,0,0,0,,,
 2020-03-09,United States,Oklahoma,State,1,0,0,0,0,0,,,
@@ -20592,25 +20592,25 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-04-07,United States,San Antonio Metro,Metro,548,14,0,66,0,0,14,0,0
 2020-04-08,United States,San Antonio Metro,Metro,607,21,0,59,7,0,42,3,0
 2020-04-09,United States,San Antonio Metro,Metro,667,25,0,60,4,0,31,0,0
-2020-04-10,United States,San Antonio Metro,Metro,735,27,0,68,2,0,32,0,0
-2020-04-11,United States,San Antonio Metro,Metro,791,29,0,56,2,0,95,0,0
-2020-04-12,United States,San Antonio Metro,Metro,855,32,0,64,3,0,46,2,0
-2020-04-13,United States,San Antonio Metro,Metro,905,37,0,50,5,0,27,1,0
-2020-04-14,United States,San Antonio Metro,Metro,929,40,0,24,3,0,66,0,0
-2020-04-15,United States,San Antonio Metro,Metro,957,40,0,28,0,0,59,7,0
-2020-04-16,United States,San Antonio Metro,Metro,1040,45,0,83,5,0,60,4,0
-2020-04-17,United States,San Antonio Metro,Metro,1076,47,0,36,2,0,68,2,0
-2020-04-18,United States,San Antonio Metro,Metro,1117,47,0,41,0,0,56,2,0
-2020-04-19,United States,San Antonio Metro,Metro,1158,48,0,41,1,0,64,3,0
-2020-04-20,United States,San Antonio Metro,Metro,1182,49,0,24,1,0,50,5,0
-2020-04-21,United States,San Antonio Metro,Metro,1201,49,0,19,0,0,24,3,0
-2020-04-22,United States,San Antonio Metro,Metro,1260,50,0,59,1,0,28,0,0
-2020-04-23,United States,San Antonio Metro,Metro,1353,54,0,93,4,0,83,5,0
-2020-04-24,United States,San Antonio Metro,Metro,1521,54,0,168,0,0,36,2,0
-2020-04-25,United States,San Antonio Metro,Metro,1528,54,0,7,0,0,41,0,0
-2020-04-26,United States,San Antonio Metro,Metro,1534,54,0,6,0,0,41,1,0
-2020-04-27,United States,San Antonio Metro,Metro,1535,54,0,1,0,0,24,1,0
-2020-04-28,United States,San Antonio Metro,Metro,1479,55,0,0,1,0,19,0,0
+2020-04-10,United States,San Antonio Metro,Metro,735,28,0,68,3,0,32,0,0
+2020-04-11,United States,San Antonio Metro,Metro,791,30,0,56,2,0,95,0,0
+2020-04-12,United States,San Antonio Metro,Metro,855,33,0,64,3,0,46,2,0
+2020-04-13,United States,San Antonio Metro,Metro,905,38,0,50,5,0,27,1,0
+2020-04-14,United States,San Antonio Metro,Metro,929,41,0,24,3,0,66,0,0
+2020-04-15,United States,San Antonio Metro,Metro,957,41,0,28,0,0,59,7,0
+2020-04-16,United States,San Antonio Metro,Metro,1040,46,0,83,5,0,60,4,0
+2020-04-17,United States,San Antonio Metro,Metro,1076,48,0,36,2,0,68,3,0
+2020-04-18,United States,San Antonio Metro,Metro,1117,48,0,41,0,0,56,2,0
+2020-04-19,United States,San Antonio Metro,Metro,1158,49,0,41,1,0,64,3,0
+2020-04-20,United States,San Antonio Metro,Metro,1182,50,0,24,1,0,50,5,0
+2020-04-21,United States,San Antonio Metro,Metro,1201,50,0,19,0,0,24,3,0
+2020-04-22,United States,San Antonio Metro,Metro,1260,51,0,59,1,0,28,0,0
+2020-04-23,United States,San Antonio Metro,Metro,1353,55,0,93,4,0,83,5,0
+2020-04-24,United States,San Antonio Metro,Metro,1521,55,0,168,0,0,36,2,0
+2020-04-25,United States,San Antonio Metro,Metro,1528,55,0,7,0,0,41,0,0
+2020-04-26,United States,San Antonio Metro,Metro,1534,55,0,6,0,0,41,1,0
+2020-04-27,United States,San Antonio Metro,Metro,1535,55,0,1,0,0,24,1,0
+2020-04-28,United States,San Antonio Metro,Metro,1479,55,0,0,0,0,19,0,0
 2020-04-29,United States,San Antonio Metro,Metro,1527,55,0,48,0,0,59,1,0
 2020-04-30,United States,San Antonio Metro,Metro,1601,60,0,74,5,0,93,4,0
 2020-05-01,United States,San Antonio Metro,Metro,1603,60,0,2,0,0,168,0,0
@@ -20759,45 +20759,45 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-22,United States,South Carolina,State,196,3,0,25,0,0,9,0,0
 2020-03-23,United States,South Carolina,State,298,5,0,102,2,0,5,1,0
 2020-03-24,United States,South Carolina,State,342,5,0,44,0,0,14,0,0
-2020-03-25,United States,South Carolina,State,424,7,0,82,2,0,0,0,0
-2020-03-26,United States,South Carolina,State,424,9,0,0,2,0,34,0,0
-2020-03-27,United States,South Carolina,State,542,13,0,118,4,0,45,0,0
-2020-03-28,United States,South Carolina,State,660,15,0,118,2,0,45,2,0
-2020-03-29,United States,South Carolina,State,774,16,0,114,1,0,25,0,0
-2020-03-30,United States,South Carolina,State,925,18,0,151,2,0,102,2,0
-2020-03-31,United States,South Carolina,State,1083,22,0,158,4,0,44,0,0
-2020-04-01,United States,South Carolina,State,1293,26,0,210,4,0,82,2,0
-2020-04-02,United States,South Carolina,State,1554,31,0,261,5,0,0,2,0
-2020-04-03,United States,South Carolina,State,1700,34,0,146,3,0,118,4,0
-2020-04-04,United States,South Carolina,State,1917,40,0,217,6,0,118,2,0
-2020-04-05,United States,South Carolina,State,2049,44,0,132,4,0,114,1,0
-2020-04-06,United States,South Carolina,State,2232,48,0,183,4,0,151,2,0
-2020-04-07,United States,South Carolina,State,2417,51,0,185,3,0,158,4,0
-2020-04-08,United States,South Carolina,State,2417,51,0,0,0,0,210,4,0
-2020-04-09,United States,South Carolina,State,2793,67,0,376,16,0,261,5,0
-2020-04-10,United States,South Carolina,State,3067,72,0,274,5,0,146,3,0
-2020-04-11,United States,South Carolina,State,3211,80,0,144,8,0,217,6,0
-2020-04-12,United States,South Carolina,State,3320,82,0,109,2,0,132,4,0
-2020-04-13,United States,South Carolina,State,3391,82,0,71,0,0,183,4,0
-2020-04-14,United States,South Carolina,State,3553,97,0,162,15,0,185,3,0
-2020-04-15,United States,South Carolina,State,3656,106,0,103,9,0,0,0,0
-2020-04-16,United States,South Carolina,State,3931,111,0,275,5,0,376,16,0
-2020-04-17,United States,South Carolina,State,4099,116,0,168,5,0,274,5,0
-2020-04-18,United States,South Carolina,State,4248,119,0,149,3,0,144,8,0
-2020-04-19,United States,South Carolina,State,4377,120,0,129,1,0,109,2,0
-2020-04-20,United States,South Carolina,State,4446,123,0,69,3,0,71,0,0
-2020-04-21,United States,South Carolina,State,4439,124,0,0,1,0,162,15,0
-2020-04-22,United States,South Carolina,State,4761,140,0,322,16,0,103,9,0
-2020-04-23,United States,South Carolina,State,4917,150,0,156,10,0,275,5,0
-2020-04-24,United States,South Carolina,State,5070,157,0,153,7,0,168,5,0
-2020-04-25,United States,South Carolina,State,5253,166,0,183,9,0,149,3,0
-2020-04-26,United States,South Carolina,State,5498,174,0,245,8,0,129,1,0
-2020-04-27,United States,South Carolina,State,5613,177,0,115,3,0,69,3,0
-2020-04-28,United States,South Carolina,State,5735,192,0,122,15,0,0,1,0
-2020-04-29,United States,South Carolina,State,5882,231,0,147,39,0,322,16,0
-2020-04-30,United States,South Carolina,State,6095,244,0,213,13,0,156,10,0
-2020-05-01,United States,South Carolina,State,6258,256,0,163,12,0,153,7,0
-2020-05-02,United States,South Carolina,State,6489,267,0,231,11,0,183,9,0
+2020-03-25,United States,South Carolina,State,424,8,0,82,3,0,0,0,0
+2020-03-26,United States,South Carolina,State,424,11,0,0,3,0,34,0,0
+2020-03-27,United States,South Carolina,State,542,15,0,118,4,0,45,0,0
+2020-03-28,United States,South Carolina,State,660,18,0,118,3,0,45,2,0
+2020-03-29,United States,South Carolina,State,774,19,0,114,1,0,25,0,0
+2020-03-30,United States,South Carolina,State,925,21,0,151,2,0,102,2,0
+2020-03-31,United States,South Carolina,State,1083,26,0,158,5,0,44,0,0
+2020-04-01,United States,South Carolina,State,1293,30,0,210,4,0,82,3,0
+2020-04-02,United States,South Carolina,State,1554,36,0,261,6,0,0,3,0
+2020-04-03,United States,South Carolina,State,1700,41,0,146,5,0,118,4,0
+2020-04-04,United States,South Carolina,State,1917,49,0,217,8,0,118,3,0
+2020-04-05,United States,South Carolina,State,2049,53,0,132,4,0,114,1,0
+2020-04-06,United States,South Carolina,State,2232,57,0,183,4,0,151,2,0
+2020-04-07,United States,South Carolina,State,2417,60,0,185,3,0,158,5,0
+2020-04-08,United States,South Carolina,State,2417,60,0,0,0,0,210,4,0
+2020-04-09,United States,South Carolina,State,2793,79,0,376,19,0,261,6,0
+2020-04-10,United States,South Carolina,State,3067,86,0,274,7,0,146,5,0
+2020-04-11,United States,South Carolina,State,3211,96,0,144,10,0,217,8,0
+2020-04-12,United States,South Carolina,State,3320,99,0,109,3,0,132,4,0
+2020-04-13,United States,South Carolina,State,3391,99,0,71,0,0,183,4,0
+2020-04-14,United States,South Carolina,State,3553,116,0,162,17,0,185,3,0
+2020-04-15,United States,South Carolina,State,3656,125,0,103,9,0,0,0,0
+2020-04-16,United States,South Carolina,State,3931,130,0,275,5,0,376,19,0
+2020-04-17,United States,South Carolina,State,4099,138,0,168,8,0,274,7,0
+2020-04-18,United States,South Carolina,State,4248,141,0,149,3,0,144,10,0
+2020-04-19,United States,South Carolina,State,4377,142,0,129,1,0,109,3,0
+2020-04-20,United States,South Carolina,State,4446,146,0,69,4,0,71,0,0
+2020-04-21,United States,South Carolina,State,4439,147,0,0,1,0,162,17,0
+2020-04-22,United States,South Carolina,State,4761,164,0,322,17,0,103,9,0
+2020-04-23,United States,South Carolina,State,4917,175,0,156,11,0,275,5,0
+2020-04-24,United States,South Carolina,State,5070,183,0,153,8,0,168,8,0
+2020-04-25,United States,South Carolina,State,5253,193,0,183,10,0,149,3,0
+2020-04-26,United States,South Carolina,State,5498,203,0,245,10,0,129,1,0
+2020-04-27,United States,South Carolina,State,5613,206,0,115,3,0,69,4,0
+2020-04-28,United States,South Carolina,State,5735,223,0,122,17,0,0,1,0
+2020-04-29,United States,South Carolina,State,5882,231,0,147,8,0,322,17,0
+2020-04-30,United States,South Carolina,State,6095,244,0,213,13,0,156,11,0
+2020-05-01,United States,South Carolina,State,6258,256,0,163,12,0,153,8,0
+2020-05-02,United States,South Carolina,State,6489,267,0,231,11,0,183,10,0
 2020-03-10,United States,South Dakota,State,0,0,0,0,0,0,,,
 2020-03-11,United States,South Dakota,State,8,1,0,8,1,0,,,
 2020-03-12,United States,South Dakota,State,8,1,0,0,0,0,,,
@@ -21034,47 +21034,47 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-20,United States,Texas,State,394,5,0,134,0,0,16,0,0
 2020-03-21,United States,Texas,State,581,5,0,187,0,0,14,0,0
 2020-03-22,United States,Texas,State,643,7,0,62,2,0,15,0,0
-2020-03-23,United States,Texas,State,758,9,0,115,2,0,13,0,0
-2020-03-24,United States,Texas,State,955,12,0,197,3,0,25,1,0
-2020-03-25,United States,Texas,State,1229,15,0,274,3,0,63,2,0
-2020-03-26,United States,Texas,State,1563,21,0,334,6,0,87,2,0
-2020-03-27,United States,Texas,State,1937,26,0,374,5,0,134,0,0
-2020-03-28,United States,Texas,State,2455,30,0,518,4,0,187,0,0
-2020-03-29,United States,Texas,State,2792,37,0,337,7,0,62,2,0
-2020-03-30,United States,Texas,State,3147,45,0,355,8,0,115,2,0
-2020-03-31,United States,Texas,State,3809,54,0,662,9,0,197,3,0
-2020-04-01,United States,Texas,State,4355,66,0,546,12,0,274,3,0
-2020-04-02,United States,Texas,State,5069,77,0,714,11,0,334,6,0
-2020-04-03,United States,Texas,State,5734,100,0,665,23,0,374,5,0
-2020-04-04,United States,Texas,State,6567,116,0,833,16,0,518,4,0
-2020-04-05,United States,Texas,State,7209,136,0,642,20,0,337,7,0
-2020-04-06,United States,Texas,State,8043,150,0,834,14,0,355,8,0
-2020-04-07,United States,Texas,State,8925,160,0,882,10,0,662,9,0
-2020-04-08,United States,Texas,State,9777,189,0,852,29,0,546,12,0
-2020-04-09,United States,Texas,State,11208,210,0,1431,21,0,714,11,0
-2020-04-10,United States,Texas,State,12105,238,0,897,28,0,665,23,0
-2020-04-11,United States,Texas,State,13023,266,0,918,28,0,833,16,0
-2020-04-12,United States,Texas,State,13677,283,0,654,17,0,642,20,0
-2020-04-13,United States,Texas,State,14275,305,0,598,22,0,834,14,0
-2020-04-14,United States,Texas,State,15006,342,0,731,37,0,882,10,0
-2020-04-15,United States,Texas,State,15907,375,0,901,33,0,852,29,0
-2020-04-16,United States,Texas,State,16876,414,0,969,39,0,1431,21,0
-2020-04-17,United States,Texas,State,17849,451,0,973,37,0,897,28,0
-2020-04-18,United States,Texas,State,18704,476,0,855,25,0,918,28,0
-2020-04-19,United States,Texas,State,19260,490,0,556,14,0,654,17,0
-2020-04-20,United States,Texas,State,19751,507,0,491,17,0,598,22,0
-2020-04-21,United States,Texas,State,20574,533,0,823,26,0,731,37,0
-2020-04-22,United States,Texas,State,21321,556,0,747,23,0,901,33,0
-2020-04-23,United States,Texas,State,22650,604,0,1329,48,0,969,39,0
-2020-04-24,United States,Texas,State,23642,624,0,992,20,0,973,37,0
-2020-04-25,United States,Texas,State,24153,638,0,511,14,0,855,25,0
-2020-04-26,United States,Texas,State,24967,651,0,814,13,0,556,14,0
-2020-04-27,United States,Texas,State,25321,666,0,354,15,0,491,17,0
-2020-04-28,United States,Texas,State,26357,719,0,1036,53,0,823,26,0
-2020-04-29,United States,Texas,State,27257,754,0,900,35,0,747,23,0
-2020-04-30,United States,Texas,State,28727,812,0,1470,58,0,1329,48,0
+2020-03-23,United States,Texas,State,758,10,0,115,3,0,13,0,0
+2020-03-24,United States,Texas,State,955,13,0,197,3,0,25,1,0
+2020-03-25,United States,Texas,State,1229,16,0,274,3,0,63,2,0
+2020-03-26,United States,Texas,State,1563,22,0,334,6,0,87,2,0
+2020-03-27,United States,Texas,State,1937,27,0,374,5,0,134,0,0
+2020-03-28,United States,Texas,State,2455,31,0,518,4,0,187,0,0
+2020-03-29,United States,Texas,State,2792,39,0,337,8,0,62,2,0
+2020-03-30,United States,Texas,State,3147,49,0,355,10,0,115,3,0
+2020-03-31,United States,Texas,State,3809,58,0,662,9,0,197,3,0
+2020-04-01,United States,Texas,State,4355,70,0,546,12,0,274,3,0
+2020-04-02,United States,Texas,State,5069,81,0,714,11,0,334,6,0
+2020-04-03,United States,Texas,State,5734,106,0,665,25,0,374,5,0
+2020-04-04,United States,Texas,State,6567,124,0,833,18,0,518,4,0
+2020-04-05,United States,Texas,State,7209,144,0,642,20,0,337,8,0
+2020-04-06,United States,Texas,State,8043,160,0,834,16,0,355,10,0
+2020-04-07,United States,Texas,State,8925,170,0,882,10,0,662,9,0
+2020-04-08,United States,Texas,State,9777,200,0,852,30,0,546,12,0
+2020-04-09,United States,Texas,State,11208,223,0,1431,23,0,714,11,0
+2020-04-10,United States,Texas,State,12105,255,0,897,32,0,665,25,0
+2020-04-11,United States,Texas,State,13023,285,0,918,30,0,833,18,0
+2020-04-12,United States,Texas,State,13677,303,0,654,18,0,642,20,0
+2020-04-13,United States,Texas,State,14275,325,0,598,22,0,834,16,0
+2020-04-14,United States,Texas,State,15006,367,0,731,42,0,882,10,0
+2020-04-15,United States,Texas,State,15907,404,0,901,37,0,852,30,0
+2020-04-16,United States,Texas,State,16876,446,0,969,42,0,1431,23,0
+2020-04-17,United States,Texas,State,17849,484,0,973,38,0,897,32,0
+2020-04-18,United States,Texas,State,18704,513,0,855,29,0,918,30,0
+2020-04-19,United States,Texas,State,19260,529,0,556,16,0,654,18,0
+2020-04-20,United States,Texas,State,19751,547,0,491,18,0,598,22,0
+2020-04-21,United States,Texas,State,20574,575,0,823,28,0,731,42,0
+2020-04-22,United States,Texas,State,21321,599,0,747,24,0,901,37,0
+2020-04-23,United States,Texas,State,22650,649,0,1329,50,0,969,42,0
+2020-04-24,United States,Texas,State,23642,669,0,992,20,0,973,38,0
+2020-04-25,United States,Texas,State,24153,684,0,511,15,0,855,29,0
+2020-04-26,United States,Texas,State,24967,697,0,814,13,0,556,16,0
+2020-04-27,United States,Texas,State,25321,712,0,354,15,0,491,18,0
+2020-04-28,United States,Texas,State,26357,719,0,1036,7,0,823,28,0
+2020-04-29,United States,Texas,State,27257,754,0,900,35,0,747,24,0
+2020-04-30,United States,Texas,State,28727,812,0,1470,58,0,1329,50,0
 2020-05-01,United States,Texas,State,29692,840,0,965,28,0,992,20,0
-2020-05-02,United States,Texas,State,30917,863,0,1225,23,0,511,14,0
+2020-05-02,United States,Texas,State,30917,863,0,1225,23,0,511,15,0
 2020-02-22,United States,"Travis, CA (From Diamond Princess)",State,5,0,0,5,0,0,,,
 2020-02-23,United States,"Travis, CA (From Diamond Princess)",State,5,0,0,0,0,0,,,
 2020-02-24,United States,"Travis, CA (From Diamond Princess)",State,0,0,0,0,0,0,,,

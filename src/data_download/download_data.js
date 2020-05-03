@@ -506,10 +506,42 @@ function reallocateRestatedDeaths(rows, number) {
         }
 
         var reallocAmount = 0;
-        if((row.state == 'New York' && (row.date == '2020-04-16' || row.date == '2020-04-17'))) {
+        if((row.state == 'New York' && (row.date == '2020-04-16' || row.date == '2020-04-17')) || 
+           (row.state == 'Colorado' && row.date == '2020-04-24') || 
+           (row.state == 'Louisiana' && row.date == '2020-04-23') || 
+           (row.state == 'Ohio' && row.date == '2020-04-29') || 
+           (row.state == 'Texas' && row.date == '2020-04-28') || 
+           (row.state == 'Connecticut' && row.date == '2020-04-20') || 
+           (row.state == 'South Carolina' && row.date == '2020-04-29') || 
+           (row.country == 'United Kingdom' && row.date == '2020-04-29'))
+        { 
             const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
             reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
             fromStart = true;
+        }
+
+        // Reallocate the probable deaths added to "Unassigned" to Marion county
+        if(row.state == 'Indiana' && row.admin2 == "Marion" && row.date == "2020-04-30") {
+          row.confirmedDeaths += 107;
+          reallocAmount = 107;
+          fromStart = true;
+        }
+
+        if(row.state == 'Indiana' && row.admin2 == "Unassigned" && row.date == "2020-04-30") {
+          row.confirmedDeaths = 0;
+          return;
+        }
+
+        // Reallocating probable deaths to Carroll
+        if(row.state == 'Maryland' && row.admin2 == "Carroll" && row.date == "2020-04-20") {
+          row.confirmedDeaths += 97;
+          reallocAmount = 97;
+          fromStart = true;
+        }
+
+        if(row.state == 'Maryland' && row.admin2 == "Unassigned" && row.date == "2020-04-20") {
+          row.confirmedDeaths = 0;
+          return;
         }
 
         if(row.state == 'New York' && row.date == '2020-04-23') {
@@ -525,14 +557,6 @@ function reallocateRestatedDeaths(rows, number) {
             fromStart = true;
         }
         
-        if (row.country == 'United Kingdom' && row.date == '2020-04-29') {
-            const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
-            reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);
-
-            process.stderr.write("UK " + deathsYesterday + " " + reallocAmount + " " + (row.confirmedDeaths - rows[index - 1].confirmedDeaths));
-            fromStart = true;
-        }
-
         if(reallocAmount) {
             process.stderr.write(`Reallocating ${row.state} ${row.admin2} ${reallocAmount}\n`)
 
@@ -547,7 +571,7 @@ function reallocateRestatedDeaths(rows, number) {
                 const delta = Math.round((prevRow.confirmedDeaths - initialDeaths) * ratio);
                 finalDelta = delta;
                 prevRow.confirmedDeaths += delta;
-                process.stderr.write(`    ${prevRow.date} ${prevRow.state} ${prevRow.confirmedDeaths} ${delta} ${initialDeaths}\n`);
+                process.stderr.write(`    ${prevRow.state} ${prevRow.admin2} ${prevRow.confirmedDeaths}\n`);
             }
 
             process.stderr.write(`    Checksum: ${reallocAmount} should equal ${finalDelta}\n`);

@@ -484,7 +484,7 @@ function addCountrySums(rows) {
             extraRows.push(newRow)
 
             if(!addedTotal[key]) {
-                process.stderr.write("Adding total for country " + newRow.country + ' ' + newRow.date + '\n');
+                // process.stderr.write("Adding total for country " + newRow.country + ' ' + newRow.date + '\n');
                 addedTotal[key] = true;
             }
         }
@@ -509,6 +509,7 @@ function reallocateRestatedDeaths(rows, number) {
         if((row.state == 'New York' && (row.date == '2020-04-16' || row.date == '2020-04-17'))) {
             const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
             reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
+            fromStart = true;
         }
 
         if(row.state == 'New York' && row.date == '2020-04-23') {
@@ -521,10 +522,20 @@ function reallocateRestatedDeaths(rows, number) {
 
         if (row.state == 'Hubei' && row.date == '2020-04-17') {
             reallocAmount = row.confirmedDeaths - rows[index - 1].confirmedDeaths;
+            fromStart = true;
+        }
+        
+        if (row.country == 'United Kingdom' && row.date == '2020-04-29') {
+            const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
+            reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);
+
+            process.stderr.write("UK " + deathsYesterday + " " + reallocAmount + " " + (row.confirmedDeaths - rows[index - 1].confirmedDeaths));
+            fromStart = true;
         }
 
         if(reallocAmount) {
             process.stderr.write(`Reallocating ${row.state} ${row.admin2} ${reallocAmount}\n`)
+
             const initialDeaths = fromStart ? 0 : rows[index - totalRows - 1].confirmedDeaths;
             var totalDeaths = rows[index - 1].confirmedDeaths - initialDeaths; 
             var ratio = totalDeaths > 0 ? reallocAmount / totalDeaths : 0;
@@ -536,6 +547,7 @@ function reallocateRestatedDeaths(rows, number) {
                 const delta = Math.round((prevRow.confirmedDeaths - initialDeaths) * ratio);
                 finalDelta = delta;
                 prevRow.confirmedDeaths += delta;
+                process.stderr.write(`    ${prevRow.date} ${prevRow.state} ${prevRow.confirmedDeaths} ${delta} ${initialDeaths}\n`);
             }
 
             process.stderr.write(`    Checksum: ${reallocAmount} should equal ${finalDelta}\n`);

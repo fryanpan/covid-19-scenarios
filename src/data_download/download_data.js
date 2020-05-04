@@ -677,11 +677,17 @@ function reallocateRestatedDeaths(rows, number) {
         }
 
         var reallocAmount = 0;
+
+        // Reallocating states on the day they added probable deaths
         if((row.state == 'New York' && (row.date == '2020-04-16' || row.date == '2020-04-17')) || 
            (row.state == 'Colorado' && row.date == '2020-04-24') || 
            (row.state == 'Louisiana' && row.date == '2020-04-23') || 
            (row.state == 'Ohio' && row.date == '2020-04-29') || 
            (row.state == 'Texas' && row.date == '2020-04-28') || 
+
+           // https://www.wpxi.com/news/pennsylvania/live-updates-coronavirus-pennsylvania-what-you-need-know-wednesday/4QL2QXZXO5CQPKJNHFYIDXMU3E/
+           (row.state == 'Pennsylvania' && row.date == '2020-04-29') || 
+
            (row.state == 'Connecticut' && row.date == '2020-04-20') || 
            (row.state == 'South Carolina' && row.date == '2020-04-29') || 
            (row.country == 'United Kingdom' && row.date == '2020-04-29'))

@@ -17047,48 +17047,48 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-20,United States,All,Country,19100,244,0,5421,44,0,516,7,0
 2020-03-21,United States,All,Country,25513,307,0,6413,63,0,547,7,0
 2020-03-22,United States,All,Country,33848,458,0,8335,151,0,773,9,0
-2020-03-23,United States,All,Country,43663,600,0,9815,142,0,1133,22,5
-2020-03-24,United States,All,Country,53736,827,348,10073,227,348,1789,23,0
-2020-03-25,United States,All,Country,65778,1095,361,12042,268,13,1364,10,0
-2020-03-26,United States,All,Country,83836,1398,681,18058,303,320,5894,82,0
-2020-03-27,United States,All,Country,101657,1817,869,17821,419,188,5421,44,0
-2020-03-28,United States,All,Country,121465,2327,1072,19808,510,203,6413,63,0
-2020-03-29,United States,All,Country,140909,2781,2665,19444,454,1593,8335,151,0
-2020-03-30,United States,All,Country,161831,3348,5644,20922,567,2979,9815,142,0
-2020-03-31,United States,All,Country,188172,4555,7024,26341,1207,1380,10073,227,348
-2020-04-01,United States,All,Country,213372,5300,8474,25200,745,1450,12042,268,13
-2020-04-02,United States,All,Country,243599,6654,9001,30227,1354,527,18058,303,320
-2020-04-03,United States,All,Country,275586,8093,9707,31987,1439,706,17821,419,188
-2020-04-04,United States,All,Country,308853,9334,14652,33267,1241,4945,19808,510,203
-2020-04-05,United States,All,Country,337072,10953,17448,28219,1619,2796,19444,454,1593
-2020-04-06,United States,All,Country,366667,12599,19581,29595,1646,2133,20922,567,2979
-2020-04-07,United States,All,Country,396223,14773,21763,29556,2174,2182,26341,1207,1380
-2020-04-08,United States,All,Country,429052,16982,23559,32829,2209,1796,25200,745,1450
-2020-04-09,United States,All,Country,461437,19045,25410,32385,2063,1851,30227,1354,527
-2020-04-10,United States,All,Country,496535,21502,28790,35098,2457,3380,31987,1439,706
-2020-04-11,United States,All,Country,526396,23688,31270,29861,2186,2480,33267,1241,4945
-2020-04-12,United States,All,Country,555313,25493,32988,28917,1805,1718,28219,1619,2796
-2020-04-13,United States,All,Country,580619,27046,43482,25306,1553,10494,29595,1646,2133
-2020-04-14,United States,All,Country,607670,29623,47763,27051,2577,4281,29556,2174,2182
-2020-04-15,United States,All,Country,636350,32455,52096,28680,2832,4333,32829,2209,1796
-2020-04-16,United States,All,Country,667801,34629,54703,31451,2174,2607,32385,2063,1851
-2020-04-17,United States,All,Country,699706,37323,58545,31905,2694,3842,35098,2457,3380
-2020-04-18,United States,All,Country,732197,39246,64840,32491,1923,6295,29861,2186,2480
-2020-04-19,United States,All,Country,759086,41259,70337,26889,2013,5497,28917,1805,1718
-2020-04-20,United States,All,Country,784326,42735,72329,25240,1476,1992,25306,1553,10494
-2020-04-21,United States,All,Country,811865,45765,75204,27539,3030,2875,27051,2577,4281
-2020-04-22,United States,All,Country,840220,48245,77366,28355,2480,2162,28680,2832,4333
-2020-04-23,United States,All,Country,869170,50280,80203,28950,2035,2837,31451,2174,2607
-2020-04-24,United States,All,Country,905333,52199,99079,36163,1919,18876,31905,2694,3842
-2020-04-25,United States,All,Country,938154,54014,100372,32821,1815,1293,32491,1923,6295
-2020-04-26,United States,All,Country,965783,55145,106988,27629,1131,6616,26889,2013,5497
-2020-04-27,United States,All,Country,988197,56529,111424,22414,1384,4436,25240,1476,1992
-2020-04-28,United States,All,Country,1012582,58592,115936,24385,2063,4512,27539,3030,2875
-2020-04-29,United States,All,Country,1039909,61074,120720,27327,2482,4784,28355,2480,2162
-2020-04-30,United States,All,Country,1069424,62996,153947,29515,1922,33227,28950,2035,2837
-2020-05-01,United States,All,Country,1103461,64943,164015,34037,1947,10068,36163,1919,18876
-2020-05-02,United States,All,Country,1132539,66369,175382,29078,1426,11367,32821,1815,1293
-2020-05-03,United States,All,Country,1158040,67682,180152,25501,1313,4770,27629,1131,6616
+2020-03-23,United States,All,Country,43663,601,0,9815,143,0,1133,22,5
+2020-03-24,United States,All,Country,53736,828,348,10073,227,348,1789,23,0
+2020-03-25,United States,All,Country,65778,1098,361,12042,270,13,1364,10,0
+2020-03-26,United States,All,Country,83836,1401,681,18058,303,320,5894,82,0
+2020-03-27,United States,All,Country,101657,1820,869,17821,419,188,5421,44,0
+2020-03-28,United States,All,Country,121465,2331,1072,19808,511,203,6413,63,0
+2020-03-29,United States,All,Country,140909,2785,2665,19444,454,1593,8335,151,0
+2020-03-30,United States,All,Country,161831,3353,5644,20922,568,2979,9815,143,0
+2020-03-31,United States,All,Country,188172,4561,7024,26341,1208,1380,10073,227,348
+2020-04-01,United States,All,Country,213372,5307,8474,25200,746,1450,12042,270,13
+2020-04-02,United States,All,Country,243599,6663,9001,30227,1356,527,18058,303,320
+2020-04-03,United States,All,Country,275586,8105,9707,31987,1442,706,17821,419,188
+2020-04-04,United States,All,Country,308853,9350,14652,33267,1245,4945,19808,511,203
+2020-04-05,United States,All,Country,337072,10970,17448,28219,1620,2796,19444,454,1593
+2020-04-06,United States,All,Country,366667,12616,19581,29595,1646,2133,20922,568,2979
+2020-04-07,United States,All,Country,396223,14799,21763,29556,2183,2182,26341,1208,1380
+2020-04-08,United States,All,Country,429052,17014,23559,32829,2215,1796,25200,746,1450
+2020-04-09,United States,All,Country,461437,19085,25410,32385,2071,1851,30227,1356,527
+2020-04-10,United States,All,Country,496535,21550,28790,35098,2465,3380,31987,1442,706
+2020-04-11,United States,All,Country,526396,23745,31270,29861,2195,2480,33267,1245,4945
+2020-04-12,United States,All,Country,555313,25551,32988,28917,1806,1718,28219,1620,2796
+2020-04-13,United States,All,Country,580619,27104,43482,25306,1553,10494,29595,1646,2133
+2020-04-14,United States,All,Country,607670,29694,47763,27051,2590,4281,29556,2183,2182
+2020-04-15,United States,All,Country,636350,32533,52096,28680,2839,4333,32829,2215,1796
+2020-04-16,United States,All,Country,667801,34714,54703,31451,2181,2607,32385,2071,1851
+2020-04-17,United States,All,Country,699706,37413,58545,31905,2699,3842,35098,2465,3380
+2020-04-18,United States,All,Country,732197,39344,64840,32491,1931,6295,29861,2195,2480
+2020-04-19,United States,All,Country,759086,41389,70337,26889,2045,5497,28917,1806,1718
+2020-04-20,United States,All,Country,784326,42878,72329,25240,1489,1992,25306,1553,10494
+2020-04-21,United States,All,Country,811865,45937,75204,27539,3059,2875,27051,2590,4281
+2020-04-22,United States,All,Country,840220,48423,77366,28355,2486,2162,28680,2839,4333
+2020-04-23,United States,All,Country,869170,50461,80203,28950,2038,2837,31451,2181,2607
+2020-04-24,United States,All,Country,905333,52378,99079,36163,1917,18876,31905,2699,3842
+2020-04-25,United States,All,Country,938154,54196,100372,32821,1818,1293,32491,1931,6295
+2020-04-26,United States,All,Country,965783,55330,106988,27629,1134,6616,26889,2045,5497
+2020-04-27,United States,All,Country,988197,56718,111424,22414,1388,4436,25240,1489,1992
+2020-04-28,United States,All,Country,1012582,58796,115936,24385,2078,4512,27539,3059,2875
+2020-04-29,United States,All,Country,1039909,61074,120720,27327,2278,4784,28355,2486,2162
+2020-04-30,United States,All,Country,1069424,62996,153947,29515,1922,33227,28950,2038,2837
+2020-05-01,United States,All,Country,1103461,64943,164015,34037,1947,10068,36163,1917,18876
+2020-05-02,United States,All,Country,1132539,66369,175382,29078,1426,11367,32821,1818,1293
+2020-05-03,United States,All,Country,1158040,67682,180152,25501,1313,4770,27629,1134,6616
 2020-03-13,United States,Alabama,State,5,0,0,5,0,0,,,
 2020-03-14,United States,Alabama,State,6,0,0,1,0,0,,,
 2020-03-15,United States,Alabama,State,12,0,0,6,0,0,,,
@@ -20605,29 +20605,29 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-04-04,United States,New York Metro,Metro,134398,3864,0,14765,700,0,8671,261,0
 2020-04-05,United States,New York Metro,Metro,145761,4549,0,11363,685,0,8345,300,0
 2020-04-06,United States,New York Metro,Metro,157183,6598,0,11422,2049,0,8758,161,0
-2020-04-07,United States,New York Metro,Metro,168866,7987,0,11683,1389,0,10887,129,0
-2020-04-08,United States,New York Metro,Metro,182636,9190,0,13770,1203,0,9909,679,0
-2020-04-09,United States,New York Metro,Metro,196070,10471,0,13434,1281,0,10646,592,0
-2020-04-10,United States,New York Metro,Metro,209428,11831,0,13358,1360,0,13608,439,0
-2020-04-11,United States,New York Metro,Metro,220285,13031,0,10857,1200,0,14765,700,0
-2020-04-12,United States,New York Metro,Metro,230541,14104,0,10256,1073,0,11363,685,0
-2020-04-13,United States,New York Metro,Metro,238756,15031,0,8215,927,0,11422,2049,0
-2020-04-14,United States,New York Metro,Metro,248773,16342,0,10017,1311,0,11683,1389,0
-2020-04-15,United States,New York Metro,Metro,262136,17618,0,13363,1276,0,13770,1203,0
-2020-04-16,United States,New York Metro,Metro,274419,18690,0,12283,1072,0,13434,1281,0
-2020-04-17,United States,New York Metro,Metro,283754,19528,0,9335,838,0,13358,1360,0
-2020-04-18,United States,New York Metro,Metro,297171,19746,0,13417,218,0,10857,1200,0
-2020-04-19,United States,New York Metro,Metro,306093,21278,0,8922,1532,0,10256,1073,0
-2020-04-20,United States,New York Metro,Metro,314049,22313,0,7956,1035,0,8215,927,0
-2020-04-21,United States,New York Metro,Metro,319307,23360,0,5258,1047,0,10017,1311,0
-2020-04-22,United States,New York Metro,Metro,328654,24559,0,9347,1199,0,13363,1276,0
-2020-04-23,United States,New York Metro,Metro,332563,25072,0,3909,513,0,12283,1072,0
-2020-04-24,United States,New York Metro,Metro,342199,25691,0,9636,619,0,9335,838,0
-2020-04-25,United States,New York Metro,Metro,353294,26491,0,11095,800,0,13417,218,0
-2020-04-26,United States,New York Metro,Metro,361324,26735,0,8030,244,0,8922,1532,0
-2020-04-27,United States,New York Metro,Metro,366122,27166,0,4798,431,0,7956,1035,0
-2020-04-28,United States,New York Metro,Metro,370772,27761,0,4650,595,0,5258,1047,0
-2020-04-29,United States,New York Metro,Metro,376854,28536,0,6082,775,0,9347,1199,0
+2020-04-07,United States,New York Metro,Metro,168866,7988,0,11683,1390,0,10887,129,0
+2020-04-08,United States,New York Metro,Metro,182636,9191,0,13770,1203,0,9909,679,0
+2020-04-09,United States,New York Metro,Metro,196070,10472,0,13434,1281,0,10646,592,0
+2020-04-10,United States,New York Metro,Metro,209428,11832,0,13358,1360,0,13608,439,0
+2020-04-11,United States,New York Metro,Metro,220285,13032,0,10857,1200,0,14765,700,0
+2020-04-12,United States,New York Metro,Metro,230541,14105,0,10256,1073,0,11363,685,0
+2020-04-13,United States,New York Metro,Metro,238756,15032,0,8215,927,0,11422,2049,0
+2020-04-14,United States,New York Metro,Metro,248773,16343,0,10017,1311,0,11683,1390,0
+2020-04-15,United States,New York Metro,Metro,262136,17619,0,13363,1276,0,13770,1203,0
+2020-04-16,United States,New York Metro,Metro,274419,18691,0,12283,1072,0,13434,1281,0
+2020-04-17,United States,New York Metro,Metro,283754,19529,0,9335,838,0,13358,1360,0
+2020-04-18,United States,New York Metro,Metro,297171,19747,0,13417,218,0,10857,1200,0
+2020-04-19,United States,New York Metro,Metro,306093,21279,0,8922,1532,0,10256,1073,0
+2020-04-20,United States,New York Metro,Metro,314049,22315,0,7956,1036,0,8215,927,0
+2020-04-21,United States,New York Metro,Metro,319307,23362,0,5258,1047,0,10017,1311,0
+2020-04-22,United States,New York Metro,Metro,328654,24561,0,9347,1199,0,13363,1276,0
+2020-04-23,United States,New York Metro,Metro,332563,25074,0,3909,513,0,12283,1072,0
+2020-04-24,United States,New York Metro,Metro,342199,25693,0,9636,619,0,9335,838,0
+2020-04-25,United States,New York Metro,Metro,353294,26493,0,11095,800,0,13417,218,0
+2020-04-26,United States,New York Metro,Metro,361324,26737,0,8030,244,0,8922,1532,0
+2020-04-27,United States,New York Metro,Metro,366122,27168,0,4798,431,0,7956,1036,0
+2020-04-28,United States,New York Metro,Metro,370772,27763,0,4650,595,0,5258,1047,0
+2020-04-29,United States,New York Metro,Metro,376854,28536,0,6082,773,0,9347,1199,0
 2020-04-30,United States,New York Metro,Metro,382655,29016,0,5801,480,0,3909,513,0
 2020-05-01,United States,New York Metro,Metro,387889,29690,0,5234,674,0,9636,619,0
 2020-05-02,United States,New York Metro,Metro,393705,30021,0,5816,331,0,11095,800,0
@@ -21090,91 +21090,91 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-03-20,United States,Pennsylvania,State,303,1,0,97,0,0,19,0,0
 2020-03-21,United States,Pennsylvania,State,396,2,0,93,1,0,6,0,0
 2020-03-22,United States,Pennsylvania,State,509,4,0,113,2,0,19,0,0
-2020-03-23,United States,Pennsylvania,State,698,6,0,189,2,0,11,0,0
-2020-03-24,United States,Pennsylvania,State,946,8,0,248,2,0,35,0,0
-2020-03-25,United States,Pennsylvania,State,1260,15,0,314,7,0,40,0,0
-2020-03-26,United States,Pennsylvania,State,1795,18,0,535,3,0,54,1,0
-2020-03-27,United States,Pennsylvania,State,2345,22,0,550,4,0,97,0,0
-2020-03-28,United States,Pennsylvania,State,2845,34,0,500,12,0,93,1,0
-2020-03-29,United States,Pennsylvania,State,3432,41,0,587,7,0,113,2,0
-2020-03-30,United States,Pennsylvania,State,4155,50,0,723,9,0,189,2,0
-2020-03-31,United States,Pennsylvania,State,4963,63,0,808,13,0,248,2,0
-2020-04-01,United States,Pennsylvania,State,6009,74,0,1046,11,0,314,7,0
-2020-04-02,United States,Pennsylvania,State,7268,90,0,1259,16,0,535,3,0
-2020-04-03,United States,Pennsylvania,State,8570,102,0,1302,12,0,550,4,0
-2020-04-04,United States,Pennsylvania,State,10444,136,0,1874,34,0,500,12,0
-2020-04-05,United States,Pennsylvania,State,11589,151,0,1145,15,0,587,7,0
-2020-04-06,United States,Pennsylvania,State,13127,179,0,1538,28,0,723,9,0
-2020-04-07,United States,Pennsylvania,State,14853,247,0,1726,68,0,808,13,0
-2020-04-08,United States,Pennsylvania,State,16631,318,0,1778,71,0,1046,11,0
-2020-04-09,United States,Pennsylvania,State,18300,345,0,1669,27,0,1259,16,0
-2020-04-10,United States,Pennsylvania,State,20051,418,0,1751,73,0,1302,12,0
-2020-04-11,United States,Pennsylvania,State,21719,503,0,1668,85,0,1874,34,0
-2020-04-12,United States,Pennsylvania,State,22938,557,0,1219,54,0,1145,15,0
-2020-04-13,United States,Pennsylvania,State,24292,589,0,1354,32,0,1538,28,0
-2020-04-14,United States,Pennsylvania,State,25465,691,0,1173,102,0,1726,68,0
-2020-04-15,United States,Pennsylvania,State,26753,779,0,1288,88,0,1778,71,0
-2020-04-16,United States,Pennsylvania,State,28258,841,0,1505,62,0,1669,27,0
-2020-04-17,United States,Pennsylvania,State,29888,921,0,1630,80,0,1751,73,0
-2020-04-18,United States,Pennsylvania,State,31652,1042,0,1764,121,0,1668,85,0
-2020-04-19,United States,Pennsylvania,State,32902,1276,0,1250,234,0,1219,54,0
-2020-04-20,United States,Pennsylvania,State,33914,1348,0,1012,72,0,1354,32,0
-2020-04-21,United States,Pennsylvania,State,35249,1614,0,1335,266,0,1173,102,0
-2020-04-22,United States,Pennsylvania,State,36082,1673,0,833,59,0,1288,88,0
-2020-04-23,United States,Pennsylvania,State,38379,1724,0,2297,51,0,1505,62,0
-2020-04-24,United States,Pennsylvania,State,40208,1747,0,1829,23,0,1630,80,0
-2020-04-25,United States,Pennsylvania,State,41153,1793,0,945,46,0,1764,121,0
-2020-04-26,United States,Pennsylvania,State,42616,1816,0,1463,23,0,1250,234,0
-2020-04-27,United States,Pennsylvania,State,43558,1886,0,942,70,0,1012,72,0
-2020-04-28,United States,Pennsylvania,State,45137,2046,0,1579,160,0,1335,266,0
-2020-04-29,United States,Pennsylvania,State,46327,2373,0,1190,327,0,833,59,0
-2020-04-30,United States,Pennsylvania,State,47971,2475,0,1644,102,0,2297,51,0
-2020-05-01,United States,Pennsylvania,State,49579,2635,0,1608,160,0,1829,23,0
-2020-05-02,United States,Pennsylvania,State,50494,2695,0,915,60,0,945,46,0
-2020-05-03,United States,Pennsylvania,State,51225,2720,0,731,25,0,1463,23,0
+2020-03-23,United States,Pennsylvania,State,698,7,0,189,3,0,11,0,0
+2020-03-24,United States,Pennsylvania,State,946,9,0,248,2,0,35,0,0
+2020-03-25,United States,Pennsylvania,State,1260,18,0,314,9,0,40,0,0
+2020-03-26,United States,Pennsylvania,State,1795,21,0,535,3,0,54,1,0
+2020-03-27,United States,Pennsylvania,State,2345,25,0,550,4,0,97,0,0
+2020-03-28,United States,Pennsylvania,State,2845,38,0,500,13,0,93,1,0
+2020-03-29,United States,Pennsylvania,State,3432,45,0,587,7,0,113,2,0
+2020-03-30,United States,Pennsylvania,State,4155,55,0,723,10,0,189,3,0
+2020-03-31,United States,Pennsylvania,State,4963,69,0,808,14,0,248,2,0
+2020-04-01,United States,Pennsylvania,State,6009,81,0,1046,12,0,314,9,0
+2020-04-02,United States,Pennsylvania,State,7268,99,0,1259,18,0,535,3,0
+2020-04-03,United States,Pennsylvania,State,8570,114,0,1302,15,0,550,4,0
+2020-04-04,United States,Pennsylvania,State,10444,152,0,1874,38,0,500,13,0
+2020-04-05,United States,Pennsylvania,State,11589,168,0,1145,16,0,587,7,0
+2020-04-06,United States,Pennsylvania,State,13127,196,0,1538,28,0,723,10,0
+2020-04-07,United States,Pennsylvania,State,14853,273,0,1726,77,0,808,14,0
+2020-04-08,United States,Pennsylvania,State,16631,350,0,1778,77,0,1046,12,0
+2020-04-09,United States,Pennsylvania,State,18300,385,0,1669,35,0,1259,18,0
+2020-04-10,United States,Pennsylvania,State,20051,466,0,1751,81,0,1302,15,0
+2020-04-11,United States,Pennsylvania,State,21719,560,0,1668,94,0,1874,38,0
+2020-04-12,United States,Pennsylvania,State,22938,615,0,1219,55,0,1145,16,0
+2020-04-13,United States,Pennsylvania,State,24292,647,0,1354,32,0,1538,28,0
+2020-04-14,United States,Pennsylvania,State,25465,762,0,1173,115,0,1726,77,0
+2020-04-15,United States,Pennsylvania,State,26753,857,0,1288,95,0,1778,77,0
+2020-04-16,United States,Pennsylvania,State,28258,926,0,1505,69,0,1669,35,0
+2020-04-17,United States,Pennsylvania,State,29888,1011,0,1630,85,0,1751,81,0
+2020-04-18,United States,Pennsylvania,State,31652,1140,0,1764,129,0,1668,94,0
+2020-04-19,United States,Pennsylvania,State,32902,1406,0,1250,266,0,1219,55,0
+2020-04-20,United States,Pennsylvania,State,33914,1491,0,1012,85,0,1354,32,0
+2020-04-21,United States,Pennsylvania,State,35249,1786,0,1335,295,0,1173,115,0
+2020-04-22,United States,Pennsylvania,State,36082,1851,0,833,65,0,1288,95,0
+2020-04-23,United States,Pennsylvania,State,38379,1905,0,2297,54,0,1505,69,0
+2020-04-24,United States,Pennsylvania,State,40208,1926,0,1829,21,0,1630,85,0
+2020-04-25,United States,Pennsylvania,State,41153,1975,0,945,49,0,1764,129,0
+2020-04-26,United States,Pennsylvania,State,42616,2001,0,1463,26,0,1250,266,0
+2020-04-27,United States,Pennsylvania,State,43558,2075,0,942,74,0,1012,85,0
+2020-04-28,United States,Pennsylvania,State,45137,2250,0,1579,175,0,1335,295,0
+2020-04-29,United States,Pennsylvania,State,46327,2373,0,1190,123,0,833,65,0
+2020-04-30,United States,Pennsylvania,State,47971,2475,0,1644,102,0,2297,54,0
+2020-05-01,United States,Pennsylvania,State,49579,2635,0,1608,160,0,1829,21,0
+2020-05-02,United States,Pennsylvania,State,50494,2695,0,915,60,0,945,49,0
+2020-05-03,United States,Pennsylvania,State,51225,2720,0,731,25,0,1463,26,0
 2020-03-22,United States,Philadelphia Metro,Metro,402,1,0,402,1,0,,,
 2020-03-23,United States,Philadelphia Metro,Metro,576,2,0,174,1,0,,,
 2020-03-24,United States,Philadelphia Metro,Metro,791,2,0,215,0,0,,,
-2020-03-25,United States,Philadelphia Metro,Metro,1018,6,0,227,4,0,,,
-2020-03-26,United States,Philadelphia Metro,Metro,1400,7,0,382,1,0,,,
-2020-03-27,United States,Philadelphia Metro,Metro,1787,9,0,387,2,0,,,
-2020-03-28,United States,Philadelphia Metro,Metro,2143,18,0,356,9,0,,,
-2020-03-29,United States,Philadelphia Metro,Metro,2541,24,0,398,6,0,402,1,0
-2020-03-30,United States,Philadelphia Metro,Metro,2949,27,0,408,3,0,174,1,0
-2020-03-31,United States,Philadelphia Metro,Metro,3437,30,0,488,3,0,215,0,0
-2020-04-01,United States,Philadelphia Metro,Metro,4170,48,0,733,18,0,227,4,0
-2020-04-02,United States,Philadelphia Metro,Metro,4979,63,0,809,15,0,382,1,0
-2020-04-03,United States,Philadelphia Metro,Metro,5808,74,0,829,11,0,387,2,0
-2020-04-04,United States,Philadelphia Metro,Metro,6996,98,0,1188,24,0,356,9,0
-2020-04-05,United States,Philadelphia Metro,Metro,7706,108,0,710,10,0,398,6,0
-2020-04-06,United States,Philadelphia Metro,Metro,8853,132,0,1147,24,0,408,3,0
-2020-04-07,United States,Philadelphia Metro,Metro,10000,185,0,1147,53,0,488,3,0
-2020-04-08,United States,Philadelphia Metro,Metro,11221,236,0,1221,51,0,733,18,0
-2020-04-09,United States,Philadelphia Metro,Metro,12384,247,0,1163,11,0,809,15,0
-2020-04-10,United States,Philadelphia Metro,Metro,13628,299,0,1244,52,0,829,11,0
-2020-04-11,United States,Philadelphia Metro,Metro,14851,366,0,1223,67,0,1188,24,0
-2020-04-12,United States,Philadelphia Metro,Metro,15788,418,0,937,52,0,710,10,0
-2020-04-13,United States,Philadelphia Metro,Metro,16860,444,0,1072,26,0,1147,24,0
-2020-04-14,United States,Philadelphia Metro,Metro,17620,495,0,760,51,0,1147,53,0
-2020-04-15,United States,Philadelphia Metro,Metro,18523,575,0,903,80,0,1221,51,0
-2020-04-16,United States,Philadelphia Metro,Metro,19739,671,0,1216,96,0,1163,11,0
-2020-04-17,United States,Philadelphia Metro,Metro,20924,741,0,1185,70,0,1244,52,0
-2020-04-18,United States,Philadelphia Metro,Metro,22095,828,0,1171,87,0,1223,67,0
-2020-04-19,United States,Philadelphia Metro,Metro,23168,941,0,1073,113,0,937,52,0
-2020-04-20,United States,Philadelphia Metro,Metro,24110,995,0,942,54,0,1072,26,0
-2020-04-21,United States,Philadelphia Metro,Metro,25265,1126,0,1155,131,0,760,51,0
-2020-04-22,United States,Philadelphia Metro,Metro,25978,1180,0,713,54,0,903,80,0
-2020-04-23,United States,Philadelphia Metro,Metro,28077,1250,0,2099,70,0,1216,96,0
-2020-04-24,United States,Philadelphia Metro,Metro,29516,1271,0,1439,21,0,1185,70,0
-2020-04-25,United States,Philadelphia Metro,Metro,30139,1325,0,623,54,0,1171,87,0
-2020-04-26,United States,Philadelphia Metro,Metro,31524,1365,0,1385,40,0,1073,113,0
-2020-04-27,United States,Philadelphia Metro,Metro,32491,1409,0,967,44,0,942,54,0
-2020-04-28,United States,Philadelphia Metro,Metro,33972,1524,0,1481,115,0,1155,131,0
-2020-04-29,United States,Philadelphia Metro,Metro,34986,1755,0,1014,231,0,713,54,0
+2020-03-25,United States,Philadelphia Metro,Metro,1018,8,0,227,6,0,,,
+2020-03-26,United States,Philadelphia Metro,Metro,1400,9,0,382,1,0,,,
+2020-03-27,United States,Philadelphia Metro,Metro,1787,11,0,387,2,0,,,
+2020-03-28,United States,Philadelphia Metro,Metro,2143,20,0,356,9,0,,,
+2020-03-29,United States,Philadelphia Metro,Metro,2541,26,0,398,6,0,402,1,0
+2020-03-30,United States,Philadelphia Metro,Metro,2949,29,0,408,3,0,174,1,0
+2020-03-31,United States,Philadelphia Metro,Metro,3437,33,0,488,4,0,215,0,0
+2020-04-01,United States,Philadelphia Metro,Metro,4170,52,0,733,19,0,227,6,0
+2020-04-02,United States,Philadelphia Metro,Metro,4979,67,0,809,15,0,382,1,0
+2020-04-03,United States,Philadelphia Metro,Metro,5808,80,0,829,13,0,387,2,0
+2020-04-04,United States,Philadelphia Metro,Metro,6996,106,0,1188,26,0,356,9,0
+2020-04-05,United States,Philadelphia Metro,Metro,7706,117,0,710,11,0,398,6,0
+2020-04-06,United States,Philadelphia Metro,Metro,8853,141,0,1147,24,0,408,3,0
+2020-04-07,United States,Philadelphia Metro,Metro,10000,199,0,1147,58,0,488,4,0
+2020-04-08,United States,Philadelphia Metro,Metro,11221,252,0,1221,53,0,733,19,0
+2020-04-09,United States,Philadelphia Metro,Metro,12384,264,0,1163,12,0,809,15,0
+2020-04-10,United States,Philadelphia Metro,Metro,13628,321,0,1244,57,0,829,13,0
+2020-04-11,United States,Philadelphia Metro,Metro,14851,394,0,1223,73,0,1188,26,0
+2020-04-12,United States,Philadelphia Metro,Metro,15788,447,0,937,53,0,710,11,0
+2020-04-13,United States,Philadelphia Metro,Metro,16860,473,0,1072,26,0,1147,24,0
+2020-04-14,United States,Philadelphia Metro,Metro,17620,530,0,760,57,0,1147,58,0
+2020-04-15,United States,Philadelphia Metro,Metro,18523,616,0,903,86,0,1221,53,0
+2020-04-16,United States,Philadelphia Metro,Metro,19739,717,0,1216,101,0,1163,12,0
+2020-04-17,United States,Philadelphia Metro,Metro,20924,790,0,1185,73,0,1244,57,0
+2020-04-18,United States,Philadelphia Metro,Metro,22095,881,0,1171,91,0,1223,73,0
+2020-04-19,United States,Philadelphia Metro,Metro,23168,1013,0,1073,132,0,937,53,0
+2020-04-20,United States,Philadelphia Metro,Metro,24110,1075,0,942,62,0,1072,26,0
+2020-04-21,United States,Philadelphia Metro,Metro,25265,1223,0,1155,148,0,760,57,0
+2020-04-22,United States,Philadelphia Metro,Metro,25978,1281,0,713,58,0,903,86,0
+2020-04-23,United States,Philadelphia Metro,Metro,28077,1351,0,2099,70,0,1216,101,0
+2020-04-24,United States,Philadelphia Metro,Metro,29516,1370,0,1439,19,0,1185,73,0
+2020-04-25,United States,Philadelphia Metro,Metro,30139,1429,0,623,59,0,1171,91,0
+2020-04-26,United States,Philadelphia Metro,Metro,31524,1471,0,1385,42,0,1073,132,0
+2020-04-27,United States,Philadelphia Metro,Metro,32491,1518,0,967,47,0,942,62,0
+2020-04-28,United States,Philadelphia Metro,Metro,33972,1643,0,1481,125,0,1155,148,0
+2020-04-29,United States,Philadelphia Metro,Metro,34986,1755,0,1014,112,0,713,58,0
 2020-04-30,United States,Philadelphia Metro,Metro,36345,1852,0,1359,97,0,2099,70,0
-2020-05-01,United States,Philadelphia Metro,Metro,37832,2012,0,1487,160,0,1439,21,0
-2020-05-02,United States,Philadelphia Metro,Metro,38572,2069,0,740,57,0,623,54,0
-2020-05-03,United States,Philadelphia Metro,Metro,39351,2095,0,779,26,0,1385,40,0
+2020-05-01,United States,Philadelphia Metro,Metro,37832,2012,0,1487,160,0,1439,19,0
+2020-05-02,United States,Philadelphia Metro,Metro,38572,2069,0,740,57,0,623,59,0
+2020-05-03,United States,Philadelphia Metro,Metro,39351,2095,0,779,26,0,1385,42,0
 2020-03-22,United States,Phoenix Metro,Metro,97,2,0,97,2,0,,,
 2020-03-23,United States,Phoenix Metro,Metro,156,2,0,59,0,0,,,
 2020-03-24,United States,Phoenix Metro,Metro,221,2,0,65,0,0,,,
@@ -21237,26 +21237,26 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-04-07,United States,Pittsburgh Metro,Metro,1196,18,0,115,5,0,72,1,0
 2020-04-08,United States,Pittsburgh Metro,Metro,1257,26,0,61,8,0,50,2,0
 2020-04-09,United States,Pittsburgh Metro,Metro,1319,28,0,62,2,0,87,0,0
-2020-04-10,United States,Pittsburgh Metro,Metro,1389,40,0,70,12,0,110,0,0
-2020-04-11,United States,Pittsburgh Metro,Metro,1467,45,0,78,5,0,124,5,0
-2020-04-12,United States,Pittsburgh Metro,Metro,1507,46,0,40,1,0,91,1,0
-2020-04-13,United States,Pittsburgh Metro,Metro,1554,48,0,47,2,0,69,0,0
-2020-04-14,United States,Pittsburgh Metro,Metro,1579,54,0,25,6,0,115,5,0
-2020-04-15,United States,Pittsburgh Metro,Metro,1607,61,0,28,7,0,61,8,0
-2020-04-16,United States,Pittsburgh Metro,Metro,1652,75,0,45,14,0,62,2,0
-2020-04-17,United States,Pittsburgh Metro,Metro,1704,82,0,52,7,0,70,12,0
-2020-04-18,United States,Pittsburgh Metro,Metro,1908,103,0,204,21,0,78,5,0
-2020-04-19,United States,Pittsburgh Metro,Metro,1954,110,0,46,7,0,40,1,0
-2020-04-20,United States,Pittsburgh Metro,Metro,1975,119,0,21,9,0,47,2,0
-2020-04-21,United States,Pittsburgh Metro,Metro,2008,143,0,33,24,0,25,6,0
-2020-04-22,United States,Pittsburgh Metro,Metro,2065,155,0,57,12,0,28,7,0
-2020-04-23,United States,Pittsburgh Metro,Metro,2145,154,0,80,0,0,45,14,0
-2020-04-24,United States,Pittsburgh Metro,Metro,2213,155,0,68,1,0,52,7,0
-2020-04-25,United States,Pittsburgh Metro,Metro,2309,152,0,96,0,0,204,21,0
-2020-04-26,United States,Pittsburgh Metro,Metro,2347,152,0,38,0,0,46,7,0
-2020-04-27,United States,Pittsburgh Metro,Metro,2391,158,0,44,6,0,21,9,0
-2020-04-28,United States,Pittsburgh Metro,Metro,2418,180,0,27,22,0,33,24,0
-2020-04-29,United States,Pittsburgh Metro,Metro,2469,190,0,51,10,0,57,12,0
+2020-04-10,United States,Pittsburgh Metro,Metro,1389,41,0,70,13,0,110,0,0
+2020-04-11,United States,Pittsburgh Metro,Metro,1467,46,0,78,5,0,124,5,0
+2020-04-12,United States,Pittsburgh Metro,Metro,1507,47,0,40,1,0,91,1,0
+2020-04-13,United States,Pittsburgh Metro,Metro,1554,49,0,47,2,0,69,0,0
+2020-04-14,United States,Pittsburgh Metro,Metro,1579,55,0,25,6,0,115,5,0
+2020-04-15,United States,Pittsburgh Metro,Metro,1607,63,0,28,8,0,61,8,0
+2020-04-16,United States,Pittsburgh Metro,Metro,1652,78,0,45,15,0,62,2,0
+2020-04-17,United States,Pittsburgh Metro,Metro,1704,85,0,52,7,0,70,13,0
+2020-04-18,United States,Pittsburgh Metro,Metro,1908,106,0,204,21,0,78,5,0
+2020-04-19,United States,Pittsburgh Metro,Metro,1954,113,0,46,7,0,40,1,0
+2020-04-20,United States,Pittsburgh Metro,Metro,1975,122,0,21,9,0,47,2,0
+2020-04-21,United States,Pittsburgh Metro,Metro,2008,147,0,33,25,0,25,6,0
+2020-04-22,United States,Pittsburgh Metro,Metro,2065,159,0,57,12,0,28,8,0
+2020-04-23,United States,Pittsburgh Metro,Metro,2145,158,0,80,0,0,45,15,0
+2020-04-24,United States,Pittsburgh Metro,Metro,2213,159,0,68,1,0,52,7,0
+2020-04-25,United States,Pittsburgh Metro,Metro,2309,156,0,96,0,0,204,21,0
+2020-04-26,United States,Pittsburgh Metro,Metro,2347,156,0,38,0,0,46,7,0
+2020-04-27,United States,Pittsburgh Metro,Metro,2391,162,0,44,6,0,21,9,0
+2020-04-28,United States,Pittsburgh Metro,Metro,2418,184,0,27,22,0,33,25,0
+2020-04-29,United States,Pittsburgh Metro,Metro,2469,190,0,51,6,0,57,12,0
 2020-04-30,United States,Pittsburgh Metro,Metro,2509,198,0,40,8,0,80,0,0
 2020-05-01,United States,Pittsburgh Metro,Metro,2567,205,0,58,7,0,68,1,0
 2020-05-02,United States,Pittsburgh Metro,Metro,2596,210,0,29,5,0,96,0,0

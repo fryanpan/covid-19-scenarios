@@ -2,5 +2,6 @@ node_modules
 .cache
 public
 .DS_Store
+src/data_download/cache/*.csv
 
 *.swp

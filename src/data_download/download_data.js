@@ -3,6 +3,8 @@ const moment = require('moment');
 const neatCsv = require('neat-csv');
 const createCsvStringifier = require('csv-writer').createObjectCsvStringifier;
 const lodash = require('lodash');
+const fs = require('fs');
+const path = require('path');
 
 const BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/"
 
@@ -414,8 +416,177 @@ METRO_MAP = {
     // Las Vegas
     "Clark, Nevada": "Las Vegas Metro",
 
-
-    
+        // Columbus, OH Metro
+        "Delaware, Ohio": "Columbus, OH Metro",
+        "Fairfield, Ohio": "Columbus, OH Metro",
+        "Franklin, Ohio": "Columbus, OH Metro",
+        "Hocking, Ohio": "Columbus, OH Metro",
+        "Licking, Ohio": "Columbus, OH Metro",
+        "Madison, Ohio": "Columbus, OH Metro",
+        "Morrow, Ohio": "Columbus, OH Metro",
+        "Perry, Ohio": "Columbus, OH Metro",
+        "Pickaway, Ohio": "Columbus, OH Metro",
+        "Union, Ohio": "Columbus, OH Metro",
+        // Indianapolis Metro
+        "Boone, Indiana": "Indianapolis Metro",
+        "Brown, Indiana": "Indianapolis Metro",
+        "Hamilton, Indiana": "Indianapolis Metro",
+        "Hancock, Indiana": "Indianapolis Metro",
+        "Hendricks, Indiana": "Indianapolis Metro",
+        "Johnson, Indiana": "Indianapolis Metro",
+        "Madison, Indiana": "Indianapolis Metro",
+        "Marion, Indiana": "Indianapolis Metro",
+        "Morgan, Indiana": "Indianapolis Metro",
+        "Putnam, Indiana": "Indianapolis Metro",
+        "Shelby, Indiana": "Indianapolis Metro",
+        // Austin Metro
+        "Bastrop, Texas": "Austin Metro",
+        "Caldwell, Texas": "Austin Metro",
+        "Hays, Texas": "Austin Metro",
+        "Travis, Texas": "Austin Metro",
+        "Williamson, Texas": "Austin Metro",
+        // Nashville Metro
+        "Cannon, Tennessee": "Nashville Metro",
+        "Cheatham, Tennessee": "Nashville Metro",
+        "Davidson, Tennessee": "Nashville Metro",
+        "Dickson, Tennessee": "Nashville Metro",
+        "Hickman, Tennessee": "Nashville Metro",
+        "Macon, Tennessee": "Nashville Metro",
+        "Maury, Tennessee": "Nashville Metro",
+        "Robertson, Tennessee": "Nashville Metro",
+        "Rutherford, Tennessee": "Nashville Metro",
+        "Smith, Tennessee": "Nashville Metro",
+        "Sumner, Tennessee": "Nashville Metro",
+        "Trousdale, Tennessee": "Nashville Metro",
+        "Williamson, Tennessee": "Nashville Metro",
+        "Wilson, Tennessee": "Nashville Metro",
+        // Virginia Beach Metro
+        "Currituck, North Carolina": "Virginia Beach Metro",
+        "Gates, North Carolina": "Virginia Beach Metro",
+        "Gloucester, Virginia": "Virginia Beach Metro",
+        "Isle of Wight, Virginia": "Virginia Beach Metro",
+        "James City, Virginia": "Virginia Beach Metro",
+        "Mathews, Virginia": "Virginia Beach Metro",
+        "York, Virginia": "Virginia Beach Metro",
+        "Chesapeake, Virginia": "Virginia Beach Metro",
+        "Hampton, Virginia": "Virginia Beach Metro",
+        "Newport News, Virginia": "Virginia Beach Metro",
+        "Norfolk, Virginia": "Virginia Beach Metro",
+        "Poquoson, Virginia": "Virginia Beach Metro",
+        "Portsmouth, Virginia": "Virginia Beach Metro",
+        "Suffolk, Virginia": "Virginia Beach Metro",
+        "Virginia Beach, Virginia": "Virginia Beach Metro",
+        "Williamsburg, Virginia": "Virginia Beach Metro",
+        // Providence Metro
+        "Bristol, Massachusetts": "Providence Metro",
+        "Bristol, Rhode Island": "Providence Metro",
+        "Kent, Rhode Island": "Providence Metro",
+        "Newport, Rhode Island": "Providence Metro",
+        "Providence, Rhode Island": "Providence Metro",
+        "Washington, Rhode Island": "Providence Metro",
+        // Milwaukee Metro
+        "Milwaukee, Wisconsin": "Milwaukee Metro",
+        "Ozaukee, Wisconsin": "Milwaukee Metro",
+        "Washington, Wisconsin": "Milwaukee Metro",
+        "Waukesha, Wisconsin": "Milwaukee Metro",
+        // Jacksonville Metro
+        "Baker, Florida": "Jacksonville Metro",
+        "Clay, Florida": "Jacksonville Metro",
+        "Duval, Florida": "Jacksonville Metro",
+        "Nassau, Florida": "Jacksonville Metro",
+        "St. Johns, Florida": "Jacksonville Metro",
+        // Memphis Metro
+        "Crittenden, Arkansas": "Memphis Metro",
+        "Benton, Mississippi": "Memphis Metro",
+        "DeSoto, Mississippi": "Memphis Metro",
+        "Marshall, Mississippi": "Memphis Metro",
+        "Tate, Mississippi": "Memphis Metro",
+        "Tunica, Mississippi": "Memphis Metro",
+        "Fayette, Tennessee": "Memphis Metro",
+        "Shelby, Tennessee": "Memphis Metro",
+        "Tipton, Tennessee": "Memphis Metro",
+        // Oklahoma City Metro
+        "Canadian, Oklahoma": "Oklahoma City Metro",
+        "Cleveland, Oklahoma": "Oklahoma City Metro",
+        "Grady, Oklahoma": "Oklahoma City Metro",
+        "Lincoln, Oklahoma": "Oklahoma City Metro",
+        "Logan, Oklahoma": "Oklahoma City Metro",
+        "McClain, Oklahoma": "Oklahoma City Metro",
+        "Oklahoma, Oklahoma": "Oklahoma City Metro",
+        // Raleigh Metro
+        "Franklin, North Carolina": "Raleigh Metro",
+        "Johnston, North Carolina": "Raleigh Metro",
+        "Wake, North Carolina": "Raleigh Metro",
+        // Louisville Metro
+        "Clark, Indiana": "Louisville Metro",
+        "Floyd, Indiana": "Louisville Metro",
+        "Harrison, Indiana": "Louisville Metro",
+        "Scott, Indiana": "Louisville Metro",
+        "Washington, Indiana": "Louisville Metro",
+        "Bullitt, Kentucky": "Louisville Metro",
+        "Henry, Kentucky": "Louisville Metro",
+        "Jefferson, Kentucky": "Louisville Metro",
+        "Oldham, Kentucky": "Louisville Metro",
+        "Shelby, Kentucky": "Louisville Metro",
+        "Spencer, Kentucky": "Louisville Metro",
+        "Trimble, Kentucky": "Louisville Metro",
+        // Richmond Metro
+        "Amelia, Virginia": "Richmond Metro",
+        "Caroline, Virginia": "Richmond Metro",
+        "Charles City, Virginia": "Richmond Metro",
+        "Chesterfield, Virginia": "Richmond Metro",
+        "Dinwiddie, Virginia": "Richmond Metro",
+        "Goochland, Virginia": "Richmond Metro",
+        "Hanover, Virginia": "Richmond Metro",
+        "Henrico, Virginia": "Richmond Metro",
+        "King William, Virginia": "Richmond Metro",
+        "New Kent, Virginia": "Richmond Metro",
+        "Powhatan, Virginia": "Richmond Metro",
+        "Prince George, Virginia": "Richmond Metro",
+        "Sussex, Virginia": "Richmond Metro",
+        "Colonial Heights, Virginia": "Richmond Metro",
+        "Hopewell, Virginia": "Richmond Metro",
+        "Petersburg, Virginia": "Richmond Metro",
+        "Richmond City, Virginia": "Richmond Metro",
+        // New Orleans Metro
+        "Jefferson, Louisiana": "New Orleans Metro",
+        "Orleans, Louisiana": "New Orleans Metro",
+        "Plaquemines, Louisiana": "New Orleans Metro",
+        "St. Bernard, Louisiana": "New Orleans Metro",
+        "St. Charles, Louisiana": "New Orleans Metro",
+        "St. James, Louisiana": "New Orleans Metro",
+        "St. John the Baptist, Louisiana": "New Orleans Metro",
+        "St. Tammany, Louisiana": "New Orleans Metro",
+        // Hartford Metro
+        "Hartford, Connecticut": "Hartford Metro",
+        "Middlesex, Connecticut": "Hartford Metro",
+        "Tolland, Connecticut": "Hartford Metro",
+        // Salt Lake City Metro
+        "Salt Lake, Utah": "Salt Lake City Metro",
+        "Tooele, Utah": "Salt Lake City Metro",
+        // Birmingham Metro
+        "Bibb, Alabama": "Birmingham Metro",
+        "Blount, Alabama": "Birmingham Metro",
+        "Chilton, Alabama": "Birmingham Metro",
+        "Jefferson, Alabama": "Birmingham Metro",
+        "St. Clair, Alabama": "Birmingham Metro",
+        "Shelby, Alabama": "Birmingham Metro",
+        "Walker, Alabama": "Birmingham Metro",
+        // Buffalo Metro
+        "Erie, New York": "Buffalo Metro",
+        "Niagara, New York": "Buffalo Metro",
+        // Rochester Metro
+        "Livingston, New York": "Rochester Metro",
+        "Monroe, New York": "Rochester Metro",
+        "Ontario, New York": "Rochester Metro",
+        "Orleans, New York": "Rochester Metro",
+        "Wayne, New York": "Rochester Metro",
+        "Yates, New York": "Rochester Metro",
+        // Grand Rapids Metro
+        "Barry, Michigan": "Grand Rapids Metro",
+        "Kent, Michigan": "Grand Rapids Metro",
+        "Montcalm, Michigan": "Grand Rapids Metro",
+        "Ottawa, Michigan": "Grand Rapids Metro",
 }
 
 
@@ -581,6 +752,7 @@ function reallocateRestatedDeaths(rows, number) {
     });
 }
 
+const CACHE_DIR = 'cache';
 async function downloadFiles() {
     var now = new Date();
     var rows = [];
@@ -592,7 +764,19 @@ async function downloadFiles() {
         const dateString = curDate.format("YYYY-MM-DD");
 
         try {
-            const rawData = await download(url);
+            // try reading file first, if it is more than 7 days old
+            var rawData;
+            const cacheFile = path.resolve(__dirname, CACHE_DIR, fileName);
+
+            process.stderr.write(`Checking ${cacheFile}`);
+            if(moment().diff(dateString, 'days') > 7 && fs.existsSync(cacheFile)) {
+              process.stderr.write(`Reading ${dateString} from cache file\n`);
+              rawData = fs.readFileSync(cacheFile, "UTF-8");  
+            } else {
+              rawData = await download(url);
+              fs.writeFileSync(cacheFile, rawData);
+              process.stderr.write(`Downloaded ${dateString} and wrote cache file\n`);
+            }
 
             /* Handle some odd whitespace characters by trimming */
             const fileData = await neatCsv(rawData.toString().trim());
@@ -650,7 +834,7 @@ async function downloadFiles() {
 
             });
         } catch (e) {
-            process.stderr.write("On date" + dateString + e);
+            process.stderr.write("On date " + dateString + " " + e + "\n");
         }
     }
 

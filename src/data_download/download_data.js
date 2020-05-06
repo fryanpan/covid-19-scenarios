@@ -688,6 +688,14 @@ function reallocateRestatedDeaths(rows, number) {
            // https://www.wpxi.com/news/pennsylvania/live-updates-coronavirus-pennsylvania-what-you-need-know-wednesday/4QL2QXZXO5CQPKJNHFYIDXMU3E/
            (row.state == 'Pennsylvania' && row.date == '2020-04-29') || 
 
+
+            // https://twitter.com/COVID19Tracking/status/1257784015773294593
+            // https://www.post-gazette.com/news/health/2020/05/05/covid-19-coronavirus-Allegheny-County-Western-Pennsylvania-deaths-cases-data-pandemic/stories/202005050081
+            // Unclear what exactly the "reconciliation" was for 554 deaths
+            // Did not adjust cases
+            // But it seems more useful to spread this into the past than to keep it on 5/5 or omit 
+           (row.state == 'Pennsylvania' && row.date == '2020-05-05') || 
+
            (row.state == 'Connecticut' && row.date == '2020-04-20') || 
            (row.state == 'South Carolina' && row.date == '2020-04-29') || 
            (row.country == 'United Kingdom' && row.date == '2020-04-29'))

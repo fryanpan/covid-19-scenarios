@@ -685,17 +685,6 @@ function reallocateRestatedDeaths(rows, number) {
            (row.state == 'Ohio' && row.date == '2020-04-29') || 
            (row.state == 'Texas' && row.date == '2020-04-28') || 
 
-           // https://www.wpxi.com/news/pennsylvania/live-updates-coronavirus-pennsylvania-what-you-need-know-wednesday/4QL2QXZXO5CQPKJNHFYIDXMU3E/
-           (row.state == 'Pennsylvania' && row.date == '2020-04-29') || 
-
-
-            // https://twitter.com/COVID19Tracking/status/1257784015773294593
-            // https://www.post-gazette.com/news/health/2020/05/05/covid-19-coronavirus-Allegheny-County-Western-Pennsylvania-deaths-cases-data-pandemic/stories/202005050081
-            // Unclear what exactly the "reconciliation" was for 554 deaths
-            // Did not adjust cases
-            // But it seems more useful to spread this into the past than to keep it on 5/5 or omit 
-           (row.state == 'Pennsylvania' && row.date == '2020-05-05') || 
-
            (row.state == 'Connecticut' && row.date == '2020-04-20') || 
            (row.state == 'South Carolina' && row.date == '2020-04-29') || 
            (row.country == 'United Kingdom' && row.date == '2020-04-29'))
@@ -704,6 +693,11 @@ function reallocateRestatedDeaths(rows, number) {
             reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday);          
             fromStart = true;
         }
+
+
+        // Pennsylvania has reporting issues that are leading to weekly periodic spikes
+        // https://www.post-gazette.com/news/health/2020/05/05/covid-19-coronavirus-Allegheny-County-Western-Pennsylvania-deaths-cases-data-pandemic/stories/202005050081
+        // But since these should be handled with 7-day rolling measurements later, I'm ignoring
 
         // Reallocate the probable deaths added to "Unassigned" to Marion county
         if(row.state == 'Indiana' && row.admin2 == "Marion" && row.date == "2020-04-30") {

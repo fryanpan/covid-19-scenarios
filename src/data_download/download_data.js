@@ -694,6 +694,18 @@ function reallocateRestatedDeaths(rows, number) {
             fromStart = true;
         }
 
+        /** New York reported 700 or so extra deaths on 5/6 and 5/7.  Actual deaths were ~250. Unsure when to assign them in time */
+        if(row.state == 'New York' && row.date == '2020-05-06') { 
+          const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
+          reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday * 3);
+          fromStart = true;
+        }
+
+        if(row.state == 'New York' && row.date == '2020-05-07') { 
+          const deathsYesterday = rows[index - 1].confirmedDeaths - rows[index - 2].confirmedDeaths;
+          reallocAmount = Math.max(0, row.confirmedDeaths - rows[index - 1].confirmedDeaths - deathsYesterday * 3);
+          fromStart = true;
+        } 
 
         // Pennsylvania has reporting issues that are leading to weekly periodic spikes
         // https://www.post-gazette.com/news/health/2020/05/05/covid-19-coronavirus-Allegheny-County-Western-Pennsylvania-deaths-cases-data-pandemic/stories/202005050081

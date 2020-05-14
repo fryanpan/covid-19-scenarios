@@ -885,6 +885,20 @@ async function downloadFiles() {
                 confirmedRecoveries: row.confirmedRecoveries,
                 confirmedActive: row.confirmedActive
             })
+
+            if(metroKey == "Orange, California") {
+              process.stderr.write("ORANGE!");
+              rows.push({
+                date: row.date,
+                country: row.country,
+                state: "Orange County, CA",
+                locationType: "Metro",
+                confirmedCases: row.confirmedCases,
+                confirmedDeaths: row.confirmedDeaths,
+                confirmedRecoveries: row.confirmedRecoveries,
+                confirmedActive: row.confirmedActive
+              })
+            }
         }   
     }    
 

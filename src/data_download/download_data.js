@@ -942,6 +942,12 @@ async function downloadFiles() {
               cur.newDeaths7dAgo = sortedRows[i-7].newDeaths; 
               cur.newRecoveries7dAgo = sortedRows[i-7].newRecoveries; 
             }
+
+            if(locationIndex >= 14) {
+              cur.newCases14dAgo = sortedRows[i-14].newCases; 
+              cur.newDeaths14dAgo = sortedRows[i-14].newDeaths; 
+              cur.newRecoveries14dAgo = sortedRows[i-14].newRecoveries; 
+            }
         }
     }
 

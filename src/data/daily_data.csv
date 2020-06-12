@@ -32980,8 +32980,8 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-06-06,United States,All,Country,1925765,110083,500849,23133,710,9143,24146,967,10015
 2020-06-07,United States,All,Country,1943880,110528,506367,18115,445,5518,20007,605,28297
 2020-06-08,United States,All,Country,1961428,111011,518522,17548,483,12155,20848,768,13473
-2020-06-09,United States,All,Country,1979411,111989,524855,17983,978,6333,20801,1031,5637
-2020-06-10,United States,All,Country,2000464,112924,533504,21053,935,8649,19699,995,15390
+2020-06-09,United States,All,Country,1979489,111989,524860,18061,978,6338,20801,1031,5637
+2020-06-10,United States,All,Country,2000464,112924,533504,20975,935,8644,19699,995,15390
 2020-03-13,United States,Alabama,State,5,0,0,5,0,0,,,
 2020-03-14,United States,Alabama,State,6,0,0,1,0,0,,,
 2020-03-15,United States,Alabama,State,12,0,0,6,0,0,,,
@@ -37659,7 +37659,7 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-06-06,United States,Michigan,State,64229,5894,0,452,40,0,348,58,0
 2020-06-07,United States,Michigan,State,64648,5898,0,419,4,0,428,27,0
 2020-06-08,United States,Michigan,State,64944,5916,0,296,18,0,135,25,0
-2020-06-09,United States,Michigan,State,64998,5943,0,54,27,0,199,37,0
+2020-06-09,United States,Michigan,State,64998,5943,5,54,27,5,199,37,0
 2020-06-10,United States,Michigan,State,65182,5955,0,184,12,0,304,17,0
 2020-03-22,United States,Milwaukee Metro,Metro,239,3,0,239,3,0,,,
 2020-03-23,United States,Milwaukee Metro,Metro,264,4,0,25,1,0,,,
@@ -41926,8 +41926,8 @@ date,country,state,locationType,confirmedCases,confirmedDeaths,confirmedRecoveri
 2020-06-06,United States,Texas,State,74470,1833,0,1922,21,0,1774,33,0
 2020-06-07,United States,Texas,State,75408,1841,0,938,8,0,1977,23,0
 2020-06-08,United States,Texas,State,76463,1848,0,1055,7,0,941,8,0
-2020-06-09,United States,Texas,State,78130,1867,0,1667,19,0,1717,33,0
-2020-06-10,United States,Texas,State,80777,1905,0,2647,38,0,1567,28,0
+2020-06-09,United States,Texas,State,78208,1867,0,1745,19,0,1717,33,0
+2020-06-10,United States,Texas,State,80777,1905,0,2569,38,0,1567,28,0
 2020-02-22,United States,"Travis, CA (From Diamond Princess)",State,5,0,0,5,0,0,,,
 2020-02-23,United States,"Travis, CA (From Diamond Princess)",State,5,0,0,0,0,0,,,
 2020-02-24,United States,"Travis, CA (From Diamond Princess)",State,0,0,0,0,0,0,,,

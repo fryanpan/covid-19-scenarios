@@ -862,7 +862,7 @@ async function downloadFiles() {
     rows = rows.sort(rowCmpAdmin2);
     reallocateRestatedDeaths(rows);
 
-    // Add metro rows
+    // Add metro rows 
     var foundMetro = {};
     const originalLength = rows.length;
     for(let j = 0; j < originalLength; ++j) {
@@ -892,6 +892,21 @@ async function downloadFiles() {
                 date: row.date,
                 country: row.country,
                 state: "Orange County, CA",
+                locationType: "Metro",
+                confirmedCases: row.confirmedCases,
+                confirmedDeaths: row.confirmedDeaths,
+                confirmedRecoveries: row.confirmedRecoveries,
+                confirmedActive: row.confirmedActive
+              })
+            }
+
+            if(metro == "San Francisco Metro") {
+              county = admin2.replace(', California', ' County, California') 
+              process.stderr.write("\nSF Metro County " + county);
+              rows.push({
+                date: row.date,
+                country: row.country,
+                state: county, 
                 locationType: "Metro",
                 confirmedCases: row.confirmedCases,
                 confirmedDeaths: row.confirmedDeaths,
@@ -947,6 +962,12 @@ async function downloadFiles() {
               cur.newCases14dAgo = sortedRows[i-14].newCases; 
               cur.newDeaths14dAgo = sortedRows[i-14].newDeaths; 
               cur.newRecoveries14dAgo = sortedRows[i-14].newRecoveries; 
+            }
+
+            if(locationIndex >= 21) {
+              cur.newCases21dAgo = sortedRows[i-21].newCases; 
+              cur.newDeaths21dAgo = sortedRows[i-21].newDeaths; 
+              cur.newRecoveries21dAgo = sortedRows[i-21].newRecoveries; 
             }
         }
     }
@@ -1005,6 +1026,12 @@ async function generateData() {
             {id: 'newCases7dAgo', title: 'newCases7dAgo'},
             {id: 'newDeaths7dAgo', title: 'newDeaths7dAgo'},
             {id: 'newRecoveries7dAgo', title: 'newRecoveries7dAgo'},
+            {id: 'newCases14dAgo', title: 'newCases14dAgo'},
+            {id: 'newDeaths14dAgo', title: 'newDeaths14dAgo'},
+            {id: 'newRecoveries14dAgo', title: 'newRecoveries14dAgo'},
+            {id: 'newCases21dAgo', title: 'newCases21dAgo'},
+            {id: 'newDeaths21dAgo', title: 'newDeaths21dAgo'},
+            {id: 'newRecoveries21dAgo', title: 'newRecoveries21dAgo'},
         ]
     });
 

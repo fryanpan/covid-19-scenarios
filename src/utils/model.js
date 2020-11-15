@@ -5,9 +5,9 @@ import {LocationManager} from "../utils/locationManager"
 /** Scenarios list that we're running */
 const BASE_SCENARIO = {
   rBefore: 2.2,
-  cfrBefore: 0.014,
+  cfrBefore: 0.005,
   rAfter: 2.2,
-  cfrAfter: 0.014
+  cfrAfter: 0.005
 }
 
 export const PresetCategories  = {

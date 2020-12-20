@@ -901,13 +901,13 @@ async function downloadFiles() {
             }
 
             if(metro == "San Francisco Metro") {
-              county = admin2.replace(', California', ' County, California') 
+              county = admin2 + ' County'
               process.stderr.write("\nSF Metro County " + county);
               rows.push({
                 date: row.date,
                 country: row.country,
                 state: county, 
-                locationType: "Metro",
+                locationType: "County",
                 confirmedCases: row.confirmedCases,
                 confirmedDeaths: row.confirmedDeaths,
                 confirmedRecoveries: row.confirmedRecoveries,

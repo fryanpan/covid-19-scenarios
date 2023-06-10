@@ -8,7 +8,7 @@
     "d3-format": "^1.4.3",
     "d3-scale": "^3.2.1",
     "gamma-distribution": "^1.0.4",
-    "gatsby": "^2.20.2",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.3.0",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.3.1",
